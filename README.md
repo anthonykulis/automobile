@@ -4,6 +4,8 @@ This repository is for in-class projects completed by students at JALC in CPS206
 ## Overview
 Breaking into 4 teams (4 people per team), you will be responsible for building the line of automobiles. Design will occur in class as a group, slices will be made and delegated to team leaders, who will in-turn slice into features for team members to complete.
 
+The design can be found on [LucidCharts](https://goo.gl/q3Vm1t)
+
 ## Methodology
 1. Team leaders will fork this repository.
 2. Team members will fork their team leaders repository.
