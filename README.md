@@ -37,7 +37,7 @@ Individual level criteria:
 
 	1. You participate actively in project design (10 points, subjective)
 	1. Attendence is mandatory. Late arrivals count as absent (20 points, 10 points lost per instance)
-	2. You have daily commits (10 points, 2 points lost per instance)
+	2. You have daily commits during the code writing phase (10 points, 2 points lost per instance)
 	3. You complete your assigned tasks in a timely manner (5 points all or nothing)
 	3. Your code is tested (10 points, 2 points lost per instance)
 	3. Your code works as tested (10 points, 2 points lost per instance)
