@@ -23,7 +23,9 @@ The design can be found on [LucidCharts](https://goo.gl/q3Vm1t). Currently I onl
 		Wheel wheel = new ForgedWheel();
 		
 ## Grading
-This is a graded exercise. You will be graded at an individual level and at a team level. Do not delete your personal forked repositories. Other teams will be depending on your team, so if you fail as a team, we fail as a class. Being said, you pass as a team, or you fail as a team.
+This is a graded exercise. You will be graded at an individual level and at a team level. Do not delete your personal forked repositories. They will be used in your individual level grading. 
+
+Also, other teams will be depending on your team, so if you fail as a team, we fail as a class. Being said, you pass as a team, or you fail as a team.
 
 Team level criteria:
 
