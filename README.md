@@ -13,7 +13,7 @@ The design can be found on [LucidCharts](https://goo.gl/q3Vm1t)
 4. Team members will complete their assigned feature(s), committing to their own fork of the repository until their work is completed. 
 5. Upon the feature completion, the team member will then make a pull request to the team leaders repository. 
 6. The team leader will review the work for completeness, tests, etc, before they merge the team members code into their master branch. If a team member successfully has a feature pulled into the teams master and needs to start a new feature, they should update their personal fork with the teams fork, and start on the next feature. Please see me for the git steps to handle this properly.
-7. Upon all team members completing their features and completing a pull request to the team leaders master, the team leader will then make a pull request to the project's repository.
+7. Upon all team members completing their features and completing a pull request to the team leaders master, the team leader will then make a pull request to the project's repository. The team leader will then meet with me to participate in the design review.
 8. Once all teams have completed the pull request into the master repository, each student will then have an extra credit opportunity (scoped to project only) to then create a driver that creates multiple vehicles and stores them into a collection of type `Automobile`. Once numerous vehicles are created, the student then can iterate across this collection calling the `toString` method of the vehicle that will then print out the full description of the car.
 
 ## Requirements
