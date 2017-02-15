@@ -2,7 +2,7 @@
 This repository is for in-class projects completed by students at JALC in CPS206 spring 2017 term. 
 
 ## Overview
-Breaking into 4 teams (4 people per team), you will be responsible for building the line of automobiles. Design will occur in class as a group, slices will be made and delegated to team leaders, who will in-turn slice into features for team members to complete.
+Breaking into 4 teams (4 people per team), you will be responsible for building a line of automobiles. Design will occur in class as a group, slices will be made and delegated to team leaders, who will in-turn slice into features for team members to complete.
 
 The design can be found on [LucidCharts](https://goo.gl/q3Vm1t)
 
