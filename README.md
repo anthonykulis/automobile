@@ -61,4 +61,4 @@ If we follow these steps, any time we complete early, e.g. the design phase, it 
 I reserve the right to use any of these tools, but I will only do so if your team is properly communicating with you and you are properly communicating with me.
 
 ### ProTip
-You will not be able to finish this in class only. You will need to work on it at home. Class time, while it can and should be used for coding, it also needs to provide time for your team to have meetings, help with issues, etc. 
+You will not be able to finish this in class only. You will need to work on it at home. Class time, while it can and should be used for coding, it also needs to provide time for your team to have meetings, help with issues, etc. Do not spend class time with your head buried in your computer ignoring your teammates. Remember, you're a team. You pass as a team, or you fail as a team.
