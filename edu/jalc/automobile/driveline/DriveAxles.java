@@ -1,4 +1,4 @@
-package edu.jalc.driveline;
+package edu.jalc.automobile.driveline;
 
 public class DriveAxles{
 //rear drive axles
