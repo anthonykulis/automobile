@@ -1,4 +1,4 @@
-package edu.jalc.automobile.parts.driveshaft;
+package edu.jalc.automobile.parts.driveline;
 
 public class DriveShaft{
 

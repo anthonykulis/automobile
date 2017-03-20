@@ -1,4 +1,4 @@
-package edu.jalc.automobile.parts.fourwheeldriveaxle;
+package edu.jalc.automobile.parts.driveline;
 
 public class FourWheelDriveAxle{
 

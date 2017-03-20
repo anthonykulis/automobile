@@ -1,4 +1,4 @@
-package edu.jalc.automobile.parts.frontdeadaxle;
+package edu.jalc.automobile.parts.driveline;
 
 public class FrontDeadAxle{
 

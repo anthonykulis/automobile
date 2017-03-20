@@ -1,4 +1,4 @@
-package edu.jalc.automobile.parts.electricsteering;
+package edu.jalc.automobile.parts.driveline;
 
 public class ElectricSteering{
 

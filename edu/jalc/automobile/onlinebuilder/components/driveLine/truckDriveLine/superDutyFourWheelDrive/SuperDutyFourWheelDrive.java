@@ -1,7 +1,7 @@
 package edu.jalc.automobile.onlinebuilder.components.driveline.truckdriveline.superdutyfourwheeldrive; 
 
 import edu.jalc.automobile.onlinebuilder.components.driveline.truckdriveline.TruckDriveLine;
-import edu.jalc.automobile.parts.fourwheeldriveaxle.FourWheelDriveAxle;
+import edu.jalc.automobile.parts.driveline.FourWheelDriveAxle;
 
 public class SuperDutyFourWheelDrive extends TruckDriveLine{
 
@@ -18,5 +18,4 @@ public class SuperDutyFourWheelDrive extends TruckDriveLine{
    public String toString(){
       return "SuperDutyFourWheelDrive";
    }
-   
 }

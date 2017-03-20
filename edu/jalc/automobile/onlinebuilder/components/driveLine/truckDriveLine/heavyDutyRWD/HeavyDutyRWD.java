@@ -1,8 +1,8 @@
 package edu.jalc.automobile.onlinebuilder.components.driveline.truckdriveline.heavydutyrwd;
 
 import edu.jalc.automobile.onlinebuilder.components.driveline.truckdriveline.TruckDriveLine;
-import edu.jalc.automobile.parts.reardriveaxle.RearDriveAxle;
-import edu.jalc.automobile.parts.frontdeadaxle.FrontDeadAxle;
+import edu.jalc.automobile.parts.driveline.RearDriveAxle;
+import edu.jalc.automobile.parts.driveline.FrontDeadAxle;
 
 public class HeavyDutyRWD extends TruckDriveLine{
 
@@ -28,5 +28,4 @@ public class HeavyDutyRWD extends TruckDriveLine{
    public String toString(){
       return "HeavyDutyRearWheelDrive";
    }
-   
 }

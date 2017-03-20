@@ -1,8 +1,8 @@
 package edu.jalc.automobile.onlinebuilder.components.driveline.truckdriveline;
 
-import edu.jalc.automobile.parts.driveshaft.DriveShaft;
-import edu.jalc.automobile.parts.electricsteering.ElectricSteering;
-import edu.jalc.automobile.parts.lockingdifferential.LockingDifferential;
+import edu.jalc.automobile.parts.driveline.DriveShaft;
+import edu.jalc.automobile.parts.driveline.ElectricSteering;
+import edu.jalc.automobile.parts.driveline.LockingDifferential;
 
 public class TruckDriveLine{
 
@@ -37,5 +37,4 @@ public class TruckDriveLine{
    public String toString(){
       return "TruckDriveLine";
    }
-   
 }

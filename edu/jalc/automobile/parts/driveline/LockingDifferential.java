@@ -1,4 +1,4 @@
-package edu.jalc.automobile.parts.lockingdifferential;
+package edu.jalc.automobile.parts.driveline;
 
 public class LockingDifferential{
 
