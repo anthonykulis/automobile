@@ -1,8 +1,8 @@
-package edu.jalc.automobile.onlinebuilder.components.driveLine.truckDriveLine.heavyDutyRWD;
+package edu.jalc.automobile.onlinebuilder.components.driveline.truckdriveline.heavydutyrwd;
 
-import edu.jalc.automobile.onlinebuilder.components.driveLine.truckDriveLine.TruckDriveLine;
-import edu.jalc.automobile.onlinebuilder.components.driveLine.truckDriveLine.heavyDutyRWD.rearDriveAxle.RearDriveAxle;
-import edu.jalc.automobile.onlinebuilder.components.driveLine.truckDriveLine.heavyDutyRWD.frontDeadAxle.FrontDeadAxle;
+import edu.jalc.automobile.onlinebuilder.components.driveline.truckdriveline.TruckDriveLine;
+import edu.jalc.automobile.parts.reardriveaxle.RearDriveAxle;
+import edu.jalc.automobile.parts.frontdeadaxle.FrontDeadAxle;
 
 public class HeavyDutyRWD extends TruckDriveLine{
 

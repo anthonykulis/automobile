@@ -1,7 +1,7 @@
-package edu.jalc.automobile.onlinebuilder.components.driveLine.truckDriveLine.superDutyFourWheelDrive; 
+package edu.jalc.automobile.onlinebuilder.components.driveline.truckdriveline.superdutyfourwheeldrive; 
 
-import edu.jalc.automobile.onlinebuilder.components.driveLine.truckDriveLine.TruckDriveLine;
-import edu.jalc.automobile.onlinebuilder.components.driveLine.truckDriveLine.superDutyFourWheelDrive.fourWheelDriveAxle.FourWheelDriveAxle;
+import edu.jalc.automobile.onlinebuilder.components.driveLine.truckdriveline.TruckDriveLine;
+import edu.jalc.automobile.parts.fourwheeldriveaxle.FourWheelDriveAxle;
 
 public class SuperDutyFourWheelDrive extends TruckDriveLine{
 

@@ -1,8 +1,8 @@
-package edu.jalc.automobile.onlinebuilder.components.driveLine.truckDriveLine;
+package edu.jalc.automobile.onlinebuilder.components.driveline.truckdriveline;
 
-import edu.jalc.automobile.onlinebuilder.components.driveLine.truckDriveLine.driveShaft.DriveShaft;
-import edu.jalc.automobile.onlinebuilder.components.driveLine.truckDriveLine.electricSteering.ElectricSteering;
-import edu.jalc.automobile.onlinebuilder.components.driveLine.truckDriveLine.lockingDifferential.LockingDifferential;
+import edu.jalc.automobile.parts.driveshaft.DriveShaft;
+import edu.jalc.automobile.parts.electricsteering.ElectricSteering;
+import edu.jalc.automobile.parts.lockingdifferential.LockingDifferential;
 
 public class TruckDriveLine{
 
