@@ -1,4 +1,4 @@
-package edu.jalc.automobile.truckDriveLine.heavyDutyRWD.rearDriveAxle;
+package edu.jalc.automobile.onlinebuilder.components.truckDriveLine.heavyDutyRWD.rearDriveAxle;
 
 public class RearDriveAxle{
 

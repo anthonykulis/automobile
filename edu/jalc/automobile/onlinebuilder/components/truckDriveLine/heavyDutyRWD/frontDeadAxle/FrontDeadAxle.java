@@ -1,4 +1,4 @@
-package edu.jalc.automobile.truckDriveLine.heavyDutyRWD.frontDeadAxle;
+package edu.jalc.automobile.onlinebuilder.components.truckDriveLine.heavyDutyRWD.frontDeadAxle;
 
 public class FrontDeadAxle{
 

@@ -1,4 +1,4 @@
-package edu.jalc.automobile.truckDriveLine.superDutyFourWheelDrive.fourWheelDriveAxle;
+package edu.jalc.automobile.onlinebuilder.components.truckDriveLine.superDutyFourWheelDrive.fourWheelDriveAxle;
 
 public class FourWheelDriveAxle{
 
