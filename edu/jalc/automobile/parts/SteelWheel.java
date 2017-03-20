@@ -16,6 +16,14 @@ public class SteelWheel extends Wheel{
       this.tire = tire;
    }
    
+   public double getSize(){
+      return size;
+   }
+   
+   public Tire getTire(){
+      return tire;
+   }
+   
    public String toString(){
       return "Steal Wheel with " + tire.toString();
    }

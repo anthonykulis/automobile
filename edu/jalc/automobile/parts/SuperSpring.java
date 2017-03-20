@@ -12,6 +12,10 @@ public class SuperSpring extends Spring{
       this.height = height;
    }
    
+   public double getHeight(){
+      return height;
+   }
+   
    public String toString(){
       return "Super Leaf Spring";
    }

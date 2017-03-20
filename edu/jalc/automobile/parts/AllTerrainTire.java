@@ -15,6 +15,14 @@ public class AllTerrainTire extends Tire{
       this.width = width;
    }
    
+   public double getHeight(){
+      return height;
+   }
+   
+   public double getWidth(){
+      return width;
+   }
+   
    public String toString(){
       return "All Terrain Tire";
    }

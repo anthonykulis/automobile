@@ -17,6 +17,14 @@ public class TowingLightDuty extends Towing{
       this.spring = spring;
    }
    
+   public Shock getShock(){
+      return shock;
+   }
+
+   public Spring getSpring(){
+      return spring;
+   }
+   
    public String toString(){
       return shock.toString() + ", " + spring.toString();
    }
