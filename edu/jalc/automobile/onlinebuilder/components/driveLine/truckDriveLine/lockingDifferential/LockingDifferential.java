@@ -1,4 +1,4 @@
-package edu.jalc.automobile.onlinebuilder.components.truckDriveLine.lockingDifferential;
+package edu.jalc.automobile.onlinebuilder.components.driveLine.truckDriveLine.lockingDifferential;
 
 public class LockingDifferential{
 

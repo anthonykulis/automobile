@@ -1,4 +1,4 @@
-package edu.jalc.automobile.onlinebuilder.components.truckDriveLine.electricSteering;
+package edu.jalc.automobile.onlinebuilder.components.driveLine.truckDriveLine.electricSteering;
 
 public class ElectricSteering{
 
