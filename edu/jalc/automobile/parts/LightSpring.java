@@ -1,3 +1,5 @@
+package edu.jalc.automobile.parts;
+
 public class LightSpring extends Spring{
 
    private double height;

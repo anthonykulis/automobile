@@ -1,3 +1,5 @@
-abstract class Shock{
+package edu.jalc.automobile.parts;
+
+public abstract class Shock{
 
 }

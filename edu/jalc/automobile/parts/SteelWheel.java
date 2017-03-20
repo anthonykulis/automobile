@@ -1,3 +1,5 @@
+package edu.jalc.automobile.parts;
+
 public class SteelWheel extends Wheel{
 
    private double size;

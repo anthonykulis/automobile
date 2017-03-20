@@ -1,3 +1,5 @@
-abstract class Wheel{
+package edu.jalc.automobile.parts;
+
+public abstract class Wheel{
 
 }
