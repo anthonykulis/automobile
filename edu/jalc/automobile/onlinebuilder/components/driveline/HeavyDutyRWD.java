@@ -1,6 +1,6 @@
-package edu.jalc.automobile.onlinebuilder.components.driveline.truckdriveline.heavydutyrwd;
+package edu.jalc.automobile.onlinebuilder.components.driveline;
 
-import edu.jalc.automobile.onlinebuilder.components.driveline.truckdriveline.TruckDriveLine;
+import edu.jalc.automobile.onlinebuilder.components.driveline.TruckDriveLine;
 import edu.jalc.automobile.parts.driveline.RearDriveAxle;
 import edu.jalc.automobile.parts.driveline.FrontDeadAxle;
 

@@ -1,4 +1,4 @@
-package edu.jalc.automobile.onlinebuilder.components.driveline.truckdriveline;
+package edu.jalc.automobile.onlinebuilder.components.driveline;
 
 import edu.jalc.automobile.parts.driveline.DriveShaft;
 import edu.jalc.automobile.parts.driveline.ElectricSteering;
