@@ -18,4 +18,5 @@ public class SuperDutyFourWheelDrive extends TruckDriveLine{
    public String toString(){
       return "SuperDutyFourWheelDrive";
    }
+   
 }
