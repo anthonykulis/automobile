@@ -10,31 +10,27 @@ public class TruckDriveLine{
    private ElectricSteering electricSteering = new ElectricSteering();
    private LockingDifferential lockingDifferential = new LockingDifferential();
 
-   public void setDriveShaft(DriveShaft driveShaft){
-      this.driveShaft = driveShaft;
+   private TruckDriveLine(){
+   this.driveShaft=null;
+   this.electricSteering =null;
+   this.lockingDifferential=null;
    }
    
    public DriveShaft getDriveShaft(){
       return this.driveShaft;
    }
-
-   public void setElectricSteering(ElectricSteering electricSteering){
-      this.electricSteering = electricSteering;
-   }
-
    public ElectricSteering getElectricSteering(){
       return this.electricSteering;
    }
-
-   public void setLockingDifferential(LockingDifferential lockingDifferential){
-      this.lockingDifferential = lockingDifferential;
-   }
-   
    public LockingDifferential getLockingDifferential(){
       return this.lockingDifferential;
    }
 
    public String toString(){
-      return "TruckDriveLine";
+      return "TruckDriveLine has :\n" +
+              "\t"+ driveShaft +"\n"+
+              "\t"+ electricSteering+"\n"+
+              "\t"+ lockingDifferential ;
+
    }
 }

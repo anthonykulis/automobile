@@ -1,9 +1,10 @@
 package edu.jalc.automobile.onlinebuilder.components.driveline; 
+
 import edu.jalc.automobile.parts.driveline.FrontDeadAxle;
 import edu.jalc.automobile.parts.driveline.RearDriveAxle;
 import edu.jalc.automobile.parts.driveline.DriveShaft ; 
 
-public class EconomicRWD{
+public class EconomicRWD extends EconomicDriveLine{
 
    private FrontDeadAxle frontDeadAxle;
    private RearDriveAxle rearDriveAxle;

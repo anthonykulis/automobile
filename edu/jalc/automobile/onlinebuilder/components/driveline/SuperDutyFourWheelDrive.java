@@ -6,16 +6,18 @@ import edu.jalc.automobile.parts.driveline.FourWheelDriveAxle;
 public class SuperDutyFourWheelDrive extends TruckDriveLine{
 
    FourWheelDriveAxle fwdAxle = new FourWheelDriveAxle();
-
-   public void setFWDAxle(FourWheelDriveAxle fwdAxle){
-      this.fwdAxle = fwdAxle;
-   }
    
+   private SuperDutyFourWheelDrive(){
+   this.fwdAxle=null;
+   }
+    
    public FourWheelDriveAxle getFWDAxle(){
       return this.fwdAxle;
    }
    
    public String toString(){
-      return "SuperDutyFourWheelDrive";
+      return "SuperDutyFourWheelDrive has :\n" +
+              "\t"+ fwdAxle;
+
    }
 }

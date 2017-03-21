@@ -8,19 +8,16 @@ public class HeavyDutyRWD extends TruckDriveLine{
 
    RearDriveAxle rearAxle = new RearDriveAxle();
    FrontDeadAxle deadAxle = new FrontDeadAxle();
-
-   public void setRearAxle(RearDriveAxle rearAxle){
-      this.rearAxle = rearAxle;
+   
+   private HeavyDutyRWD(){
+      this.rearAxle=null;
+      this.deadAxle=null;
    }
    
    public RearDriveAxle getRearAxle(){
       return this.rearAxle;
    }
-   
-   public void setDeadAxle(FrontDeadAxle deadAxle){
-      this.deadAxle = deadAxle;
-   }
-   
+      
    public FrontDeadAxle getDeadAxle(){
       return this.deadAxle;
    }
