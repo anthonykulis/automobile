@@ -1,0 +1,5 @@
+private class DieselEngineAssembly
+getEngine(): DieselEngine
+getExhaust(): PerformanceExhaust
+  }
+}
