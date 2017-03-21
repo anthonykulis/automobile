@@ -1,8 +1,8 @@
 package edu.jalc.automobile.parts.driveline;
 
-public class OpenDiffrential{
+public class OpenDifferential{
 
    public String toString(){
-      return "OpenDiffrential";
+      return "OpenDifferential";
    }
 }
