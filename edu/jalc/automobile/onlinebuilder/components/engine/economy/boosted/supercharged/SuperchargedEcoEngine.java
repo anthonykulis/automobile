@@ -2,6 +2,6 @@ package edu.jalc.automobile.onlinebuilder.components.engine.economy.boosted.supe
 
 import edu.jalc.automobile.parts.induction.SuperchargedInduction;
 
-abstract public class SuperchargedEcoEngine{
+abstract public class SuperchargedEcoEngine extends BoostedEcoEngine{
   private SuperchargedInduction intake;
 }
