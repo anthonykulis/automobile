@@ -26,6 +26,7 @@ public class HeavyDutyRWD extends TruckDriveLine{
    }
    
    public String toString(){
-      return "HeavyDutyRearWheelDrive";
+      return "HeavyDutyRearWheelDrive has :\n" +
+              "\t"+ rearAxle +"\n"+ deadAxle;
    }
 }
