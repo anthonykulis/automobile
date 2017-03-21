@@ -1,18 +1,12 @@
 package edu.jalc.automobile.parts;
 
-private class LongBed extends TruckBed{
-  super double cubicFt;
-
+public class LongBed extends TruckBed{
   double getCubicFt(){
-
-
+    return this.cubicFt;
   }
-  double setCubicFt(){
 
-
-  }
   String toString(){
-    return "LongBed"
+    return "LongBed";
   }
 
 
