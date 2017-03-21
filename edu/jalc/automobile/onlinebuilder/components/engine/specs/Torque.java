@@ -8,7 +8,7 @@ public class Torque{
       this.torque = this.rpm = 0;
    }
 
-   private Torque(double torque, double rpm){
+   public Torque(double torque, double rpm){
       this.torque = torque;
       this.rpm = rpm;
    }

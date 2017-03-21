@@ -8,7 +8,7 @@ public class HorsePower{
       this.horsepower = this.rpm = 0;
    }
 
-   private HorsePower(double horsepower, double rpm){
+   public HorsePower(double horsepower, double rpm){
       this.horsepower = horsepower;
       this.rpm = rpm;
    }
