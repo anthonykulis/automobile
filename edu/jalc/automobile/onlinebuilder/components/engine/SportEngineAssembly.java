@@ -1,4 +1,4 @@
-package edu.jalc.automobile.onlinebuilder.components.enginecomponents;
+package edu.jalc.automobile.onlinebuilder.components.engine;
 
 import edu.jalc.automobile.parts.engineparts.exhaust.PerformanceExhaust;
 
