@@ -1,4 +1,5 @@
 public class SuperSportAWD extends SportDriveLine{
+
   private AllWheelDriveAxle allWheelDriveAxle;
 
   public SuperSportAWD(AllWheelDriveAxle allWheelDriveAxle,
@@ -14,6 +15,10 @@ public class SuperSportAWD extends SportDriveLine{
   }
 
   public String toString(){
-    return "SuperSportAWD";
+    return "SuperSportAWD has :"\n"+
+           "\t"+ AllWheelDriveAxle + "\n"+
+           "\t"+ DriveShaft + "\n"+
+           "\t"+ HydraulicSteering + "\n"+
+           "\t"+ TorqueVectorDifferential";
   }
 }

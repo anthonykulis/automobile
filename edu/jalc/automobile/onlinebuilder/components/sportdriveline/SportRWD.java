@@ -1,4 +1,5 @@
 public class SportRWD extends SportDriveLine{
+
   private FrontDeadAxle frontDeadAxle;
   private RearDriveAxle rearDriveAxle;
 
@@ -21,6 +22,11 @@ public class SportRWD extends SportDriveLine{
   }
 
   public String toString(){
-    return "SportRWD";
+    return "SportRWD has :"\n"+
+           "\t"+ FrontDeadAxle + "\n"+
+           "\t"+ RearDriveAxle + "\n"+
+           "\t"+ DriveShaft + "\n"+
+           "\t"+ HydraulicSteering + "\n"+
+           "\t"+ TorqueVectorDifferential";
   }
 }
