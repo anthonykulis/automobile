@@ -9,8 +9,8 @@ abstract public class Body{
   private Cabin cabin;
 
   public Body(Quarterpanels quarterpanels, EngineCompartment engineCompartment, Cabin cabin){
-    this.quarterpanels = quarterpanels;
-    this.engineCompartment = engineCompartment;
+    this.setQuarterpanels(quarterpanels);
+    this.setEngineCompartment(engineCompartment);
     this.cabin = cabin;
   }
 
