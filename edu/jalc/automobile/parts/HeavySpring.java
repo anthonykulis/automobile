@@ -2,22 +2,18 @@ package edu.jalc.automobile.parts;
 
 public class HeavySpring extends Spring{
 
-   private double height;
+   private final double HEIGHT = 10;
    
-   private HeavySpring(){
-      this.height = 0;
-   }
-   
-   public HeavySpring(double height){
-      this.height = height;
+   public HeavySpring(){
+
    }
    
    public double getHeight(){
-      return height;
+      return HEIGHT;
    }
    
    public String toString(){
-      return "Heavy Coil Spring";
+      return "Heavy Coil Spring: "+ getHeight() + " inches";
    }
 }
    

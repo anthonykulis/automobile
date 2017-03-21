@@ -2,14 +2,10 @@ package edu.jalc.automobile.parts;
 
 public class SuperSpring extends Spring{
 
-   private double height;
-   
-   private SuperSpring(){
-      this.height = 0;
-   }
-   
-   public SuperSpring(double height){
-      this.height = height;
+   private final double height = 12;
+
+   public SuperSpring(){
+
    }
    
    public double getHeight(){
@@ -17,7 +13,7 @@ public class SuperSpring extends Spring{
    }
    
    public String toString(){
-      return "Super Leaf Spring";
+      return "Super Leaf Spring: " + getHeight() + " inches";
    }
 }
    

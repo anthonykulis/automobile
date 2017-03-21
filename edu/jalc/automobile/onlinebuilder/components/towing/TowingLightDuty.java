@@ -26,7 +26,9 @@ public class TowingLightDuty extends Towing{
    }
    
    public String toString(){
-      return shock.toString() + ", " + spring.toString();
+      return "Towing Light Duty has:\n" +
+             "\t" + shock.toString() + "\n" +
+             "\t" + spring.toString();
    }
    
 }

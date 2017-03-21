@@ -26,7 +26,9 @@ public class TowingSuperDuty extends Towing{
    }
    
    public String toString(){
-      return shock.toString() + ", " + spring.toString();
+      return "Towing Super Duty has:\n" +
+             "\t" + shock.toString() + "\n" +
+             "\t" + spring.toString();
    }
    
 }

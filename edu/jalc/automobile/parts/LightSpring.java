@@ -2,14 +2,10 @@ package edu.jalc.automobile.parts;
 
 public class LightSpring extends Spring{
 
-   private double height;
-   
-   private LightSpring(){
-      this.height = 0;
-   }
-   
-   public LightSpring(double height){
-      this.height = height;
+   private final double height = 8;
+
+   public LightSpring(){
+
    }
    
    public double getHeight(){
@@ -17,7 +13,7 @@ public class LightSpring extends Spring{
    }
    
    public String toString(){
-      return "Light Coil Spring";
+      return "Light Coil Spring: " + getHeight() + " inches";
    }
 }
    
