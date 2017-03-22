@@ -9,11 +9,6 @@ public class Graphic{
 
   public String getGraphic(){return this.graphic;}
 
-  String setGraphic(String graphic){
-    this.graphic = graphic;
-    return this.graphic;
-  }
-
   public String toString(){
     return "Adding graphic";
   }
