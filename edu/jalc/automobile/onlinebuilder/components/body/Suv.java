@@ -14,6 +14,6 @@ public class Suv extends Body{
   abstract Cabin getCabin(){}
 
   public String toString(){
-    return "Adding StandardTrunk to Suv"
+    return "Adding StandardTrunk to Suv";
   }
 }
