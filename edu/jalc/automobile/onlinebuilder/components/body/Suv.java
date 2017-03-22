@@ -1,9 +1,9 @@
 package edu.jalc.automobile.onlinebuilder.components.body;
 
-public class Suv extends Body{
+abstract public class Suv extends Body{
 
   public Suv(Quarterpanels quarterpanels, EngineCompartment engineCompartment,
-                                Cabin cabin, StandardTrunk standardTrunk){
+                                //Cabin cabin, StandardTrunk standardTrunk){
     super(quarterpanels, engineCompartment, cabin, standardTrunk);
   }
 

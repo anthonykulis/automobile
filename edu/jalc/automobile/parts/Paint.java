@@ -1,7 +1,7 @@
 package edu.jalc.automobile.parts;
 
 public class Paint{
-  private final String paint;
+  private String paint;
 
   public Paint(String paint){
     this.paint = paint;

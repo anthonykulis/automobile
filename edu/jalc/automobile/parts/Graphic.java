@@ -1,7 +1,7 @@
 package edu.jalc.automobile.parts;
 
 public class Graphic{
-  private final String graphic;
+  private String graphic;
 
   public Graphic(String graphic){
     this.graphic = graphic;

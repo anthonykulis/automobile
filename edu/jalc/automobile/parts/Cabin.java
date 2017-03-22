@@ -1,11 +1,11 @@
 package edu.jalc.automobile.parts;
 
-public class Cabin{
+abstract public class Cabin{
   private Seat seat;
 
   public Cabin(Seat seat){
     this.seat = seat;
   }
-  abstract public Seat getSeat(){}
+  abstract public Seat getSeat();
 
 }
