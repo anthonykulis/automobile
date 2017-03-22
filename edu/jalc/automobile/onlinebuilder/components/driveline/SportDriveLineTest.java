@@ -6,29 +6,32 @@ import edu.jalc.automobile.parts.driveline.TorqueVectorDifferential;
 
 public class SportDriveLineTest{
 
-  public void testDriveShaft(){
+  public void testGetDriveShaft(){
     System.out.println("Testing SportDriveLine: :getDriveShaft");
     DriveShaft driveShaft = new DriveShaft();
-    assert(driveShaft.getDriveShaft().equals("DriveShaft"));
+    SportDriveLine sportDriveLine = new SportDriveLine(driveShaft, null, null);
+    assert(sportDriveLine.getDriveShaft() == driveShaft);
   }
 
-  public void testHydraulicSteering(){
+  public void testGetHydraulicSteering(){
     System.out.println("Testing SportDriveLine: :getHydraulicSteering");
     HydraulicSteering hydraulicSteering = new HydraulicSteering();
-    assert(hydraulicSteering.getHydraulicSteering().equals("HydraulicSteering"));
+    SportDriveLine sportDriveLine = new SportDriveLine(null, hydraulicSteering, null);
+    assert(sportDriveLine.getHydraulicSteering() == hydraulicSteering);
   }
 
-  public void testTorqueVectorDifferential(){
+  public void testGetTorqueVectorDifferential(){
     System.out.println("Testing SportDriveLine: :getTorqueVectorDifferential");
     TorqueVectorDifferential torqueVectorDifferential = new TorqueVectorDifferential();
-    assert(torqueVectorDifferential.getTorqueVectorDifferential().equals("TorqueVectorDifferential"));
+    SportDriveLine sportDriveLine = new SportDriveLine(null, null, torqueVectorDifferential);
+    assert(sportDriveLine.getTorqueVectorDifferential() == torqueVectorDifferential);
   }
 
   public static void main(String... args){
     SportDriveLineTest sportDriveLineTest = new SportDriveLineTest();
-    sportDriveLineTest.testDriveShaft();
-    sportDriveLineTest.testHydraulicSteering();
-    sportDriveLineTest.testTorqueVectorDifferential();
+    sportDriveLineTest.testGetDriveShaft();
+    sportDriveLineTest.testGetHydraulicSteering();
+    sportDriveLineTest.testGetTorqueVectorDifferential();
     System.out.println("SportDriveLine Test Passed");
   }
 }

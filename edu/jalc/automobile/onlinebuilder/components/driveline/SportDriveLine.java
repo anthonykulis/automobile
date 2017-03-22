@@ -19,9 +19,6 @@ public class SportDriveLine{
   public SportDriveLine(DriveShaft driveShaft,
                         HydraulicSteering hydraulicSteering,
                         TorqueVectorDifferential torqueVectorDifferential){
-    this.DriveShaft = driveShaft;
-    this.HydraulicSteering = hydraulicSteering;
-    this.TorqueVectorDifferential = torqueVectorDifferential;
   }
 
   public DriveShaft getDriveShaft(){

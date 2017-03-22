@@ -1,4 +1,4 @@
-package edu.jalc.automobile.parts.sportlineparts;
+package edu.jalc.automobile.parts.driveline;
 
 public class TorqueVectorDifferentialTest{
 
