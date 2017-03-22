@@ -1,6 +1,6 @@
-package edu.jalc.automobile.onlinebuilder.components.driveline;
+package edu.jalc.automobile.onlinebuilder.components.driveline.economic;
 
-import edu.jalc.automobile.onlinebuilder.components.driveline.EconomicRWD;
+import edu.jalc.automobile.onlinebuilder.components.driveline.economic.EconomicRWD;
 import edu.jalc.automobile.parts.driveline.FrontDeadAxle;
 import edu.jalc.automobile.parts.driveline.RearDriveAxle;
 import edu.jalc.automobile.parts.driveline.DriveShaft ; 

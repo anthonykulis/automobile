@@ -1,7 +1,8 @@
-package edu.jalc.automobile.onlinebuilder.components.driveline; 
+package edu.jalc.automobile.onlinebuilder.components.driveline.economic; 
 
 import edu.jalc.automobile.parts.driveline.FrontDriveAxle;
 import edu.jalc.automobile.parts.driveline.RearDeadAxle;
+import edu.jalc.automobile.onlinebuilder.components.driveline.EconomicDriveLine;
 
 public class EconomicFWD extends EconomicDriveLine {
 
