@@ -5,7 +5,7 @@ public class LuxurySuv extends Suv{
                                 LuxuryCabin luxuryCabin, StandardTrunk standardTrunk){
     super(quarterpanels, engineCompartment, luxuryCabin, standardTrunk);
   }
-  public LuxuryCabin getLuxuryCabin(){
+  public LuxuryCabin getCabin(){
     return (LuxuryCabin) this.getCabin();
   }
 

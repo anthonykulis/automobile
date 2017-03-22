@@ -33,7 +33,7 @@ abstract public class Body{
     return this.engineCompartment;
   }
 
-  public Cabin getCabin(){return cabin}
+  public Cabin getCabin(){return cabin;}
 
 
   public String toString(){
