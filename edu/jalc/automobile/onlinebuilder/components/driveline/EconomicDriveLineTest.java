@@ -7,13 +7,13 @@ import edu.jalc.automobile.onlinebuilder.components.driveline.EconomicDriveLine;
 public  class EconomicDriveLineTest{
 
    public void testGetElectricSteering(){
-      System.out.println("Testing  EconomicDriveLine::getElectricSteering(");
+      System.out.println("Testing  EconomicDriveLine::getElectricSteering");
       ElectricSteering electricSteering = new  ElectricSteering();
       EconomicDriveLine economicDriveLine = new EconomicDriveLine (electricSteering,null);
       assert( electricSteering == economicDriveLine .getElectricSteering());
    }
    public void testGetOpenDifferential(){
-      System.out.println("Testing  EconomicDriveLine::getOpenDifferential(");
+      System.out.println("Testing  EconomicDriveLine::getOpenDifferential");
       OpenDifferential openDifferential = new  OpenDifferential();
        EconomicDriveLine economicDriveLine =new EconomicDriveLine (null,openDifferential);
       assert( openDifferential== economicDriveLine.getOpenDifferential());
