@@ -2,16 +2,23 @@ package edu.jalc.automobile.onlinebuilder.components.driveline;
 
 import edu.jalc.automobile.parts.driveline.ElectricSteering;
 import edu.jalc.automobile.parts.driveline.OpenDifferential;
+import edu.jalc.automobile.onlinebuilder.components.driveline.DriveLine;
 
-abstract public  class EconomicDriveLine{
+public  class EconomicDriveLine extends DriveLine{
 
    private ElectricSteering electricSteering=new ElectricSteering();
    private OpenDifferential openDifferential=new OpenDifferential();
 
-   public EconomicDriveLine(){
+   private EconomicDriveLine(){
       this.electricSteering=null;
       this.openDifferential=null;
    }
+   
+    public EconomicDriveLine(ElectricSteering electricSteering,OpenDifferential openDifferential){
+      this.electricSteering=electricSteering;
+      this.openDifferential=openDifferential;
+   }
+
    public  ElectricSteering getElectricSteering(){
       return this.electricSteering;
    }

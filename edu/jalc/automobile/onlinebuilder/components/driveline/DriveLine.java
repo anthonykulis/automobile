@@ -1,4 +1,4 @@
-package automobile.onlinebuilder.components.driveline;
+package edu.jalc.automobile.onlinebuilder.components.driveline;
 
 public abstract class DriveLine{
 

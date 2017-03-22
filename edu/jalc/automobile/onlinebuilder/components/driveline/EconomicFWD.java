@@ -2,7 +2,6 @@ package edu.jalc.automobile.onlinebuilder.components.driveline;
 
 import edu.jalc.automobile.parts.driveline.FrontDriveAxle;
 import edu.jalc.automobile.parts.driveline.RearDeadAxle;
-import edu.jalc.automobile.parts.driveline.DriveShaft ; 
 
 public class EconomicFWD extends EconomicDriveLine {
 
@@ -10,11 +9,17 @@ public class EconomicFWD extends EconomicDriveLine {
    private RearDeadAxle rearDeadAxle;
 
    private EconomicFWD(){
+   super(null,null);
       this.frontDriveAxle=null;
       this.rearDeadAxle=null;
    }
+    public EconomicFWD(FrontDriveAxle frontDriveAxle,RearDeadAxle rearDeadAxle){
+    super(null,null);
+      this.frontDriveAxle=frontDriveAxle;
+      this.rearDeadAxle=rearDeadAxle;
+   }
 
-   public FrontDriveAxle getFrontWheelDeadAxle(){
+   public FrontDriveAxle getFrontDriveAxle(){
       return this.frontDriveAxle;
    }
 

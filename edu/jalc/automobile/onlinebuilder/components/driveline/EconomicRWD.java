@@ -10,12 +10,19 @@ public class EconomicRWD extends EconomicDriveLine{
    private RearDriveAxle rearDriveAxle;
    private DriveShaft driveShaft;
 
-   public EconomicRWD(){
+   private EconomicRWD(){
+   super(null,null);
       this.frontDeadAxle=null;
       this.rearDriveAxle=null;
       this.driveShaft=null;
    }
-
+   public EconomicRWD(FrontDeadAxle frontDeadAxle,RearDriveAxle rearDriveAxle,DriveShaft driveShaft){
+    super(null,null);
+      this.frontDeadAxle=frontDeadAxle;
+      this.rearDriveAxle=rearDriveAxle;
+      this.driveShaft=driveShaft;
+   }
+   
    public FrontDeadAxle getFrontDeadAxle(){
       return this.frontDeadAxle;
    }
