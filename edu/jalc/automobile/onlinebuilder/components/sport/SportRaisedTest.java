@@ -20,7 +20,7 @@ public class SportAdjustableTest {
      }
 
      public static void main(String[] args){
-        TowingHeavyDutyTest test = new TowingHeavyDutyTest();
+        SportRaisedTest test = new SportRaisedTest();
         test.testGetShock();
         test.testGetSpring();
         System.out.println("All Tests for SportRaised Passed");

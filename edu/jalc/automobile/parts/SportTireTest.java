@@ -12,12 +12,12 @@ public class SportTireTest {
    }
 
    public static void main(String[] args){
-      ShortSpring test = new ShortSpring();
+      SportTireTest test = new SportTireTest();
 
       test.testGetHeight();
       test.testGetWidth();
 
-      System.out.println("All Tests for ShortSpring Passed");
+      System.out.println("All Tests for SportTireTest Passed");
    }
 
 }
