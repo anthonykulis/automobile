@@ -3,7 +3,7 @@ package edu.jalc.automobile.onlinebuilder.components.sport;
 import edu.jalc.automobile.parts.*;
 
 
-public class SportAdjustableTest {
+public class SportLoweredTest {
 
      public void testGetShock(){
         System.out.println("Testing SportLowered::getShock");
@@ -16,7 +16,7 @@ public class SportAdjustableTest {
         System.out.println("Testing SportLowered::getSpring");
         ShortSpring spring = new ShortSpring();
         SportLowered sportLowered = new SportLowered(null, spring);
-        assert(spring == sportAdjustable.getSpring());
+        assert(spring == sportLowered.getSpring());
      }
 
      public static void main(String[] args){
