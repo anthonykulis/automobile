@@ -2,7 +2,6 @@ package edu.jalc.automobile.onlinebuilder.components.driveline;
 
 import edu.jalc.automobile.parts.driveline.ElectricSteering;
 import edu.jalc.automobile.parts.driveline.OpenDifferential;
-import edu.jalc.automobile.onlinebuilder.components.driveline.DriveLine;
 
 public  class EconomicDriveLine extends DriveLine{
 
