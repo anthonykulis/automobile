@@ -13,14 +13,18 @@ abstract public class Engine{
       this.horsePower = new HorsePower(0,0);
       this.torque = new Torque(0,0);
    }
-   
+
    public Engine(double displacement, HorsePower horsePower, Torque torque, int cylinders){
    this.displacement = displacement;
    this.horsePower = horsePower;
    this.torque = torque;
    this.cylinders = cylinders;
    }
-   
+
+   public String toString(){
+     return String.format("%d cylinder %fcc",cylinders,displacement);
+   }
+
    public double getDisplacement(){
       return this.displacement;
    }
@@ -32,5 +36,18 @@ abstract public class Engine{
    }
    public Torque getTorque(){
       return this.torque;
+   }
+
+   public void setDisplacement(double displacement){
+     this.displacement = displacement;
+   }
+   public void setHorsePower(HorsePower horsePower){
+     this.horsePower = horsePower;
+   }
+   public void setTorque(Torque torque){
+     this.torque = torque;
+   }
+   public void setCylinders(int cylinders){
+     this.cylinders = cylinders;
    }
 }

@@ -8,11 +8,11 @@ import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 
 public class SuperchargedSportEngineTest{
    public static void main(String... args){
-      System.out.println("testing SuperchargedSportEngine");
+      System.out.print("testing SuperchargedSportEngine");
       testEngine();
       testExhaust();
       testInduction();
-      System.out.println("all tests passed");
+      System.out.println(" - all tests passed");
    }
 
    public static void testEngine(){
