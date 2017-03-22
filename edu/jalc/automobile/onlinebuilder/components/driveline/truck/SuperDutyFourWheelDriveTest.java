@@ -1,4 +1,4 @@
-package edu.jalc.automobile.onlinebuilder.components.driveline;
+package edu.jalc.automobile.onlinebuilder.components.driveline.truck;
 
 import edu.jalc.automobile.parts.driveline.FourWheelDriveAxle;
 
