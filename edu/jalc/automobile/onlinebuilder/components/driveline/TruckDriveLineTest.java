@@ -26,19 +26,12 @@ public class TruckDriveLineTest{
       TruckDriveLine truckDriveLine = new TruckDriveLine(null, null, lockingDifferential);
       assert(truckDriveLine.getLockingDifferential() == lockingDifferential);
    }
-
-   protected void testToString(){
-      System.out.println("Testing TruckDriveLine::toString");
-      TruckDriveLine truckDriveLine = new TruckDriveLine(null, null, null);
-      assert(truckDriveLine.toString().equals("TruckDriveLine"));
-   }
    
    public static void main(String[] args){
       TruckDriveLineTest test = new TruckDriveLineTest();
       test.testGetDriveShaft();
       test.testGetElectricSteering();
       test.testGetLockingDifferential();
-      test.testToString();
       System.out.println("TruckDriveLineTest compleat");
    } 
 }
