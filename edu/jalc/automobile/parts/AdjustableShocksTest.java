@@ -1,9 +1,10 @@
 package edu.jalc.automobile.parts;
+
 public class AdjustableShocksTest {
    public void testGetHeight(){
       System.out.println("Testing AdjustableShocksTest::getHeight");
-      AdjustableShocksTest adjustableShocksTest = new AdjustableShocksTest(30);
-      assert(adjustableShocksTest.getHeight() == 30);
+      AdjustableShocks adjustableShocks = new AdjustableShocks(30);
+      assert(adjustableShocks.getHeight() == 30);
    }
 
 
@@ -13,5 +14,4 @@ public class AdjustableShocksTest {
 
       System.out.println("All Tests for AdjustableShocksTest Passed");
    }
-
 }

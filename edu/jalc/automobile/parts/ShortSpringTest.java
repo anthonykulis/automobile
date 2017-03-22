@@ -8,7 +8,7 @@ package edu.jalc.automobile.parts;
 
 
    public static void main(String[] args){
-      ShortSpring test = new ShortSpring();
+      ShortSpringTest test = new ShortSpringTest();
       test.testGetHeight();
 
       System.out.println("All Tests for ShortSpring Passed");
