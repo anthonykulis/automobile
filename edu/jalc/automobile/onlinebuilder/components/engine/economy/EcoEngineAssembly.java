@@ -8,22 +8,23 @@ abstract public class EcoEngineAssembly extends EngineAssembly{
   private EconomyExhaust exhaust;
   private EcoEngine engine;
 
-  private EcoEngineAssembly()
-  {
+  private EcoEngineAssembly(){
     super();
     this.exhaust = new EconomyExhaust();
     this.engine = new EcoEngine(0,null,null,0);
   }
 
-  public EcoEngineAssembly(EcoEngine engine, EconomyExhaust exhaust)
-  {
+  public EcoEngineAssembly(EcoEngine engine, EconomyExhaust exhaust){
    super();
    this.exhaust = exhaust;
    this.engine = engine;
   }
 
-  public EconomyExhaust getExhaust()
-  {
+  public EcoEngine getEngine(){
+    return this.engine
+  }
+
+  public EconomyExhaust getExhaust(){
     return this.exhaust;
   }
 
@@ -31,8 +32,7 @@ abstract public class EcoEngineAssembly extends EngineAssembly{
    this.engine = engine;
   }
 
-  public void setExhaust(EconomyExhaust exhaust)
-  {
+  public void setExhaust(EconomyExhaust exhaust){
   this.exhaust = exhaust;
   }
 }
