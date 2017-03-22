@@ -19,4 +19,11 @@ public class Torque{
    public double getRPM(){
       return this.rpm;
    }
+   
+   public void setTorque(double torque){
+     this.torque = torque;
+   }
+   public void setRPM(double rpm){
+     this.rpm = rpm;
+   }
 }

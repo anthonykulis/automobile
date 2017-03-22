@@ -18,6 +18,10 @@ abstract public class SportEngineAssembly extends EngineAssembly{
     this.exhaust = exhaust;
     this.engine = engine;
   }
+  
+  public String toString(){
+    return this.engine.toString() + " with a " + this.exhaust.toString();
+  }
 
   public SportEngine getEngine(){
     return this.engine;

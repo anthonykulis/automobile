@@ -22,7 +22,7 @@ abstract public class Engine{
    }
 
    public String toString(){
-     return String.format("%d cylinder %fcc",cylinders,displacement);
+     return String.format("%fcc %d cylinder",displacement,cylinders);
    }
 
    public double getDisplacement(){

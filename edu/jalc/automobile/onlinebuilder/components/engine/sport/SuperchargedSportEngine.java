@@ -11,6 +11,10 @@ public class SuperchargedSportEngine extends BoostedSportEngine{
     super(engine,exhaust);
     this.induction = induction;
   }
+  
+  public String toString(){
+    return super.toString() + " and a " + this.induction.toString();
+  }
 
   public SuperchargedInduction getInduction(){
     return this.induction;

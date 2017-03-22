@@ -17,32 +17,32 @@ public class TurbochargedSportEngineTest{
 
    public static void testEngine(){
          //construct a TurbochargedSportEngine with valid parts, but with nulls and zeros only
-      TurbochargedSportEngine ScSEngine = new TurbochargedSportEngine(new SportEngine(0,null,null,0), new PerformanceExhaust(), new TurbochargedInduction());
+      TurbochargedSportEngine TcSEngine = new TurbochargedSportEngine(new SportEngine(0,null,null,0), new PerformanceExhaust(), new TurbochargedInduction());
          //create an engine
       SportEngine engine = new SportEngine(300,new HorsePower(375,3000),new Torque(450,1500),6);
          //set the engine
-      ScSEngine.setEngine(engine);
+      TcSEngine.setEngine(engine);
          //test that it is returned correctly
-      assert(ScSEngine.getEngine() == engine);
+      assert(TcSEngine.getEngine() == engine);
    }
    public static void testExhaust(){
          //construct a TurbochargedSportEngine with valid parts, but with nulls and zeros only
-      TurbochargedSportEngine ScSEngine = new TurbochargedSportEngine(new SportEngine(0,null,null,0), new PerformanceExhaust(), new TurbochargedInduction());
+      TurbochargedSportEngine TcSEngine = new TurbochargedSportEngine(new SportEngine(0,null,null,0), new PerformanceExhaust(), new TurbochargedInduction());
          //create a new exhaust
       PerformanceExhaust exhaust = new PerformanceExhaust();
          //set the engine's exhaust
-      ScSEngine.setExhaust(exhaust);
+      TcSEngine.setExhaust(exhaust);
          //test that it is returned correctly
-      assert(ScSEngine.getExhaust() == exhaust);
+      assert(TcSEngine.getExhaust() == exhaust);
    }
    public static void testInduction(){
          //construct a TurbochargedSportEngine with valid parts, but with nulls and zeros only
-      TurbochargedSportEngine ScSEngine = new TurbochargedSportEngine(new SportEngine(0,null,null,0), new PerformanceExhaust(), new TurbochargedInduction());
+      TurbochargedSportEngine TcSEngine = new TurbochargedSportEngine(new SportEngine(0,null,null,0), new PerformanceExhaust(), new TurbochargedInduction());
          //create a new induction
       TurbochargedInduction induction = new TurbochargedInduction();
          //set the engine's induction
-      ScSEngine.setInduction(induction);
+      TcSEngine.setInduction(induction);
          //test that it is returned correctly
-      assert(ScSEngine.getInduction() == induction);
+      assert(TcSEngine.getInduction() == induction);
    }
 }
