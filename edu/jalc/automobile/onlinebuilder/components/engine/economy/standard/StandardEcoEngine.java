@@ -5,18 +5,18 @@ import edu.jalc.automobile.parts.exhaust.EconomyExhaust;
 import edu.jalc.automobile.parts.engine.EcoEngine;
 
 abstract public class StandardEcoEngine extends EcoEngineAssembly{
-  private NaturallyAspiratedInduction intake;
+  private NaturallyAspiratedInduction induction;
 
-  public StandardEcoEngine(EcoEngine engine, EconomyExhaust exhaust, NaturallyAspiratedInduction intake){
+  public StandardEcoEngine(EcoEngine engine, EconomyExhaust exhaust, NaturallyAspiratedInduction induction){
    super(engine,exhaust);
-   this.intake = intake;
+   this.induction = induction;
   }
 
- public NaturallyAspiratedInduction getIntake(){
-   return this.intake;
+  public NaturallyAspiratedInduction getInduction(){
+   return this.induction;
  }
 
-  public void getIntake(NaturallyAspiratedInduction intake){
-  this.intake = intake;
+  public void setInduction(NaturallyAspiratedInduction induction){
+  this.induction = induction;
   }
 }
