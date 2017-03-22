@@ -1,6 +1,12 @@
+package edu.jalc.automobile.onlinebuilder.components.sportdriveline;
+
 public class SuperSportAWD extends SportDriveLine{
 
   private AllWheelDriveAxle allWheelDriveAxle;
+
+  private SuperSportAWD(){
+    this.allWheelDriveAxle = null;
+  }
 
   public SuperSportAWD(AllWheelDriveAxle allWheelDriveAxle,
                        DriveShaft driveShaft,
@@ -10,7 +16,7 @@ public class SuperSportAWD extends SportDriveLine{
     AllWheelDriveAxle = allWheelDriveAxle;
   }
 
-  public getAllWheelDriveAxle(){
+  public AllWheelDriveAxle getAllWheelDriveAxle(){
     return this.allWheelDriveAxle;
   }
 

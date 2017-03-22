@@ -1,7 +1,14 @@
+package edu.jalc.automobile.onlinebuilder.components.sportdriveline;
+
 public class SportRWD extends SportDriveLine{
 
   private FrontDeadAxle frontDeadAxle;
   private RearDriveAxle rearDriveAxle;
+
+  private SportRWD(){
+    this.frontDeadAxle = null;
+    this.rearDeadAxle = null;
+  }
 
   public SportRWD(FrontDeadAxle frontDeadAxle,
                   RearDriveAxle rearDriveAxle,
@@ -13,11 +20,11 @@ public class SportRWD extends SportDriveLine{
     RearDriveAxle = rearDriveAxle;
   }
 
-  public getFrontDeadAxle(){
+  public FrontDeadAxle getFrontDeadAxle(){
     return this.frontDeadAxle;
   }
 
-  public getRearDriveAxle(){
+  public RearDriveAxle getRearDriveAxle(){
     return this.rearDriveAxle;
   }
 
