@@ -3,11 +3,11 @@ package edu.jalc.automobile.onlinebuilder.components.driveline;
 import edu.jalc.automobile.onlinebuilder.components.driveline.TruckDriveLine;
 import edu.jalc.automobile.parts.driveline.FourWheelDriveAxle;
 
-public class SuperDutyFourWheelDrive extends TruckDriveLine{
+public class SuperDutyFourWheelDrive{
 
-   FourWheelDriveAxle fwdAxle = new FourWheelDriveAxle();
-
-   public void setFWDAxle(FourWheelDriveAxle fwdAxle){
+   private final FourWheelDriveAxle fwdAxle;
+   
+   public SuperDutyFourWheelDrive(FourWheelDriveAxle fwdAxle){
       this.fwdAxle = fwdAxle;
    }
    
@@ -16,6 +16,6 @@ public class SuperDutyFourWheelDrive extends TruckDriveLine{
    }
    
    public String toString(){
-      return "SuperDutyFourWheelDrive";
+      return "SuperDutyFourWheelDrive has: /n /t" + fwdAxle.toString();
    }
 }

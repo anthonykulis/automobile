@@ -1,33 +1,28 @@
 package edu.jalc.automobile.onlinebuilder.components.driveline;
 
+//import edu.jalc.automobile.onlinebuilder.components.driveline.DriveLine;
 import edu.jalc.automobile.parts.driveline.DriveShaft;
 import edu.jalc.automobile.parts.driveline.ElectricSteering;
 import edu.jalc.automobile.parts.driveline.LockingDifferential;
 
 public class TruckDriveLine{
 
-   private DriveShaft driveShaft = new DriveShaft();
-   private ElectricSteering electricSteering = new ElectricSteering();
-   private LockingDifferential lockingDifferential = new LockingDifferential();
-
-   public void setDriveShaft(DriveShaft driveShaft){
+   private final DriveShaft driveShaft;
+   private final ElectricSteering electricSteering;
+   private final LockingDifferential lockingDifferential;
+   
+   public TruckDriveLine(DriveShaft driveShaft, ElectricSteering electricSteering, LockingDifferential lockingDifferential){
       this.driveShaft = driveShaft;
+      this.electricSteering = electricSteering;
+      this.lockingDifferential = lockingDifferential;
    }
    
    public DriveShaft getDriveShaft(){
       return this.driveShaft;
    }
 
-   public void setElectricSteering(ElectricSteering electricSteering){
-      this.electricSteering = electricSteering;
-   }
-
    public ElectricSteering getElectricSteering(){
       return this.electricSteering;
-   }
-
-   public void setLockingDifferential(LockingDifferential lockingDifferential){
-      this.lockingDifferential = lockingDifferential;
    }
    
    public LockingDifferential getLockingDifferential(){
