@@ -12,7 +12,7 @@ abstract public  class EconomicDriveLine{
       this.electricSteering=null;
       this.openDifferential=null;
    }
-   public ElectricSteering getElectricSteering(){
+   public  ElectricSteering getElectricSteering(){
       return this.electricSteering;
    }
    public OpenDifferential getOpenDifferential(){

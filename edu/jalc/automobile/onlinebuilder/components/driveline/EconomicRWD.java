@@ -6,17 +6,17 @@ import edu.jalc.automobile.parts.driveline.DriveShaft ;
 
 public class EconomicRWD extends EconomicDriveLine{
 
-   private FrontDeadAxle frontDeadAxle;
+   private FrontDeadAxle frontDeadAxle= new FrontDeadAxle();
    private RearDriveAxle rearDriveAxle;
    private DriveShaft driveShaft;
 
-   private EconomicRWD(){
+   public EconomicRWD(){
       this.frontDeadAxle=null;
       this.rearDriveAxle=null;
       this.driveShaft=null;
    }
 
-   public FrontDeadAxle getFrontWheelDeadAxle(){
+   public FrontDeadAxle getFrontDeadAxle(){
       return this.frontDeadAxle;
    }
 
