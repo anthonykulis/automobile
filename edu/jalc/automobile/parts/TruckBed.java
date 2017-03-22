@@ -1,8 +1,8 @@
 package edu.jalc.automobile.parts;
 
-public class TruckBed extends RearEnd{
-  abstract getCubicFt(){
-    return double cubicFt;
+abstract public class TruckBed{
+  abstract public double getCubicFt(){
+    return cubicFt;
   }
 
 

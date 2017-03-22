@@ -1,8 +1,8 @@
 package edu.jalc.automobile.parts;
 
-abstract public class RearEnd{
+abstract public class Trunk{
   double cubicFt;
-  abstract public getCubicFt(){
+  abstract public double getCubicFt(){
     return cubicFt;
   }
 

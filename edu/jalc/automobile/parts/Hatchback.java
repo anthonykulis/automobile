@@ -1,12 +1,12 @@
 package edu.jalc.automobile.parts;
 
-public class ShortBed extends TruckBed{
+public class Hatchback extends Trunk{
 
   double getCubicFt(){
     return this.cubicFt;
   }
 
   String toString(){
-    return "ShortBed";
+    return "Hacthback";
   }
 }
