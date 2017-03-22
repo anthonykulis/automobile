@@ -4,7 +4,7 @@ import edu.jalc.automobile.parts.engine.EcoEngine;
 import edu.jalc.automobile.parts.induction.SuperchargedInduction;
 import edu.jalc.automobile.parts.exhaust.EconomyExhaust;
 
-abstract public class SuperchargedEcoEngine extends BoostedEcoEngine{
+public class SuperchargedEcoEngine extends BoostedEcoEngine{
   private SuperchargedInduction induction;
 
   public SuperchargedEcoEngine(EcoEngine engine, EconomyExhaust exhaust, SuperchargedInduction induction){

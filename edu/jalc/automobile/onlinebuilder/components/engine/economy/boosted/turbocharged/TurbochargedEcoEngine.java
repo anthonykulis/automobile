@@ -4,7 +4,7 @@ import edu.jalc.automobile.parts.engine.EcoEngine;
 import edu.jalc.automobile.parts.induction.TurbochargedInduction;
 import edu.jalc.automobile.parts.exhaust.EconomyExhaust;
 
-abstract public class TurbochargedEcoEngine extends BoostedEcoEngine{
+public class TurbochargedEcoEngine extends BoostedEcoEngine{
   private TurbochargedInduction induction;
 
   public TurbochargedEcoEngine(EcoEngine engine, EconomyExhaust exhaust, TurbochargedInduction induction){
@@ -18,5 +18,5 @@ abstract public class TurbochargedEcoEngine extends BoostedEcoEngine{
 
  public void setInduction(TurbochargedInduction induction){
    this.induction = induction;
- } 
+ }
 }
