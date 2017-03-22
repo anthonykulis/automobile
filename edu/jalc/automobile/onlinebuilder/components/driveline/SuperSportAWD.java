@@ -1,4 +1,4 @@
-package edu.jalc.automobile.onlinebuilder.components.sportdriveline;
+package edu.jalc.automobile.onlinebuilder.components.driveline;
 
 public class SuperSportAWD extends SportDriveLine{
 

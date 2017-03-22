@@ -1,4 +1,8 @@
-package edu.jalc.automobile.onlinebuilder.components.sportdriveline;
+package edu.jalc.automobile.onlinebuilder.components.driveline;
+
+import edu.jalc.automobile.parts.driveline.DriveShaft;
+import edu.jalc.automobile.parts.driveline.HydraulicSteering;
+import edu.jalc.automobile.parts.driveline.TorqueVectorDifferential;
 
 public class SportDriveLineTest{
 
