@@ -6,17 +6,17 @@ import edu.jalc.automobile.parts.driveline.FrontDeadAxle;
 public class HeavyDutyRWDTest{
 
    protected void testGetRearAxle(){
-      System.out.println("Testing HeavyDutyRWD::getRearAxle");
+      System.out.println("Testing HeavyDutyRWD::getRearDriveAxle");
       RearDriveAxle rearAxle = new RearDriveAxle();
       HeavyDutyRWD heavyDutyRWD = new HeavyDutyRWD(rearAxle, null);
-      assert(heavyDutyRWD.getRearAxle() == rearAxle);
+      assert(heavyDutyRWD.getRearDriveAxle() == rearAxle);
    }
    
    protected void testGetFrontDeadAxle(){
       System.out.println("Testing HeavyDutyRWD::getFrontDeadAxle");
       FrontDeadAxle frontDeadAxle = new FrontDeadAxle();
       HeavyDutyRWD heavyDutyRWD = new HeavyDutyRWD(null, frontDeadAxle);
-      assert(heavyDutyRWD.getDeadAxle() == frontDeadAxle);
+      assert(heavyDutyRWD.getFrontDeadAxle() == frontDeadAxle);
    }
       
    public static void main(String[] args){

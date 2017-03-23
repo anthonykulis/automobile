@@ -21,11 +21,11 @@ public class HeavyDutyRWD extends TruckDriveLine{
       this.deadAxle = deadAxle;
    }
    
-   public RearDriveAxle getRearAxle(){
+   public RearDriveAxle getRearDriveAxle(){
       return this.rearAxle;
    }
    
-   public FrontDeadAxle getDeadAxle(){
+   public FrontDeadAxle getFrontDeadAxle(){
       return this.deadAxle;
    }
    
