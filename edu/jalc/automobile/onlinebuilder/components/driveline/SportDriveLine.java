@@ -4,7 +4,7 @@ import edu.jalc.automobile.parts.driveline.DriveShaft;
 import edu.jalc.automobile.parts.driveline.HydraulicSteering;
 import edu.jalc.automobile.parts.driveline.TorqueVectorDifferential;
 
-public class SportDriveLine{
+public class SportDriveLine extends DriveLine{
 
   private DriveShaft driveShaft;
   private HydraulicSteering hydraulicSteering;
@@ -19,6 +19,9 @@ public class SportDriveLine{
   public SportDriveLine(DriveShaft driveShaft,
                         HydraulicSteering hydraulicSteering,
                         TorqueVectorDifferential torqueVectorDifferential){
+    this.driveShaft = driveShaft;
+    this.hydraulicSteering = hydraulicSteering;
+    this.torqueVectorDifferential = torqueVectorDifferential;
   }
 
   public DriveShaft getDriveShaft(){
@@ -34,7 +37,10 @@ public class SportDriveLine{
   }
 
   public String toString(){
-    return "SportDriveLine";
+    return "SportDriveLine has :\n"+
+           "\t"+ driveShaft + "\n"+
+           "\t"+ hydraulicSteering + "\n"+
+           "\t"+ torqueVectorDifferential;
   }
 
 }

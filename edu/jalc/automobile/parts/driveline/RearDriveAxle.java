@@ -1,8 +1,8 @@
 package edu.jalc.automobile.parts.driveline;
 
-public class RearDeadAxle{
+public class RearDriveAxle{
 
   public String toString(){
-    return "RearDeadAxle";
+    return "RearDriveAxle";
   }
 }
