@@ -1,7 +1,10 @@
 package edu.jalc.automobile.parts;
 
 public class Hatchback extends Trunk{
-public double getCubicFt(){return this.cubicFt;}
+
+  public Hatchback(double cubicFt){super.cubicFt = cubicFt;}
+
+  public double getCubicFt(){return super.cubicFt;}
   public String toString(){
     return "Hacthback";
   }

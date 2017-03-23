@@ -1,7 +1,10 @@
 package edu.jalc.automobile.parts;
 
 public class StandardTrunk extends Trunk{
-public double getCubicFt(){return this.cubicFt;}
+
+  public StandardTrunk(double cubicFt){super.cubicFt = cubicFt;}
+
+  public double getCubicFt(){return super.cubicFt;}
   public String toString(){
     return "StandardTrunk";
   }

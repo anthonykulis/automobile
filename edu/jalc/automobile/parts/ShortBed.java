@@ -2,8 +2,11 @@ package edu.jalc.automobile.parts;
 
 public class ShortBed extends TruckBed{
 
-public double getCubicFt(){return this.cubicFt;}
-  public String toString(){
+public ShortBed(double cubicFt){super.cubicFt = cubicFt;}
+
+public double getCubicFt()
+  {return super.cubicFt;}
+public String toString(){
     return "ShortBed";
   }
 }
