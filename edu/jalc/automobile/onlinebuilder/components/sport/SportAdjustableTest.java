@@ -7,14 +7,14 @@ public class SportAdjustableTest {
 
      public void testGetShock(){
         System.out.println("Testing SportAdjustable::getShock");
-        AdjustableShocks shock = new AdjustableShocks();
+        AdjustableShocks shock = new AdjustableShocks(10);
         SportAdjustable sportAdjustable = new SportAdjustable(shock, null);
         assert(shock == sportAdjustable.getShock());
      }
 
      public void testGetSpring(){
         System.out.println("Testing SportAdjustable::getSpring");
-        MediumSpring spring = new MediumSpring();
+        MediumSpring spring = new MediumSpring(10);
         SportAdjustable sportAdjustable = new SportAdjustable(null, spring);
         assert(spring == sportAdjustable.getSpring());
      }

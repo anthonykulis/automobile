@@ -4,11 +4,6 @@ public class ExtendedSpring extends Spring{
 
      private double height = 10;
 
-     ShortSpring(double height) {
-       this.height = height;
-     }
-
-
      public double getHeight(){
         return height;
      }

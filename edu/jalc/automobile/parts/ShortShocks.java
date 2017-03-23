@@ -1,6 +1,6 @@
 package edu.jalc.automobile.parts;
 
-public class ShortShocks extends Spring{
+public class ShortShocks extends Shock{
 
    private final double height = 2;
 

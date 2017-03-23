@@ -4,6 +4,7 @@ import edu.jalc.automobile.parts.*;
 
 public class SportLowered extends Sport{
 
+   static ShortSpring shortSpring;
    private Shock shock;
    private Spring spring;
 
@@ -26,6 +27,6 @@ public class SportLowered extends Sport{
    }
 
    public String toString(){
-      return "sport has :" + "\n \t" + ShortSpring.toString() + " \n " + ShortShocks.toString();
+      return "sport has :" + "\n \t" + shortSpring.toString() + " \n " + shortSpring.toString();
    }
 }

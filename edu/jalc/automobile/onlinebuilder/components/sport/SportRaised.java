@@ -2,17 +2,17 @@ package edu.jalc.automobile.onlinebuilder.components.sport;
 
 import edu.jalc.automobile.parts.*;
 
-public class SportAdjustable extends Sport{
+public class SportRaised extends Sport{
 
    private Shock shock;
    private Spring spring;
 
-   private SportAdjustable(){
+   private SportRaised(){
       this.shock = null;
       this.spring = null;
    }
 
-   public SportAdjustable(Shock shock, Spring spring){
+   public SportRaised(Shock shock, Spring spring){
       this.shock = shock;
       this.spring = spring;
    }
@@ -26,6 +26,6 @@ public class SportAdjustable extends Sport{
    }
 
    public String toString(){
-      return "sport has :" + "\n \t" + ExtendedSpring.toString() + " \n " + ExtendedShocks.toString();
-   }
+      return "";
+         }
 }

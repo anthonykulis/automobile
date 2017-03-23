@@ -3,7 +3,7 @@ package edu.jalc.automobile.onlinebuilder.components.sport;
 import edu.jalc.automobile.parts.*;
 
 
-public class SportAdjustableTest {
+public class SportRaisedTest {
 
      public void testGetShock(){
         System.out.println("Testing SportRaised::getShock");

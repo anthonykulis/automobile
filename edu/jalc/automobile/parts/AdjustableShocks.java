@@ -1,6 +1,6 @@
 package edu.jalc.automobile.parts;
 
-public class AdjustableShocks extends Spring{
+public class AdjustableShocks extends Shock{
 
    private double height;
 

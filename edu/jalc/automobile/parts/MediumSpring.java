@@ -1,7 +1,8 @@
 package edu.jalc.automobile.parts;
 
 public class MediumSpring extends Spring{
-  MediumSpring(double height) {
+
+  public MediumSpring(double height) {
     this.height = height;
   }
 
