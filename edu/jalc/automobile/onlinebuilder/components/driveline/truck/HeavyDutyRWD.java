@@ -6,32 +6,32 @@ import edu.jalc.automobile.parts.driveline.FrontDeadAxle;
 
 public class HeavyDutyRWD extends TruckDriveLine{
 
-   private final RearDriveAxle rearAxle;
-   private final FrontDeadAxle deadAxle;
+   private final RearDriveAxle rearDriveAxle;
+   private final FrontDeadAxle frontDeadAxle;
    
    private HeavyDutyRWD(){
       super(null, null, null);
-      this.rearAxle = null;
-      this.deadAxle = null;
+      this.rearDriveAxle = null;
+      this.frontDeadAxle = null;
    }
    
-   public HeavyDutyRWD(RearDriveAxle rearAxle, FrontDeadAxle deadAxle){
+   public HeavyDutyRWD(RearDriveAxle rearDriveAxle, FrontDeadAxle frontDeadAxle){
       super(null, null, null);
-      this.rearAxle = rearAxle;
-      this.deadAxle = deadAxle;
+      this.rearDriveAxle = rearDriveAxle;
+      this.frontDeadAxle = frontDeadAxle;
    }
    
    public RearDriveAxle getRearDriveAxle(){
-      return this.rearAxle;
+      return this.rearDriveAxle;
    }
    
    public FrontDeadAxle getFrontDeadAxle(){
-      return this.deadAxle;
+      return this.frontDeadAxle;
    }
    
    public String toString(){
       return "TruckDriveLine has:\n" +
-                    "\t"+ rearAxle +"\n"+
-                    "\t"+ deadAxle;
+                    "\t"+ rearDriveAxle +"\n"+
+                    "\t"+ frontDeadAxle;
    }
 }

@@ -7,9 +7,9 @@ public class HeavyDutyRWDTest{
 
    protected void testGetRearAxle(){
       System.out.println("Testing HeavyDutyRWD::getRearDriveAxle");
-      RearDriveAxle rearAxle = new RearDriveAxle();
-      HeavyDutyRWD heavyDutyRWD = new HeavyDutyRWD(rearAxle, null);
-      assert(heavyDutyRWD.getRearDriveAxle() == rearAxle);
+      RearDriveAxle rearDriveAxle = new RearDriveAxle();
+      HeavyDutyRWD heavyDutyRWD = new HeavyDutyRWD(rearDriveAxle, null);
+      assert(heavyDutyRWD.getRearDriveAxle() == rearDriveAxle);
    }
    
    protected void testGetFrontDeadAxle(){
