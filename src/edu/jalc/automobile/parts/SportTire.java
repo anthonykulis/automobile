@@ -5,12 +5,12 @@ public class SportTire extends Tire{
    private double height;
    private double width;
 
-   private AllTerrainTire(){
+   private SportTire(){
       this.height = 0;
       this.width = 0;
    }
 
-   public AllTerrainTire(double height, double width){
+   public SportTire(double height, double width){
       this.height = height;
       this.width = width;
    }

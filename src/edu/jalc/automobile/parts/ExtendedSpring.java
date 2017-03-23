@@ -2,6 +2,10 @@ package edu.jalc.automobile.parts;
 
 public class ExtendedSpring extends Spring{
 
+    public ExtendedSpring(double height) {
+        this.height = height;
+    }
+
      private double height = 10;
 
      public double getHeight(){

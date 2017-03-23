@@ -9,8 +9,8 @@ public class ForgedWheelTest {
   }
 
   public static void main(String[] args){
-     ForegedWheelTest test = new ForegedWheelTest();
-     test.testGetHeight();
+     ForgedWheelTest test = new ForgedWheelTest();
+     test.testGetSize();
 
      System.out.println("All Tests for ForgedWheel Passed");
   }

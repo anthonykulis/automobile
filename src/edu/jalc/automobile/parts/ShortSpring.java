@@ -2,7 +2,11 @@ package edu.jalc.automobile.parts;
 
 public class ShortSpring extends Spring{
 
-   private final double height = 2;
+   public ShortSpring(double height) {
+      this.height = height;
+   }
+
+   private double height = 2;
 
    public double getHeight(){
       return height;

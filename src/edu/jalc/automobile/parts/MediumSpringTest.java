@@ -3,8 +3,8 @@ public class MediumSpringTest {
 
    public void testGetHeight(){
       System.out.println("Testing ShortSpring::getHeight");
-      MediumSpringTest mediumSpringTest = new MediumSpringTest(30);
-      assert(mediumSpringTest.getHeight() == 30);
+      MediumSpring mediumSpring = new MediumSpring(30);
+      assert(mediumSpring.getHeight() == 30);
    }
 
 

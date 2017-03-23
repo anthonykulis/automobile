@@ -14,7 +14,7 @@ public class SportLoweredTest {
 
      public void testGetSpring(){
         System.out.println("Testing SportLowered::getSpring");
-        ShortSpring spring = new ShortSpring();
+        ShortSpring spring = new ShortSpring(2);
         SportLowered sportLowered = new SportLowered(null, spring);
         assert(spring == sportLowered.getSpring());
      }

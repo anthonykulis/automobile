@@ -1,5 +1,7 @@
 package edu.jalc.automobile.parts;
 
+public class ShortSpringTest {
+
    public void testGetHeight(){
       System.out.println("Testing ShortSpring::getHeight");
       ShortSpring shortSpring = new ShortSpring(30);
