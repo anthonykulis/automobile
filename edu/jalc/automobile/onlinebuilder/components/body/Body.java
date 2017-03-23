@@ -2,14 +2,15 @@ package edu.jalc.automobile.onlinebuilder.components.body;
 
 import edu.jalc.automobile.parts.Quarterpanels;
 import edu.jalc.automobile.parts.EngineCompartment;
+import edu.jalc.automobile.parts.Cabin;
 
 abstract public class Body{
-  private Quarterpanels quarterpanels;
-  private EngineCompartment engineCompartment;
-  private Cabin cabin;
+  Quarterpanels quarterpanels;
+  EngineCompartment engineCompartment;
+  Cabin cabin;
 
   public Body(Quarterpanels quarterpanels, EngineCompartment engineCompartment, Cabin cabin){
-    this.setQuarterpanels(quarterpanels);
+    this.setQuarterpanel(quarterpanel);
     this.setEngineCompartment(engineCompartment);
     this.cabin = cabin;
   }
@@ -32,7 +33,8 @@ abstract public class Body{
     return this.engineCompartment;
   }
 
-  abstract public Cabin getCabin(){}
+  public Cabin getCabin(){return cabin;}
+
 
   public String toString(){
     return "Added Quarterpanels and EngineCompartment";

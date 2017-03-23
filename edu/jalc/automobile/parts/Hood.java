@@ -3,16 +3,17 @@ package edu.jalc.automobile.parts;
 import edu.jalc.automobile.parts.Paint;
 import edu.jalc.automobile.parts.Graphic;
 
-public class Quarterpanels{
+public class Hood{
   private Paint paint;
   private Graphic graphic;
 
-  private Quarterpanels(){
+  private Hood(){
     this.paint = null;
     this.graphic = null;
   }
 
-  public Quarterpanels(Paint paint, Graphic graphic){
+
+  public Hood(Paint paint, Graphic graphic){
     this.setPaint(paint);
     this.setGraphic(graphic);
   }
@@ -32,6 +33,6 @@ public class Quarterpanels{
   }
 
   public String toString(){
-    return "Added Paint and Graphic to Quarterpanels";
+    return "Added Paint and Graphic to Hood";
   }
 }
