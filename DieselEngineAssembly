@@ -1,5 +1,5 @@
-private class DieselEngineAssembly
-getEngine(): DieselEngine
-getExhaust(): PerformanceExhaust
+package edu.jalc.automobile.onlinebuilder.components.engine;
+
+abstract public class DieselEngineAssembly{
   }
 }
