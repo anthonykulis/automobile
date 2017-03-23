@@ -10,6 +10,6 @@ public class Paint{
   public String getPaint(){return this.paint;}
 
   public String toString(){
-    return "Adding paint";
+    return "Paint";
   }
 }
