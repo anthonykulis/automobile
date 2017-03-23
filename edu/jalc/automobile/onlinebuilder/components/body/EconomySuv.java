@@ -10,7 +10,7 @@ public class EconomySuv extends Suv{
     super(quarterpanels, engineCompartment, standardCabin, standardTrunk);
   }
   public StandardCabin getCabin(){
-    return (StandardCabin) this.getCabin();
+    return (StandardCabin) super.getCabin();
   }
 
   public String toString(){
