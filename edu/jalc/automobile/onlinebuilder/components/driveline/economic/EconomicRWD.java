@@ -1,8 +1,6 @@
 package edu.jalc.automobile.onlinebuilder.components.driveline.economic; 
 
-import edu.jalc.automobile.parts.driveline.FrontDeadAxle;
-import edu.jalc.automobile.parts.driveline.RearDriveAxle;
-import edu.jalc.automobile.parts.driveline.DriveShaft ; 
+import edu.jalc.automobile.parts.driveline.*; 
 import edu.jalc.automobile.onlinebuilder.components.driveline.EconomicDriveLine;
 
 public class EconomicRWD extends EconomicDriveLine{
@@ -17,8 +15,9 @@ public class EconomicRWD extends EconomicDriveLine{
       this.rearDriveAxle=null;
       this.driveShaft=null;
    }
-   public EconomicRWD(FrontDeadAxle frontDeadAxle,RearDriveAxle rearDriveAxle,DriveShaft driveShaft){
-    super(null,null);
+   public EconomicRWD(FrontDeadAxle frontDeadAxle,RearDriveAxle rearDriveAxle,DriveShaft driveShaft,
+                      ElectricSteering electricSteering, OpenDifferential openDifferential){
+      super(electricSteering,openDifferential);
       this.frontDeadAxle=frontDeadAxle;
       this.rearDriveAxle=rearDriveAxle;
       this.driveShaft=driveShaft;
@@ -37,8 +36,10 @@ public class EconomicRWD extends EconomicDriveLine{
    }
    public String toString (){
       return "EconomicRWD has :\n" +
-                    "\t"+ frontDeadAxle +"\n"+
+                    "\t"+ FrontDeadAxle().toString() +"\n"+
                     "\t"+ rearDriveAxle +"\n"+
-                    "\t"+ driveShaft+"\n";
+                    "\t"+ driveShaft    +"\n"+
+                    "\t"+ electricSteering +"\n"+
+                    "\t"+ openDifferential;
    }
 }

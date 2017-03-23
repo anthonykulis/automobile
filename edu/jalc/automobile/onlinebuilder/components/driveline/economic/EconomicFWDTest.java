@@ -8,13 +8,13 @@ public  class EconomicFWDTest{
    public void testGetFrontDriveAxle(){
       System.out.println("Testing  EconomicFWD :: getFrontDriveAxle");
       FrontDriveAxle frontDriveAxle = new  FrontDriveAxle();
-      EconomicFWD economicFWD =new EconomicFWD(frontDriveAxle,null);
+      EconomicFWD economicFWD =new EconomicFWD(frontDriveAxle,null,null,null);
       assert( frontDriveAxle == economicFWD.getFrontDriveAxle());
    }
    public void testGetRearDeadAxle(){
       System.out.println("Testing  EconomicFWD ::getRearDeadAxle");
       RearDeadAxle rearDeadAxle = new  RearDeadAxle();
-       EconomicFWD economicFWD=new EconomicFWD(null,rearDeadAxle);
+       EconomicFWD economicFWD=new EconomicFWD(null,rearDeadAxle,null,null);
       assert( rearDeadAxle==economicFWD.getRearDeadAxle());
    }
  public static void main(String... args) throws Exception {

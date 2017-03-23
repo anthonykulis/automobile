@@ -5,8 +5,8 @@ import edu.jalc.automobile.parts.driveline.OpenDifferential;
 
 public  class EconomicDriveLine extends DriveLine{
 
-   private final ElectricSteering electricSteering;
-   private final OpenDifferential openDifferential;
+   public final ElectricSteering electricSteering;
+   public final OpenDifferential openDifferential;
 
    private EconomicDriveLine(){
       this.electricSteering=null;
