@@ -1,4 +1,4 @@
-package edu.jalc.automobile.onlinebuilder.components.engine.economy.boosted.naturallyAspirated;
+package edu.jalc.automobile.onlinebuilder.components.engine.economy.standard;
 
 import edu.jalc.automobile.parts.engine.EcoEngine;
 import edu.jalc.automobile.parts.induction.*;
