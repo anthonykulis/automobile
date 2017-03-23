@@ -2,14 +2,10 @@ package edu.jalc.automobile.parts;
 
 public class StockSpring extends Spring{
 
-   private double height;
+   private final double height = 2;
    
-   private StockSpring(){
-      this.height = 0;
-   }
-   
-   public StockSpring(double height){
-      this.height = height;
+   public StockSpring(){
+      
    }
    
    public double getHeight(){
