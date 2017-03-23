@@ -1,7 +1,7 @@
 package edu.jalc.automobile.onlinebuilder.components.driveline.truck; 
 
 import edu.jalc.automobile.onlinebuilder.components.driveline.TruckDriveLine;
-import edu.jalc.automobile.parts.driveline.FourWheelDriveAxle;
+import edu.jalc.automobile.parts.driveline.*;
 
 public class SuperDutyFourWheelDrive extends TruckDriveLine{
 
@@ -12,8 +12,8 @@ public class SuperDutyFourWheelDrive extends TruckDriveLine{
       this.fwdAxle = null;
    }
 
-   public SuperDutyFourWheelDrive(FourWheelDriveAxle fwdAxle){
-      super(null, null, null);
+   public SuperDutyFourWheelDrive(FourWheelDriveAxle fwdAxle, DriveShaft driveShaft, ElectricSteering electricSteering, LockingDifferential lockingDifferential){
+      super(driveShaft, electricSteering, lockingDifferential);
       this.fwdAxle = fwdAxle;
    }
    

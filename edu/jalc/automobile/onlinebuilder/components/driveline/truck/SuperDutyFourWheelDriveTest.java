@@ -5,9 +5,9 @@ import edu.jalc.automobile.parts.driveline.FourWheelDriveAxle;
 public class SuperDutyFourWheelDriveTest{
 
    protected void testGetFWDAxle(){
-      System.out.println("Testing SuperDutyFourWheelDrive::getRearAxle");
+      System.out.println("Testing SuperDutyFourWheelDrive::getFWDAxle");
       FourWheelDriveAxle fwdAxle = new FourWheelDriveAxle();
-      SuperDutyFourWheelDrive superDutyFWD = new SuperDutyFourWheelDrive(fwdAxle);
+      SuperDutyFourWheelDrive superDutyFWD = new SuperDutyFourWheelDrive(fwdAxle, null, null, null);
       assert(superDutyFWD.getFWDAxle() == fwdAxle);
    }
          
