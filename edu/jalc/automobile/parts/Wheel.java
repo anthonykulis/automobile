@@ -1,5 +1,7 @@
 package edu.jalc.automobile.parts;
 
-public abstract class Wheel{
+import edu.jalc.automobile.onlinebuilder.components.*;
+
+public abstract class Wheel extends Suspension{
 
 }

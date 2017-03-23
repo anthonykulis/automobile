@@ -25,6 +25,6 @@ public class SteelWheel extends Wheel{
    }
    
    public String toString(){
-      return "Steal Wheel with " + tire.toString();
+      return "\tSteal Wheel with " + tire.toString();
    }
 }
