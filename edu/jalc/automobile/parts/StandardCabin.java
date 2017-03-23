@@ -7,6 +7,6 @@ public class StandardCabin extends Cabin{
   }
 
   public ClothSeat getSeat(){
-    return (ClothSeat) super.getSeat();
+    return (ClothSeat) this.getSeat();
   }
 }
