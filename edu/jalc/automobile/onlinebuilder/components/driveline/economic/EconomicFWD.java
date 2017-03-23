@@ -31,8 +31,8 @@ public class EconomicFWD extends EconomicDriveLine {
       return "EconomicRWD has :\n" +
                     "\t"+ frontDriveAxle +"\n"+
                     "\t"+ rearDeadAxle+"\n"+
-                    "\t"+ electricSteering +"\n"+
-                    "\t"+ openDifferential;
+                    "\t"+ getElectricSteering()+"\n"+
+                    "\t"+ getOpenDifferential();
                     
    }
 }

@@ -14,10 +14,10 @@ public  class EconomicFWDTest{
    public void testGetRearDeadAxle(){
       System.out.println("Testing  EconomicFWD ::getRearDeadAxle");
       RearDeadAxle rearDeadAxle = new  RearDeadAxle();
-       EconomicFWD economicFWD=new EconomicFWD(null,rearDeadAxle,null,null);
+      EconomicFWD economicFWD=new EconomicFWD(null,rearDeadAxle,null,null);
       assert( rearDeadAxle==economicFWD.getRearDeadAxle());
    }
- public static void main(String... args) throws Exception {
+   public static void main(String... args) throws Exception {
       EconomicFWDTest test = new EconomicFWDTest();
    	
       test.testGetFrontDriveAxle();

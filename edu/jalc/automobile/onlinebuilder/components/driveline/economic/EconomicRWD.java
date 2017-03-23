@@ -36,10 +36,10 @@ public class EconomicRWD extends EconomicDriveLine{
    }
    public String toString (){
       return "EconomicRWD has :\n" +
-                    "\t"+ FrontDeadAxle().toString() +"\n"+
+                    "\t"+ frontDeadAxle +"\n"+
                     "\t"+ rearDriveAxle +"\n"+
-                    "\t"+ driveShaft    +"\n"+
-                    "\t"+ electricSteering +"\n"+
-                    "\t"+ openDifferential;
+                    "\t"+ driveShaft    + "\n"+
+                    "\t"+ getElectricSteering() +"\n"+
+                    "\t"+ getOpenDifferential();
    }
 }

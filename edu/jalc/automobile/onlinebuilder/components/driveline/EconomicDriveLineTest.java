@@ -15,10 +15,10 @@ public  class EconomicDriveLineTest{
    public void testGetOpenDifferential(){
       System.out.println("Testing  EconomicDriveLine::getOpenDifferential");
       OpenDifferential openDifferential = new  OpenDifferential();
-       EconomicDriveLine economicDriveLine =new EconomicDriveLine (null,openDifferential);
+      EconomicDriveLine economicDriveLine =new EconomicDriveLine (null,openDifferential);
       assert( openDifferential== economicDriveLine.getOpenDifferential());
    }
- public static void main(String... args) throws Exception {
+   public static void main(String... args) throws Exception {
       EconomicDriveLineTest test = new EconomicDriveLineTest();
    	
       test.testGetElectricSteering();

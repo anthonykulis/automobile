@@ -16,7 +16,7 @@ public  class EconomicRWDTest{
    public void testGetRearDriveAxle(){
       System.out.println("Testing  EconomicRWD ::getRearDriveAxle(");
       RearDriveAxle rearDriveAxle = new  RearDriveAxle();
-       EconomicRWD economicRWD=new EconomicRWD(null,rearDriveAxle,null,null,null);
+      EconomicRWD economicRWD=new EconomicRWD(null,rearDriveAxle,null,null,null);
       assert( rearDriveAxle==economicRWD.getRearDriveAxle());
    }
    public void testGetDriveShaft(){
@@ -25,7 +25,7 @@ public  class EconomicRWDTest{
       EconomicRWD economicRWD=new EconomicRWD(null,null,driveShaft,null,null);
       assert( driveShaft==economicRWD.getDriveShaft());
    }
- public static void main(String... args) throws Exception {
+   public static void main(String... args) throws Exception {
       EconomicRWDTest test = new EconomicRWDTest();
    	
       test.testGetFrontDeadAxle();
