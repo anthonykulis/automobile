@@ -21,7 +21,7 @@ abstract public class EcoEngineAssembly extends EngineAssembly{
   }
 
   public EcoEngine getEngine(){
-    return this.engine
+    return this.engine;
   }
 
   public EconomyExhaust getExhaust(){
