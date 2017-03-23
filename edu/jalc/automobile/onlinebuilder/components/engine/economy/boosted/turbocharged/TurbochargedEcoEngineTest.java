@@ -5,6 +5,7 @@ import edu.jalc.automobile.parts.induction.*;
 import edu.jalc.automobile.parts.exhaust.*;
 import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
+import edu.jalc.automobile.onlinebuilder.components.engine.economy.boosted.BoostedEcoEngine;
 
 public class TurbochargedEcoEngineTest{
   public static void main(String[] args){
