@@ -5,7 +5,7 @@ import edu.jalc.automobile.parts.Cabin;
 
 abstract public class Suv extends Body{
 
-  public Suv(Quarterpanel quarterpanel, EngineCompartment engineCompartment,
+  public Suv(Quarterpanels quarterpanels, EngineCompartment engineCompartment,
                                 Cabin cabin, StandardTrunk standardTrunk){
     super(quarterpanels, engineCompartment, cabin, standardTrunk);
   }

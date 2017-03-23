@@ -1,22 +1,22 @@
 package edu.jalc.automobile.parts;
 
-public class TestQuarterpanel{
+public class TestQuarterpanels{
   public void testGetPaint(){
-    System.out.println("Testing getPaint() :: Quarterpanel");
+    System.out.println("Testing getPaint() :: Quarterpanels");
     Paint paint = new Paint("black");
-    Quarterpanel quarterpanel = new Quarterpanel(paint,null);
-    assert(quarterpanel.getPaint() == paint);
+    Quarterpanels quarterpanels = new Quarterpanels(paint,null);
+    assert(quarterpanels.getPaint() == paint);
   }
   public void testGetGraphic(){
-    System.out.println("Testing getGraphic() :: Quarterpanel");
+    System.out.println("Testing getGraphic() :: Quarterpanels");
     Graphic graphic = new Graphic("flames");
-    Quarterpanel quarterpanel = new Quarterpanel(null,graphic);
-    assert(quarterpanel.getGraphic() == graphic);
+    Quarterpanels quarterpanels = new Quarterpanels(null,graphic);
+    assert(quarterpanels.getGraphic() == graphic);
   }
   public static void main(String[] args){
-    TestQuarterpanel testQuarterpanel = new TestQuarterpanel();
-    testQuarterpanel.testGetPaint();
-    testQuarterpanel.testGetGraphic();
+    TestQuarterpanels testQuarterpanels = new TestQuarterpanels();
+    testQuarterpanels.testGetPaint();
+    testQuarterpanels.testGetGraphic();
     System.out.println("Test Complete");
   }
 }
