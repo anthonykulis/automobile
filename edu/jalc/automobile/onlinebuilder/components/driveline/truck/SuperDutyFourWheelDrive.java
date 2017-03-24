@@ -23,7 +23,7 @@ public class SuperDutyFourWheelDrive extends TruckDriveLine{
    
    public String toString(){
       return "SuperDutyFourWheelDrive has:\n" +
-                    "\t"+ fwdAxle +
+                    "\t"+ fwdAxle +"\n"+
                     "\t"+ getDriveShaft() +"\n"+
                     "\t"+ getElectricSteering() +"\n"+
                     "\t"+ getLockingDifferential();

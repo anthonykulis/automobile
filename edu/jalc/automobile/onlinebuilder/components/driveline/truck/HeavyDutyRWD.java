@@ -31,7 +31,7 @@ public class HeavyDutyRWD extends TruckDriveLine{
    public String toString(){
       return "TruckDriveLine has:\n" +
                     "\t"+ rearDriveAxle +"\n"+
-                    "\t"+ frontDeadAxle +
+                    "\t"+ frontDeadAxle +"\n"+
                     "\t"+ getDriveShaft() +"\n"+
                     "\t"+ getElectricSteering() +"\n"+
                     "\t"+ getLockingDifferential();
