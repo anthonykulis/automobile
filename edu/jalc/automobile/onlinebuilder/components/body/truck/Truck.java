@@ -20,7 +20,6 @@ abstract public class Truck extends Body {
 		return this.truckBed;
 	}
 
-	public abstract Cabin getCabin();
 
 	public String toString() {
 		return "truck body has: ";

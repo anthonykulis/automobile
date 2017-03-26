@@ -4,20 +4,18 @@ import edu.jalc.automobile.parts.body.*;
 
 public class StandardCab extends Truck {
 
-  public StandardCab(Quarterpanels quarterpanels, EngineCompartment engineCompartment,
-                                 Cabin cabin, TruckBed truckBed){
-     super(quarterpanels, engineCompartment, cabin, truckBed);
-   }
 
-   public StandardCabin getCabin(){
-     return (StandardCabin) super.getCabin();
-   }
-   public ShortBed getTruckBed(){
-     return (ShortBed) super.TruckBed();
-   }
+	public StandardCab(Quarterpanels quarterpanels, EngineCompartment engineCompartment,
+	                   Cabin cabin, TruckBed truckBed) {
+		super(quarterpanels, engineCompartment, cabin, truckBed);
+	}
+
+	public StandardCabin getCabin() {
+		return (StandardCabin) super.getCabin();
+	}
 
 
-public String toString(){
-  return "StardardCabin and a ShortBed";
-    }
-  }
+	public String toString() {
+		return "StardardCabin and a ShortBed";
+	}
+}
