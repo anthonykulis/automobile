@@ -7,6 +7,6 @@ public class MediumSpring extends Spring{
   }
 
    public String toString(){
-      return height+ " inch Coil Spring";
+      return this.getHeight() + " inch Coil Spring";
    }
 }
