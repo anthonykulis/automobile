@@ -8,18 +8,21 @@ import edu.jalc.automobile.parts.body.TruckBed;
 
 abstract public class Truck extends Body {
 
-  public Truck(Quarterpanels quarterpanels, EngineCompartment engineCompartment,
-                                 Cabin cabin, TruckBed truckBed){
-     super(quarterpanels, engineCompartment, cabin, truckBed);
-   }
+	private TruckBed truckBed;
 
-   public TruckBed getTruckBed(){
-     return (TruckBed) super.TruckBed();
-   }
+	public Truck(Quarterpanels quarterpanels, EngineCompartment engineCompartment,
+	             Cabin cabin, TruckBed truckBed) {
+		super(quarterpanels, engineCompartment, cabin);
+		this.truckBed = truckBed;
+	}
 
-   abstract Cabin getCabin(){}
+	public TruckBed getTruckBed() {
+		return this.truckBed;
+	}
 
-public String toString(){
-  return "truck body has: ";
-    }
-  }
+	public abstract Cabin getCabin();
+
+	public String toString() {
+		return "truck body has: ";
+	}
+}
