@@ -1,18 +1,12 @@
 package edu.jalc.automobile.parts.suspension;
 
-public class ForgedWheel extends Tire {
+public class ForgedWheel extends Wheel {
 
-   private double size;
-
-   public ForgedWheel(double size) {
-     this.size = size;
-   }
-
-   public double getSize(){
-      return size;
+   public ForgedWheel(double size, Tire tire) {
+     super(size, tire);
    }
 
    public String toString(){
-      return size+ " inch Wheels";
+      return this.getSize() + " inch Wheels";
    }
 }
