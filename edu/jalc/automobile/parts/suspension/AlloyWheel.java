@@ -7,11 +7,11 @@ public class AlloyWheel extends Wheel {
    }
    
    public AlloyWheel(double size, Tire tire){
-      super(seize, tire);
+      super(size, tire);
    }
    
 
    public String toString(){
-      return "Alloy Wheel with " + tire.toString();
+      return "Alloy Wheel with " + this.getTire();
    }
 }
