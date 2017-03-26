@@ -1,8 +1,6 @@
 package edu.jalc.automobile.parts.suspension;
 
-import edu.jalc.automobile.onlinebuilder.components.suspension.Suspension;
-
-public abstract class Tire extends Suspension {
+public abstract class Tire  {
 	private double height;
 	private double width;
 
