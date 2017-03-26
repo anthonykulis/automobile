@@ -1,5 +1,7 @@
 package edu.jalc.automobile.parts;
 
-class LuxurySeat extends Seat{
+import edu.jalc.automobile.parts.body.Seat;
+
+class LuxurySeat extends Seat {
 
 }

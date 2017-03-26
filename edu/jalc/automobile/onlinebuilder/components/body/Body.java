@@ -1,8 +1,8 @@
 package edu.jalc.automobile.onlinebuilder.components.body;
 
-import edu.jalc.automobile.parts.Quarterpanels;
-import edu.jalc.automobile.parts.EngineCompartment;
-import edu.jalc.automobile.parts.Cabin;
+import edu.jalc.automobile.parts.body.Quarterpanels;
+import edu.jalc.automobile.parts.body.EngineCompartment;
+import edu.jalc.automobile.parts.body.Cabin;
 
 abstract public class Body{
   Quarterpanels quarterpanels;

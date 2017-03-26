@@ -1,5 +1,5 @@
 package edu.jalc.automobile.onlinebuilder.components.body;
-import edu.jalc.automobile.parts.StandardCabin;
+import edu.jalc.automobile.parts.body.StandardCabin;
 
 public class TestEconomySuv{
   public void testGetCabin(){

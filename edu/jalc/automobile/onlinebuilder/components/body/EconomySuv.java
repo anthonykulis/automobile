@@ -1,8 +1,9 @@
 package edu.jalc.automobile.onlinebuilder.components.body;
-import edu.jalc.automobile.parts.Quarterpanels;
-import edu.jalc.automobile.parts.EngineCompartment;
-import edu.jalc.automobile.parts.Cabin;
-import edu.jalc.automobile.parts.StandardCabin;
+
+import edu.jalc.automobile.parts.body.EngineCompartment;
+import edu.jalc.automobile.parts.body.Quarterpanels;
+import edu.jalc.automobile.parts.body.StandardCabin;
+import edu.jalc.automobile.parts.body.StandardTrunk;
 
 public class EconomySuv extends Suv{
   public EconomySuv(Quarterpanels quarterpanels, EngineCompartment engineCompartment,
