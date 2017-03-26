@@ -10,4 +10,5 @@ abstract public class Car extends Body{
     }
   abstract public Trunk getTrunk();
   abstract public Cabin getCabin();
+  
 }
