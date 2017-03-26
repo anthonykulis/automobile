@@ -8,7 +8,7 @@ import edu.jalc.automobile.parts.EngineCompartment;
 abstract public class Truck extends Body{
 
   public Truck(Quarterpanels quarterpanels, EngineCompartment engineCompartment,
-                                 Cabin cabin, TruckBed truckBed){
+               Cabin cabin, TruckBed truckBed){
      super(quarterpanels, engineCompartment, cabin, truckBed);
    }
 
