@@ -1,4 +1,4 @@
-package jalc.automobile.parts.suspension;
+package edu.jalc.automobile.parts.suspension;
 
 import edu.jalc.automobile.onlinebuilder.components.suspension.Suspension;
 

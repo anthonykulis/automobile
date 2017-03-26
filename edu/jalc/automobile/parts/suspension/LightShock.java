@@ -1,6 +1,6 @@
-package jalc.automobile.parts.suspension;
+package edu.jalc.automobile.parts.suspension;
 
-public class LightShock extends Shock{
+public class LightShock extends Shock {
 
    public String toString(){
       return "Light Shock";

@@ -1,6 +1,6 @@
-package jalc.automobile.parts.suspension;
+package edu.jalc.automobile.parts.suspension;
 
-public class AdjustableShocks extends Shock{
+public class AdjustableShocks extends Shock {
 
    private double height;
 

@@ -1,5 +1,8 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.economy;
 
+import edu.jalc.automobile.parts.suspension.StockShock;
+import edu.jalc.automobile.parts.suspension.StockSpring;
+
 public class EconomySuspensionTest{
    
    public void testGetShock(){

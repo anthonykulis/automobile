@@ -1,6 +1,6 @@
-package jalc.automobile.parts.suspension;
+package edu.jalc.automobile.parts.suspension;
 
-public class EconomyTire extends Tire{
+public class EconomyTire extends Tire {
 
    private double height;
    private double width;

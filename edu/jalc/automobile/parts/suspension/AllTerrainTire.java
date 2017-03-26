@@ -1,6 +1,6 @@
-package jalc.automobile.parts.suspension;
+package edu.jalc.automobile.parts.suspension;
 
-public class AllTerrainTire extends Tire{
+public class AllTerrainTire extends Tire {
 
    private double height;
    private double width;

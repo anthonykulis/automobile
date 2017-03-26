@@ -1,6 +1,9 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.sport;
 
 
+import edu.jalc.automobile.parts.suspension.AdjustableShocks;
+import edu.jalc.automobile.parts.suspension.MediumSpring;
+
 public class SportAdjustableTest {
 
      public void testGetShock(){

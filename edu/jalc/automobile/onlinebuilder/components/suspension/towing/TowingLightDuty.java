@@ -1,5 +1,8 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.towing;
 
+import edu.jalc.automobile.parts.suspension.Shock;
+import edu.jalc.automobile.parts.suspension.Spring;
+
 public class TowingLightDuty extends Towing{
 
    private Shock shock;

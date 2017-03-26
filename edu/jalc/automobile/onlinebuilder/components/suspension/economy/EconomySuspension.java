@@ -1,9 +1,11 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.economy;
-import edu.jalc.automobile.parts.suspension.*;
+
+import edu.jalc.automobile.parts.suspension.Shock;
+import edu.jalc.automobile.parts.suspension.Spring;
 
 public class EconomySuspension extends Economy{
 
-   private jalc.automobile.parts.suspension.Shock stockShock;
+   private Shock stockShock;
    private Spring stockSpring;
    
    private EconomySuspension(){
@@ -11,12 +13,12 @@ public class EconomySuspension extends Economy{
       this.stockSpring = null;
    }
    
-   public EconomySuspension(jalc.automobile.parts.suspension.Shock stockShock, Spring stockSpring){
+   public EconomySuspension(Shock stockShock, Spring stockSpring){
       this.stockShock = stockShock;
       this.stockSpring = stockSpring;
    }
    
-   public jalc.automobile.parts.suspension.Shock getShock(){
+   public Shock getShock(){
       return stockShock;
    }
    

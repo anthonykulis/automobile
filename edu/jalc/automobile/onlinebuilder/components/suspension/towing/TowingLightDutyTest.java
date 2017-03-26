@@ -1,5 +1,8 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.towing;
 
+import edu.jalc.automobile.parts.suspension.LightShock;
+import edu.jalc.automobile.parts.suspension.LightSpring;
+
 public class TowingLightDutyTest{
    
    public void testGetShock(){

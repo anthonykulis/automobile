@@ -1,4 +1,4 @@
-package jalc.automobile.parts.suspension;
+package edu.jalc.automobile.parts.suspension;
 
 
 public class ForgedWheelTest {

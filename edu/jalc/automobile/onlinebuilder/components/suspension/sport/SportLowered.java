@@ -1,5 +1,10 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.sport;
 
+import edu.jalc.automobile.parts.suspension.Shock;
+import edu.jalc.automobile.parts.suspension.ShortSpring;
+import edu.jalc.automobile.parts.suspension.Spring;
+
+
 public class SportLowered extends Sport{
 
    static ShortSpring shortSpring;

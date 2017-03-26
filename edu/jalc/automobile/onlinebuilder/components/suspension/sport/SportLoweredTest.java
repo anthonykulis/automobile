@@ -1,6 +1,9 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.sport;
 
 
+import edu.jalc.automobile.parts.suspension.ShortShocks;
+import edu.jalc.automobile.parts.suspension.ShortSpring;
+
 public class SportLoweredTest {
 
      public void testGetShock(){

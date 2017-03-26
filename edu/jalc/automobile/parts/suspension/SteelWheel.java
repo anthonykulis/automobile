@@ -1,6 +1,6 @@
-package jalc.automobile.parts.suspension;
+package edu.jalc.automobile.parts.suspension;
 
-public class SteelWheel extends Wheel{
+public class SteelWheel extends Wheel {
 
    private double size;
    private Tire tire;

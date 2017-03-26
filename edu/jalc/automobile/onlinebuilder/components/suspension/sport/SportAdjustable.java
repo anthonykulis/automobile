@@ -1,5 +1,10 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.sport;
 
+import edu.jalc.automobile.parts.suspension.AdjustableShocks;
+import edu.jalc.automobile.parts.suspension.MediumSpring;
+import edu.jalc.automobile.parts.suspension.Shock;
+import edu.jalc.automobile.parts.suspension.Spring;
+
 public class SportAdjustable extends Sport{
    
    static MediumSpring mediumSpring;

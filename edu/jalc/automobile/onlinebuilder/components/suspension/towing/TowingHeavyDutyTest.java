@@ -1,5 +1,8 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.towing;
 
+import edu.jalc.automobile.parts.suspension.HeavyShock;
+import edu.jalc.automobile.parts.suspension.HeavySpring;
+
 public class TowingHeavyDutyTest{
    
    public void testGetShock(){
