@@ -13,6 +13,6 @@ public class SteelWheel extends Wheel {
 
    
    public String toString(){
-      return "\tSteal Wheel with " + tire.toString();
+      return "\tSteal Wheel with " + this.getTire();
    }
 }
