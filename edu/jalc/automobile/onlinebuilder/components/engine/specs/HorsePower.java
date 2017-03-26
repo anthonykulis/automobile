@@ -20,10 +20,9 @@ public class HorsePower{
       return this.rpm;
    }
    
-   public void setHorsePower(double horsePower){
-     this.horsePower = horsePower;
+   public void setHorsePowerAtRpm(double horsePower, double rpm){
+      this.horsePower = horsePower;
+      this.rpm = rpm;
    }
-   public void setRPM(double rpm){
-     this.rpm = rpm;
-   }
+
 }
