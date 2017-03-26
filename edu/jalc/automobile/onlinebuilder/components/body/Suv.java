@@ -23,7 +23,5 @@ abstract public class Suv extends Body{
 
 
 
-  public String toString(){
-    return "Adding StandardTrunk to Suv";
   }
 }
