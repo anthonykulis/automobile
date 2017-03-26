@@ -35,8 +35,4 @@ abstract public class Body{
 
   public Cabin getCabin(){return cabin;}
 
-
-  public String toString(){
-    return "Added Quarterpanels and EngineCompartment";
-  }
 }

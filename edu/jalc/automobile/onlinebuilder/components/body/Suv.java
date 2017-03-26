@@ -21,10 +21,4 @@ abstract public class Suv extends Body{
   public StandardTrunk getTrunk(){
     return (StandardTrunk) this.getTrunk();
   }
-
-
-
-  public String toString(){
-    return "Adding StandardTrunk to Suv";
-  }
 }
