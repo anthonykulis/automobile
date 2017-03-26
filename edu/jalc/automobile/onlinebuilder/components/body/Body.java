@@ -5,13 +5,14 @@ import edu.jalc.automobile.parts.body.EngineCompartment;
 import edu.jalc.automobile.parts.body.Cabin;
 
 abstract public class Body{
-  Quarterpanels quarterpanels;
-  EngineCompartment engineCompartment;
-  Cabin cabin;
+
+  private Quarterpanels quarterpanels;
+  private EngineCompartment engineCompartment;
+  private Cabin cabin;
 
   public Body(Quarterpanels quarterpanels, EngineCompartment engineCompartment, Cabin cabin){
-    this.setQuarterpanels(quarterpanels);
-    this.setEngineCompartment(engineCompartment);
+    this.quarterpanels = quarterpanels;
+    this.engineCompartment = engineCompartment;
     this.cabin = cabin;
   }
 
@@ -19,17 +20,7 @@ abstract public class Body{
     return this.quarterpanels;
   }
 
-  Quarterpanels setQuarterpanels(Quarterpanels quarterpanels){
-    this.quarterpanels = quarterpanels;
-    return this.quarterpanels;
-  }
-
   public EngineCompartment getEngineCompartment(){
-    return this.engineCompartment;
-  }
-
-  EngineCompartment setEngineCompartment(EngineCompartment engineCompartment){
-    this.engineCompartment = engineCompartment;
     return this.engineCompartment;
   }
 

@@ -1,5 +1,7 @@
 package edu.jalc.automobile.parts.body;
 
+import edu.jalc.automobile.parts.body.seat.ClothSeat;
+
 public class StandardCabin extends Cabin{
 
   public StandardCabin(ClothSeat clothSeat){

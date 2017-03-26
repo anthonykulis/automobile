@@ -1,5 +1,8 @@
 package edu.jalc.automobile.parts.body;
 
+
+import edu.jalc.automobile.parts.body.seat.Seat;
+
 abstract public class Cabin{
   private Seat seat;
 

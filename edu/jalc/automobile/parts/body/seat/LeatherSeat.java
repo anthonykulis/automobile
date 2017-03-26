@@ -1,9 +1,8 @@
 package edu.jalc.automobile.parts.body.seat;
 
-
-public class Vinyl extends Seat {
+public class LeatherSeat extends Seat {
 
   public String toString(){
-    return "Vinyl Seat";
+    return "LeatherSeat Seat";
   }
 }
