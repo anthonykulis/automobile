@@ -7,14 +7,14 @@ public class TowingLightDutyTest{
    
    public void testGetShock(){
       System.out.println("Testing TowingLightDuty::getShock");
-      LightShock shock = new LightShock();
+      LightShock shock = new LightShock(3);
       TowingLightDuty tow = new TowingLightDuty(shock, null);
       assert(shock == tow.getShock());
    }
    
    public void testGetSpring(){
       System.out.println("Testing TowingLightDuty::getSpring");
-      LightSpring spring = new LightSpring();
+      LightSpring spring = new LightSpring(3);
       TowingLightDuty tow = new TowingLightDuty(null, spring);
       assert(spring == tow.getSpring());
    }

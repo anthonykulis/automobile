@@ -8,7 +8,7 @@ public class SportRaisedTest {
 
      public void testGetShock(){
         System.out.println("Testing SportRaised::getShock");
-        ExtendedShocks shock = new ExtendedShocks();
+        ExtendedShocks shock = new ExtendedShocks(3);
         SportRaised sportRaised = new SportRaised(shock, null);
         assert(shock == sportRaised.getShock());
      }

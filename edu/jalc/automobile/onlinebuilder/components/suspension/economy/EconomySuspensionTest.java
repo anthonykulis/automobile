@@ -7,14 +7,14 @@ public class EconomySuspensionTest{
    
    public void testGetShock(){
       System.out.println("Testing EconomySuspension::getShock");
-      StockShock shock = new StockShock();
+      StockShock shock = new StockShock(3);
       EconomySuspension suspension = new EconomySuspension(shock, null);
       assert(shock == suspension.getShock());
    }
    
    public void testGetSpring(){
       System.out.println("Testing EconomySuspension::getSpring");
-      StockSpring spring = new StockSpring();
+      StockSpring spring = new StockSpring(3);
       EconomySuspension suspension = new EconomySuspension(null, spring);
       assert(spring == suspension.getSpring());
    }

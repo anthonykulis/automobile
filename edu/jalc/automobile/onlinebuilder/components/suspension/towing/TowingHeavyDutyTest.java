@@ -7,14 +7,14 @@ public class TowingHeavyDutyTest{
    
    public void testGetShock(){
       System.out.println("Testing TowingHeavyDuty::getShock");
-      HeavyShock shock = new HeavyShock();
+      HeavyShock shock = new HeavyShock(3);
       TowingHeavyDuty tow = new TowingHeavyDuty(shock, null);
       assert(shock == tow.getShock());
    }
    
    public void testGetSpring(){
       System.out.println("Testing TowingHeavyDuty::getSpring");
-      HeavySpring spring = new HeavySpring();
+      HeavySpring spring = new HeavySpring(3);
       TowingHeavyDuty tow = new TowingHeavyDuty(null, spring);
       assert(spring == tow.getSpring());
    }

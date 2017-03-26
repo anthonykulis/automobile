@@ -7,14 +7,14 @@ public class TowingSuperDutyTest{
 
    public void testGetShock(){
       System.out.println("Testing TowingSuperDuty::getShock");
-      SuperShock shock = new SuperShock();
+      SuperShock shock = new SuperShock(3);
       TowingSuperDuty tow = new TowingSuperDuty(shock, null);
       assert(shock == tow.getShock());
    }
 
    public void testGetSpring(){
       System.out.println("Testing TowingSuperDuty::getSpring");
-      SuperSpring spring = new SuperSpring();
+      SuperSpring spring = new SuperSpring(3);
       TowingSuperDuty tow = new TowingSuperDuty(null, spring);
       assert(spring == tow.getSpring());
    }
