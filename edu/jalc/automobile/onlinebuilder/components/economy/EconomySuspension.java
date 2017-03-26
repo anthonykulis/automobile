@@ -26,7 +26,9 @@ public class EconomySuspension extends Economy{
    }
    
    public String toString(){
-      return stockShock.toString() + ", " + stockSpring.toString();
+      return "EconomySuspension has :\n" +
+                    "\t"+ stockShock+"\n"+
+                    "\t"+ stockSpring;
    }
    
 }
