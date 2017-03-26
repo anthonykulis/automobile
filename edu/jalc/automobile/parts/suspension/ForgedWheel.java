@@ -7,6 +7,6 @@ public class ForgedWheel extends Wheel {
    }
 
    public String toString(){
-      return this.getSize() + " inch Wheels";
+      return this.getSize() + " inch Forged Wheels";
    }
 }
