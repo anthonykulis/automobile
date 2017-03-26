@@ -26,6 +26,9 @@ public class SportRaised extends Sport{
    }
 
    public String toString(){
-      return "";
+      return "SportRaised has :\n" +
+                    "\t"+ shock+"\n"+
+                    "\t"+ spring;
+      
          }
 }

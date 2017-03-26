@@ -14,6 +14,9 @@ public class LuxurySuv extends Suv{
   }
 
   public String toString(){
-    return "Adding LuxuryCabin to LuxurySuv";
+    return "LuxurySuv has :\n" +
+                    "\t"+ getQuarterpanels()+"\n"+
+                    "\t"+ getEngineCompartment()+"\n"+
+                    "\t"+ getCabin();
   }
 }
