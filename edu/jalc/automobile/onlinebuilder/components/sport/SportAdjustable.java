@@ -28,7 +28,7 @@ public class SportAdjustable extends Sport{
    }
 
    public String toString(){
-      return "sport has :" + "\n \t" + mediumSpring.toString() + " \n " + adjustableShocks.toString();
+      return "sport has :" + "\n \t" + spring.toString() + "\n\t" + shock.toString();
    }
 
 }

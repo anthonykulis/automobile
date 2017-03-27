@@ -27,6 +27,6 @@ public class SportLowered extends Sport{
    }
 
    public String toString(){
-      return "sport has :" + "\n \t" + shortSpring.toString() + " \n " + shortSpring.toString();
+      return "sport has :" + "\n \t" + spring.toString() + "\n\t" + shock.toString();
    }
 }

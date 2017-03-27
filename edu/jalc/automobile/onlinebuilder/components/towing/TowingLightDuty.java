@@ -4,15 +4,15 @@ import edu.jalc.automobile.parts.*;
 
 public class TowingLightDuty extends Towing{
 
-   private Shock shock;
-   private Spring spring;
+   private LightShock shock;
+   private LightSpring spring;
    
    private TowingLightDuty(){
       this.shock = null;
       this.spring = null;
    }
    
-   public TowingLightDuty(Shock shock, Spring spring){
+   public TowingLightDuty(LightShock shock, LightSpring spring){
       this.shock = shock;
       this.spring = spring;
    }
@@ -30,5 +30,4 @@ public class TowingLightDuty extends Towing{
              "\t" + shock.toString() + "\n" +
              "\t" + spring.toString();
    }
-   
 }

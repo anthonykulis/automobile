@@ -3,7 +3,7 @@ package edu.jalc.automobile.parts;
 public class SteelWheel extends Wheel{
 
    private double size;
-   private Tire tire;
+   private AllTerrainTire tire;
    
    private SteelWheel(){
       this.size = 0;
@@ -11,7 +11,7 @@ public class SteelWheel extends Wheel{
       
    }
    
-   public SteelWheel(double size, Tire tire){
+   public SteelWheel(double size, AllTerrainTire tire){
       this.size = size;
       this.tire = tire;
    }
@@ -25,6 +25,6 @@ public class SteelWheel extends Wheel{
    }
    
    public String toString(){
-      return "\tSteal Wheel with " + tire.toString();
+      return "Steal Wheel with " + tire.toString();
    }
 }

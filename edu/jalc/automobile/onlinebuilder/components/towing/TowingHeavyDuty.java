@@ -4,15 +4,15 @@ import edu.jalc.automobile.parts.*;
 
 public class TowingHeavyDuty extends Towing{
 
-   private Shock shock;
-   private Spring spring;
+   private HeavyShock shock;
+   private HeavySpring spring;
    
    private TowingHeavyDuty(){
       this.shock = null;
       this.spring = null;
    }
    
-   public TowingHeavyDuty(Shock shock, Spring spring){
+   public TowingHeavyDuty(HeavyShock shock, HeavySpring spring){
       this.shock = shock;
       this.spring = spring;
    }
