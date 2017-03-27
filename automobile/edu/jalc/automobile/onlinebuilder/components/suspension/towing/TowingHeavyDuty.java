@@ -13,6 +13,7 @@ public class TowingHeavyDuty extends Towing{
       this.shock = null;
       this.spring = null;
       this.tire = null;
+      this.steelWheel = null;
    }
 
    public TowingHeavyDuty(HeavyShock shock, HeavySpring spring, AllTerrainTire tire,SteelWheel steelWheel){
