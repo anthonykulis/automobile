@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2284dac-4eda-43b0-a7d9-bc95e26133d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +19,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="test" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/test">
+        <entry file="file://$PROJECT_DIR$/automobile/test">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -146,7 +146,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="automobile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -715,7 +715,7 @@
       <option name="presentableId" value="Default" />
       <updated>1490308975084</updated>
       <workItem from="1490308976217" duration="1162000" />
-      <workItem from="1490582805224" duration="8035000" />
+      <workItem from="1490582805224" duration="8067000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed all tests&#10;@willbkeller">
       <created>1490309251707</created>
@@ -808,11 +808,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490592721821</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="GIthub is now greaying out my folders">
+      <created>1490592748689</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1490592748689</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9197000" />
+    <option name="totallyTimeSpent" value="9229000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -873,14 +880,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/edu/jalc/automobile/parts/suspension/ForgedWheelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/jalc/automobile/parts/suspension/HeavyShock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1283,6 +1282,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automobile/test">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
