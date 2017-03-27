@@ -31,6 +31,5 @@ public class EconomySuspensionTest{
       test.testGetSpring();
       test.testGetTire();
       System.out.println("All Tests for EconomySuspension Passed");
-
    }
 }
