@@ -22,6 +22,10 @@ abstract public class Truck extends Body {
 
 
 	public String toString() {
-		return "truck body has: ";
+		return "truck body has :\n" +
+                        "\t"+getQuarterpanels().toString()+"\n"+ 
+                        "\t" + getEngineCompartment().toString()+"\n"+
+                 	      "\t" +getCabin().toString()+"\n"+
+                        "\t" + getTruckBed().toString();                    
 	}
 }

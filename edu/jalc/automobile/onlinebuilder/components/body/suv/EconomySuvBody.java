@@ -12,7 +12,11 @@ public class EconomySuvBody extends SuvBody {
     return (StandardCabin) super.getCabin();
   }
 
-  public String toString(){
-    return "Adding StandardCabin to EconomySuvBody";
-  }
-}
+ public String toString(){
+      return "EconomySuvBody has :\n" +
+                       "\t"+ getQuarterpanels() +"\n"+
+                       "\t"+ getEngineCompartment()+"\n"+
+                       "\t"+ getCabin()+"\n"+
+                       "\t"+ getHatchback();
+   
+   }}
