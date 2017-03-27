@@ -1,6 +1,13 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.sport;
 
+<<<<<<< HEAD:edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustable.java
 import edu.jalc.automobile.parts.suspension.*;
+=======
+import edu.jalc.automobile.parts.suspension.AdjustableShocks;
+import edu.jalc.automobile.parts.suspension.MediumSpring;
+import edu.jalc.automobile.parts.suspension.Shock;
+import edu.jalc.automobile.parts.suspension.Spring;
+>>>>>>> 7944c06d16bf7f58dcd703219a015a8fee427965:edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustable.java
 
 public class SportAdjustable extends Sport{
    

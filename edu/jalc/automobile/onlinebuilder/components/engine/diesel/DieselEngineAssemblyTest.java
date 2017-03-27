@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 package edu.jalc.automobile.onlinebuilder.components.engine.diesel;
 
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 import edu.jalc.automobile.parts.engine.DieselEngine;
 import edu.jalc.automobile.parts.engine.Engine;
+=======
+package edu.jalc.automobile.onlinebuilder.components.engine.diesel
+
+import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
+>>>>>>> 7944c06d16bf7f58dcd703219a015a8fee427965
 
 public class DieselEngineAssemblyTest{
   public static void main(String... args){
