@@ -12,6 +12,6 @@ public class SportTire extends Tire{
    }
 
    public String toString(){
-      return "Sport Tire";
+      return getHeight() + "in tall and " + getWidth() + "in wide size Sport Tire";
    }
 }

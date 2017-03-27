@@ -13,6 +13,6 @@ public class SteelWheel extends Wheel {
 
    
    public String toString(){
-      return "\tSteal Wheel";
+      return getSize() + "in Steal Wheel";
    }
 }

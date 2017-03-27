@@ -43,7 +43,8 @@ public class SportRaised extends Sport{
       return "SportRaised has :\n" +
                     "\t"+ extendedShocks.toString()+"\n"+
                     "\t"+ extendedSpring.toString()+"\n"+
-                     "\t"+ sportTire.toString();
+                     "\t"+ sportTire.toString()+"\n"+
+                     "\t"+ forgedWheel.toString()+"\n";
       
          }
 }

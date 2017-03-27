@@ -7,6 +7,6 @@ public class LightShock extends Shock {
    }
 
    public String toString(){
-      return "Light Shock";
+      return getHeight() + "in Light Shock";
    }
 }

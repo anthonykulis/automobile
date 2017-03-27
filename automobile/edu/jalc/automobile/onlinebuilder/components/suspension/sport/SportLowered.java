@@ -41,9 +41,10 @@ public class SportLowered extends Sport{
    }
 
    public String toString(){
-      return "sport has :" +
+      return "SportLowered has : \n" +
               "\t"+ shortShocks.toString()+"\n"+
               "\t"+ shortSpring.toString()+"\n"+
-              "\t"+ sportTire.toString();
+              "\t"+ sportTire.toString() +"\n"+
+              "\t"+ forgedWheel.toString()+"\n";
    }
 }

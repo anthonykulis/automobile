@@ -11,7 +11,7 @@ public class LightSpring extends Spring{
    }
 
    public String toString(){
-      return "Light Coil Spring: " + getHeight() + " inches";
+      return getHeight() + "in Light Coil Spring";
    }
 }
    
