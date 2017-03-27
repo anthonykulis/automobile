@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2284dac-4eda-43b0-a7d9-bc95e26133d8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/automobile.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -693,7 +689,7 @@
       <option name="presentableId" value="Default" />
       <updated>1490308975084</updated>
       <workItem from="1490308976217" duration="1162000" />
-      <workItem from="1490582805224" duration="7994000" />
+      <workItem from="1490582805224" duration="8009000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed all tests&#10;@willbkeller">
       <created>1490309251707</created>
@@ -772,11 +768,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490592677702</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="GIthub is now greaying out my folders">
+      <created>1490592707656</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1490592707656</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9156000" />
+    <option name="totallyTimeSpent" value="9171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
