@@ -30,7 +30,7 @@ public class SportRaisedTest {
         ForgedWheel forgedWheel = new ForgedWheel(16);
         SportRaised sportRaised = new SportRaised(null,null,null,forgedWheel);
 
-        assert (forgedWheel.getSize() == sportRaised.getForgedWheel().getSize());
+        assert (forgedWheel == sportRaised.getForgedWheel());
     }
 
 

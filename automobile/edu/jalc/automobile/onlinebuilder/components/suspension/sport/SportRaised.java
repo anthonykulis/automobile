@@ -45,6 +45,6 @@ public class SportRaised extends Sport{
                     "\t"+ extendedSpring.toString()+"\n"+
                      "\t"+ sportTire.toString()+"\n"+
                      "\t"+ forgedWheel.toString()+"\n";
-      
+
          }
 }

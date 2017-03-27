@@ -4,25 +4,25 @@ import edu.jalc.automobile.parts.suspension.*;
 
 public class TowingSuperDuty extends Towing{
 
-   private Shock shock;
-   private Spring spring;
+   private SuperShock shock;
+   private SuperSpring spring;
    private AllTerrainTire tire;
    private SteelWheel steelWheel;
-   
+
    private TowingSuperDuty(){
       this.shock = null;
       this.spring = null;
       this.tire = null;
       this.steelWheel = null;
    }
-   
-   public TowingSuperDuty(Shock shock, Spring spring, AllTerrainTire tire, SteelWheel steelWheel){
+
+   public TowingSuperDuty(SuperShock shock, SuperSpring spring, AllTerrainTire tire, SteelWheel steelWheel){
       this.shock = shock;
       this.spring = spring;
       this.tire = tire;
       this.steelWheel = steelWheel;
    }
-   
+
    public Shock getShock(){
       return shock;
    }
@@ -46,5 +46,5 @@ public class TowingSuperDuty extends Towing{
               "\t" + tire.toString() + "\n" +
               "\t" + steelWheel.toString();
    }
-   
+
 }

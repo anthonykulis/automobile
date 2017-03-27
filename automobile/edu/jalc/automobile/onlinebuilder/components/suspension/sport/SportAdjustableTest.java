@@ -29,7 +29,7 @@ public class SportAdjustableTest {
         ForgedWheel forgedWheel = new ForgedWheel(16);
         SportAdjustable sportAdjustable = new SportAdjustable(null,null,null,forgedWheel);
 
-        assert (forgedWheel.getSize() == sportAdjustable.getForgedWheel().getSize());
+        assert (forgedWheel == sportAdjustable.getForgedWheel());
     }
 
      public static void main(String[] args) {
