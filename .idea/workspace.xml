@@ -1,43 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2284dac-4eda-43b0-a7d9-bc95e26133d8" name="Default" comment="Fixed issues from 62-68&#10;And moved a file from body due to it no supposed to be there in in suspension instead&#10;">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/EngineTestDriver.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/diesel/DieselEngineAssemblyTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/specs/SpecsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/NaturallyAspiratedSportEngineTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/SuperchargedSportEngineTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/TurbochargedSportEngineTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspension.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustableTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLowered.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLoweredTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportRaised.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportRaisedTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingHeavyDuty.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingHeavyDutyTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingLightDuty.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingLightDutyTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingSuperDuty.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingSuperDutyTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/SportTire.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/SportTireTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestLuxuryCabin.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/AdjustableShocksTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/ExtendedSpringTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/ForgedWheelTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/HeavySpringTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/LightSpring.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/MediumSpringTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/ShortSpringTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SportTireTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/StockSpringTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SuperShock.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SuperSpringTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/automobile.iml" afterPath="$PROJECT_DIR$/.idea/automobile.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="a2284dac-4eda-43b0-a7d9-bc95e26133d8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java" afterPath="$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,21 +54,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EconomySuspensionTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EconomySuspensionTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DieselEngineAssemblyTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DieselEngineAssemblyTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/engine/diesel/DieselEngineAssemblyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+            <state relative-caret-position="221">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -201,6 +166,8 @@
         <option value="$PROJECT_DIR$/src/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/sh.exe.stackdump" />
+        <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/engine/diesel/DieselEngineAssemblyTest.java" />
+        <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java" />
       </list>
     </option>
   </component>
@@ -980,7 +947,7 @@
       <option name="presentableId" value="Default" />
       <updated>1490308975084</updated>
       <workItem from="1490308976217" duration="1162000" />
-      <workItem from="1490582805224" duration="7365000" />
+      <workItem from="1490582805224" duration="7402000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed all tests&#10;@willbkeller">
       <created>1490309251707</created>
@@ -1024,11 +991,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490589599286</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed issues from 62-68&#10;&#10;And moved a file from body due to it no supposed to be there in in suspension instead&#10;">
+      <created>1490592081568</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1490592081568</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8527000" />
+    <option name="totallyTimeSpent" value="8564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1076,7 +1050,8 @@
     <MESSAGE value="Fixed issues 62-67&#10;&#10;And moved a file that was in body that was supposed to be in suspension" />
     <MESSAGE value="Fixed issues from 62-68&#10;And moved a file from body due to it no supposed to be there in in suspension instead&#10;&#10;Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/Driver.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/README.md&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/Suspension.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/economy/test&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/luxury/test&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/Sport.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustable.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustableTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportLowered.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportLoweredTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportRaised.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportRaisedTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/Towing.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingHeavyDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingLightDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingSuperDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/test&#10;#&#9;edu/jalc/automobile/parts/AdjustableShocks.java&#10;#&#9;edu/jalc/automobile/parts/AdjustableShocksTest.java&#10;#&#9;edu/jalc/automobile/parts/AllTerrainTire.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedShocks.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedSpring.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/ForgedWheel.java&#10;#&#9;edu/jalc/automobile/parts/ForgedWheelTest.java&#10;#&#9;edu/jalc/automobile/parts/HeavyShock.java&#10;#&#9;edu/jalc/automobile/parts/HeavySpring.java&#10;#&#9;edu/jalc/automobile/parts/LightShock.java&#10;#&#9;edu/jalc/automobile/parts/LightSpring.java&#10;#&#9;edu/jalc/automobile/parts/MediumSpring.java&#10;#&#9;edu/jalc/automobile/parts/MediumSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/README.md&#10;#&#9;edu/jalc/automobile/parts/Shock.java&#10;#&#9;edu/jalc/automobile/parts/ShortShocks.java&#10;#&#9;edu/jalc/automobile/parts/ShortSpring.java&#10;#&#9;edu/jalc/automobile/parts/ShortSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/SportTire.java&#10;#&#9;edu/jalc/automobile/parts/SportTireTest.java&#10;#&#9;edu/jalc/automobile/parts/Spring.java&#10;#&#9;edu/jalc/automobile/parts/SteelWheel.java&#10;#&#9;edu/jalc/automobile/parts/SuperShock.java&#10;#&#9;edu/jalc/automobile/parts/SuperSpring.java&#10;#&#9;edu/jalc/automobile/parts/Tire.java&#10;#&#9;edu/jalc/automobile/parts/Wheel.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustable.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/sport/SportLoweredTest.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustable.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLoweredTest.java&#10;#&#9;src/edu/jalc/automobile/parts/AdjustableShocksTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ExtendedSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ForgedWheelTest.java&#10;#&#9;src/edu/jalc/automobile/parts/MediumSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ShortSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/SportTireTest.java&#10;#&#9;src/edu/jalc/automobile/parts/SuperShock.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/AdjustableShocksTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ExtendedSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ForgedWheelTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/MediumSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ShortSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/SportTireTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/SuperShock.java&#10;" />
     <MESSAGE value="Fixed issues from 62-68&#10;And moved a file from body due to it no supposed to be there in in suspension instead&#10;&#10;&#10;# Conflicts:&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/Driver.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/README.md&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/Suspension.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/economy/test&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/luxury/test&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/Sport.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustable.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustableTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportLowered.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportLoweredTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportRaised.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportRaisedTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/Towing.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingHeavyDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingLightDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingSuperDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/test&#10;#&#9;edu/jalc/automobile/parts/AdjustableShocks.java&#10;#&#9;edu/jalc/automobile/parts/AdjustableShocksTest.java&#10;#&#9;edu/jalc/automobile/parts/AllTerrainTire.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedShocks.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedSpring.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/ForgedWheel.java&#10;#&#9;edu/jalc/automobile/parts/ForgedWheelTest.java&#10;#&#9;edu/jalc/automobile/parts/HeavyShock.java&#10;#&#9;edu/jalc/automobile/parts/HeavySpring.java&#10;#&#9;edu/jalc/automobile/parts/LightShock.java&#10;#&#9;edu/jalc/automobile/parts/LightSpring.java&#10;#&#9;edu/jalc/automobile/parts/MediumSpring.java&#10;#&#9;edu/jalc/automobile/parts/MediumSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/README.md&#10;#&#9;edu/jalc/automobile/parts/Shock.java&#10;#&#9;edu/jalc/automobile/parts/ShortShocks.java&#10;#&#9;edu/jalc/automobile/parts/ShortSpring.java&#10;#&#9;edu/jalc/automobile/parts/ShortSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/SportTire.java&#10;#&#9;edu/jalc/automobile/parts/SportTireTest.java&#10;#&#9;edu/jalc/automobile/parts/Spring.java&#10;#&#9;edu/jalc/automobile/parts/SteelWheel.java&#10;#&#9;edu/jalc/automobile/parts/SuperShock.java&#10;#&#9;edu/jalc/automobile/parts/SuperSpring.java&#10;#&#9;edu/jalc/automobile/parts/Tire.java&#10;#&#9;edu/jalc/automobile/parts/Wheel.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustable.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/sport/SportLoweredTest.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustable.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLoweredTest.java&#10;#&#9;src/edu/jalc/automobile/parts/AdjustableShocksTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ExtendedSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ForgedWheelTest.java&#10;#&#9;src/edu/jalc/automobile/parts/MediumSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ShortSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/SportTireTest.java&#10;#&#9;src/edu/jalc/automobile/parts/SuperShock.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/AdjustableShocksTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ExtendedSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ForgedWheelTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/MediumSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ShortSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/SportTireTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/SuperShock.java&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues from 62-68&#10;And moved a file from body due to it no supposed to be there in in suspension instead&#10;&#10;&#10;# Conflicts:&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/Driver.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/README.md&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/Suspension.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/economy/test&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/luxury/test&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/Sport.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustable.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustableTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportLowered.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportLoweredTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportRaised.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportRaisedTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/Towing.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingHeavyDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingLightDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingSuperDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/test&#10;#&#9;edu/jalc/automobile/parts/AdjustableShocks.java&#10;#&#9;edu/jalc/automobile/parts/AdjustableShocksTest.java&#10;#&#9;edu/jalc/automobile/parts/AllTerrainTire.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedShocks.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedSpring.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/ForgedWheel.java&#10;#&#9;edu/jalc/automobile/parts/ForgedWheelTest.java&#10;#&#9;edu/jalc/automobile/parts/HeavyShock.java&#10;#&#9;edu/jalc/automobile/parts/HeavySpring.java&#10;#&#9;edu/jalc/automobile/parts/LightShock.java&#10;#&#9;edu/jalc/automobile/parts/LightSpring.java&#10;#&#9;edu/jalc/automobile/parts/MediumSpring.java&#10;#&#9;edu/jalc/automobile/parts/MediumSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/README.md&#10;#&#9;edu/jalc/automobile/parts/Shock.java&#10;#&#9;edu/jalc/automobile/parts/ShortShocks.java&#10;#&#9;edu/jalc/automobile/parts/ShortSpring.java&#10;#&#9;edu/jalc/automobile/parts/ShortSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/SportTire.java&#10;#&#9;edu/jalc/automobile/parts/SportTireTest.java&#10;#&#9;edu/jalc/automobile/parts/Spring.java&#10;#&#9;edu/jalc/automobile/parts/SteelWheel.java&#10;#&#9;edu/jalc/automobile/parts/SuperShock.java&#10;#&#9;edu/jalc/automobile/parts/SuperSpring.java&#10;#&#9;edu/jalc/automobile/parts/Tire.java&#10;#&#9;edu/jalc/automobile/parts/Wheel.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustable.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/sport/SportLoweredTest.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustable.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLoweredTest.java&#10;#&#9;src/edu/jalc/automobile/parts/AdjustableShocksTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ExtendedSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ForgedWheelTest.java&#10;#&#9;src/edu/jalc/automobile/parts/MediumSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ShortSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/SportTireTest.java&#10;#&#9;src/edu/jalc/automobile/parts/SuperShock.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/AdjustableShocksTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ExtendedSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ForgedWheelTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/MediumSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ShortSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/SportTireTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/SuperShock.java&#10;" />
+    <MESSAGE value="Fixed issues from 62-68&#10;&#10;And moved a file from body due to it no supposed to be there in in suspension instead&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues from 62-68&#10;&#10;And moved a file from body due to it no supposed to be there in in suspension instead&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1503,18 +1478,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java">
+    <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/engine/diesel/DieselEngineAssemblyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/engine/diesel/DieselEngineAssemblyTest.java">
+    <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
