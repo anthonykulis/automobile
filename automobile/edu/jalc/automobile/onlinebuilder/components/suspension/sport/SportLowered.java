@@ -1,46 +1,49 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.sport;
 
-import edu.jalc.automobile.parts.suspension.Shock;
-import edu.jalc.automobile.parts.suspension.ShortSpring;
-import edu.jalc.automobile.parts.suspension.Spring;
-import edu.jalc.automobile.parts.suspension.Tire;
+import edu.jalc.automobile.parts.suspension.*;
 
 
 public class SportLowered extends Sport{
 
-   static ShortSpring shortSpring;
-   private Shock shock;
-   private Spring spring;
-   private Tire tire;
+   private ShortSpring shortSpring;
+   private ShortShocks shortShocks;
+   private SportTire sportTire;
+   private ForgedWheel forgedWheel;
 
    private SportLowered(){
-      this.shock = null;
-      this.spring = null;
-      this.tire = null;
+      this.shortShocks = null;
+      this.shortSpring = null;
+      this.sportTire = null;
+      this.forgedWheel = null;
    }
 
-   public SportLowered(Shock shock, Spring spring,Tire tire){
-      this.shock = shock;
-      this.spring = spring;
-      this.tire = tire;
+   public SportLowered(ShortShocks shock, ShortSpring spring, SportTire sportTire, ForgedWheel forgedWheel){
+      this.shortShocks = shock;
+      this.shortSpring = spring;
+      this.sportTire = sportTire;
+      this.forgedWheel = forgedWheel;
    }
 
    public Shock getShock(){
-      return shock;
+      return shortShocks;
    }
 
    public Spring getSpring(){
-      return spring;
+      return shortSpring;
    }
 
-   public Tire getTire(){
-      return tire;
+   public SportTire getTire(){
+      return sportTire;
+   }
+
+   public ForgedWheel getForgedWheel() {
+      return forgedWheel;
    }
 
    public String toString(){
       return "sport has :" +
-              "\t"+ shock.toString()+"\n"+
-              "\t"+ spring.toString()+"\n"+
-              "\t"+ tire.toString();
+              "\t"+ shortShocks.toString()+"\n"+
+              "\t"+ shortSpring.toString()+"\n"+
+              "\t"+ sportTire.toString();
    }
 }

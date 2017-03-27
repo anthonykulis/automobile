@@ -1,14 +1,13 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.economy;
 
-import edu.jalc.automobile.parts.suspension.Shock;
-import edu.jalc.automobile.parts.suspension.Spring;
-import edu.jalc.automobile.parts.suspension.Tire;
+import edu.jalc.automobile.parts.suspension.*;
 
 public class EconomySuspension extends Economy{
 
    private Shock stockShock;
    private Spring stockSpring;
    private Tire stockTire;
+   private Wheel wheel;
    
    private EconomySuspension(){
       this.stockShock = null;
@@ -16,10 +15,12 @@ public class EconomySuspension extends Economy{
       this.stockTire = null;
    }
    
-   public EconomySuspension(Shock stockShock, Spring stockSpring,Tire stockTire){
+   public EconomySuspension(Shock stockShock, Spring stockSpring,Wheel wheel){
       this.stockShock = stockShock;
       this.stockSpring = stockSpring;
-      this.stockTire = stockTire;
+      this.wheel = wheel;
+
+
    }
    
    public Shock getShock(){
@@ -34,7 +35,16 @@ public class EconomySuspension extends Economy{
       return stockTire;
    }
 
-   public String toString(){
+    public Wheel getWheel() {
+        return wheel;
+    }
+
+
+    public void setStockTire(double height, double width) {
+       this.stockTire = new StockTire(height,width);
+    }
+
+    public String toString(){
       return "EconomySuspension has :\n" +
               "\t"+ stockShock.toString()+"\n"+
               "\t"+ stockSpring.toString()+"\n"+

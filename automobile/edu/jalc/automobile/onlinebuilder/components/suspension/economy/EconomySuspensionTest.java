@@ -18,11 +18,19 @@ public class EconomySuspensionTest{
       assert(spring == economySuspension.getSpring());
    }
    public void testGetTire() {
-      System.out.println("Testing EconomySuspension::getWheel");
-      StockTire tire = new StockTire(10,30);
-      EconomySuspension economySuspension = new EconomySuspension(null, null,tire);
+      System.out.println("Testing EconomySuspension::getTire");
+      StockTire tire = new StockTire(5,5);
+      EconomySuspension economySuspension = new EconomySuspension(null, null,null);
+      economySuspension.setStockTire(5,5);
 
       assert(tire == economySuspension.getTire());
+   }
+   public void testGetWheel() {
+      System.out.println("Testing EconomySuspension::getWheel");
+
+
+
+
    }
    
    public static void main(String[] args){

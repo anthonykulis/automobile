@@ -4,15 +4,15 @@ public class SteelWheel extends Wheel {
 
    
    private SteelWheel(){
-      super(0, null);
+      super(0);
    }
    
-   public SteelWheel(double size, Tire tire){
-      super(size, tire);
+   public SteelWheel(double size){
+      super(size);
    }
 
    
    public String toString(){
-      return "\tSteal Wheel with " + this.getTire();
+      return "\tSteal Wheel";
    }
 }

@@ -4,39 +4,44 @@ import edu.jalc.automobile.parts.suspension.*;
 
 public class SportAdjustable extends Sport{
    
-   static MediumSpring mediumSpring;
-   static AdjustableShocks adjustableShocks;
-   private Shock shock;
-   private Spring spring;
-   private Tire tire;
+   private MediumSpring mediumSpring;
+   private AdjustableShocks adjustableShocks;
+   private SportTire sportTire;
+   private ForgedWheel forgedWheel;
 
    private SportAdjustable(){
-      this.shock = null;
-      this.spring = null;
+      this.adjustableShocks = null;
+      this.mediumSpring = null;
+      this.sportTire = null;
+      this.forgedWheel = null;
    }
 
-   public SportAdjustable(Shock shock, Spring spring,Tire tire){
-      this.shock = shock;
-      this.spring = spring;
-      this.tire = tire;
+   public SportAdjustable(AdjustableShocks shock, MediumSpring spring, SportTire sportTire, ForgedWheel forgedWheel){
+      this.adjustableShocks = shock;
+      this.mediumSpring = spring;
+      this.sportTire = sportTire;
+      this.forgedWheel = forgedWheel;
+   }
+
+   public ForgedWheel getForgedWheel() {
+      return forgedWheel;
    }
 
    public Shock getShock(){
-      return shock;
+      return adjustableShocks;
    }
 
    public Spring getSpring(){
-      return spring;
+      return mediumSpring;
    }
-   public Tire getTire(){
-      return tire;
+   public SportTire getTire(){
+      return sportTire;
    }
 
    public String toString(){
       return "sport has :" +
-              "\t"+ shock.toString()+"\n"+
-              "\t"+ spring.toString()+"\n"+
-              "\t"+ tire.toString();
+              "\t"+ adjustableShocks.toString()+"\n"+
+              "\t"+ mediumSpring.toString()+"\n"+
+              "\t"+ sportTire.toString();
    }
-
 }
