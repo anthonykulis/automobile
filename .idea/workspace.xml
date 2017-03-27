@@ -2,184 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2284dac-4eda-43b0-a7d9-bc95e26133d8" name="Default" comment="Fixed issues from 62-68&#10;And moved a file from body due to it no supposed to be there in in suspension instead&#10;">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/Body.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/car/CarBody.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/car/CoupeBody.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/car/SedanBody.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/suv/EconomySuvBody.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/suv/LuxurySuvBody.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/suv/SuvBody.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/suv/TestEconomySuv.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/truck/CrewCab.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/truck/ExtendedCab.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/truck/StandardCab.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/truck/TestCrewCab.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/truck/TestExtendedCab.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/truck/TestStandardCab.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/truck/Truck.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/DriveLine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/EconomicDriveLine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/EconomicDriveLineTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/SportDriveLine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/SportDriveLineTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/TruckDriveLine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/TruckDriveLineTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/economic/EconomicFWD.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/economic/EconomicFWDTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/economic/EconomicRWD.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/economic/EconomicRWDTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/sport/SportRWD.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/sport/SportRWDTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/sport/SuperSportAWD.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/sport/SuperSportAWDTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/truck/HeavyDutyRWD.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/truck/HeavyDutyRWDTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/truck/SuperDutyFourWheelDrive.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/truck/SuperDutyFourWheelDriveTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/EngineAssembly.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/diesel/DieselEngineAssembly.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/EcoEngineAssembly.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/boosted/BoostedEcoEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/boosted/supercharged/SuperchargedEcoEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/boosted/supercharged/SuperchargedEcoEngineTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/boosted/turbocharged/TurbochargedEcoEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/boosted/turbocharged/TurbochargedEcoEngineTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/standard/StandardEcoEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/standard/StandardEcoEngineTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/specs/HorsePower.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/specs/Torque.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/BoostedSportEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/NaturallyAspiratedSportEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/SportEngineAssembly.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/SuperchargedSportEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/TurbochargedSportEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/Suspension.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/Economy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/Sport.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/Towing.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Cabin.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/EngineCompartment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Graphic.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Hatchback.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Hood.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/LongBed.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/LuxuryCabin.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Paint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Quarterpanels.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/ShortBed.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/StandardCabin.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/StandardTrunk.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestEngineCompartment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestGraphic.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestHatchback.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestHood.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestLongBed.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestPaint.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestQuarterpanels.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestShortBed.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestStandardCabin.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestStandardTrunk.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TruckBed.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Trunk.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/seat/ClothSeat.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/seat/LeatherSeat.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/seat/Seat.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/seat/VinylSeat.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/AllWheelDriveAxle.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/AllWheelDriveAxleTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/DriveShaft.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/DriveShaftTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/ElectricSteering.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/ElectricSteeringTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/FourWheelDriveAxle.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/FourWheelDriveAxleTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/FrontDeadAxle.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/FrontDeadAxleTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/FrontDriveAxle.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/HydraulicSteering.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/HydraulicSteeringTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/LockingDifferential.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/LockingDifferentialTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/OpenDifferential.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/OpenDifferentialTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/RearDeadAxle.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/RearDriveAxle.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/RearDriveAxleTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/TorqueVectorDifferential.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/driveline/TorqueVectorDifferentialTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/engine/DieselEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/engine/EcoEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/engine/Engine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/engine/SportEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/exhaust/EconomyExhaust.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/exhaust/Exhaust.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/exhaust/PerformanceExhaust.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/induction/BoostedInduction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/induction/Induction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/induction/NaturallyAspiratedInduction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/induction/SuperchargedInduction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/induction/TurbochargedInduction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/AdjustableShocks.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/AllTerrainTire.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/AllTerrainTireTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/AlloyWheel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/AlloyWheelTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/EconomyTire.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/EconomyTireTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/ExtendedShocks.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/ExtendedSpring.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/ForgedWheel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/HeavyShock.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/HeavySpring.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/LightShock.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/LightSpringTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/MediumSpring.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/Shock.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/ShortShocks.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/ShortSpring.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SportTire.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/Spring.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SteelWheel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SteelWheelTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/StockShock.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/StockSpring.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/StockTire.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/StockTireTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SuperSpring.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/Tire.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/Wheel.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/EngineTestDriver.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/EngineTestDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/diesel/DieselEngineAssemblyTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/diesel/DieselEngineAssemblyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/specs/SpecsTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/specs/SpecsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/NaturallyAspiratedSportEngineTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/NaturallyAspiratedSportEngineTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/SuperchargedSportEngineTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/SuperchargedSportEngineTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/TurbochargedSportEngineTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/TurbochargedSportEngineTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspension.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspension.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustable.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustableTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustableTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLowered.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLowered.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLoweredTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLoweredTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportRaised.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportRaised.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportRaisedTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportRaisedTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingHeavyDuty.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingHeavyDuty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingHeavyDutyTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingHeavyDutyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingLightDuty.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingLightDuty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingLightDutyTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingLightDutyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingSuperDuty.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingSuperDuty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingSuperDutyTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingSuperDutyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/SportTire.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/SportTire.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/SportTireTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/SportTireTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestLuxuryCabin.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestLuxuryCabin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/HeavySpringTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/HeavySpringTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/LightSpring.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/LightSpring.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SportTireTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SportTireTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/StockSpringTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/StockSpringTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SuperSpringTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SuperSpringTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/EngineTestDriver.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/diesel/DieselEngineAssemblyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/specs/SpecsTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/NaturallyAspiratedSportEngineTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/SuperchargedSportEngineTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/TurbochargedSportEngineTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspension.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustableTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLowered.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLoweredTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportRaised.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportRaisedTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingHeavyDuty.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingHeavyDutyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingLightDuty.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingLightDutyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingSuperDuty.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingSuperDutyTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/SportTire.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/SportTireTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestLuxuryCabin.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/AdjustableShocksTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/ExtendedSpringTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/ForgedWheelTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/HeavySpringTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/LightSpring.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/MediumSpringTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/ShortSpringTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SportTireTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/StockSpringTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SuperShock.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/suspension/SuperSpringTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/automobile.iml" afterPath="$PROJECT_DIR$/.idea/automobile.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -193,7 +51,83 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AdjustableShocks.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/parts/suspension/AdjustableShocks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#123#124#0" expanded="false" />
+                <element signature="e#144#145#0" expanded="false" />
+                <element signature="e#188#189#0" expanded="false" />
+                <element signature="e#214#215#0" expanded="false" />
+                <element signature="e#245#246#0" expanded="false" />
+                <element signature="e#298#299#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShortSpringTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/parts/suspension/ShortSpringTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Economy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/economy/Economy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EconomySuspensionTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DieselEngineAssemblyTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/engine/diesel/DieselEngineAssemblyTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EconomySuspension.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspension.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#724#725#0" expanded="false" />
+                <element signature="e#754#755#0" expanded="false" />
+                <element signature="e#788#789#0" expanded="false" />
+                <element signature="e#819#820#0" expanded="false" />
+                <element signature="e#847#848#0" expanded="false" />
+                <element signature="e#876#877#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -309,11 +243,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="edu" />
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jalc" />
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -331,11 +297,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="edu" />
+              <option name="myItemId" value="automobile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jalc" />
+              <option name="myItemId" value="edu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -348,6 +314,104 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="suspension" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlinebuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="suspension" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="economy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlinebuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlinebuilder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -382,6 +446,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nick\Desktop\GitRepos\automobile\automobile\edu\jalc\automobile\onlinebuilder\components\suspension" />
+      <recent name="C:\Users\Nick\Desktop\GitRepos\automobile\automobile\edu\jalc\automobile\parts\suspension" />
       <recent name="C:\Users\Nick\Desktop\GitRepos\automobile" />
       <recent name="C:\Users\Nick\Desktop\GitRepos\automobile\src\edu\jalc\automobile\parts\suspension" />
     </key>
@@ -896,9 +962,9 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.EconomySuspensionTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.SportRaisedTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.SportAdjustableTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ExtendedSpringTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ExtendedSpringTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.SportRaisedTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.SportAdjustableTest" />
         <item index="4" class="java.lang.String" itemvalue="Application.SportLoweredTest" />
       </list>
     </recent_temporary>
@@ -914,7 +980,7 @@
       <option name="presentableId" value="Default" />
       <updated>1490308975084</updated>
       <workItem from="1490308976217" duration="1162000" />
-      <workItem from="1490582805224" duration="7028000" />
+      <workItem from="1490582805224" duration="7365000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed all tests&#10;@willbkeller">
       <created>1490309251707</created>
@@ -962,28 +1028,28 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8190000" />
+    <option name="totallyTimeSpent" value="8527000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1021,54 +1087,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/edu/jalc/automobile/parts/suspension/EconomyTire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jalc/automobile/onlinebuilder/components/engine/diesel/DieselEngineAssemblyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="67" lean-forward="false" selection-start-line="0" selection-start-column="67" selection-end-line="0" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jalc/automobile/parts/suspension/Wheel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jalc/automobile/parts/suspension/ForgedWheel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jalc/automobile/parts/suspension/Tire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jalc/automobile/parts/suspension/SuperSpringTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/jalc/automobile/parts/suspension/AdjustableShocks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1434,6 +1452,69 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/parts/suspension/AdjustableShocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#123#124#0" expanded="false" />
+            <element signature="e#144#145#0" expanded="false" />
+            <element signature="e#188#189#0" expanded="false" />
+            <element signature="e#214#215#0" expanded="false" />
+            <element signature="e#245#246#0" expanded="false" />
+            <element signature="e#298#299#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/parts/suspension/ShortSpringTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/economy/Economy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspension.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#724#725#0" expanded="false" />
+            <element signature="e#754#755#0" expanded="false" />
+            <element signature="e#788#789#0" expanded="false" />
+            <element signature="e#819#820#0" expanded="false" />
+            <element signature="e#847#848#0" expanded="false" />
+            <element signature="e#876#877#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/engine/diesel/DieselEngineAssemblyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
           <folding />
         </state>
       </provider>
