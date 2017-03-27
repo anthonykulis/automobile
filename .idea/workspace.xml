@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2284dac-4eda-43b0-a7d9-bc95e26133d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/automobile.iml" afterPath="$PROJECT_DIR$/.idea/automobile.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/automobile.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -125,94 +128,6 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="edu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="edu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jalc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="edu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jalc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="automobile" />
@@ -778,7 +693,7 @@
       <option name="presentableId" value="Default" />
       <updated>1490308975084</updated>
       <workItem from="1490308976217" duration="1162000" />
-      <workItem from="1490582805224" duration="7951000" />
+      <workItem from="1490582805224" duration="7994000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed all tests&#10;@willbkeller">
       <created>1490309251707</created>
@@ -850,11 +765,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490592510004</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="GIthub is now greaying out my folders">
+      <created>1490592677702</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1490592677702</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9113000" />
+    <option name="totallyTimeSpent" value="9156000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -903,7 +825,8 @@
     <MESSAGE value="Fixed issues from 62-68&#10;And moved a file from body due to it no supposed to be there in in suspension instead&#10;&#10;Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/Driver.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/README.md&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/Suspension.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/economy/test&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/luxury/test&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/Sport.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustable.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustableTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportLowered.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportLoweredTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportRaised.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportRaisedTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/Towing.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingHeavyDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingLightDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingSuperDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/test&#10;#&#9;edu/jalc/automobile/parts/AdjustableShocks.java&#10;#&#9;edu/jalc/automobile/parts/AdjustableShocksTest.java&#10;#&#9;edu/jalc/automobile/parts/AllTerrainTire.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedShocks.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedSpring.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/ForgedWheel.java&#10;#&#9;edu/jalc/automobile/parts/ForgedWheelTest.java&#10;#&#9;edu/jalc/automobile/parts/HeavyShock.java&#10;#&#9;edu/jalc/automobile/parts/HeavySpring.java&#10;#&#9;edu/jalc/automobile/parts/LightShock.java&#10;#&#9;edu/jalc/automobile/parts/LightSpring.java&#10;#&#9;edu/jalc/automobile/parts/MediumSpring.java&#10;#&#9;edu/jalc/automobile/parts/MediumSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/README.md&#10;#&#9;edu/jalc/automobile/parts/Shock.java&#10;#&#9;edu/jalc/automobile/parts/ShortShocks.java&#10;#&#9;edu/jalc/automobile/parts/ShortSpring.java&#10;#&#9;edu/jalc/automobile/parts/ShortSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/SportTire.java&#10;#&#9;edu/jalc/automobile/parts/SportTireTest.java&#10;#&#9;edu/jalc/automobile/parts/Spring.java&#10;#&#9;edu/jalc/automobile/parts/SteelWheel.java&#10;#&#9;edu/jalc/automobile/parts/SuperShock.java&#10;#&#9;edu/jalc/automobile/parts/SuperSpring.java&#10;#&#9;edu/jalc/automobile/parts/Tire.java&#10;#&#9;edu/jalc/automobile/parts/Wheel.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustable.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/sport/SportLoweredTest.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustable.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLoweredTest.java&#10;#&#9;src/edu/jalc/automobile/parts/AdjustableShocksTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ExtendedSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ForgedWheelTest.java&#10;#&#9;src/edu/jalc/automobile/parts/MediumSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ShortSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/SportTireTest.java&#10;#&#9;src/edu/jalc/automobile/parts/SuperShock.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/AdjustableShocksTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ExtendedSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ForgedWheelTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/MediumSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ShortSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/SportTireTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/SuperShock.java&#10;" />
     <MESSAGE value="Fixed issues from 62-68&#10;And moved a file from body due to it no supposed to be there in in suspension instead&#10;&#10;&#10;# Conflicts:&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/Driver.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/README.md&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/Suspension.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/economy/test&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/luxury/test&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/Sport.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustable.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustableTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportLowered.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportLoweredTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportRaised.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/sport/SportRaisedTest.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/Towing.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingHeavyDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingLightDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/TowingSuperDuty.java&#10;#&#9;edu/jalc/automobile/onlinebuilder/components/towing/test&#10;#&#9;edu/jalc/automobile/parts/AdjustableShocks.java&#10;#&#9;edu/jalc/automobile/parts/AdjustableShocksTest.java&#10;#&#9;edu/jalc/automobile/parts/AllTerrainTire.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedShocks.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedSpring.java&#10;#&#9;edu/jalc/automobile/parts/ExtendedSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/ForgedWheel.java&#10;#&#9;edu/jalc/automobile/parts/ForgedWheelTest.java&#10;#&#9;edu/jalc/automobile/parts/HeavyShock.java&#10;#&#9;edu/jalc/automobile/parts/HeavySpring.java&#10;#&#9;edu/jalc/automobile/parts/LightShock.java&#10;#&#9;edu/jalc/automobile/parts/LightSpring.java&#10;#&#9;edu/jalc/automobile/parts/MediumSpring.java&#10;#&#9;edu/jalc/automobile/parts/MediumSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/README.md&#10;#&#9;edu/jalc/automobile/parts/Shock.java&#10;#&#9;edu/jalc/automobile/parts/ShortShocks.java&#10;#&#9;edu/jalc/automobile/parts/ShortSpring.java&#10;#&#9;edu/jalc/automobile/parts/ShortSpringTest.java&#10;#&#9;edu/jalc/automobile/parts/SportTire.java&#10;#&#9;edu/jalc/automobile/parts/SportTireTest.java&#10;#&#9;edu/jalc/automobile/parts/Spring.java&#10;#&#9;edu/jalc/automobile/parts/SteelWheel.java&#10;#&#9;edu/jalc/automobile/parts/SuperShock.java&#10;#&#9;edu/jalc/automobile/parts/SuperSpring.java&#10;#&#9;edu/jalc/automobile/parts/Tire.java&#10;#&#9;edu/jalc/automobile/parts/Wheel.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/sport/SportAdjustable.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/sport/SportLoweredTest.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportAdjustable.java&#10;#&#9;src/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLoweredTest.java&#10;#&#9;src/edu/jalc/automobile/parts/AdjustableShocksTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ExtendedSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ForgedWheelTest.java&#10;#&#9;src/edu/jalc/automobile/parts/MediumSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/ShortSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/SportTireTest.java&#10;#&#9;src/edu/jalc/automobile/parts/SuperShock.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/AdjustableShocksTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ExtendedSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ForgedWheelTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/MediumSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/ShortSpringTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/SportTireTest.java&#10;#&#9;src/edu/jalc/automobile/parts/suspension/SuperShock.java&#10;" />
     <MESSAGE value="Fixed issues from 62-68&#10;&#10;And moved a file from body due to it no supposed to be there in in suspension instead&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues from 62-68&#10;&#10;And moved a file from body due to it no supposed to be there in in suspension instead&#10;" />
+    <MESSAGE value="GIthub is now greaying out my folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="GIthub is now greaying out my folders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -914,14 +837,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/edu/jalc/automobile/parts/suspension/AdjustableShocksTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/jalc/automobile/parts/suspension/ExtendedSpringTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1327,6 +1242,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
