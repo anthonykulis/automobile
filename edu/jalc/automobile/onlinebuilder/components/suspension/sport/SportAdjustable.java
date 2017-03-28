@@ -3,7 +3,7 @@ package edu.jalc.automobile.onlinebuilder.components.suspension.sport;
 import edu.jalc.automobile.parts.suspension.*;
 
 public class SportAdjustable extends Sport{
-   
+
    private MediumSpring mediumSpring;
    private AdjustableShocks adjustableShocks;
    private SportTire sportTire;

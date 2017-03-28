@@ -8,11 +8,12 @@ public class TowingHeavyDuty extends Towing{
    private HeavySpring spring;
    private Tire tire;
    private SteelWheel steelWheel;
-   
+
    private TowingHeavyDuty(){
       this.shock = null;
       this.spring = null;
       this.tire = null;
+      this.steelWheel = null;
    }
 
    public TowingHeavyDuty(HeavyShock shock, HeavySpring spring, AllTerrainTire tire,SteelWheel steelWheel){
@@ -21,11 +22,11 @@ public class TowingHeavyDuty extends Towing{
       this.tire = tire;
       this.steelWheel = steelWheel;
    }
-   
+
    public Shock getShock(){
       return shock;
    }
-   
+
    public Spring getSpring(){
       return spring;
    }
@@ -45,5 +46,5 @@ public class TowingHeavyDuty extends Towing{
               "\t" + tire.toString() + "\n" +
               "\t" + steelWheel.toString() + "\n";
    }
-   
+
 }

@@ -23,8 +23,7 @@ public class TowingSuperDutyTest{
       AllTerrainTire tire = new AllTerrainTire(10,30);
       TowingSuperDuty towingSuperDuty = new TowingSuperDuty(null, null,tire,null);
 
-      assert(tire.getWidth() == towingSuperDuty.getTire().getWidth() &&
-              tire.getHeight() == towingSuperDuty.getTire().getHeight());
+      assert(tire == towingSuperDuty.getTire());
    }
 
    public void testGetWheel() {

@@ -4,29 +4,30 @@ import edu.jalc.automobile.parts.suspension.*;
 
 public class EconomySuspension extends Economy{
 
-   private Shock stockShock;
-   private Spring stockSpring;
+   private StockShock stockShock;
+   private StockSpring stockSpring;
    private Tire stockTire;
    private Wheel wheel;
-   
+
    private EconomySuspension(){
       this.stockShock = null;
       this.stockSpring = null;
       this.stockTire = null;
+      this.wheel = null;
    }
-   
-   public EconomySuspension(Shock stockShock, Spring stockSpring,Wheel wheel){
+
+   public EconomySuspension(StockShock stockShock, StockSpring spring, EconomyTire tire,AlloyWheel wheel){
       this.stockShock = stockShock;
       this.stockSpring = stockSpring;
       this.wheel = wheel;
-
+      this.tire = tire;
 
    }
-   
+
    public Shock getShock(){
       return stockShock;
    }
-   
+
    public Spring getSpring(){
       return stockSpring;
    }
@@ -50,5 +51,5 @@ public class EconomySuspension extends Economy{
               "\t"+ stockSpring.toString()+"\n"+
               "\t"+ stockTire.toString();
    }
-   
+
 }

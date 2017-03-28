@@ -29,7 +29,7 @@ public class SportLoweredTest {
         ForgedWheel forgedWheel = new ForgedWheel(16);
         SportLowered sportLowered = new SportLowered(null,null,null,forgedWheel);
 
-        assert (forgedWheel.getSize() == sportLowered.getForgedWheel().getSize());
+        assert (forgedWheel == sportLowered.getForgedWheel());
     }
 
     public static void main(String[] args){
