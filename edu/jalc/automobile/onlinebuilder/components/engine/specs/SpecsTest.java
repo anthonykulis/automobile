@@ -1,3 +1,4 @@
+/*
 package edu.jalc.automobile.onlinebuilder.components.engine.specs;
 
 public class SpecsTest{
@@ -16,3 +17,4 @@ public class SpecsTest{
     System.out.println(" - all tests passed");
   }
 }
+*/

@@ -8,6 +8,6 @@ public class ExtendedSpring extends Spring{
 
 
     public String toString(){
-        return this.getHeight() + " inch Coil Spring";
+        return getHeight() + "in Extended Coil Spring";
      }
 }

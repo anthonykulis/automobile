@@ -1,4 +1,5 @@
-package edu.jalc.automobile.onlinebuilder.components.engine.diesel
+
+/*package edu.jalc.automobile.onlinebuilder.components.engine.diesel
 
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 
@@ -35,3 +36,5 @@ public class DieselEngineAssemblyTest{
     assert(engine.getCylinders() == 4);
   }
 }
+
+*/

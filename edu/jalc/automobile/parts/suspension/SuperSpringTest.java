@@ -4,7 +4,7 @@ public class SuperSpringTest{
    
    public void testGetHeight(){
       System.out.println("Testing SuperSpring::getHeight");
-      SuperSpring spring = new SuperSpring();
+      SuperSpring spring = new SuperSpring(12);
       assert(12 == spring.getHeight());
    }
    

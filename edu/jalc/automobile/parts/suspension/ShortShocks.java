@@ -7,6 +7,6 @@ public class ShortShocks extends Shock{
    }
 
    public String toString(){
-      return this.getHeight() + " inch shocks";
+      return getHeight() + "in Short Shocks";
    }
 }

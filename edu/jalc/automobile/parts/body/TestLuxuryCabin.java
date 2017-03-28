@@ -1,3 +1,4 @@
+/*
 package edu.jalc.automobile.parts.body;
 
 import edu.jalc.automobile.parts.LuxurySeat;
@@ -17,3 +18,4 @@ public class TestLuxuryCabin{
     System.out.println("Test Complete");
   }
 }
+*/

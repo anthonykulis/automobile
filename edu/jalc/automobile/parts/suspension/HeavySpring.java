@@ -11,7 +11,7 @@ public class HeavySpring extends Spring{
    }
 
    public String toString(){
-      return "Heavy Coil Spring: "+ this.getHeight() + " inches";
+      return getHeight() + "in Heavy Coil Spring";
    }
 }
    

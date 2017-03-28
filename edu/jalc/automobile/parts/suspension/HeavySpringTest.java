@@ -4,7 +4,7 @@ public class HeavySpringTest{
 
    public void testGetHeight(){
       System.out.println("Testing HeavySpring::getHeight");
-      HeavySpring spring = new HeavySpring();
+      HeavySpring spring = new HeavySpring(10);
       assert(10 == spring.getHeight());
    }
    

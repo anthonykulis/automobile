@@ -4,7 +4,7 @@ public class StockSpringTest{
 
    public void testGetHeight(){
       System.out.println("Testing StockSpring::getHeight");
-      StockSpring spring = new StockSpring();
+      StockSpring spring = new StockSpring(2);
       assert(2 == spring.getHeight());
    }
    
