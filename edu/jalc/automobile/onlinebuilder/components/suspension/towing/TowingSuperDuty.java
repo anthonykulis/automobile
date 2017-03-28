@@ -30,7 +30,7 @@ public class TowingSuperDuty extends Towing{
    
    public String toString(){
       return "Towing Super Duty has:\n" +
-             "\t" + shock.toString() + "\n" +
+             "\t" + shock.toString() + "\n" + 
              "\t" + spring.toString();
       }
    
