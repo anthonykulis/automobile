@@ -41,6 +41,7 @@ public class SportLowered extends Sport{
    }
 
    public String toString(){
+
       return "SportLowered has : \n" +
               "\t"+ shortShocks.toString()+"\n"+
               "\t"+ shortSpring.toString()+"\n"+

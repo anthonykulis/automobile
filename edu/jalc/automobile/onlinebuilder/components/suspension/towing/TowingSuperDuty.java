@@ -1,6 +1,11 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.towing;
 
-import edu.jalc.automobile.parts.suspension.*;
+
+import edu.jalc.automobile.parts.suspension.Shock;
+import edu.jalc.automobile.parts.suspension.Spring;
+import edu.jalc.automobile.parts.suspension.SuperShock;
+import edu.jalc.automobile.parts.suspension.SuperSpring;
+
 
 public class TowingSuperDuty extends Towing{
 
@@ -9,12 +14,14 @@ public class TowingSuperDuty extends Towing{
    private AllTerrainTire tire;
    private SteelWheel steelWheel;
 
+
    private TowingSuperDuty(){
       this.shock = null;
       this.spring = null;
       this.tire = null;
       this.steelWheel = null;
    }
+
 
    public TowingSuperDuty(SuperShock shock, SuperSpring spring, AllTerrainTire tire, SteelWheel steelWheel){
       this.shock = shock;
@@ -48,3 +55,4 @@ public class TowingSuperDuty extends Towing{
    }
 
 }
+

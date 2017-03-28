@@ -1,6 +1,10 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension.towing;
 
-import edu.jalc.automobile.parts.suspension.*;
+import edu.jalc.automobile.parts.suspension.Shock;
+import edu.jalc.automobile.parts.suspension.Spring;
+import edu.jalc.automobile.parts.suspension.LightShock;
+import edu.jalc.automobile.parts.suspension.LightSpring; 
+
 
 public class TowingLightDuty extends Towing{
 
@@ -8,6 +12,7 @@ public class TowingLightDuty extends Towing{
    private LightSpring spring;
    private Tire tire;
    private SteelWheel steelWheel;
+
 
    private TowingLightDuty(){
       this.shock = null;
@@ -17,6 +22,7 @@ public class TowingLightDuty extends Towing{
    }
 
    public TowingLightDuty(LightShock shock, LightSpring spring, AllTerrainTire tire, SteelWheel steelWheel){
+
       this.shock = shock;
       this.spring = spring;
       this.tire = tire;
@@ -48,3 +54,4 @@ public class TowingLightDuty extends Towing{
    }
 
 }
+
