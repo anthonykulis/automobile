@@ -2,6 +2,8 @@ package edu.jalc.automobile.onlinebuilder.components.suspension.towing;
 
 import edu.jalc.automobile.parts.suspension.Shock;
 import edu.jalc.automobile.parts.suspension.Spring;
+import edu.jalc.automobile.parts.suspension.HeavyShock;
+import edu.jalc.automobile.parts.suspension.HeavySpring;
 
 public class TowingHeavyDuty extends Towing{
 
