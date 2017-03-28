@@ -9,7 +9,7 @@ public class SuperSpring extends Spring{
    }
 
    public String toString(){
-      return "Super Leaf Spring: " + getHeight() + " inches";
+      return getHeight() + "in Super Coil Spring";
    }
 }
    

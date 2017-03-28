@@ -12,6 +12,6 @@ public class AdjustableShocks extends Shock {
 
 
    public String toString(){
-      return this.getHeight() + " inch shocks";
+      return this.getHeight() + "in Adjustable Shocks";
    }
 }

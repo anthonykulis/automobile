@@ -1,18 +1,18 @@
 package edu.jalc.automobile.parts.body;
 
-public class SportTire extends Tire{
+import edu.jalc.automobile.parts.suspension.Tire;
+
+public class SportTire extends Tire {
 
    private double height;
    private double width;
 
    private SportTire(){
-      this.height = 0;
-      this.width = 0;
+      super(0,0);
    }
 
    public SportTire(double height, double width){
-      this.height = height;
-      this.width = width;
+      super(height,width);
    }
 
    public double getHeight(){

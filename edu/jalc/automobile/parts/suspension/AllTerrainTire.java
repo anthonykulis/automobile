@@ -13,6 +13,6 @@ public class AllTerrainTire extends Tire {
 
    
    public String toString(){
-      return "All Terrain Tire";
+      return getHeight() + "in tall and "+ getWidth() +"in wide size All Terrain Tire";
    }
 }

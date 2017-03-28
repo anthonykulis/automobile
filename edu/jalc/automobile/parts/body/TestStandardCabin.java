@@ -1,3 +1,4 @@
+/*
 package edu.jalc.automobile.parts.body;
 
 public class TestStandardCabin{
@@ -12,3 +13,4 @@ public class TestStandardCabin{
     System.out.println("Test Complete");
   }
 }
+*/
