@@ -1,4 +1,6 @@
 package edu.jalc.automobile.onlinebuilder.components.engine;
 
-abstract public class EngineAssembly{
+import edu.jalc.automobile.onlinebuilder.components.Component;
+
+abstract public class EngineAssembly extends Component {
 }

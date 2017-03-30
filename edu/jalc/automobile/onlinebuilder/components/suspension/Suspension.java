@@ -1,6 +1,8 @@
 package edu.jalc.automobile.onlinebuilder.components.suspension;
 
-public abstract class Suspension{
+import edu.jalc.automobile.onlinebuilder.components.Component;
+
+public abstract class Suspension extends Component {
 
 
 }
