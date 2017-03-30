@@ -29,7 +29,11 @@ public class Hood{
     return this.graphic;
   }
 
-  public String toString(){
-    return "Added Paint and Graphic to Hood";
+ public String toString(){
+    return "Hood has:\n" +
+                       "\t"+ paint.toString()+"\n"+
+                       "\t"+ graphic.toString(); 
+
   }
+
 }

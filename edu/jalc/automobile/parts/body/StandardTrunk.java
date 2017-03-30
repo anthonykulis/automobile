@@ -6,6 +6,7 @@ public class StandardTrunk extends Trunk{
 
   public double getCubicFt(){return super.cubicFt;}
   public String toString(){
-    return "StandardTrunk";
+    return "StandardTrunk has:/n"+
+                              "/t"+getCubicFt()+ " CubicFt";
   }
 }
