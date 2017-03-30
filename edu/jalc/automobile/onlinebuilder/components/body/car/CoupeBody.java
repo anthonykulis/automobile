@@ -10,4 +10,13 @@ class CoupeBody extends CarBody {
 	public CoupeBody(Quarterpanels quarterpanels, EngineCompartment engineCompartment, Cabin cabin, StandardTrunk trunk){
 		super(quarterpanels, engineCompartment, cabin, trunk);
 	}
+      public String toString(){
+      return "CoupeBody has :\n" +
+                          "\t"+ getQuarterpanels() +"\n"+
+                          "\t"+ getEngineCompartment()+"\n"+
+                          "\t"+ getCabin()+"\n"+
+                          "\t"+ getTrunk();
+   }
+    
+
 }

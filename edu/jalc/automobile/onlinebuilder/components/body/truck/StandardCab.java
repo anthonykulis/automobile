@@ -14,8 +14,11 @@ public class StandardCab extends Truck {
 		return (StandardCabin) super.getCabin();
 	}
 
-
-	public String toString() {
-		return "StardardCabin and a ShortBed";
-	}
-}
+	public String toString(){
+      return "StandardCab has :\n" +
+                       "\t"+ getQuarterpanels() +"\n"+
+                       "\t"+ getEngineCompartment()+"\n"+
+                       "\t"+ getCabin()+"\n"+
+                       "\t"+ getTruckBed();
+   
+   }}
