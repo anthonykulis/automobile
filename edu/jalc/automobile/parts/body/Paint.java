@@ -7,8 +7,6 @@ public class Paint{
 
    }
 
-   public String getPaint(){
-      return this.paint;}
 
    public String toString(){
       return "Paint is :\n" +

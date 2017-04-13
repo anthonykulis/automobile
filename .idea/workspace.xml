@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c0bd62e-c071-4635-864e-1f69ccbb7be8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Graphic.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Graphic.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Paint.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Paint.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,8 +58,8 @@
       <file leaf-file-name="Paint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/Paint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="152">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="method#Paint#0;class#Paint#0" expanded="true" />
                 <element signature="method#toString#0;class#Paint#0" expanded="true" />
@@ -73,11 +71,11 @@
       <file leaf-file-name="Graphic.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/Graphic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="133">
+              <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
               <folding>
-                <element signature="e#190#191#0" expanded="true" />
-                <element signature="e#230#231#0" expanded="true" />
+                <element signature="e#140#141#0" expanded="true" />
+                <element signature="e#180#181#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -970,7 +968,7 @@
       <workItem from="1491828828346" duration="4040000" />
       <workItem from="1492001341832" duration="2527000" />
       <workItem from="1492087779759" duration="442000" />
-      <workItem from="1492090611556" duration="70000" />
+      <workItem from="1492090611556" duration="110000" />
     </task>
     <task id="LOCAL-00001" summary="Finished recoding sport class to make sport wheel and forged wheel default no matter what but now you pass size parameters to each one">
       <created>1490596578836</created>
@@ -990,7 +988,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14307000" />
+    <option name="totallyTimeSpent" value="14347000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1423,8 +1421,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/Paint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="152">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="method#Paint#0;class#Paint#0" expanded="true" />
             <element signature="method#toString#0;class#Paint#0" expanded="true" />
@@ -1434,11 +1432,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/Graphic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        <state relative-caret-position="133">
+          <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
           <folding>
-            <element signature="e#190#191#0" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#140#141#0" expanded="true" />
+            <element signature="e#180#181#0" expanded="true" />
           </folding>
         </state>
       </provider>

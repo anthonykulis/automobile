@@ -6,8 +6,6 @@ public class Graphic{
   public Graphic(){
   }
 
-  public String getGraphic(){return this.graphic;}
-
   public String toString(){
     return "Graphic: " + this.name;
   }
