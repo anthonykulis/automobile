@@ -13,6 +13,10 @@ public class TerminalPrompter implements Askable {
 		this.numberOfOptions = numberOfOptions;
 	}
 
+	public void tell(String message){
+		System.out.println(message);
+	}
+
 	public int ask() {
 
 		Integer result = 0;
