@@ -1,4 +1,4 @@
-package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts;
+package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.cabandbox;
 import  edu.jalc.automobile.parts.body.ShortBed;
 
 public class CrewShortBed extends ShortBed{
