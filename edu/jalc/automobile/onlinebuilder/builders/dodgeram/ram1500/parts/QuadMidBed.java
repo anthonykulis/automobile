@@ -7,5 +7,5 @@ public class QuadMidBed extends MidBed{
    public String toString(){
       return "Cab and Box: Quad 6'4\"";
       
-   }
+   }  
 }
