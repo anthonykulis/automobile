@@ -1,8 +1,8 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts;
 
-public class TwoLiterI4DOHCEngine extends Engine{
+public class TwoPointFourLiterI4MultiAirEngine extends Engine{
 
    public String toString(){
-      return "2.0-Liter I4 DOHC Engine";
+      return "2.4-Liter I4 MultiAir® Engine";
    }
 } 
