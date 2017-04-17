@@ -1,15 +1,12 @@
 package edu.jalc.automobile.parts.body;
 
 public class Graphic{
-  private String graphic;
+  private String name;
 
-  public Graphic(String graphic){
-    this.graphic = graphic;
+  public Graphic(){
   }
 
-  public String getGraphic(){return this.graphic;}
-
   public String toString(){
-    return "Adding graphic";
+    return "Graphic: " + this.name;
   }
 }
