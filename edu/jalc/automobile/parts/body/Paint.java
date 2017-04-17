@@ -1,4 +1,5 @@
 package edu.jalc.automobile.parts.body;
+import edu.jalc.automobile.parts.body.colors.BrightRed;
 
 public class Paint{
    private String paint;
