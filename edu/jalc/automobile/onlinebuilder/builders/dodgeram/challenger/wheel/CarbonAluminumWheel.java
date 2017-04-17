@@ -6,7 +6,7 @@ public class CarbonAluminumWheel extends Wheel{
 
   private String finish;
 
-  public AluminumWheel(double size, String finish){
+  public CarbonAluminumWheel(double size, String finish){
     super(size);
     this.finish = finish;
   }
