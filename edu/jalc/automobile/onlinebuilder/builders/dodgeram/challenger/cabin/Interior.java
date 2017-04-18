@@ -12,6 +12,6 @@ public class Interior{
     this.type = type;
   }
   public String toString(){
-    return this.color + this.type + "Interior";
+    return this.color + " " + this.type + " Interior";
   }
 }

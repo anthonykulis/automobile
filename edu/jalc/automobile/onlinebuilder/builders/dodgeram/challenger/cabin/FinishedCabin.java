@@ -7,10 +7,11 @@ public class FinishedCabin extends Cabin{
   private Interior interior;
 
   public FinishedCabin(Seat seat, Interior interior){
+    super(seat);
     this.interior = interior;
   }
   
   public String toString(){
-    return this.interior + this.seat;
+    return this.interior + " " + this.seat;
   }
 }

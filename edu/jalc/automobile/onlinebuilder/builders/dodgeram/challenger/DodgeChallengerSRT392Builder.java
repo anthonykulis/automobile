@@ -42,10 +42,24 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
       new YellowJacketPaint(),
       new MaximumSteelPaint(),
     };
+    TerminalPrompterBuilder paintPrompter = new TerminalPrompterBuilder().addType("Paint");
+    for(Paint paint: paints){
+      paintPrompter.addOption(paint);
+    }
+    Paint paint = paints[paintPrompter.sort().build().ask()];
     Graphic[] graphics = new Graphic[]{
       new Graphic("Twin Silver Center Stripes"),
       new Graphic("Twin Black Center Stripes")
     };
+    int interiorChoice = new TerminalPrompterBuilder()
+      .addType("Interior")
+      .addOption(new Interior(new Red(), "Nappa Leather Alcantara"))
+      .addOption(new Interior(new Black(), "Nappa Leather Alcantara"))
+      .addOption(new Interior(new Black(), "SRT Laguna Leather"))
+      .addOption(new Interior(new Sepia(), "SRT Laguna Leather"))
+      .sort()
+      .build()
+      .ask();
     return this;
   }
   public DodgeRamBuilderInterface askForOptions(TerminalPrompterBuilderInterface promptBuilder){
