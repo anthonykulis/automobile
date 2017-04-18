@@ -9,4 +9,8 @@ public class DualRearWheel extends Wheel{
   public DualRearWheel(){
     super(17);
   }
+
+  public String toString(){
+    return "Dual Rear Wheel " + getSize() + " inch";
+  }
 }
