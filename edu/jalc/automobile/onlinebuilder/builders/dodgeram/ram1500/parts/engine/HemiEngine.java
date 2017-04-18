@@ -1,8 +1,14 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.enigne;
 
-public class HemiEngine extends EngineType{
+import edu.jalc.automobile.parts.engine.Engine;
+
+public class HemiEngine extends Engine{
+
+  public HemiEngine(double displacement, HorsePower horsePower, Torque torque, int cylinders){
+    super(displacement, horsePower, torque, cylinders);
+  }
 
   public String toString(){
-    return "5.7-Liter V8 Hemi MDS VVT";
+    return "Hemi" + super.toString();
   }
 }
