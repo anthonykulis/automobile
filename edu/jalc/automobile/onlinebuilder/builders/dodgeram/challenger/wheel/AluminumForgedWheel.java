@@ -14,6 +14,6 @@ public class AluminumForgedWheel extends ForgedWheel{
   }
 
   public String toString(){
-    return String.format("%d-inch x %d-inch %s Aluminum Forged Wheels", this.getSize(), this.width, this.finish);
+    return String.format("%f-inch x %f-inch %s Aluminum Forged Wheels", this.getSize(), this.width, this.finish);
   }
 }

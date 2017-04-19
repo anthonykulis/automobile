@@ -9,7 +9,7 @@ public class HemiMdsVvtSportEngine extends HEMISportEngine{
    }
   
   public String toString(){
-    return "HEMI MDS VVT " + super.toString();
+    return "MDS VVT " + super.toString();
   }
 
 }

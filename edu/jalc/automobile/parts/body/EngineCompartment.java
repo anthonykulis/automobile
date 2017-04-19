@@ -15,6 +15,6 @@ public class EngineCompartment{
   }
 
   public String toString(){
-    return "Adding hood to enginecompartment";
+    return "Engine Compartment Has:\n\t" + this.hood;
   }
 }

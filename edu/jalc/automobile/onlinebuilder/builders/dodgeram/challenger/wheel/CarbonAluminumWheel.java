@@ -1,6 +1,6 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.wheel;
 
-import edu.jalc.automobile.parts.suspention.Wheel;
+import edu.jalc.automobile.parts.suspension.Wheel;
 
 public class CarbonAluminumWheel extends Wheel{
 
@@ -12,6 +12,6 @@ public class CarbonAluminumWheel extends Wheel{
   }
 
   public String toString(){
-    return String.format("%d-inch %s Carbon Aluminum Wheels", super.getSize(), this.finish);
+    return String.format("%f-inch %s Carbon Aluminum Wheels", super.getSize(), this.finish);
   }
 }
