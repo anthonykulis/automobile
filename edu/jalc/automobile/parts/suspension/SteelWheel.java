@@ -3,16 +3,16 @@ package edu.jalc.automobile.parts.suspension;
 public class SteelWheel extends Wheel {
 
    
-   private SteelWheel(){
-      super(0);
+   public SteelWheel(){
+      super(18);
    }
    
-   public SteelWheel(double size){
+   private SteelWheel(double size){
       super(size);
    }
 
    
    public String toString(){
-      return getSize() + "in Steal Wheel";
+      return getSize() + "in Steel Wheel";
    }
 }
