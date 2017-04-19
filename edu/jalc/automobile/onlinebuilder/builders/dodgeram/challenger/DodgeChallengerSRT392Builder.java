@@ -11,6 +11,7 @@ import edu.jalc.automobile.parts.engine.SportEngine;
 import edu.jalc.automobile.parts.induction.NaturallyAspiratedInduction;
 import edu.jalc.automobile.parts.exhaust.PerformanceExhaust;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.paint.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.seat.*;
 
 public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
 
@@ -32,7 +33,7 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
     else this.engine = hemi_Engine;
     return this;
   }
-  public DodgeRamBuilderInterface askForColorAndInterior(TerminalPrompterBuilderInterface promptBuilder){
+  public DodgeRamBuilderInterface askForColorAndInterior(){
     Paint[] paints = new Paint[]{
       new OctaneRedPaint(),
       new ContusionBluePaint(),
@@ -42,21 +43,22 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
       new YellowJacketPaint(),
       new MaximumSteelPaint(),
     };
-    TerminalPrompterBuilder paintPrompter = new TerminalPrompterBuilder().addType("Paint");
+    TerminalPrompterBuilder paintPrompter = TerminalPrompterBuilder.newBuilder().addType("Paint");
     for(Paint paint: paints){
       paintPrompter.addOption(paint);
     }
+
     Paint paint = paints[paintPrompter.sort().build().ask()];
     Graphic[] graphics = new Graphic[]{
       new Graphic("Twin Silver Center Stripes"),
       new Graphic("Twin Black Center Stripes")
     };
-    int interiorChoice = new TerminalPrompterBuilder()
-      .addType("Interior")
-      .addOption(new Interior(new Red(), "Nappa Leather Alcantara"))
-      .addOption(new Interior(new Black(), "Nappa Leather Alcantara"))
-      .addOption(new Interior(new Black(), "SRT Laguna Leather"))
-      .addOption(new Interior(new Sepia(), "SRT Laguna Leather"))
+    int interiorChoice = TerminalPrompterBuilder.newBuilder()
+      .addType("Seat")
+      .addOption(new ColoredLeatherSeat(new Red(), "Nappa Alcantara"))
+      .addOption(new ColoredLeatherSeat(new Black(), "Nappa Alcantara"))
+      .addOption(new ColoredLeatherSeat(new Black(), "SRT Laguna"))
+      .addOption(new ColoredLeatherSeat(new Sepia(), "SRT Laguna"))
       .sort()
       .build()
       .ask();
