@@ -12,7 +12,7 @@ public class PZeroSummerTire extends SportTire{
   }
 
   public String toString(){
-    return String.format("%dinch x %dinch %s %s",getHeight(), getWidth(), "P Zero Summer Tire";
+    return this.description + " P Zero Summer Tires";
   }
 
 }

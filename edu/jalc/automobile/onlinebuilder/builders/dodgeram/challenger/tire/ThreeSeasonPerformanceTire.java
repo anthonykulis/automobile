@@ -12,7 +12,7 @@ public class ThreeSeasonPerformanceTire extends SportTire{
   }
 
   public String toString(){
-      return String.format("%dinch x %dinch %s %s",getHeight(), getWidth(), "Three Season Performance Tire";
+      return this.description + " Three Season Performance Tires";
   }
 
 }

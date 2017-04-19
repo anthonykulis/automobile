@@ -9,7 +9,7 @@ public class HemiMdsSportEngine extends HEMISportEngine{
    }
   
   public String toString(){
-    return "HEMI MDS " + super.toString();
+    return "MDS " + super.toString();
   }
 
 }

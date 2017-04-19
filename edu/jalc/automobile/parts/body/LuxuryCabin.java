@@ -8,7 +8,11 @@ public class LuxuryCabin extends Cabin{
     super(leatherSeat);
   }
   public LeatherSeat getSeat(){
-    return (LeatherSeat) this.getSeat();
+    return (LeatherSeat) super.getSeat();
+  }
+  
+  public String toString(){
+    return "Luxury Cabin with " + super.getSeat();
   }
 
 }

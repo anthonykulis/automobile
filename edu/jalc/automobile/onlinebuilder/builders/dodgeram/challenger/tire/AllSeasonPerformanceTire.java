@@ -12,7 +12,7 @@ public class AllSeasonPerformanceTire extends SportTire{
   }
 
   public String toString(){
-    return String.format("%dinch x %dinch %s %s",getHeight(), getWidth(), this.description,"All Season Performance Tire");
+    return this.description + " All Season Performance Tires";
   }
 
 }
