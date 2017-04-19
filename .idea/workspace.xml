@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c0bd62e-c071-4635-864e-1f69ccbb7be8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompter.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilder.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/DodgeRamBuilderInterface.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/DodgeRamBuilderInterface.java" />
-    </list>
+    <list default="true" id="6c0bd62e-c071-4635-864e-1f69ccbb7be8" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,9 +91,11 @@
       <file leaf-file-name="TerminalPrompterBuilderTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="53" column="114" lean-forward="false" selection-start-line="53" selection-start-column="114" selection-end-line="53" selection-end-column="114" />
-              <folding />
+            <state relative-caret-position="413">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding>
+                <element signature="method#main#0;class#TerminalPrompterBuilderTest#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1070,7 +1066,7 @@
       <workItem from="1492087779759" duration="442000" />
       <workItem from="1492090611556" duration="322000" />
       <workItem from="1492539524654" duration="218000" />
-      <workItem from="1492609382679" duration="1240000" />
+      <workItem from="1492609382679" duration="1386000" />
     </task>
     <task id="LOCAL-00001" summary="Finished recoding sport class to make sport wheel and forged wheel default no matter what but now you pass size parameters to each one">
       <created>1490596578836</created>
@@ -1090,7 +1086,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16017000" />
+    <option name="totallyTimeSpent" value="16163000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1550,9 +1546,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="53" column="114" lean-forward="false" selection-start-line="53" selection-start-column="114" selection-end-line="53" selection-end-column="114" />
-          <folding />
+        <state relative-caret-position="413">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="method#main#0;class#TerminalPrompterBuilderTest#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
