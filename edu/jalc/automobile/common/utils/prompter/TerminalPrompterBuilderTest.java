@@ -1,5 +1,6 @@
 package edu.jalc.automobile.common.utils.prompter;
 
+import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.HorsePower;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.Torque;
 import edu.jalc.automobile.onlinebuilder.components.engine.sport.SuperchargedSportEngine;
@@ -8,6 +9,8 @@ import edu.jalc.automobile.parts.engine.SportEngine;
 import edu.jalc.automobile.parts.exhaust.PerformanceExhaust;
 import edu.jalc.automobile.parts.induction.SuperchargedInduction;
 import edu.jalc.automobile.parts.induction.TurbochargedInduction;
+
+import java.util.ArrayList;
 
 public class TerminalPrompterBuilderTest {
 
@@ -44,8 +47,11 @@ public class TerminalPrompterBuilderTest {
 
 		int result = prompter.ask();
 
+		ArrayList<Object> options = builder.getOptions();
+		EngineAssembly engine = (EngineAssembly) options.get(result);
+
 		//expect
-		assert(result == 1 || result == 2);
+		assert((result == 1 || result == 2) && (engine == turbochargedSportEngine || engine == superchargedSportEngine));
 
 	}
 }

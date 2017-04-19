@@ -19,7 +19,7 @@ public class TerminalPrompter implements Askable {
 
 	public int ask() {
 
-		Integer result = 0;
+		Integer result;
 
 		// try to ask, if not a int, ask again
 		try{
