@@ -5,7 +5,7 @@ import edu.jalc.automobile.onlinebuilder.components.Component;
 public interface TerminalPrompterBuilderInterface {
 
 	public TerminalPrompterBuilderInterface addType(String type);
-	public TerminalPrompterBuilderInterface addOption(Component component);
+	public TerminalPrompterBuilderInterface addOption(Object object);
 	public TerminalPrompterBuilderInterface sort();
 	public TerminalPrompter build() throws Exception;
 }
