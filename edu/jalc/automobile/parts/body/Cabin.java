@@ -13,6 +13,8 @@ abstract public class Cabin{
   public Cabin(Seat seat){
     this.seat = seat;
   }
-  abstract public Seat getSeat();
+  public Seat getSeat(){
+    return this.seat;
+  }
 
 }

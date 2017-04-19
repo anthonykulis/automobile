@@ -31,8 +31,6 @@ public class Quarterpanels{
    }
 
    public String toString(){
-      return "Quarterpanels has:\n" +
-                           "\t"+ paint+"\n"+
-                           "\t"+ graphic; 
+      return "Quarterpanels with " + paint + " " + graphic; 
    }
 }

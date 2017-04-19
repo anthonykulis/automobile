@@ -1,11 +1,9 @@
-package edu.jalc.automobile.parts.body;
+package edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.paint;
 
 public class Graphic{
+
   private String name;
 
-  public Graphic(){
-  }
-    
   public Graphic(String name){
     this.name = name;
   }
@@ -13,4 +11,5 @@ public class Graphic{
   public String toString(){
     return "Graphic: " + this.name;
   }
+
 }
