@@ -1,4 +1,4 @@
-package edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.cabin;
+package edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.seat;
 
 public class Black extends Color{
 
