@@ -2,27 +2,39 @@ package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.sxtsportblackto
 
 import java.util.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
+import edu.jalc.automobile.common.utils.prompter.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.color.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.seatingandtrim.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.stripe.*;
 
-//import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.TwoLiterI4DOHCEngine;
-
 public class SXTSportBlacktopBuilder /*implements DodgeRamBuilderInterface*/{
 
-   public static Engine engine;
-   Color color;
-   SeatingAndTrim seatingAndTrim;
-   Stripe stripe;
+   static TwoLiterI4DOHCEngine twoLiterI4DOHCEngine = new TwoLiterI4DOHCEngine();
+   
    Scanner keyboard = new Scanner(System.in);
    
-   public void askForPowerTrain(){
-      System.out.println("Standard engine equiped.");
-      Engine standard = new TwoLiterI4DOHCEngine();
-      engine = standard;
+   public void askForPowerTrain(TerminalPrompterBuilderInterface promptBuilder) throws Exception{
+      TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
+      builder.addType("Engine");
+      builder.addOption(twoLiterI4DOHCEngine);
+      builder.sort();
+      TerminalPrompter prompter = builder.build();
+   
+      int result = prompter.ask();
+   
+      assert(result == 1 || result == 2);
    }
-   public static void main(String[] args){
-      System.out.println(engine);
+      
+   public static void main(String[] args) throws Exception{
+      TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
+      builder.addType("Engine");
+      builder.addOption(twoLiterI4DOHCEngine);
+      builder.sort();
+      TerminalPrompter prompter = builder.build();
+   
+      int result = prompter.ask();
+   
+      assert(result == 1);   
    }
 }
