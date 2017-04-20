@@ -15,10 +15,24 @@ import java.util.*;
 public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
 
   public DodgeRamBuilderInterface askForPowerTrain(TerminalPrompterBuilderInterface promptBuilder){
+    TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
+    //builder.addType("Engine");
+    //builder.addOption();
+
     return null;
   }
   public DodgeRamBuilderInterface askForColorAndInterior(TerminalPrompterBuilderInterface promptBuilder){
+    TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
+    builder.addType("Color");
+    //Issues with the options being added. Not sure how to or why but continueing on adding them.
+    builder.addOption(flameRedCLearCoat);
+    builder.addOption(brightWhiteClearCoat);
+    builder.addOption(maximumSteelMetallicClearCoat);
+    builder.addOption(brilliantBlackCrystalPearl);
+    builder.sort();
+
     return null;
+
   }
   public DodgeRamBuilderInterface askForOptions(TerminalPrompterBuilderInterface promptBuilder){
     return null;
