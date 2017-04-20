@@ -3,12 +3,13 @@ package edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger;
 import edu.jalc.automobile.Automobile;
 import edu.jalc.automobile.common.utils.prompter.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.engine.*;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.paint.*;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.seat.*;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.wheel.SteelForgedWheel;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.tire.*;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.suspension.SportSuspension;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.engine.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.paint.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.seat.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.color.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.wheel.SteelForgedWheel;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.tire.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.suspension.SportSuspension;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
 import edu.jalc.automobile.onlinebuilder.components.engine.sport.NaturallyAspiratedSportEngine;
@@ -64,47 +65,56 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
     return this;
   }
   public DodgeRamBuilderInterface askForColorAndInterior(){
-    Paint[] paints = new Paint[]{
-      new OctaneRedPaint(),
-      new ContusionBluePaint(),
-      new PitchBlackPaint(),
-      new GoMangoPaint(),
-      new GreenGoPaint(),
-      new YellowJacketPaint(),
-      new MaximumSteelPaint(),
-    };
-    TerminalPrompterBuilder paintPrompter = TerminalPrompterBuilder.newBuilder();
-    paintPrompter.addType("Paint");
-    for(Paint paint: paints){
-      paintPrompter.addOption(paint);
-    }
+    Paint paint = askForPaint();
+    Graphic graphic = askForGraphic();
+    ColoredLeatherSeat seat = askForSeat();
     
+    this.body = new CoupeBody(
+      new Quarterpanels(paint,new Graphic("None")),
+      new EngineCompartment(new Hood(paint, graphic)),
+      new LuxuryCabin(seat),
+      new StandardTrunk(5));
+    return this;
+  }
+  
+  private Paint askForPaint(){
+    TerminalPrompterBuilder paintPrompter = TerminalPrompterBuilder.newBuilder();
     int choice = 7;
+    paintPrompter.addType("Paint")
+      .addOption(new OctaneRedPaint())
+      .addOption(new ContusionBluePaint())
+      .addOption(new PitchBlackPaint())
+      .addOption(new GoMangoPaint())
+      .addOption(new GreenGoPaint())
+      .addOption(new YellowJacketPaint())
+      .addOption(new MaximumSteelPaint())
+      .sort();
+    
     try{
       choice = paintPrompter.build().ask();
     }catch(Exception e){System.err.println(e);}
     
-    Paint paint = (Paint)paintPrompter.getOptions().get(choice - 1);
-
-    Graphic graphic = new Graphic("No Graphics");
-    int graphicChoice = 3;
+    return (Paint)paintPrompter.getOptions().get(choice - 1);
+  }
+  private Graphic askForGraphic(){
+    int graphicChoice = 1;
+    TerminalPrompterBuilder graphicPrompter = TerminalPrompterBuilder.newBuilder();
     try{
-      TerminalPrompterBuilder graphicPrompter = TerminalPrompterBuilder.newBuilder();
-        graphicChoice = graphicPrompter.addType("Graphics")
+      graphicChoice = graphicPrompter.addType("Graphics")
         .addOption(new Graphic("Twin Silver Center Stripes"))
         .addOption(new Graphic("Twin Black Center Stripes"))
-        .addOption(new Graphic("No Graphics"))
+        .addOption(new Graphic("None"))
         .sort()
         .build()
         .ask();
-      graphic = (Graphic)graphicPrompter.getOptions().get(graphicChoice - 1);
     }catch(Exception e){System.err.println(e);}
-    
-    ColoredLeatherSeat seat = new ColoredLeatherSeat(null,"");
-    int seatChoice = 3;
+    return (Graphic)graphicPrompter.getOptions().get(graphicChoice - 1);
+  }
+  private ColoredLeatherSeat askForSeat(){
+    TerminalPrompterBuilder seatPrompter = TerminalPrompterBuilder.newBuilder();
+    int seatChoice = 2;
     try{
-      TerminalPrompterBuilder seatPrompter = TerminalPrompterBuilder.newBuilder();
-        seatChoice = seatPrompter.addType("Seat")
+      seatChoice = seatPrompter.addType("Seats")
         .addOption(new ColoredLeatherSeat(new Red(), "Nappa Alcantara"))
         .addOption(new ColoredLeatherSeat(new Black(), "Nappa Alcantara"))
         .addOption(new ColoredLeatherSeat(new Black(), "SRT Laguna"))
@@ -112,16 +122,10 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
         .sort()
         .build()
         .ask();
-      seat = (ColoredLeatherSeat)seatPrompter.getOptions().get(seatChoice - 1);
     }catch(Exception e){System.err.println(e);}
-    
-    this.body = new CoupeBody(
-      new Quarterpanels(paint,null),
-      new EngineCompartment(new Hood(paint, graphic)),
-      new LuxuryCabin(seat),
-      new StandardTrunk(5));
-    return this;
+    return (ColoredLeatherSeat)seatPrompter.getOptions().get(seatChoice - 1);
   }
+  
   public DodgeRamBuilderInterface askForOptions(){
     
     SportTire tire = new SportTire(0,0);
@@ -131,7 +135,7 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
       wheelPrompter.addType("Wheels")
         .addOption(wheel)
         .build()
-        .tell("Your SRT 392 comes with " + wheel);
+        .tell("Your SRT 392 comes with\n" + wheel + "\n");
     
       TerminalPrompterBuilder tirePrompter = TerminalPrompterBuilder.newBuilder();
       int tireChoice = tirePrompter.addType("Tires")
