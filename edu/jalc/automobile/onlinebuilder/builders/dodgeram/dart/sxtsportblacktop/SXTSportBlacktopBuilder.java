@@ -27,21 +27,22 @@ import edu.jalc.automobile.parts.body.*;
 import edu.jalc.automobile.parts.suspension.*;
 import edu.jalc.automobile.parts.driveline.*;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
+import edu.jalc.automobile.parts.body.seat.ClothSeat;
 
 public class SXTSportBlacktopBuilder implements DodgeRamBuilderInterface{
-   Engine engine;
-   Paint paint;
-   SeatingAndTrim seatingAndTrim;
-   Graphic graphic;
-   Tire tire;
-   Wheel wheel;
+   private Engine engine;
+   private Paint paint;
+   private ClothSeat clothSeat;
+   private Graphic graphic;
+   private Tire tire;
+   private Wheel wheel;
    
    public Automobile build() {
-      SedanBody coupe = new SedanBody(new Quarterpanels(paint, graphic), new EngineCompartment(null), null, new StandardTrunk(0));
+      SedanBody coupe = new SedanBody(new Quarterpanels(paint, graphic), new EngineCompartment(new Hood(paint, graphic)), new StandardCabin(clothSeat), new StandardTrunk(13.1));
    
       DriveLine economicFWD = new EconomicFWD(new FrontDriveAxle(), new RearDeadAxle(), new ElectricSteering(), new OpenDifferential());
    
-      EngineAssembly ecoEngineAssembly = new StandardEcoEngine(new EcoEngine(0, new HorsePower(160, 2), new Torque(184, 3), 4), new EconomyExhaust(), new NaturallyAspiratedInduction());
+      EngineAssembly ecoEngineAssembly = new StandardEcoEngine(new EcoEngine(1400, new HorsePower(160, 2), new Torque(184, 3), 4), new EconomyExhaust(), new NaturallyAspiratedInduction());
    
       Suspension economySuspension= new EconomySuspension(new StockShock(0), new StockSpring(0), new EconomyTire(10, 10), new AlloyWheel(0, tire));
    
@@ -95,17 +96,17 @@ public class SXTSportBlacktopBuilder implements DodgeRamBuilderInterface{
       }
             
       promptBuilder = new TerminalPrompterBuilder();
-      promptBuilder.addType("Seating & Trim");
+      promptBuilder.addType("Seating");
       promptBuilder.addOption(new SportClothSeatBlackInteriorColor());
       promptBuilder.addOption(new PremiumBlackLightTungstenInteriorColors());
       promptBuilder.addOption(new PremiumBlackRubyRedInteriorColors());
    
-      ArrayList<Object> seatingAndTrims = promptBuilder.getOptions();
+      ArrayList<Object> seats = promptBuilder.getOptions();
    
       try{
          int result = promptBuilder.build().ask();
       
-         seatingAndTrim = (SeatingAndTrim)seatingAndTrims.get(result - 1);
+         clothSeat = (ClothSeat)seats.get(result - 1);
       }
       catch(Exception e){
          e.printStackTrace();
