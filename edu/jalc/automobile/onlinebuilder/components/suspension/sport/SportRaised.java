@@ -40,10 +40,7 @@ public class SportRaised extends Sport{
    }
 
    public String toString(){
-<<<<<<< HEAD:edu/jalc/automobile/onlinebuilder/components/sport/SportRaised.java
-      return "sport has :" + "\n \t" + spring.toString() + "\n\t" + shock.toString();
-   }
-=======
+
       return "SportRaised has :\n" +
                     "\t"+ extendedShocks.toString()+"\n"+
                     "\t"+ extendedSpring.toString()+"\n"+
@@ -51,5 +48,4 @@ public class SportRaised extends Sport{
                      "\t"+ forgedWheel.toString()+"\n";
 
          }
->>>>>>> 1d77634c1647631ea22843a0da0953fc4fbd8d6c:edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportRaised.java
 }
