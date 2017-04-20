@@ -23,7 +23,7 @@ public class TowingHeavyDutyTest{
       AllTerrainTire tire = new AllTerrainTire(10,30);
       TowingHeavyDuty towingHeavyDuty = new TowingHeavyDuty(null, null,tire,null);
 
-      assert(tire = towingHeavyDuty.getTire();
+      assert(tire == towingHeavyDuty.getTire());
    }
    public void testGetWheel() {
       System.out.println("Testing TowingHeavyDuty::getWheel");

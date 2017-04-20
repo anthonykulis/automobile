@@ -1,14 +1,15 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.sxtsportblacktop;
 
 import java.util.*;
-//import java.util.ArrayList;
 import edu.jalc.automobile.Automobile;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
 import edu.jalc.automobile.common.utils.prompter.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.*;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.color.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.paint.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.seatingandtrim.*;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.stripe.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.graphic.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.tires.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.wheels.*;
 import edu.jalc.automobile.onlinebuilder.components.body.car.SedanBody;
 import edu.jalc.automobile.onlinebuilder.components.driveline.DriveLine;
 import edu.jalc.automobile.onlinebuilder.components.driveline.economic.EconomicFWD;
@@ -18,24 +19,31 @@ import edu.jalc.automobile.onlinebuilder.components.engine.economy.standard.Stan
 import edu.jalc.automobile.onlinebuilder.components.suspension.Suspension;
 import edu.jalc.automobile.onlinebuilder.components.suspension.economy.EconomySuspension;
 import edu.jalc.automobile.parts.engine.EcoEngine;
+import edu.jalc.automobile.parts.exhaust.*;
+import edu.jalc.automobile.parts.induction.NaturallyAspiratedInduction;
 import edu.jalc.automobile.parts.suspension.Tire;
 import edu.jalc.automobile.parts.suspension.Wheel;
+import edu.jalc.automobile.parts.body.*;
+import edu.jalc.automobile.parts.suspension.*;
+import edu.jalc.automobile.parts.driveline.*;
+import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 
-
-public class SXTSportBlacktopBuilder{
+public class SXTSportBlacktopBuilder implements DodgeRamBuilderInterface{
    Engine engine;
-   Color color;
+   Paint paint;
    SeatingAndTrim seatingAndTrim;
-   Stripe stripe;
+   Graphic graphic;
+   Tire tire;
+   Wheel wheel;
    
    public Automobile build() {
-      SedanBody coupe = new SedanBody(null, null, null, null);
+      SedanBody coupe = new SedanBody(new Quarterpanels(paint, graphic), new EngineCompartment(null), null, new StandardTrunk(0));
    
-      DriveLine economicFWD = new EconomicFWD(null, null, null, null);
+      DriveLine economicFWD = new EconomicFWD(new FrontDriveAxle(), new RearDeadAxle(), new ElectricSteering(), new OpenDifferential());
    
-      EngineAssembly ecoEngineAssembly = new StandardEcoEngine(null, null, null);
+      EngineAssembly ecoEngineAssembly = new StandardEcoEngine(new EcoEngine(0, new HorsePower(160, 2), new Torque(184, 3), 4), new EconomyExhaust(), new NaturallyAspiratedInduction());
    
-      Suspension economySuspension= new EconomySuspension(null, null, null, null);
+      Suspension economySuspension= new EconomySuspension(new StockShock(0), new StockSpring(0), new EconomyTire(10, 10), new AlloyWheel(0, tire));
    
       return new Automobile("Dodge", "Dart", "SXT Sport Blacktop", coupe, economicFWD, ecoEngineAssembly, economySuspension);
    }
@@ -79,7 +87,7 @@ public class SXTSportBlacktopBuilder{
       
          int result = prompter.ask();
       
-         color = (Color)colors.get(result - 1);
+         paint = (Paint)colors.get(result - 1);
       } 
       catch(Exception e){
          e.printStackTrace();
@@ -105,7 +113,7 @@ public class SXTSportBlacktopBuilder{
       } 
       
       promptBuilder = new TerminalPrompterBuilder();
-      promptBuilder.addType("Stripe");
+      promptBuilder.addType("Graphic");
       promptBuilder.addOption(new RoofHoodGrayStripe());
       promptBuilder.addOption(new RoofHoodDualGrayStripes());
       promptBuilder.addOption(new RoofHoodDualBlackStripes());
@@ -118,20 +126,59 @@ public class SXTSportBlacktopBuilder{
       try{
          int result = promptBuilder.build().ask();
       
-         stripe = (Stripe)stripes.get(result - 1);
+         graphic = (Graphic)stripes.get(result - 1);
       }
       catch(Exception e){
          e.printStackTrace();
          System.exit(1); 
       } 
-
+   
       return this;   
    }
-  
+   
+   public SXTSportBlacktopBuilder askForOptions() {
+   
+      GraniteCrystalAlumWheel graniteCrystalAlumWheel = new GraniteCrystalAlumWheel(17);
+      TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
+      promptBuilder.addType("Wheels");
+      promptBuilder.addOption(graniteCrystalAlumWheel);
+      promptBuilder.sort();
+   
+      try {
+         int result = promptBuilder.build().ask();
+         wheel = graniteCrystalAlumWheel;
+      } 
+      catch (Exception e) {
+      
+      }
+      promptBuilder = new TerminalPrompterBuilder();
+   
+      AllSeasonTires allSeasonTires = new AllSeasonTires();
+      allSeasonTires.setTireDetails("205/55R16");
+   
+      promptBuilder.addType("Tires");
+      promptBuilder.addOption(allSeasonTires);
+      promptBuilder.sort();
+   
+      try {
+         int result = promptBuilder.build().ask();
+         tire = allSeasonTires;
+      } 
+      catch (Exception e) {
+      
+      }   
+   
+      return this;
+   }
+
+   public SXTSportBlacktopBuilder askForPackages(){
+      return this;}
+     
    public static void main(String[] args) throws Exception{
-      new SXTSportBlacktopBuilder()
+      System.out.println(new SXTSportBlacktopBuilder()
             .askForPowerTrain()
             .askForColorAndInterior()
-            .build();  
+            .askForOptions()
+            .build());  
    }
 }
