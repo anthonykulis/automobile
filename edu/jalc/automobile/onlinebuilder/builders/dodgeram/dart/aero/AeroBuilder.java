@@ -12,6 +12,17 @@ import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.seatingand
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.seatingandtrim.SportClothSeatBlackInteriorColor;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.tires.AllSeasonTires;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.wheels.SilverAlumWheel;
+import edu.jalc.automobile.onlinebuilder.components.body.car.SedanBody;
+import edu.jalc.automobile.onlinebuilder.components.driveline.DriveLine;
+import edu.jalc.automobile.onlinebuilder.components.driveline.economic.EconomicFWD;
+import edu.jalc.automobile.onlinebuilder.components.engine.economy.EcoEngineAssembly;
+
+import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
+
+import edu.jalc.automobile.onlinebuilder.components.engine.economy.standard.StandardEcoEngine;
+import edu.jalc.automobile.onlinebuilder.components.suspension.Suspension;
+import edu.jalc.automobile.onlinebuilder.components.suspension.economy.EconomySuspension;
+import edu.jalc.automobile.parts.engine.EcoEngine;
 import edu.jalc.automobile.parts.suspension.Tire;
 import edu.jalc.automobile.parts.suspension.Wheel;
 
@@ -24,7 +35,52 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
 
     @Override
     public Automobile build() {
-        return null;
+        SedanBody coupe = new SedanBody(
+                null,
+                null,
+                null,
+                null
+        );
+
+        DriveLine economicFWD = new EconomicFWD(
+                null,
+                null,
+                null,
+                null
+
+        );
+
+
+
+        EngineAssembly ecoEngineAssembly = new StandardEcoEngine(
+                null,
+                null,
+                null
+        );
+
+
+        Suspension economySuspension= new EconomySuspension(
+                null,
+                null,
+                null,
+                null
+        );
+
+        EngineAssembly engineAssembly = new EcoEngineAssembly(
+                null,
+                null
+        );
+
+
+        return new Automobile(
+                "Dodge Dart",
+                "Aero",
+                null,
+                coupe,
+                economicFWD,
+                engineAssembly,
+                economySuspension
+        );
     }
 
     @Override
@@ -169,7 +225,6 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
         aeroBuilder.askForPackages(new TerminalPrompterBuilder());
         aeroBuilder.askForOptions(new TerminalPrompterBuilder());
         aeroBuilder.build();
-
 
     }
 }

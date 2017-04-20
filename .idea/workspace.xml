@@ -1,32 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c0bd62e-c071-4635-864e-1f69ccbb7be8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/aero/AeroBuilder.java" />
+    <list default="true" id="6c0bd62e-c071-4635-864e-1f69ccbb7be8" name="Default" comment="Finished up builder for Dodge Aero">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/aero/AeroBuilder.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/aero/AeroBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/OnePointFourLiterI4SixteenValveMultiAirTurboEngine.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/OnePointFourLiterI4SixteenValveMultiAirTurboEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/TwoPointFourLiterI4MultiAirEngine.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/TwoPointFourLiterI4MultiAirEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/tires/AllSeasonTires.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/tires/AllSeasonTires.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/GlossBlack10SpokeAlumWheel.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/GlossBlack10SpokeAlumWheel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/GraniteCrystalAlumWheel.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/GraniteCrystalAlumWheel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/HyperBlackAlumWheels.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/HyperBlackAlumWheels.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/PolishedAlumWheels.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/PolishedAlumWheels.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/SilverAlumWheel.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/SilverAlumWheel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/Driver.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/Driver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspension.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspension.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspensionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportRaised.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportRaised.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingHeavyDuty.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingHeavyDuty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingHeavyDutyTest.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingHeavyDutyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingLightDuty.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingLightDuty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingSuperDuty.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingSuperDuty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Graphic.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Graphic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Paint.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Paint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestEngineCompartment.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestEngineCompartment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestGraphic.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestGraphic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestHood.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestHood.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestPaint.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestPaint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestQuarterpanels.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestQuarterpanels.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/car/CoupeBody.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/car/CoupeBody.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/EcoEngineAssembly.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/EcoEngineAssembly.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,111 +21,112 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AeroBuilder.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AeroBuilder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/aero/AeroBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1033">
-              <caret line="30" column="107" lean-forward="true" selection-start-line="30" selection-start-column="107" selection-end-line="30" selection-end-column="107" />
+            <state relative-caret-position="2554">
+              <caret line="227" column="8" lean-forward="false" selection-start-line="227" selection-start-column="8" selection-end-line="227" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1432#1433#0" expanded="true" />
-                <element signature="e#1459#1460#0" expanded="true" />
+                <element signature="method#askForColorAndInterior#0;class#AeroBuilder#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AllSeasonTires.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/tires/AllSeasonTires.java">
+      <file leaf-file-name="StandardEcoEngineTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/standard/StandardEcoEngineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="60" lean-forward="true" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
-              <folding>
-                <element signature="e#242#243#0" expanded="true" />
-                <element signature="e#286#287#0" expanded="true" />
-                <element signature="e#364#365#0" expanded="true" />
-                <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#456#457#0" expanded="true" />
-                <element signature="e#523#524#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="408">
+              <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Color.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/color/Color.java">
+      <file leaf-file-name="Engine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/Engine.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SilverAlumWheel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/SilverAlumWheel.java">
+      <file leaf-file-name="OnePointFourLiterI4SixteenValveMultiAirTurboEngine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/OnePointFourLiterI4SixteenValveMultiAirTurboEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#398#399#0" expanded="true" />
+                <element signature="e#232#233#0" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PolishedAlumWheels.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/PolishedAlumWheels.java">
+      <file leaf-file-name="Automobile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/Automobile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HyperBlackAlumWheels.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/HyperBlackAlumWheels.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+            <state relative-caret-position="442">
+              <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
               <folding>
-                <element signature="e#268#269#0" expanded="true" />
-                <element signature="e#295#296#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GraniteCrystalAlumWheel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/GraniteCrystalAlumWheel.java">
+      <file leaf-file-name="EconomySuspension.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspension.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+            <state relative-caret-position="408">
+              <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlossBlack10SpokeAlumWheel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/GlossBlack10SpokeAlumWheel.java">
+      <file leaf-file-name="EcoEngineAssembly.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/EcoEngineAssembly.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+            <state relative-caret-position="68">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BrightWhiteClearCoat.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/color/BrightWhiteClearCoat.java">
+      <file leaf-file-name="EcoEngine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/engine/EcoEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="68">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Engine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/engine/Engine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StandardEcoEngine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/standard/StandardEcoEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
-                <element signature="e#156#157#0" expanded="false" />
-                <element signature="e#201#202#0" expanded="false" />
+                <element signature="e#676#677#0" expanded="true" />
+                <element signature="e#705#706#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -175,10 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/parts/suspension/LightShock.java" />
-        <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/parts/suspension/LightSpring.java" />
-        <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingLightDuty.java" />
-        <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/parts/suspension/SuperShock.java" />
         <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/parts/suspension/SuperSpring.java" />
         <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/parts/suspension/HeavySpring.java" />
         <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/suspension/towing/TowingSuperDuty.java" />
@@ -215,7 +192,6 @@
         <option value="$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestEngineCompartment.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspension.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/TwoPointFourLiterI4MultiAirEngine.java" />
-        <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/OnePointFourLiterI4SixteenValveMultiAirTurboEngine.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilder.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/HyperBlackAlumWheels.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/wheels/GraniteCrystalAlumWheel.java" />
@@ -225,6 +201,11 @@
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/tires/Tire.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/tires/Tires.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/tires/AllSeasonTires.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/car/CoupeBody.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/Engine.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/EcoEngineAssembly.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/standard/StandardEcoEngine.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/OnePointFourLiterI4SixteenValveMultiAirTurboEngine.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/aero/AeroBuilder.java" />
       </list>
     </option>
@@ -354,6 +335,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="parts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jalc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="onlinebuilder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -431,6 +442,120 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="economy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jalc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlinebuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jalc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlinebuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="economy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jalc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlinebuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="economy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="standard" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -581,10 +706,6 @@
               <option name="myItemId" value="parts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wheels" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -628,95 +749,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tires" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="edu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jalc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="onlinebuilder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="builders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dodgeram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="edu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jalc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="automobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="onlinebuilder" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="builders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dodgeram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seatingandtrim" />
+              <option name="myItemId" value="engine" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1322,7 +1355,7 @@
       <workItem from="1492087779759" duration="442000" />
       <workItem from="1492090611556" duration="322000" />
       <workItem from="1492539524654" duration="182000" />
-      <workItem from="1492643415208" duration="9812000" />
+      <workItem from="1492643415208" duration="12371000" />
     </task>
     <task id="LOCAL-00001" summary="Finished recoding sport class to make sport wheel and forged wheel default no matter what but now you pass size parameters to each one">
       <created>1490596578836</created>
@@ -1352,11 +1385,25 @@
       <option name="project" value="LOCAL" />
       <updated>1492650302515</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finished up builder for Dodge Aero">
+      <created>1492659107248</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1492659107248</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Finished up builder for Dodge Aero">
+      <created>1492659133125</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1492659133125</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24553000" />
+    <option name="totallyTimeSpent" value="27112000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1415,7 +1462,8 @@
     <MESSAGE value="Fixed Directoris to right ones now" />
     <MESSAGE value="Finished Wheel Parts" />
     <MESSAGE value="Made Just one tire class due to just calling on set details to detail what you want about the tire for more versatility instead of being locked into a set tire" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made Just one tire class due to just calling on set details to detail what you want about the tire for more versatility instead of being locked into a set tire" />
+    <MESSAGE value="Finished up builder for Dodge Aero" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished up builder for Dodge Aero" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1428,163 +1476,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/Graphic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-          <folding>
-            <element signature="e#137#138#0" expanded="false" />
-            <element signature="e#177#178#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestHatchback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestLuxuryCabin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="2" lean-forward="false" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#668#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestStandardTrunk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/TruckBed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/Trunk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestShortBed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestQuarterpanels.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestPaint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestLongBed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestHood.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestGraphic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/TestEngineCompartment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/StandardCabin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/StandardTrunk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/SportTireTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/SportTire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/ShortBed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/Quarterpanels.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/Paint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1676,14 +1567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspension.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/TwoPointFourLiterI4MultiAirEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1700,14 +1583,6 @@
             <element signature="e#158#159#0" expanded="false" />
             <element signature="e#204#205#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/OnePointFourLiterI4SixteenValveMultiAirTurboEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="44" lean-forward="false" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1731,14 +1606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1755,22 +1622,6 @@
             <element signature="e#0#22438#0" expanded="false" />
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/Engine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1847,29 +1698,228 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/aero/AeroBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1033">
-          <caret line="30" column="107" lean-forward="true" selection-start-line="30" selection-start-column="107" selection-end-line="30" selection-end-column="107" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#1459#1460#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/tires/AllSeasonTires.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="60" lean-forward="true" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#242#243#0" expanded="true" />
             <element signature="e#286#287#0" expanded="true" />
             <element signature="e#364#365#0" expanded="true" />
             <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/DriveLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/SportDriveLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/SportDriveLineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/TruckDriveLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/sport/SportRWDTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/sport/SportRWD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/truck/CrewCab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/Body.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/car/CarBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/car/SedanBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/body/car/CoupeBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/driveline/economic/EconomicFWD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspension.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/Automobile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/Engine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/engine/EcoEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/engine/Engine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/standard/StandardEcoEngineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/EcoEngineAssembly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/standard/StandardEcoEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/parts/engine/OnePointFourLiterI4SixteenValveMultiAirTurboEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#232#233#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/aero/AeroBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2554">
+          <caret line="227" column="8" lean-forward="false" selection-start-line="227" selection-start-column="8" selection-end-line="227" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#askForColorAndInterior#0;class#AeroBuilder#0" expanded="false" />
           </folding>
         </state>
       </provider>
