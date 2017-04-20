@@ -15,6 +15,7 @@ public class AllSeasonTires extends Tire {
         this.tireDetails = tireDetails;
     }
 
+
     @Override
     public String toString() {
         return "A " + this.tireDetails + " all season tire";
