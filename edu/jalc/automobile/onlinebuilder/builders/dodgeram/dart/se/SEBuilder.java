@@ -9,29 +9,29 @@ import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.seatingand
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.stripe.*;
 
 public class SEBuilder {
-   Engine engine
-   TwoLiterI4DOHCEngine twoLiterI4DOHCEngine = new TwoLiterI4DOHCEngine();
+   Engine engine;
+   //TwoLiterI4DOHCEngine twoLiterI4DOHCEngine = new TwoLiterI4DOHCEngine();
    BilletSilverMetallicClearCoat billetSilverMetallicClearCoat = new BilletSilverMetallicClearCoat();
    BrightWhiteClearCoat brightWhiteClearCoat = new BrightWhiteClearCoat();
    PitchBlackClearCoat pitchBlackClearCoat = new PitchBlackClearCoat();
    SportClothSeatBlackInteriorColor sportClothSeatBlackInteriorColor = new SportClothSeatBlackInteriorColor(); 
    
-   public void askForPowerTrain(TerminalPrompterBuilderInterface promptBuilder) throws Exception{
+   public void askForPowerTrain() {
       TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
       builder.addType("Engine");
-      builder.addOption(twoLiterI4DOHCEngine);
+      builder.addOption(new TwoLiterI4DOHCEngine());
       builder.sort();
       TerminalPrompter prompter = builder.build();
    
-      int result = prompter.ask();
-   
-      assert(result == 1 || result == 2);
+      int response = prompter.ask();
       
-      engine = twoLiterI4DOHCEngine;
+     // ArrayList<Objects> options = 
+      engine = (Engine)builder.getOptions().get(0);
+      
    }
       
-   public void askForColorAndInterior(TerminalPrompterBuilderInterface promptBuilder) throws Exception{
-      TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
+   public void askForColorAndInterior() throws Exception{
+      builder = TerminalPrompterBuilder.newBuilder();
       builder.addType("Color");
       builder.addOption(billetSilverMetallicClearCoat);
       builder.addOption(brightWhiteClearCoat);
@@ -39,14 +39,16 @@ public class SEBuilder {
       builder.sort();
       TerminalPrompter prompter = builder.build();
       
-      int result = prompter.ask();
+      int response = prompter.ask();
       
-      assert(result == 1 || result == 2 || result == 3);
+      ArrayList<Objects> options = 
+      this.color = 
       
+      builder = TerminalPrompterBuilder.newBuilder();
       builder.addType("Seating");
       builder.addOption(sportClothSeatBlackInteriorColor);
       builder.sort();
-      //TerminalPrompter prompter = builder.build();
+      TerminalPrompter prompter = builder.build();
       
       int result2 = prompter.ask();
       
