@@ -35,4 +35,8 @@ import edu.jalc.automobile.parts.engine.EcoEngine;
   public void setExhaust(EconomyExhaust exhaust){
   this.exhaust = exhaust;
   }
+  
+  public String toString(){
+    return super.toString() + this.engine.toString() + " with a " + this.exhaust.toString();
+  }
 }
