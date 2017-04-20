@@ -20,7 +20,7 @@ public class EconomySuspension extends Economy{
       this.stockShock = stockShock;
       this.stockSpring = stockSpring;
       this.wheel = wheel;
-      this.tire = tire;
+      this.stockTire = tire;
 
    }
 
