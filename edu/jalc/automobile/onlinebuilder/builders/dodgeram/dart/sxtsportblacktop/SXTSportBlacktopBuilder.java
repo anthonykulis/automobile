@@ -9,26 +9,16 @@ import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.color.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.seatingandtrim.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.stripe.*;
 
-public class SXTSportBlacktopBuilder /*implements DodgeRamBuilderInterface*/{
+public class SXTSportBlacktopBuilder{
    Engine engine;
    Color color;
    SeatingAndTrim seatingAndTrim;
    Stripe stripe;
-   TwoLiterI4DOHCEngine twoLiterI4DOHCEngine = new TwoLiterI4DOHCEngine();
-   BilletSilverMetallicClearCoat billetSilverMetallicClearCoat = new BilletSilverMetallicClearCoat();  
-   BrightWhiteClearCoat brigtWhiteClearCoat = new BrightWhiteClearCoat();
-   B5BluePearlCoat b5BluePearlCoat = new B5BluePearlCoat();
-   GoMango goMango = new GoMango();
-   GraniteCrystalMetallicClearCoat graniteCrystalMetallicClearCoat = new GraniteCrystalMetallicClearCoat();       
-   PitchBlackClearCoat pitchBlackClearCoat = new PitchBlackClearCoat(); 
-   SeatingAndTrim sportClothSeatBlackInteriorColor= new SportClothSeatBlackInteriorColor();
-   PremiumBlackLightTungstenInteriorColors premiumBlackLightTungstenInteriorColors = new PremiumBlackLightTungstenInteriorColors();
-   PremiumBlackRubyRedInteriorColors premiumBlackRubyRedInteriorColors = new PremiumBlackRubyRedInteriorColors();
    
-   public void askForPowerTrain(){
+   public SXTSportBlacktopBuilder askForPowerTrain(){
       TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
       promptBuilder.addType("Engine");
-      promptBuilder.addOption(twoLiterI4DOHCEngine);
+      promptBuilder.addOption(new TwoLiterI4DOHCEngine());
       promptBuilder.sort();
       
       try{
@@ -36,24 +26,25 @@ public class SXTSportBlacktopBuilder /*implements DodgeRamBuilderInterface*/{
       
          int result = prompter.ask();
       
-         engine = twoLiterI4DOHCEngine;
+         engine = (Engine)promptBuilder.getOptions().get(0);
          
       } 
       catch(Exception e){
          e.printStackTrace();
          System.exit(1);
       }
+      return this;
    }
    
-   public void askForColorAndInterior() {
+   public SXTSportBlacktopBuilder askForColorAndInterior() {
       TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
       promptBuilder.addType("Color");
-      promptBuilder.addOption(billetSilverMetallicClearCoat);
-      promptBuilder.addOption(brigtWhiteClearCoat);
-      promptBuilder.addOption(b5BluePearlCoat);
-      promptBuilder.addOption(goMango);
-      promptBuilder.addOption(graniteCrystalMetallicClearCoat);
-      promptBuilder.addOption(pitchBlackClearCoat);
+      promptBuilder.addOption(new BilletSilverMetallicClearCoat());
+      promptBuilder.addOption(new BrightWhiteClearCoat());
+      promptBuilder.addOption(new B5BluePearlCoat());
+      promptBuilder.addOption(new GoMango());
+      promptBuilder.addOption(new GraniteCrystalMetallicClearCoat());
+      promptBuilder.addOption(new PitchBlackClearCoat());
       promptBuilder.sort();
       
       ArrayList<Object> colors = promptBuilder.getOptions();
@@ -72,9 +63,9 @@ public class SXTSportBlacktopBuilder /*implements DodgeRamBuilderInterface*/{
             
       promptBuilder = new TerminalPrompterBuilder();
       promptBuilder.addType("Seating & Trim");
-      promptBuilder.addOption(sportClothSeatBlackInteriorColor);
-      promptBuilder.addOption(premiumBlackLightTungstenInteriorColors);
-      promptBuilder.addOption(premiumBlackRubyRedInteriorColors);
+      promptBuilder.addOption(new SportClothSeatBlackInteriorColor());
+      promptBuilder.addOption(new PremiumBlackLightTungstenInteriorColors());
+      promptBuilder.addOption(new PremiumBlackRubyRedInteriorColors());
    
       ArrayList<Object> seatingAndTrims = promptBuilder.getOptions();
    
@@ -86,13 +77,14 @@ public class SXTSportBlacktopBuilder /*implements DodgeRamBuilderInterface*/{
       catch(Exception e){
          e.printStackTrace();
          System.exit(1); 
-      }    
+      } 
+      return this;   
    }
   
    public static void main(String[] args) throws Exception{
-      SXTSportBlacktopBuilder test = new SXTSportBlacktopBuilder();
-      test.askForPowerTrain();
-      test.askForColorAndInterior();
-      
+      new SXTSportBlacktopBuilder()
+            .askForPowerTrain()
+            .askForColorAndInterior();
+            //.build();  
    }
 }
