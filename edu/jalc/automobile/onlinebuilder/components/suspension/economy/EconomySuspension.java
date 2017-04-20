@@ -16,11 +16,11 @@ public class EconomySuspension extends Economy{
       this.wheel = null;
    }
 
-   public EconomySuspension(StockShock stockShock, StockSpring spring, EconomyTire tire,AlloyWheel wheel){
+   public EconomySuspension(StockShock stockShock, StockSpring spring,EconomyTire tire,AlloyWheel wheel){
       this.stockShock = stockShock;
-      this.stockSpring = stockSpring;
+      this.stockSpring = spring;
       this.wheel = wheel;
-      this.tire = tire;
+      this.stockTire = tire;
 
    }
 

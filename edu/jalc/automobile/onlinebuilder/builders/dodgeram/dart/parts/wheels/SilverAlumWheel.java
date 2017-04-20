@@ -6,7 +6,7 @@ import edu.jalc.automobile.parts.suspension.Wheel;
  * Created by Nick on 4/19/2017.
  */
 public class SilverAlumWheel extends Wheel{
-    SilverAlumWheel(double size) {
+    public SilverAlumWheel(double size) {
         super(size);
     }
 

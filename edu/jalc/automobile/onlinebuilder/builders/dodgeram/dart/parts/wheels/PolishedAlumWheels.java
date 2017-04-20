@@ -6,7 +6,7 @@ import edu.jalc.automobile.parts.suspension.Wheel;
  * Created by Nick on 4/19/2017.
  */
 public class PolishedAlumWheels extends Wheel {
-    PolishedAlumWheels(double size) {
+    public PolishedAlumWheels(double size) {
         super(size);
     }
 

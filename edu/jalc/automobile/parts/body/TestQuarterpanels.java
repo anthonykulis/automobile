@@ -3,13 +3,18 @@ package edu.jalc.automobile.parts.body;
 public class TestQuarterpanels{
   public void testGetPaint(){
     System.out.println("Testing getPaint() :: Quarterpanels");
-    Paint paint = new Paint("black");
+
+    Paint paint = new Paint();
+    paint.name = "black";
+
     Quarterpanels quarterpanels = new Quarterpanels(paint,null);
     assert(quarterpanels.getPaint() == paint);
   }
   public void testGetGraphic(){
     System.out.println("Testing getGraphic() :: Quarterpanels");
-    Graphic graphic = new Graphic("flames");
+    Graphic graphic = new Graphic();
+    graphic.name = "flames";
+
     Quarterpanels quarterpanels = new Quarterpanels(null,graphic);
     assert(quarterpanels.getGraphic() == graphic);
   }

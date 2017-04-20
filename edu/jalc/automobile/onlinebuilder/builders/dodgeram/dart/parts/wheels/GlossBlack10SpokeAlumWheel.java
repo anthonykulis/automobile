@@ -6,7 +6,7 @@ import edu.jalc.automobile.parts.suspension.Wheel;
  * Created by Nick on 4/19/2017.
  */
 public class GlossBlack10SpokeAlumWheel extends Wheel{
-    GlossBlack10SpokeAlumWheel(double size) {
+    public GlossBlack10SpokeAlumWheel(double size) {
         super(size);
     }
 
