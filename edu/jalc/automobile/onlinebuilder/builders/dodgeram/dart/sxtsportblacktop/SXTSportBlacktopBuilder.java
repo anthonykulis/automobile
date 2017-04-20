@@ -1,6 +1,7 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.sxtsportblacktop;
 
 import java.util.*;
+import java.util.ArrayList;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
 import edu.jalc.automobile.common.utils.prompter.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.*;
@@ -20,65 +21,74 @@ public class SXTSportBlacktopBuilder /*implements DodgeRamBuilderInterface*/{
    GoMango goMango = new GoMango();
    GraniteCrystalMetallicClearCoat graniteCrystalMetallicClearCoat = new GraniteCrystalMetallicClearCoat();       
    PitchBlackClearCoat pitchBlackClearCoat = new PitchBlackClearCoat(); 
+   SeatingAndTrim sportClothSeatBlackInteriorColor= new SportClothSeatBlackInteriorColor();
+   PremiumBlackLightTungstenInteriorColors premiumBlackLightTungstenInteriorColors = new PremiumBlackLightTungstenInteriorColors();
+   PremiumBlackRubyRedInteriorColors premiumBlackRubyRedInteriorColors = new PremiumBlackRubyRedInteriorColors();
    
-   public void askForPowerTrain(/*TerminalPrompterBuilderInterface promptBuilder*/) throws Exception{
-      TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
-      builder.addType("Engine");
-      builder.addOption(twoLiterI4DOHCEngine);
-      builder.sort();
-      TerminalPrompter prompter = builder.build();
-   
-      int result = prompter.ask();
-   
-      assert(result == 1);
+   public void askForPowerTrain(){
+      TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
+      promptBuilder.addType("Engine");
+      promptBuilder.addOption(twoLiterI4DOHCEngine);
+      promptBuilder.sort();
       
-      engine = twoLiterI4DOHCEngine;
-   }
-   
-   public void askForColorAndInterior(/*TerminalPrompterBuilderInterface promptBuilder*/) throws Exception{
-      TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
-      builder.addType("Color");
-      builder.addOption(billetSilverMetallicClearCoat);
-      builder.addOption(brigtWhiteClearCoat);
-      builder.addOption(b5BluePearlCoat);
-      builder.addOption(goMango);
-      builder.addOption(graniteCrystalMetallicClearCoat);
-      builder.addOption(pitchBlackClearCoat);
-      builder.sort();
-      TerminalPrompter prompter = builder.build();
-   
-      int result = prompter.ask();
-   
-      assert(result > 0 && result < 7);
+      try{
+         TerminalPrompter prompter = promptBuilder.build();
       
-      switch (result){
-         case 1: 
-            color = billetSilverMetallicClearCoat;
-            break;
+         int result = prompter.ask();
+      
+         engine = twoLiterI4DOHCEngine;
          
-         case 2:
-            color = brigtWhiteClearCoat;
-            break;
-            
-         case 3:
-            color = b5BluePearlCoat;
-            break;
-            
-         case 4:
-            color = goMango;
-            break;
-         
-         case 5:
-            color = graniteCrystalMetallicClearCoat;
-            break; 
-            
-         case 6:
-            color = pitchBlackClearCoat;
-            break;     
+      } 
+      catch(Exception e){
+         e.printStackTrace();
+         System.exit(1);
       }
    }
+   
+   public void askForColorAndInterior() {
+      TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
+      promptBuilder.addType("Color");
+      promptBuilder.addOption(billetSilverMetallicClearCoat);
+      promptBuilder.addOption(brigtWhiteClearCoat);
+      promptBuilder.addOption(b5BluePearlCoat);
+      promptBuilder.addOption(goMango);
+      promptBuilder.addOption(graniteCrystalMetallicClearCoat);
+      promptBuilder.addOption(pitchBlackClearCoat);
+      promptBuilder.sort();
+      
+      ArrayList<Object> colors = promptBuilder.getOptions();
+      
+      try{
+         TerminalPrompter prompter = promptBuilder.build();
+      
+         int result = prompter.ask();
+      
+         color = (Color)colors.get(result - 1);
+      } 
+      catch(Exception e){
+         e.printStackTrace();
+         System.exit(1);   
+      }
+            
+      promptBuilder = new TerminalPrompterBuilder();
+      promptBuilder.addType("Seating & Trim");
+      promptBuilder.addOption(sportClothSeatBlackInteriorColor);
+      promptBuilder.addOption(premiumBlackLightTungstenInteriorColors);
+      promptBuilder.addOption(premiumBlackRubyRedInteriorColors);
+   
+      ArrayList<Object> seatingAndTrims = promptBuilder.getOptions();
+   
+      try{
+         int result = promptBuilder.build().ask();
+      
+         seatingAndTrim = (SeatingAndTrim)seatingAndTrims.get(result - 1);
+      }
+      catch(Exception e){
+         e.printStackTrace();
+         System.exit(1); 
+      }    
+   }
   
-   //will delete    
    public static void main(String[] args) throws Exception{
       SXTSportBlacktopBuilder test = new SXTSportBlacktopBuilder();
       test.askForPowerTrain();
