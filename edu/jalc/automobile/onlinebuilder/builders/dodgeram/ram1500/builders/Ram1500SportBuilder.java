@@ -25,11 +25,16 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
     TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
     builder.addType("Color");
     //Issues with the options being added. Not sure how to or why but continueing on adding them.
-    builder.addOption(flameRedCLearCoat);
-    builder.addOption(brightWhiteClearCoat);
-    builder.addOption(maximumSteelMetallicClearCoat);
-    builder.addOption(brilliantBlackCrystalPearl);
+    builder.addOption(new FlameRedClearCoat());
+    builder.addOption(new BrightWhiteClearCoat());
+    builder.addOption(new MaximumSteelMetallicClearCoat());
+    builder.addOption(new BrilliantBlackCrystalPearl());
     builder.sort();
+    ArrayList<Object> colors = builder.getOptions();
+
+    //try
+      //TerminalPrompterBuilder prompter = builder.build();
+      //int response = prompter.ask();
 
     return null;
 
@@ -38,12 +43,14 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
     return null;
   }
   public DodgeRamBuilderInterface askForPackages(TerminalPrompterBuilderInterface promptBuilder){
-    return null;
+    return this;
   }
 
   public Automobile build(){
+
     return null;
   }
+  //public static void main(String[] args) {  }
 
 
 }
