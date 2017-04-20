@@ -1,10 +1,11 @@
 package edu.jalc.automobile.onlinebuilder.components.engine.diesel;
 
+import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
 import edu.jalc.automobile.parts.engine.DieselEngine;
 import edu.jalc.automobile.parts.exhaust.*;
 import edu.jalc.automobile.parts.induction.TurbochargedInduction;
 
-public class DieselEngineAssembly{
+public class DieselEngineAssembly extends EngineAssembly{
 
   private DieselEngine engine;
   private Exhaust exhaust;
@@ -22,7 +23,7 @@ public class DieselEngineAssembly{
   }
 
   public String toString(){
-    return this.engine.toString() + " with a " + this.exhaust.toString() + " and a " + this.induction.toString();
+    return super.toString() + "Turbocharged " + this.engine.toString() + " with a " + this.exhaust.toString();
   }
 
   public DieselEngine getEngine(){
