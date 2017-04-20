@@ -14,4 +14,5 @@ public class HyperBlackAlumWheels extends Wheel {
     public String toString() {
         return this.getSize() + "inch Hyper Black Aluminum Wheels";
     }
+
 }

@@ -14,4 +14,5 @@ public class GraniteCrystalAlumWheel extends Wheel{
     public String toString() {
         return this.getSize() + "inch Granite Crystal Aluminum Wheel";
     }
+
 }
