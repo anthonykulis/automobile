@@ -172,13 +172,17 @@ public class SXTSportBlacktopBuilder implements DodgeRamBuilderInterface{
    }
 
    public SXTSportBlacktopBuilder askForPackages(){
-      return this;}
+      System.out.println("No packages avaliable");
+      System.out.println("");
+      return this;
+   }
      
    public static void main(String[] args) throws Exception{
       System.out.println(new SXTSportBlacktopBuilder()
             .askForPowerTrain()
             .askForColorAndInterior()
             .askForOptions()
+            .askForPackages()
             .build());  
    }
 }
