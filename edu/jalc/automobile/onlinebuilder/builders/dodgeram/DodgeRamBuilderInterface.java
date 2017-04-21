@@ -1,7 +1,6 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram;
 
 import edu.jalc.automobile.Automobile;
-import edu.jalc.automobile.common.utils.prompter.TerminalPrompterBuilderInterface;
 
 public interface DodgeRamBuilderInterface {
 
