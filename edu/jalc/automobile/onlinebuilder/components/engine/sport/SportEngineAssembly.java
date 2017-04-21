@@ -20,7 +20,7 @@ abstract public class SportEngineAssembly extends EngineAssembly{
   }
   
   public String toString(){
-    return this.engine.toString() + " with a " + this.exhaust.toString();
+    return super.toString() + this.engine.toString() + " with a " + this.exhaust.toString();
   }
 
   public SportEngine getEngine(){
