@@ -31,17 +31,17 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
   }
 
   public DodgeRamBuilderInterface askForPowerTrain(){
-    TerminalPrompterBuilderInterface promptBuilder = TerminalPrompterBuilder.newBuilder();
+    TerminalPrompterBuilderInterface powertrainPromptBuilder = TerminalPrompterBuilder.newBuilder();
     SportEngine hemiVvtEngine = new HemiVvtSportEngine(5.7,new HorsePower(375,5200),new Torque(410,4200),8);
     SportEngineAssembly vvt_Engine = new NaturallyAspiratedSportEngine(hemiVvtEngine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
     SportEngine hemiMdsVvtSportEngine = new HemiMdsVvtSportEngine(5.7,new HorsePower(375,5200),new Torque(410,4200),8);
     SportEngineAssembly mds_Vvt_Engine = new NaturallyAspiratedSportEngine(hemiMdsVvtSportEngine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
-    promptBuilder.addType("Powertrain");
-    promptBuilder.addOption(vvt_Engine);
-    promptBuilder.addOption(mds_Vvt_Engine);
+    powertrainPromptBuilder.addType("Powertrain");
+    powertrainPromptBuilder.addOption(vvt_Engine);
+    powertrainPromptBuilder.addOption(mds_Vvt_Engine);
     int choice;
     try{
-      choice = promptBuilder.build().ask();
+      choice = powertrainPromptBuilder.sort().build().ask();
     }
     catch(Exception except){
       choice = 0;
@@ -75,6 +75,10 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     TerminalPrompterBuilder seatPromptBuilder = TerminalPrompterBuilder.newBuilder();
     seatPromptBuilder.addType("Interior");
     seatPromptBuilder.addOption(new ClothBucketSeat("Black"));
+    try{
+    seatPromptBuilder.build();
+    }
+    catch(Exception except){}
     return this;
   }
 
@@ -100,7 +104,10 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     }
     //Not sure about this casting
     Object brake = (Object)brakePromptBuilder.getOptions().get(choice - 1);
-
+    try{
+    brakePromptBuilder.build();
+    }
+    catch(Exception except){}
     return this;
   }
   //placeholder
