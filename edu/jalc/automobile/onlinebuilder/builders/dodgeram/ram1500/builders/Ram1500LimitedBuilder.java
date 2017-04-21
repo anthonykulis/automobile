@@ -40,7 +40,7 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
    Body body;
    Suspension suspension;
    DriveLine driveline;
-   TruckBed cabAndBox;
+   RamTruckCabAndBed cabAndBox;
    TruckDrive truckDrive;
    TruckRearAxle truckRearAxle;
 
@@ -54,13 +54,13 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
             .addOption(new FourByFourTruckDrive())
             .sort()
             .build()
-            .ask();
+            .ask();//use if 4*4 create 4*4driveline...
       }
       catch(Exception e){System.err.println(e);}
       return (TruckDrive)truckDrivePrompter.getOptions().get(truckDriveChoice - 1);
    }
    
-   private  static  TruckBed askForTruckBed(){
+   private  static  RamTruckCabAndBed askForTruckBed(){
       int cabAndBedChoice = 1;
       TerminalPrompterBuilder cabAndBedPrompter = TerminalPrompterBuilder.newBuilder();
       try{
@@ -72,7 +72,7 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
             .ask();
       }
       catch(Exception e){System.err.println(e);}
-      return (TruckBed)cabAndBedPrompter.getOptions().get(cabAndBedChoice - 1);
+      return (RamTruckCabAndBed)cabAndBedPrompter.getOptions().get(cabAndBedChoice - 1);
    }
    
    
@@ -131,7 +131,7 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
       this.body =  new CrewCab(
          new Quarterpanels(paint,null),
          new EngineCompartment(new Hood(paint, null)),
-         new LuxuryCabin(new LimitedLeatherBucketSeats()),//one option here, need to be fixed for other situations
+         new LuxuryCabin(new LimitedLeatherBucketSeats()),//one option here, need to be fixed for other situations and printing address!!
          cabAndBox);
       return this;
    }
@@ -202,7 +202,7 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
       return this;
    }
    public Automobile build(){
-    
+    //use truck drive line 
       DriveLine driveLine = new HeavyDutyRWD(
          truckRearAxle,
          new FrontDeadAxle(),
@@ -222,8 +222,9 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
          .askForOptions()
          .askForPackages()
          .build();
-      System.out.println(truckDrive);
-      System.out.println(cabAndBox);
+         //dont use s o p
+      System.out.println(truckDrive);//use driveline
+      System.out.println(cabAndBox);//cabin 
       System.out.println(ram1500limited);
    }
 
