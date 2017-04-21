@@ -5,6 +5,10 @@ public class Graphic{
 
   public Graphic(){
   }
+    
+  public Graphic(String name){
+    this.name = name;
+  }
 
   public String toString(){
     return "Graphic: " + this.name;

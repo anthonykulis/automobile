@@ -1,6 +1,8 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.seatingandtrim;
 
-public class PremiumClothSeatsBlackLightFrostInteriorColor extends SeatingAndTrim{
+import edu.jalc.automobile.parts.body.seat.ClothSeat;
+
+public class PremiumClothSeatsBlackLightFrostInteriorColor extends ClothSeat{
 
    public String toString(){
       return "Premium Cloth Seats Black/Light Frost Interior Color";
