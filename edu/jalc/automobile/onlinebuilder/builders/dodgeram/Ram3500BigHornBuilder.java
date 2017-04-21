@@ -27,7 +27,7 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
   public Ram3500BigHornBuilder askForPowerTrain(){
 
     TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
-
+try{
     TerminalPrompter prompter = builder.addType("Engine")
       .addOption(new HEMIVTTEngine())
       .addOption(new HeavyDutyHEMI())
@@ -36,7 +36,9 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
       .build();
 
       prompter.ask();
-
+    }
+catch(Exception e){}
+try{
     TerminalPrompterBuilder.newBuilder().addType("Axle")
       .addOption(new RearAxleRatio(3.42))
       .addOption(new RearAxleRatio(3.73))
@@ -44,18 +46,22 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
       .sort()
       .build()
       .ask();
+    }
+catch(Exception e){}
 
+try{
     TerminalPrompterBuilder.newBuilder().addType("Suspension")
       .addOption(new AirSuspension())
       .sort()
       .build()
       .ask();
-
+    }
+catch(Exception e){}
   }
   public Ram3500BigHornBuilder askForColorAndInterior(){
 
     TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
-
+try{
     TerminalPrompter prompter = builder.addType("Exterior Color")
       .addOption(new BrightGreen())
       .addOption(new BrightRed())
@@ -67,24 +73,33 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
       .build();
 
       prompter.ask();
+    }
+catch(Exception e){}
 
+try{
       TerminalPrompterBuilder.newBuilder().addType("Seating and Trim")
         .addOption(new LeatherSeat())
         .build()
         .ask();
+   }
+catch(Exception e){}
+
   }
   public Ram3500BigHornBuilder askForPackages(){
     TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
-
+try{
     TerminalPrompter prompter = builder.addType("Packages")
       .addOption(new DualRearWheel())
       .build();
 
       prompter.ask();
+    }
+catch(Exception e){}
+
   }
   public Ram3500BigHornBuilder askForOptions(){
     TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
-
+try{
     TerminalPrompter prompter = builder.addType("Wheels")
       .addOption(new BlackPaintedAluminumWheel(20))
       .addOption(new PaintedAluminumWheel(20))
@@ -93,7 +108,10 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
       .build();
 
       prompter.ask();
+    }
+  catch(Exception e){}
 
+  try{
       TerminalPrompterBuilder.newBuilder().addType("Tires")
         .addOption(new AllSeasonTire(275,70))
         .addOption(new AllTerrainTire(275,70))
@@ -101,7 +119,9 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
         .sort()
         .build()
         .ask();
+     }
+catch(Exception e){}
 
   }
-  public Automobile build(){help}
+  public Automobile build(){}
 }
