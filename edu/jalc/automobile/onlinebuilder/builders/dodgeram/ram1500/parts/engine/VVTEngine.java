@@ -1,14 +1,18 @@
-package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.enigne;
+package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.engine;
 
-import edu.jalc.automobile.parts.engine.Engine;
+import edu.jalc.automobile.parts.engine.EcoEngine;
+import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 
-public class VVTEngine extends Engine{
+public class VVTEngine extends EcoEngine{
 
-  public VVTEngine(double displacement, HorsePower horsePower, Torque torque, int cylinders){
-    super(3.6, null, null, 6);
-  }
+   public VVTEngine(double displacement, HorsePower horsePower, Torque torque, int cylinders){
+      //displacement 3.6 cylinders6
+      super(displacement,null,null,cylinders);
+   
+   }
+  
+   public String toString(){
+      return "24 Valve VVT " + super.toString();
+   }
 
-  public String toString(){
-    return "24 Valve VVTEngine" + super.toString();
-  }
 }
