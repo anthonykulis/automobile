@@ -28,23 +28,24 @@ import edu.jalc.automobile.parts.suspension.*;
 import edu.jalc.automobile.parts.driveline.*;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 import edu.jalc.automobile.parts.body.seat.ClothSeat;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.exhaust.SingleExhaust;
 
 public class SXTSportBlacktopBuilder implements DodgeRamBuilderInterface{
-   private Engine engine;
+   private EcoEngine engine;
    private Paint paint;
    private ClothSeat clothSeat;
    private Graphic graphic;
-   private Tire tire;
-   private Wheel wheel;
+   private EconomyTire tire;
+   private AlloyWheel wheel;
    
    public Automobile build() {
       SedanBody coupe = new SedanBody(new Quarterpanels(paint, graphic), new EngineCompartment(new Hood(paint, graphic)), new StandardCabin(clothSeat), new StandardTrunk(13.1));
    
       DriveLine economicFWD = new EconomicFWD(new FrontDriveAxle(), new RearDeadAxle(), new ElectricSteering(), new OpenDifferential());
    
-      EngineAssembly ecoEngineAssembly = new StandardEcoEngine(new EcoEngine(1400, new HorsePower(160, 2), new Torque(184, 3), 4), new EconomyExhaust(), new NaturallyAspiratedInduction());
+      EngineAssembly ecoEngineAssembly = new StandardEcoEngine(engine, new SingleExhaust(), new NaturallyAspiratedInduction());
    
-      Suspension economySuspension= new EconomySuspension(new StockShock(0), new StockSpring(0), new EconomyTire(10, 10), new AlloyWheel(0, tire));
+      Suspension economySuspension= new EconomySuspension(new StockShock(0), new StockSpring(0), tire, wheel);
    
       return new Automobile("Dodge", "Dart", "SXT Sport Blacktop", coupe, economicFWD, ecoEngineAssembly, economySuspension);
    }
@@ -52,7 +53,7 @@ public class SXTSportBlacktopBuilder implements DodgeRamBuilderInterface{
    public SXTSportBlacktopBuilder askForPowerTrain(){
       TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
       promptBuilder.addType("Engine");
-      promptBuilder.addOption(new TwoLiterI4DOHCEngine());
+      promptBuilder.addOption(new TwoLiterI4DOHCEngine(2.0, new HorsePower(160, 0), new Torque(184, 0), 4));
       promptBuilder.sort();
       
       try{
@@ -60,7 +61,7 @@ public class SXTSportBlacktopBuilder implements DodgeRamBuilderInterface{
       
          int result = prompter.ask();
       
-         engine = (Engine)promptBuilder.getOptions().get(0);
+         engine = (EcoEngine)promptBuilder.getOptions().get(0);
          
       } 
       catch(Exception e){
@@ -138,21 +139,8 @@ public class SXTSportBlacktopBuilder implements DodgeRamBuilderInterface{
    }
    
    public SXTSportBlacktopBuilder askForOptions() {
-   
-      GraniteCrystalAlumWheel graniteCrystalAlumWheel = new GraniteCrystalAlumWheel(17);
-      TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
-      promptBuilder.addType("Wheels");
-      promptBuilder.addOption(graniteCrystalAlumWheel);
-      promptBuilder.sort();
-   
-      try {
-         int result = promptBuilder.build().ask();
-         wheel = graniteCrystalAlumWheel;
-      } 
-      catch (Exception e) {
       
-      }
-      promptBuilder = new TerminalPrompterBuilder();
+      TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
    
       AllSeasonTires allSeasonTires = new AllSeasonTires();
       allSeasonTires.setTireDetails("205/55R16");
@@ -167,8 +155,21 @@ public class SXTSportBlacktopBuilder implements DodgeRamBuilderInterface{
       } 
       catch (Exception e) {
       
-      }   
+      }  
+      
+      GlossBlack10SpokeAlumWheel glossBlack10SpokeAlumWheel = new GlossBlack10SpokeAlumWheel(17, tire);
+      promptBuilder = new TerminalPrompterBuilder();
+      promptBuilder.addType("Wheels");
+      promptBuilder.addOption(glossBlack10SpokeAlumWheel);
+      promptBuilder.sort();
    
+      try {
+         int result = promptBuilder.build().ask();
+         wheel = glossBlack10SpokeAlumWheel;
+      } 
+      catch (Exception e) {
+      
+      }  
       return this;
    }
 

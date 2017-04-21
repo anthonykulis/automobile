@@ -1,13 +1,14 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.wheels;
 
-import edu.jalc.automobile.parts.suspension.Wheel;
+import edu.jalc.automobile.parts.suspension.AlloyWheel;
+import edu.jalc.automobile.parts.suspension.EconomyTire;
 
 /**
  * Created by Nick on 4/19/2017.
  */
-public class HyperBlackAlumWheels extends Wheel {
-    public HyperBlackAlumWheels(double size) {
-        super(size);
+public class HyperBlackAlumWheels extends AlloyWheel {
+    public HyperBlackAlumWheels(double size, EconomyTire tires) {
+        super(size, tires);
     }
 
     @Override
