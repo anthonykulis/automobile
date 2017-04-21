@@ -1,6 +1,6 @@
 package edu.jalc.automobile.parts.suspension;
 
-public class PolishedAluminumWheel extends Wheel {
+public class PolishedAluminumWheel extends AluminumWheel {
 
    private PolishedAluminumWheel(){
       super(0);
