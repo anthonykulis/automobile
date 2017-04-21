@@ -13,6 +13,8 @@ import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.seating
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.tire.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.wheels.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.suspension.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.driveline.*;
+import edu.jalc.automobile.onlinebuilder.components.driveline.*;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
 import edu.jalc.automobile.onlinebuilder.components.engine.economy.standard.StandardEcoEngine;
@@ -20,7 +22,6 @@ import edu.jalc.automobile.onlinebuilder.components.body.Body;
 import edu.jalc.automobile.onlinebuilder.components.body.truck.*;
 import edu.jalc.automobile.onlinebuilder.components.suspension.Suspension;
 import edu.jalc.automobile.onlinebuilder.components.suspension.towing.*;
-import edu.jalc.automobile.onlinebuilder.components.driveline.DriveLine;
 import edu.jalc.automobile.onlinebuilder.components.driveline.truck.HeavyDutyRWD;
 import edu.jalc.automobile.onlinebuilder.components.engine.diesel.*;
 import edu.jalc.automobile.parts.engine.EcoEngine;
@@ -40,14 +41,15 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
    DriveLine driveline;
    RamTruckCabAndBed cabAndBox;
    TruckDrive truckDrive;
+   TruckDriveLine truckDriveLine;
    TruckRearAxle truckRearAxle;
    TruckTire  tire;
    TruckWheel wheel;
    TruckSeat seat;
    Paint paint; 
-   
+    int  truckDriveChoice = 1;
+
    public TruckDrive askForTruckDrive(){
-      int  truckDriveChoice = 1;
       TerminalPrompterBuilder truckDrivePrompter = TerminalPrompterBuilder.newBuilder();
       try{
          truckDriveChoice = truckDrivePrompter.addType("Drive")
@@ -74,11 +76,10 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
             .ask();
       }
       catch(Exception e){System.err.println(e);}
-     cabAndBox= (RamTruckCabAndBed)cabAndBedPrompter.getOptions().get(cabAndBedChoice - 1);
-     return this.cabAndBox;
+      cabAndBox= (RamTruckCabAndBed)cabAndBedPrompter.getOptions().get(cabAndBedChoice - 1);
+      return this.cabAndBox;
      
    }
-   
    
    public DodgeRamBuilderInterface askForPowerTrain(){
    
@@ -189,13 +190,26 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
       return this;
    }
    public Automobile build(){
-    //use truck drive line 
-      DriveLine driveLine = new HeavyDutyRWD(
-         truckRearAxle,
-         new FrontDeadAxle(),
-         new DriveShaft(),
-         new ElectricSteering(), 
-         new LockingDifferential());
+    
+      if (truckDriveChoice == 1){
+         DriveLine driveLine = new RamHeavyDutyRWD(
+            truckDrive,
+            truckRearAxle,
+            new FrontDeadAxle(),
+            new DriveShaft(),
+            new ElectricSteering(), 
+            new LockingDifferential());
+      }
+      else if (truckDriveChoice == 2){
+         DriveLine driveLine = new RamFourWheelDrive(
+            truckDrive,
+            truckRearAxle,
+            new FrontDeadAxle(),
+            new DriveShaft(),
+            new ElectricSteering(), 
+            new LockingDifferential());
+      }
+   
       return new Automobile("Ram ","1500 ","Limited ",body,driveLine,engine,suspension);
    }
    
