@@ -41,15 +41,16 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
    DriveLine driveline;
    RamTruckCabAndBed cabAndBox;
    TruckDrive truckDrive;
-   TruckDriveLine truckDriveLine;
    TruckRearAxle truckRearAxle;
    TruckTire  tire;
    TruckWheel wheel;
    TruckSeat seat;
-   Paint paint; 
-    int  truckDriveChoice = 1;
+   Paint paint;
+  
+    
+   int  truckDriveChoice = 1;
 
-   public TruckDrive askForTruckDrive(){
+   public TruckDodgeRamBuilderInterface askForTruckDrive(){
       TerminalPrompterBuilder truckDrivePrompter = TerminalPrompterBuilder.newBuilder();
       try{
          truckDriveChoice = truckDrivePrompter.addType("Drive")
@@ -57,14 +58,14 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
             .addOption(new FourByFourTruckDrive())
             .sort()
             .build()
-            .ask();//use if 4*4 create 4*4driveline...
+            .ask();
       }
       catch(Exception e){System.err.println(e);}
       truckDrive=(TruckDrive)truckDrivePrompter.getOptions().get(truckDriveChoice - 1);
-      return this.truckDrive;
+      return this;
    }
    
-   public RamTruckCabAndBed  askForTruckCabAndBed(){
+   public TruckDodgeRamBuilderInterface askForTruckCabAndBed(){
       int cabAndBedChoice = 1;
       TerminalPrompterBuilder cabAndBedPrompter = TerminalPrompterBuilder.newBuilder();
       try{
@@ -77,11 +78,11 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
       }
       catch(Exception e){System.err.println(e);}
       cabAndBox= (RamTruckCabAndBed)cabAndBedPrompter.getOptions().get(cabAndBedChoice - 1);
-      return this.cabAndBox;
+      return this;
      
    }
    
-   public DodgeRamBuilderInterface askForPowerTrain(){
+   public TruckDodgeRamBuilderInterface askForPowerTrain(){
    
         //engine choice
       TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
@@ -121,7 +122,7 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
       return  this;
    }
    
-   public DodgeRamBuilderInterface askForColorAndInterior(){
+   public TruckDodgeRamBuilderInterface askForColorAndInterior(){
      
    //exterior paint choice
       TerminalPrompterBuilder paintPrompter = TerminalPrompterBuilder.newBuilder();
@@ -159,7 +160,7 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
       return this;
    }
    
-   public DodgeRamBuilderInterface askForOptions(){
+   public TruckDodgeRamBuilderInterface askForOptions(){
    
       try{
          TerminalPrompterBuilder wheelPrompter = TerminalPrompterBuilder.newBuilder();
@@ -186,13 +187,13 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
       
       return this;
    }
-   public DodgeRamBuilderInterface askForPackages(){
+   public TruckDodgeRamBuilderInterface askForPackages(){
       return this;
    }
    public Automobile build(){
-    
+      TruckDriveLine driveLine=new TruckDriveLine(null,null,null);
       if (truckDriveChoice == 1){
-         DriveLine driveLine = new RamHeavyDutyRWD(
+         driveLine = new RamHeavyDutyRWD(
             truckDrive,
             truckRearAxle,
             new FrontDeadAxle(),
@@ -201,10 +202,10 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
             new LockingDifferential());
       }
       else if (truckDriveChoice == 2){
-         DriveLine driveLine = new RamFourWheelDrive(
+         driveLine = new RamFourWheelDrive(
             truckDrive,
             truckRearAxle,
-            new FrontDeadAxle(),
+            new FourWheelDriveAxle(),
             new DriveShaft(),
             new ElectricSteering(), 
             new LockingDifferential());
@@ -216,6 +217,8 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
    public static void main(String... args){
       
       Automobile ram1500limited = new Ram1500LimitedBuilder()
+         .askForTruckDrive()
+         .askForTruckCabAndBed()
          .askForPowerTrain()
          .askForColorAndInterior()
          .askForOptions()

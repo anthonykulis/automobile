@@ -4,7 +4,7 @@ import edu.jalc.automobile.parts.body.Paint;
 public class BrilliantBlackCrystalPearl extends Paint{
 
   public String toString() {
-    return " Brilliant Black Crystal Pearl";
+    return "Brilliant Black Crystal Pearl";
   }
 
 }
