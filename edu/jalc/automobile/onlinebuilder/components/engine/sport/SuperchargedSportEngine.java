@@ -13,7 +13,7 @@ public class SuperchargedSportEngine extends BoostedSportEngine{
   }
   
   public String toString(){
-    return String.format("Engine:%n\tSupercharged %s with a %s",this.getEngine(),this.getExhaust());
+    return super.toString() + "Induction: " + this.induction;
   }
 
   public SuperchargedInduction getInduction(){

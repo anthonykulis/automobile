@@ -13,7 +13,7 @@ public class TurbochargedSportEngine extends BoostedSportEngine{
   }
   
   public String toString(){
-    return String.format("Engine:%n\tTurbocharged %s with a %s",this.getEngine(),this.getExhaust());
+    return super.toString() + "\tInduction: " + this.induction;
   }
 
   public TurbochargedInduction getInduction(){
