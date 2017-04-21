@@ -1,11 +1,11 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.tires;
 
-import edu.jalc.automobile.parts.suspension.Tire;
+import edu.jalc.automobile.parts.suspension.EconomyTire;
 
 /**
  * Created by Nick on 4/19/2017.
  */
-public class AllSeasonTires extends Tire {
+public class AllSeasonTires extends EconomyTire {
     public AllSeasonTires() {
         super(Double.NaN,Double.NaN);
     }
