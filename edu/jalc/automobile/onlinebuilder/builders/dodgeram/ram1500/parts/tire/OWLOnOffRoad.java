@@ -1,19 +1,12 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.tire;
 
-
-public class OWLOnOffRoad  extends OnOffRoad   {
-   private String tireDetails;
+public class OWLOnOffRoad  extends TruckTire {
     
-   private  OWLOnOffRoad(){
-      super(0,0);
-   }
-   
-   public  OWLOnOffRoad(double height, double width){
-      super(height, width);
+   public  OWLOnOffRoad(double height, double width,String tireDetails){
+      super(height, width,tireDetails);
    }
 
-   
    public String toString(){
-      return tireDetails+ " OWL On Off Road Tire";
+      return +getHeight()+ "x" +getWidth() +getTireDetails()+ " OWL On Off Road Tire";
    }
 }

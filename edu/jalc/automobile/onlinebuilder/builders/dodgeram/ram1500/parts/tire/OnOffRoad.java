@@ -1,19 +1,14 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.tire;
 import edu.jalc.automobile.parts.suspension.Tire;
 
-public class OnOffRoad  extends Tire  {
-   private String tireDetails;
-    
-   private  OnOffRoad(){
-      super(0,0);
-   }
+public class OnOffRoad  extends TruckTire  {
    
-   public  OnOffRoad(double height, double width){
-      super(height, width);
+   public  OnOffRoad(double height, double width,String tireDetails){
+      super(height, width,tireDetails);
    }
 
    
    public String toString(){
-      return tireDetails+ " On Off Road Tire";
+      return +getHeight()+ "x" +getWidth() +getTireDetails()+" On Off Road Tire";
    }
 }

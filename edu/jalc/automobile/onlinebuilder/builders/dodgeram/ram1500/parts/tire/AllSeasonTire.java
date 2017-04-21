@@ -1,19 +1,13 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.tire;
-import edu.jalc.automobile.parts.suspension.Tire;
 
-public class AllSeasonTire  extends Tire  {
-   private String tireDetails;
+public class AllSeasonTire  extends TruckTire  {
     
-   private  AllSeasonTire(){
-      super(0,0);
-   }
-   
-   public  AllSeasonTire(double height, double width){
-      super(height, width);
+   public  AllSeasonTire(double height, double width,String tireDetails){
+      super(height, width,tireDetails);
    }
 
    
    public String toString(){
-      return tireDetails+ " All Season Tire";
+       return +getHeight()+ "x" +getWidth() +getTireDetails()+" All Season Tire";
    }
 }
