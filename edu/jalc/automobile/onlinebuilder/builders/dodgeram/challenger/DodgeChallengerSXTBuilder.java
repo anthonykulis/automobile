@@ -1,14 +1,42 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger;
 
+import edu.jalc.automobile.Automobile;
+import edu.jalc.automobile.common.utils.prompter.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.engine.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.paint.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.seat.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.color.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.wheel.CarbonAluminumWheel;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.tire.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.suspension.SportSuspension;
+import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
+import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.engine.VVT24ValveSportEngine;
+import edu.jalc.automobile.onlinebuilder.components.body.Body;
+import edu.jalc.automobile.onlinebuilder.components.body.car.CoupeBody;
+import edu.jalc.automobile.onlinebuilder.components.suspension.Suspension;
+import edu.jalc.automobile.onlinebuilder.components.driveline.DriveLine;
+import edu.jalc.automobile.onlinebuilder.components.driveline.sport.SportRWD;
+import edu.jalc.automobile.parts.engine.SportEngine;
+import edu.jalc.automobile.parts.induction.NaturallyAspiratedInduction;
+import edu.jalc.automobile.parts.exhaust.PerformanceExhaust;
+import edu.jalc.automobile.parts.body.seat.Seat;
+import edu.jalc.automobile.parts.body.*;
+import edu.jalc.automobile.parts.suspension.*;
+import edu.jalc.automobile.parts.driveline.*;
+
 public class DodgeChallengerSXTBuilder implements DodgeRamBuilderInterface{
-   
+
    private EngineAssembly engineAssembly;
-   
-   DodgeRamBuilderInterface askForPowerTrain(TerminalPrompterBuilderInterface promptBuilder){
-      Engine engine = new VVT24ValveSportEngine(3.6, new HorsePower(303,3000), new Torque(300,2000), 6);
+   private Paint paint;
+
+   public DodgeRamBuilderInterface askForPowerTrain(){
+     TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
+      SportEngine engine = new VVT24ValveSportEngine(3.6, new HorsePower(303,3000), new Torque(300,2000), 6);
       EngineAssembly engineAssembly = new NaturallyAspiratedSportEngine(engine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
       try{
-         promptBuilder.addtype("Powertrain")
+         promptBuilder.addType("Powertrain")
          .addOption(engineAssembly)
          .build()
          .tell("Your SXT Comes With A " + engineAssembly);
@@ -17,39 +45,39 @@ public class DodgeChallengerSXTBuilder implements DodgeRamBuilderInterface{
       return this;
    }
 
-   DodgeRamBuilderInterface askForColorAndInterior(){
-      Color color = new YellowJacket()//, new RedlineTricoat, new PitchBlack, new MaximumSteel, new TorRed, new ContusionBlue;
+   public DodgeRamBuilderInterface askForColorAndInterior(){
+      Paint paint = new YellowJacketPaint();
+      //, new RedlineTricoat, new PitchBlack, new MaximumSteel, new TorRed, new ContusionBlue;
          TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
-         promptBuilder.addtype("Color");
-         promptBuilder.addOption(new YellowJacket());
+         promptBuilder.addType("Paint");
+         promptBuilder.addOption(paint);
          promptBuilder.sort();
-         Terminal prompter prompter = promptBuilder.build();
+         TerminalPrompter prompter = promptBuilder.build();
          int choice = prompter.ask();
-         Color color = (Color)promptBuilder.getOptions().get(choice - 1);
-      this.color = color;
+         paint = (Paint)promptBuilder.getOptions().get(choice - 1);
+      this.paint = paint;
       return this;
    }
 
 
-	DodgeRamBuilderInterface askForOptions(TerminalPrompterBuilderInterface promptBuilder){
-        AluminumWheel aluminumWheel = new AluminumWheel(18);
+	public DodgeRamBuilderInterface askForOptions(){
+    TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
+        CarbonAluminumWheel aluminumWheel = new CarbonAluminumWheel(18,"Satin");
         AllSeasonPerformanceTire allSeasonPerformanceTire = new AllSeasonPerformanceTire();
-        promptBuilder.addType("Tire");
-            //promptBuilder.addtype("Aluminum Wheel")
-            //promptBuilder.addtype("All Season Performance Tire")
+        promptBuilder.addType("Wheels & Tires")
          .addOption(aluminumWheel)
          .addOption(allSeasonPerformanceTire)
          .build()
-         .tell("Your SXT Comes With An " + aluminumWheel);
-         .tell("Your SXT Comes With An " + allSeasonPerformanceTire);
+         .tell("Your SXT Comes With An " + aluminumWheel + "\nYour SXT Comes With An " + allSeasonPerformanceTire);
       this.aluminumWheel = aluminumWheel;
       this.allSeasonPerformanceTire = allSeasonPerformanceTire;
       return this;
    }
 
-	DodgeRamBuilderInterface askForPackages(TerminalPrompterBuilderInterface promptBuilder){
+	public DodgeRamBuilderInterface askForPackages(){
+    TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
       Engine engine = new VVT24ValveSportEngine(3.6, new HorsePower(303,3000), new Torque(300,2000), 6);
-            promptBuilder.addtype("Powertrain")
+            promptBuilder.addType("Powertrain")
          .addOption(engineAssembly)
          .build()
          .tell("Your SXT Comes With A " + engineAssembly);
@@ -58,7 +86,7 @@ public class DodgeChallengerSXTBuilder implements DodgeRamBuilderInterface{
       return this;
    }
 
-	Automobile build(){
+	public Automobile build(){
       return new Automobile("Dodge","Challenger","SXT",null,null,this.engineAssembly,null);
    }
 
