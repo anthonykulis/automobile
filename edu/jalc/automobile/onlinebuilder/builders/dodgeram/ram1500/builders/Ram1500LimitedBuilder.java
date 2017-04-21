@@ -1,65 +1,47 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.builders;
 
 import java.util.*;
+import edu.jalc.automobile.parts.body.Paint;
 import edu.jalc.automobile.Automobile;
-import edu.jalc.automobile.common.utils.prompter.TerminalPrompterBuilderInterface;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.axle.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.seating.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.exteriorpaint.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.tire.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.engine.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.drive.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.wheels.*;
 import edu.jalc.automobile.common.utils.prompter.*;
 
-
 public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
-
-   private TruckDrive truckDrive;
-   private TruckRearAxle truckRearAxle;
-  /* private TruckBed;
-   private Paint;
-   private Tire;
-   //needs engine and wheel*/
+   Paint exteriorPaint;
+  
+   public Ram1500LimitedBuilder askForColorAndInterior() {
    
-  /* Scanner keyboard = new Scanner(System.in);
-   
-    //determine the drive and cab/bed
- 
-   System.out.println("Would you like your car drive to be: /n/t enter 1 for 4*4 /n/t       2 for 4*2");
-   
-   int driveChoice = keyboard.nextInt();
-   if (driveChoice==1){
-   truckDrive= new ForByFourTruckDrive();
-    }else if (driveChoice==1){
-   truckDrive= new ForByTwoTruckDrive();
-   }*/
-
-   
-   
-   public DodgeRamBuilderInterface askForPowerTrain(TerminalPrompterBuilderInterface promptBuilder){
-    
-   TruckRearAxle threePointNintyNineAxle=new  TruckRearAxle(3.92);
-   TruckRearAxle threePointFiftyFiveAxle=new  TruckRearAxle(3.55);
-   TruckRearAxle fivePointTwentyOneAxle=new  TruckRearAxle(3.21);
-   
-    promptBuilder.addType("Powertrain");
-    promptBuilder.addOption(threePointNintyNineAxle);
-    promptBuilder.addOption(threePointFiftyFiveAxle);
-    promptBuilder.addOption(fivePointTwentyOneAxle);
-    promptBuilder.sort();
-    promptBuilder.build().ask();
-       
+      TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
+      promptBuilder.addType("Exterior paint");
+      promptBuilder.addOption(new BrilliantBlackCrystalPearl());
+      promptBuilder.addOption(new BrightWhiteClearCoat());
+      promptBuilder.sort();
+      
+      ArrayList<Object> colors = promptBuilder.getOptions();
+      
+      try{
+         TerminalPrompter prompter = promptBuilder.build();
+      
+         int result = prompter.ask();
+      
+         exteriorPaint = (Paint)colors.get(result - 1);
+      } 
+      catch(Exception e){
+         e.printStackTrace();
+         System.exit(1);   
+      }           
+      return this;   
    }
-   public DodgeRamBuilderInterface askForColorAndInterior(TerminalPrompterBuilderInterface promptBuilder){
-   
-   }
-   public DodgeRamBuilderInterface askForOptions(TerminalPrompterBuilderInterface promptBuilder){
-   
-   }
-   public DodgeRamBuilderInterface askForPackages(TerminalPrompterBuilderInterface promptBuilder){
-   
-   }
-   
-   public Automobile build(){
+  
+   public static void main(String[] args) throws Exception{
+      new Ram1500LimitedBuilder()
+            .askForColorAndInterior();
    }
 }
