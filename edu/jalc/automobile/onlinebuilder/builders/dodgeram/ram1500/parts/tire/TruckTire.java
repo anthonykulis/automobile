@@ -7,7 +7,6 @@ public class TruckTire  extends Tire  {
    public  TruckTire(String tireDetails){
       super(0,0);
       this.tireDetails=tireDetails;
-
    }
    public String getTireDetails(){
       return this.tireDetails;

@@ -44,6 +44,7 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
    TruckDrive truckDrive;
    TruckRearAxle truckRearAxle;
    TruckTire  tire;
+   TruckWheel wheel;
 
    
    private  static  TruckDrive askForTruckDrive(){
@@ -167,22 +168,17 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
    }*/
    
    public DodgeRamBuilderInterface askForOptions(){
-   //didnt use here since there is one option only for wheel and tire
-   //ask about using Tire and Wheel?
-   
-     
-      //Wheel wheel;
-     
-      /*try{
+  
+   try{
          TerminalPrompterBuilder wheelPrompter = TerminalPrompterBuilder.newBuilder();
          int wheelChoice = wheelPrompter.addType("Wheels")
             .addOption(new TruckAlumWheel(20.0,9.0))
             .sort()
             .build()
             .ask();
-         wheel = (Wheel )wheelPrompter.getOptions().get(wheelChoice - 1);
+         wheel = (TruckWheel)wheelPrompter.getOptions().get(wheelChoice - 1);
       } 
-      catch(Exception e){System.err.println(e);}*/
+      catch(Exception e){System.err.println(e);}
    
       try{      
          TerminalPrompterBuilder tirePrompter = TerminalPrompterBuilder.newBuilder();
@@ -194,7 +190,7 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
       }
       catch(Exception e){System.err.println(e);}
       //was not able to find the height for shock and spring!!
-      suspension = new  TruckSuspension( new StockShock(0),new StockSpring(0), tire,new TruckAlumWheel(20.0,9.0));
+      suspension = new  TruckSuspension( new StockShock(0),new StockSpring(0), tire,wheel);
       
       return this;
    }
