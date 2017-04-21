@@ -13,6 +13,14 @@ import edu.jalc.automobile.parts.body.colors.SchoolBusYellow;
 import edu.jalc.automobile.parts.body.colors.TreeGreen;
 import edu.jalc.automobile.parts.body.seat.LeatherSeat;
 import edu.jalc.automobile.parts.suspension.DualRearWheel;
+import edu.jalc.automobile.common.utils.prompter.TerminalPrompterBuilder;
+import edu.jalc.automobile.common.utils.prompter.TerminalPrompter;
+import edu.jalc.automobile.Automobile;
+import edu.jalc.automobile.parts.suspension.BlackPaintedAluminumWheel;
+import edu.jalc.automobile.parts.suspension.PaintedAluminumWheel;
+import edu.jalc.automobile.parts.suspension.PolishedAluminumWheel;
+import edu.jalc.automobile.parts.suspension.AllSeasonTire;
+import edu.jalc.automobile.parts.suspension.AllTerrainTire;
 
 public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
 
@@ -61,7 +69,7 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
       prompter.ask();
 
       TerminalPrompterBuilder.newBuilder().addType("Seating and Trim")
-        .addOption(leatherSeat)
+        .addOption(new LeatherSeat())
         .build()
         .ask();
   }
@@ -75,6 +83,25 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
       prompter.ask();
   }
   public Ram3500BigHornBuilder askForOptions(){
-    
+    TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
+
+    TerminalPrompter prompter = builder.addType("Wheels")
+      .addOption(new BlackPaintedAluminumWheel(20))
+      .addOption(new PaintedAluminumWheel(20))
+      .addOption(new PolishedAluminumWheel(18))
+      .sort()
+      .build();
+
+      prompter.ask();
+
+      TerminalPrompterBuilder.newBuilder().addType("Tires")
+        .addOption(new AllSeasonTire(275,70))
+        .addOption(new AllTerrainTire(275,70))
+        .addOption(new AllTerrainTire(285,60))
+        .sort()
+        .build()
+        .ask();
+
   }
+  public Automobile build(){}
 }
