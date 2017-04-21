@@ -16,8 +16,6 @@ import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.suspens
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
 import edu.jalc.automobile.onlinebuilder.components.engine.economy.standard.StandardEcoEngine;
-
-
 import edu.jalc.automobile.onlinebuilder.components.body.Body;
 import edu.jalc.automobile.onlinebuilder.components.body.truck.*;
 import edu.jalc.automobile.onlinebuilder.components.suspension.Suspension;
@@ -25,7 +23,6 @@ import edu.jalc.automobile.onlinebuilder.components.suspension.towing.*;
 import edu.jalc.automobile.onlinebuilder.components.driveline.DriveLine;
 import edu.jalc.automobile.onlinebuilder.components.driveline.truck.HeavyDutyRWD;
 import edu.jalc.automobile.onlinebuilder.components.engine.diesel.*;
-
 import edu.jalc.automobile.parts.engine.EcoEngine;
 import edu.jalc.automobile.parts.induction.*;
 import edu.jalc.automobile.parts.exhaust.*;
@@ -35,7 +32,7 @@ import edu.jalc.automobile.parts.body.Cabin;
 import edu.jalc.automobile.parts.suspension.*;
 import edu.jalc.automobile.parts.driveline.*;
 
-public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
+public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
 
    EngineAssembly engine;
    Body body;
@@ -48,7 +45,8 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
    TruckWheel wheel;
    TruckSeat seat;
    Paint paint; 
-   private  static  TruckDrive askForTruckDrive(){
+   
+   public TruckDrive askForTruckDrive(){
       int  truckDriveChoice = 1;
       TerminalPrompterBuilder truckDrivePrompter = TerminalPrompterBuilder.newBuilder();
       try{
@@ -60,10 +58,11 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
             .ask();//use if 4*4 create 4*4driveline...
       }
       catch(Exception e){System.err.println(e);}
-      return (TruckDrive)truckDrivePrompter.getOptions().get(truckDriveChoice - 1);
+      truckDrive=(TruckDrive)truckDrivePrompter.getOptions().get(truckDriveChoice - 1);
+      return this.truckDrive;
    }
    
-   private  static  RamTruckCabAndBed askForTruckBed(){
+   public RamTruckCabAndBed  askForTruckCabAndBed(){
       int cabAndBedChoice = 1;
       TerminalPrompterBuilder cabAndBedPrompter = TerminalPrompterBuilder.newBuilder();
       try{
@@ -75,19 +74,35 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
             .ask();
       }
       catch(Exception e){System.err.println(e);}
-      return (RamTruckCabAndBed)cabAndBedPrompter.getOptions().get(cabAndBedChoice - 1);
+     cabAndBox= (RamTruckCabAndBed)cabAndBedPrompter.getOptions().get(cabAndBedChoice - 1);
+     return this.cabAndBox;
+     
    }
    
    
    public DodgeRamBuilderInterface askForPowerTrain(){
    
-      engine= askForEngine();
-      truckRearAxle = askForTruckAxle();
-     
-      return this;//check what does it return !!!!!
-   }
-    
-   private  TruckRearAxle askForTruckAxle(){
+        //engine choice
+      TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
+      
+      EcoEngine ecoDieselEngine= new EcoDieselEngine( 182,new HorsePower(240,3600),new Torque(420,2000),6);
+      EcoEngine hemiVVTEngine = new HemiVVTEngine(345,new HorsePower(395,5600 ),new Torque(410,3950),8);
+      
+      EngineAssembly eco_DieselEngine = new StandardEcoEngine(ecoDieselEngine, new EconomyExhaust() , new NaturallyAspiratedInduction());
+      EngineAssembly hemi_VVTEngine  = new  StandardEcoEngine(hemiVVTEngine,new EconomyExhaust(),new NaturallyAspiratedInduction());
+      
+      promptBuilder.addType("Engine ");
+      promptBuilder.addOption(eco_DieselEngine);
+      promptBuilder.addOption(hemi_VVTEngine);
+      promptBuilder.sort();
+      int engineChoice = 2; 
+      try{
+         engineChoice = promptBuilder.build().ask();
+      }
+      catch(Exception e){}
+      engine = (EngineAssembly)promptBuilder.getOptions().get(engineChoice - 1);
+      
+       //axle choice
       int axleChoice = 1;
       TerminalPrompterBuilder axlePrompter = TerminalPrompterBuilder.newBuilder();
       try{
@@ -101,45 +116,13 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
       }
       catch(Exception e){System.err.println(e);}
       truckRearAxle =(TruckRearAxle)axlePrompter.getOptions().get(axleChoice - 1);
-      return truckRearAxle;
-   }
    
-   private EngineAssembly askForEngine(){
-      TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
-      
-      EcoEngine ecoDieselEngine= new EcoDieselEngine( 182,new HorsePower(240,3600),new Torque(420,2000),6);
-      EcoEngine hemiVVTEngine = new HemiVVTEngine(345,new HorsePower(395,5600 ),new Torque(410,3950),8);
-      
-      EngineAssembly eco_DieselEngine = new StandardEcoEngine(ecoDieselEngine, new EconomyExhaust() , new NaturallyAspiratedInduction());
-      EngineAssembly hemi_VVTEngine  = new  StandardEcoEngine(hemiVVTEngine,new EconomyExhaust(),new NaturallyAspiratedInduction());
-      
-      promptBuilder.addType(" PowerTain \n Engine ");
-      promptBuilder.addOption(eco_DieselEngine);
-      promptBuilder.addOption(hemi_VVTEngine);
-      promptBuilder.sort();
-      int engineChoice = 2; 
-      try{
-         engineChoice = promptBuilder.build().ask();
-      }
-      catch(Exception e){}
-      engine = (EngineAssembly)promptBuilder.getOptions().get(engineChoice - 1);
-   
-      return  engine;
+      return  this;
    }
    
    public DodgeRamBuilderInterface askForColorAndInterior(){
-      paint = askForPaint();
-      seat = askForSeat();
-      
-      this.body =  new CrewCab(
-         new Quarterpanels(paint,null),
-         new EngineCompartment(new Hood(paint, null)),
-         new TruckCabin(seat),
-         cabAndBox);
-      return this;
-   }
-   
-   private Paint askForPaint(){
+     
+   //exterior paint choice
       TerminalPrompterBuilder paintPrompter = TerminalPrompterBuilder.newBuilder();
       int choice =1 ;
       paintPrompter.addType("Paint")
@@ -153,23 +136,31 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
       }
       catch(Exception e){System.err.println(e);}
       
-      return (Paint)paintPrompter.getOptions().get(choice - 1);
-   }
-   private TruckSeat askForSeat(){
-     TerminalPrompterBuilder seatPrompter = TerminalPrompterBuilder.newBuilder();
-     int seatChoice = 1;
-     try{
-       seatChoice = seatPrompter.addType("Seats")
-         .addOption(new LimitedLeatherBucketSeats())
-         .build()
-         .ask();
-     }catch(Exception e){System.err.println(e);}
-     return (TruckSeat)seatPrompter.getOptions().get(seatChoice - 1);
+      paint=(Paint)paintPrompter.getOptions().get(choice - 1);
+      
+   //Seat choice
+      TerminalPrompterBuilder seatPrompter = TerminalPrompterBuilder.newBuilder();
+      int seatChoice = 1;
+      try{
+         seatChoice = seatPrompter.addType("Seats")
+            .addOption(new LimitedLeatherBucketSeats())
+            .build()
+            .ask();
+      }
+      catch(Exception e){System.err.println(e);}
+      seat= (TruckSeat)seatPrompter.getOptions().get(seatChoice - 1);
+      
+      this.body =  new CrewCab(
+         new Quarterpanels(paint,null),
+         new EngineCompartment(new Hood(paint, null)),
+         new TruckCabin(seat),
+         cabAndBox);
+      return this;
    }
    
    public DodgeRamBuilderInterface askForOptions(){
-  
-   try{
+   
+      try{
          TerminalPrompterBuilder wheelPrompter = TerminalPrompterBuilder.newBuilder();
          int wheelChoice = wheelPrompter.addType("Wheels")
             .addOption(new TruckAlumWheel(20.0,9.0))
@@ -209,18 +200,14 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
    }
    
    public static void main(String... args){
-      TruckDrive truckDrive = askForTruckDrive();
-      TruckBed cabAndBox = askForTruckBed();
-     
+      
       Automobile ram1500limited = new Ram1500LimitedBuilder()
          .askForPowerTrain()
          .askForColorAndInterior()
          .askForOptions()
          .askForPackages()
          .build();
-         //dont use s o p
-      System.out.println(truckDrive);//use driveline
-      System.out.println(cabAndBox);//cabin 
+          
       System.out.println(ram1500limited);
    }
 
