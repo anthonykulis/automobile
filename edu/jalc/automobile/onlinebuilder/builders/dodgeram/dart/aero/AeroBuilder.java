@@ -27,6 +27,7 @@ import edu.jalc.automobile.parts.body.*;
 import edu.jalc.automobile.parts.suspension.*;
 import edu.jalc.automobile.parts.driveline.*;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
+import edu.jalc.automobile.onlinebuilder.components.engine.economy.boosted.*;
 import edu.jalc.automobile.parts.body.seat.ClothSeat;
 
 public class AeroBuilder implements DodgeRamBuilderInterface{
