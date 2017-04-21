@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="6c0bd62e-c071-4635-864e-1f69ccbb7be8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilder.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderInterface.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderInterface.java" />
     </list>
+=======
+    <list default="true" id="6c0bd62e-c071-4635-864e-1f69ccbb7be8" name="Default" comment="" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +23,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -28,26 +33,43 @@
                 <folding />
               </first_editor>
               <second_editor />
+=======
+      <file leaf-file-name="DodgeRamBuilderInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/DodgeRamBuilderInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="94">
+              <caret line="7" column="76" lean-forward="false" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="76" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Automobile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/Automobile.java">
+      <file leaf-file-name="TerminalPrompter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompter.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="475">
               <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+=======
+            <state relative-caret-position="605">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Automobile#1;class#Automobile#0" expanded="true" />
+                <element signature="method#TerminalPrompter#0;class#TerminalPrompter#0" expanded="true" />
+                <element signature="method#ask#0;class#TerminalPrompter#0" expanded="true" />
+                <element signature="method#ask#1;class#TerminalPrompter#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DodgeRamBuilderInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/DodgeRamBuilderInterface.java">
+      <file leaf-file-name="Askable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/Askable.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="304">
               <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
               <folding>
@@ -66,10 +88,16 @@
                 <element signature="method#Paint#0;class#Paint#0" expanded="true" />
                 <element signature="method#toString#0;class#Paint#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="57">
+              <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+              <folding />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Graphic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/Graphic.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -79,44 +107,86 @@
                 <element signature="e#138#139#0" expanded="true" />
                 <element signature="e#178#179#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="TerminalPrompterBuilderInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TerminalPrompter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompter.java">
+      <file leaf-file-name="TerminalPrompterBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="247">
               <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+=======
+            <state relative-caret-position="153">
+              <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
               <folding>
-                <element signature="method#TerminalPrompter#0;class#TerminalPrompter#0" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
-                <element signature="e#475#476#0" expanded="true" />
+                <element signature="method#addOption#0;class#TerminalPrompterBuilder#0" expanded="true" />
+                <element signature="method#sort#0;class#TerminalPrompterBuilder#0" expanded="true" />
+                <element signature="method#build#0;class#TerminalPrompterBuilder#0" expanded="true" />
+                <element signature="e#1415#1445#0" expanded="true" />
+                <element signature="e#1484#1485#0" expanded="true" />
+                <element signature="e#1530#1531#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Tellable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/Tellable.java">
+=======
+      <file leaf-file-name="TerminalPrompter.class" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompter.class">
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="TerminalPrompterBuilderInterface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderInterface.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
               <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+=======
+      <file leaf-file-name="TerminalPrompterBuilderTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding>
+                <element signature="method#main#0;class#TerminalPrompterBuilderTest#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SportEngine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/engine/SportEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="TerminalPrompterBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -125,15 +195,31 @@
               <folding>
                 <element signature="method#build#0;class#TerminalPrompterBuilder#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="TurbochargedSportEngine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/TurbochargedSportEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Cabin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/Cabin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
               <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+=======
+      <file leaf-file-name="BoostedSportEngine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/BoostedSportEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
               <folding />
             </state>
           </provider>
@@ -163,8 +249,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/parts/suspension/StockWheelTest.java" />
         <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/parts/suspension/SteelWheelTest.java" />
+=======
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
         <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/parts/suspension/AlloyWheel.java" />
         <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/onlinebuilder/components/engine/diesel/DieselEngineAssemblyTest.java" />
         <option value="$PROJECT_DIR$/automobile/edu/jalc/automobile/parts/body/TestLuxuryCabin.java" />
@@ -207,6 +296,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/Automobile.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompter.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/Tellable.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/DodgeRamBuilderInterface.java" />
@@ -214,6 +304,17 @@
         <option value="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Graphic.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilder.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderInterface.java" />
+=======
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/Tellable.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Paint.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/parts/body/Graphic.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/DodgeRamBuilderInterface.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderInterface.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/Askable.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompter.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilder.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderTest.java" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
       </list>
     </option>
   </component>
@@ -224,9 +325,16 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="y" value="23" />
     <option name="width" value="2560" />
     <option name="height" value="989" />
+=======
+    <option name="x" value="498" />
+    <option name="y" value="75" />
+    <option name="width" value="1635" />
+    <option name="height" value="853" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -246,8 +354,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="PackagesPane" />
+=======
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -321,6 +434,88 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="body" />
+=======
+              <option name="myItemId" value="induction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="onlinebuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+=======
+              <option name="myItemId" value="parts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="body" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlinebuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="body" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -344,6 +539,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="automobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="onlinebuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sport" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -973,7 +1202,12 @@
       <workItem from="1492001341832" duration="2527000" />
       <workItem from="1492087779759" duration="442000" />
       <workItem from="1492090611556" duration="322000" />
+<<<<<<< HEAD
       <workItem from="1492539524654" duration="182000" />
+=======
+      <workItem from="1492539524654" duration="218000" />
+      <workItem from="1492609382679" duration="1386000" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
     </task>
     <task id="LOCAL-00001" summary="Finished recoding sport class to make sport wheel and forged wheel default no matter what but now you pass size parameters to each one">
       <created>1490596578836</created>
@@ -993,7 +1227,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="14741000" />
+=======
+    <option name="totallyTimeSpent" value="16163000" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1005,7 +1243,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="23" width="2560" height="989" extended-state="6" />
+=======
+    <frame x="498" y="75" width="1635" height="853" extended-state="0" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1019,10 +1261,17 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13043478" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29388404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2522996" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24984306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1060,6 +1309,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/Suspension.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1088,6 +1338,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
     <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/sport/SportLoweredTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -1334,22 +1586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/Askable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1380,18 +1616,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompter.java">
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/Paint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="114">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="method#TerminalPrompter#0;class#TerminalPrompter#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
+            <element signature="method#Paint#0;class#Paint#0" expanded="true" />
+            <element signature="method#toString#0;class#Paint#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/Automobile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+=======
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/Graphic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+            <element signature="e#178#179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/body/Cabin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/DodgeRamBuilderInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="7" column="76" lean-forward="false" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="76" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/Tellable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+=======
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/Askable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompter.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="247">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+=======
+        <state relative-caret-position="605">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
+          <folding>
+            <element signature="method#TerminalPrompter#0;class#TerminalPrompter#0" expanded="true" />
+            <element signature="method#ask#0;class#TerminalPrompter#0" expanded="true" />
+            <element signature="method#ask#1;class#TerminalPrompter#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/DodgeRamBuilderInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1428,10 +1740,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+=======
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -1446,7 +1765,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/parts/engine/SportEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+>>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <folding>
+            <element signature="method#addOption#0;class#TerminalPrompterBuilder#0" expanded="true" />
+            <element signature="method#sort#0;class#TerminalPrompterBuilder#0" expanded="true" />
+            <element signature="method#build#0;class#TerminalPrompterBuilder#0" expanded="true" />
+            <element signature="e#1415#1445#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1530#1531#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/TurbochargedSportEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/sport/BoostedSportEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/common/utils/prompter/TerminalPrompterBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="method#main#0;class#TerminalPrompterBuilderTest#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
