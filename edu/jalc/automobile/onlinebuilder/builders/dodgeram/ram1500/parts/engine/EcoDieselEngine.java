@@ -1,11 +1,13 @@
-package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.enigne;
+package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.engine;
 
-import edu.jalc.automobile.parts.engine.DieselEngine;
+import edu.jalc.automobile.parts.engine.EcoEngine;
+import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 
-public class EcoDieselEngine extends DieselEngine{
+public class EcoDieselEngine extends EcoEngine{
 
    public EcoDieselEngine(double displacement, HorsePower horsePower, Torque torque, int cylinders){
-      super(3.0,null,null,6);
+   //displacement 3.0 cylinders6
+      super(displacement,null,null,cylinders);
    }
 
    public String toString(){

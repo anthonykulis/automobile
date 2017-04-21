@@ -1,6 +1,6 @@
-package edu.jalc.automobile.onlinebuilder.components.suspension.towing;
+package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.suspension;
 
-
+import edu.jalc.automobile.onlinebuilder.components.suspension.towing.Towing;
 import edu.jalc.automobile.parts.suspension.Shock;
 import edu.jalc.automobile.parts.suspension.Spring;
 import edu.jalc.automobile.parts.suspension.HeavyShock;
@@ -8,26 +8,26 @@ import edu.jalc.automobile.parts.suspension.HeavySpring;
 import edu.jalc.automobile.parts.suspension.*;
 
 
-public class TowingHeavyDuty extends Towing{
+public class TruckSuspension extends Towing{
 
-   private HeavyShock shock;
-   private HeavySpring spring;
+   private Shock shock;
+   private Spring spring;
    private Tire tire;
-   private SteelWheel steelWheel;
+   private Wheel wheel;
 
-   private TowingHeavyDuty(){
+   private TruckSuspension(){
       this.shock = null;
       this.spring = null;
       this.tire = null;
-      this.steelWheel = null;
+      this.wheel = null;
    }
 
-  public TowingHeavyDuty(HeavyShock shock, HeavySpring spring, AllTerrainTire tire,SteelWheel steelWheel){
+  public TruckSuspension(Shock shock,Spring spring,Tire tire,Wheel wheel){
 
       this.shock = shock;
       this.spring = spring;
       this.tire = tire;
-      this.steelWheel = steelWheel;
+      this.wheel = wheel;
    }
 
    public Shock getShock(){
@@ -42,16 +42,16 @@ public class TowingHeavyDuty extends Towing{
       return tire;
    }
 
-   public SteelWheel getWheel() {
-      return steelWheel;
+   public Wheel getWheel() {
+      return wheel;
    }
 
    public String toString(){
-      return "Towing Heavy Duty has:\n" +
+      return "Truck Suspension has:\n" +
              "\t" + shock.toString() + "\n" +
              "\t" + spring.toString() + "\n" +
               "\t" + tire.toString() + "\n" +
-              "\t" + steelWheel.toString() + "\n";
+              "\t" + wheel.toString() + "\n";
    }
 
 }
