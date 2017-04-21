@@ -12,6 +12,7 @@ import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.tire
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.suspension.SportSuspension;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
+import edu.jalc.automobile.onlinebuilder.components.engine.sport.NaturallyAspiratedSportEngine;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.engine.VVT24ValveSportEngine;
 import edu.jalc.automobile.onlinebuilder.components.body.Body;
 import edu.jalc.automobile.onlinebuilder.components.body.car.CoupeBody;
@@ -30,6 +31,18 @@ public class DodgeChallengerSXTBuilder implements DodgeRamBuilderInterface{
 
    private EngineAssembly engineAssembly;
    private Paint paint;
+   private CarbonAluminumWheel carbonAluminumWheel;
+   private AllSeasonPerformanceTire allSeasonPerformanceTire;
+   
+   public static void main(String... args){
+      Automobile auto = new DodgeChallengerSXTBuilder()
+         .askForPowerTrain()
+         .askForColorAndInterior()
+         .askForOptions()
+         .askForPackages()
+         .build();
+      System.out.println(auto);
+   }
 
    public DodgeRamBuilderInterface askForPowerTrain(){
      TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
@@ -39,7 +52,7 @@ public class DodgeChallengerSXTBuilder implements DodgeRamBuilderInterface{
          promptBuilder.addType("Powertrain")
          .addOption(engineAssembly)
          .build()
-         .tell("Your SXT Comes With A " + engineAssembly);
+         .tell("Your SXT Comes With " + engineAssembly);
       }catch(Exception e){}
       this.engineAssembly = engineAssembly;
       return this;
@@ -52,8 +65,10 @@ public class DodgeChallengerSXTBuilder implements DodgeRamBuilderInterface{
          promptBuilder.addType("Paint");
          promptBuilder.addOption(paint);
          promptBuilder.sort();
-         TerminalPrompter prompter = promptBuilder.build();
-         int choice = prompter.ask();
+         int choice = 1;
+         try{
+            choice = promptBuilder.build().ask();
+         }catch(Exception e){}
          paint = (Paint)promptBuilder.getOptions().get(choice - 1);
       this.paint = paint;
       return this;
@@ -63,26 +78,29 @@ public class DodgeChallengerSXTBuilder implements DodgeRamBuilderInterface{
 	public DodgeRamBuilderInterface askForOptions(){
     TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
         CarbonAluminumWheel aluminumWheel = new CarbonAluminumWheel(18,"Satin");
-        AllSeasonPerformanceTire allSeasonPerformanceTire = new AllSeasonPerformanceTire();
-        promptBuilder.addType("Wheels & Tires")
-         .addOption(aluminumWheel)
-         .addOption(allSeasonPerformanceTire)
-         .build()
-         .tell("Your SXT Comes With An " + aluminumWheel + "\nYour SXT Comes With An " + allSeasonPerformanceTire);
-      this.aluminumWheel = aluminumWheel;
+        AllSeasonPerformanceTire allSeasonPerformanceTire = new AllSeasonPerformanceTire(20,7.5,"275/40ZR20");
+        try{
+           promptBuilder.addType("Wheels & Tires")
+              .addOption(aluminumWheel)
+              .addOption(allSeasonPerformanceTire)
+              .build()
+              .tell("Your SXT Comes With " + aluminumWheel + "\nYour SXT Comes With " + allSeasonPerformanceTire);
+        }catch(Exception e){e.printStackTrace();}
+      this.carbonAluminumWheel = carbonAluminumWheel;
       this.allSeasonPerformanceTire = allSeasonPerformanceTire;
       return this;
    }
 
 	public DodgeRamBuilderInterface askForPackages(){
-    TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
-      Engine engine = new VVT24ValveSportEngine(3.6, new HorsePower(303,3000), new Torque(300,2000), 6);
-            promptBuilder.addType("Powertrain")
+     TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
+     SportEngine engine = new VVT24ValveSportEngine(3.6, new HorsePower(303,3000), new Torque(300,2000), 6);
+     try{
+       promptBuilder.addType("Powertrain")
          .addOption(engineAssembly)
          .build()
          .tell("Your SXT Comes With A " + engineAssembly);
+     }catch(Exception e){e.printStackTrace();}
       this.engineAssembly = engineAssembly;
-      return this;
       return this;
    }
 
