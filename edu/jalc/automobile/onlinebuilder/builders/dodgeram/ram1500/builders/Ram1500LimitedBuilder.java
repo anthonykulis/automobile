@@ -7,6 +7,7 @@ import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.cabandb
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.drive.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.engine.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.axle.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.cabin.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.exteriorpaint.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.seating.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.tire.*;
@@ -45,8 +46,8 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
    TruckRearAxle truckRearAxle;
    TruckTire  tire;
    TruckWheel wheel;
-
-   
+   TruckSeat seat;
+   Paint paint; 
    private  static  TruckDrive askForTruckDrive(){
       int  truckDriveChoice = 1;
       TerminalPrompterBuilder truckDrivePrompter = TerminalPrompterBuilder.newBuilder();
@@ -127,13 +128,13 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
    }
    
    public DodgeRamBuilderInterface askForColorAndInterior(){
-      Paint paint = askForPaint();
-      //Seat seat = askForSeat();
+      paint = askForPaint();
+      seat = askForSeat();
       
       this.body =  new CrewCab(
          new Quarterpanels(paint,null),
          new EngineCompartment(new Hood(paint, null)),
-         new LuxuryCabin(new LimitedLeatherBucketSeats()),//one option here, need to be fixed for other situations and printing address!!
+         new TruckCabin(seat),
          cabAndBox);
       return this;
    }
@@ -154,18 +155,17 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
       
       return (Paint)paintPrompter.getOptions().get(choice - 1);
    }
-   /*private Seat askForSeat(){
+   private TruckSeat askForSeat(){
      TerminalPrompterBuilder seatPrompter = TerminalPrompterBuilder.newBuilder();
      int seatChoice = 1;
      try{
        seatChoice = seatPrompter.addType("Seats")
-         .addOption(LimitedLeatherBucketSeats)
-         .sort()
+         .addOption(new LimitedLeatherBucketSeats())
          .build()
          .ask();
      }catch(Exception e){System.err.println(e);}
-     return (Seat)seatPrompter.getOptions().get(seatChoice - 1);
-   }*/
+     return (TruckSeat)seatPrompter.getOptions().get(seatChoice - 1);
+   }
    
    public DodgeRamBuilderInterface askForOptions(){
   
