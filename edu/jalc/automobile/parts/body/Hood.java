@@ -30,9 +30,7 @@ public class Hood{
   }
 
  public String toString(){
-    return "Hood has:\n" +
-                       "\t"+ paint.toString()+"\n"+
-                       "\t"+ graphic.toString(); 
+    return "Hood with: " + paint.toString() + " " + graphic.toString(); 
 
   }
 
