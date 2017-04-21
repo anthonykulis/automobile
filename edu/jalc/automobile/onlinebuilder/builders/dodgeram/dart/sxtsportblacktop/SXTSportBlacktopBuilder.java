@@ -38,13 +38,34 @@ public class SXTSportBlacktopBuilder implements DodgeRamBuilderInterface{
    private Wheel wheel;
    
    public Automobile build() {
-      SedanBody coupe = new SedanBody(new Quarterpanels(paint, graphic), new EngineCompartment(new Hood(paint, graphic)), new StandardCabin(clothSeat), new StandardTrunk(13.1));
+      SedanBody coupe = new SedanBody(
+              new Quarterpanels(paint, graphic),
+              new EngineCompartment(new Hood(paint, graphic)),
+              new StandardCabin(clothSeat),
+              new StandardTrunk(13.1)
+      );
    
-      DriveLine economicFWD = new EconomicFWD(new FrontDriveAxle(), new RearDeadAxle(), new ElectricSteering(), new OpenDifferential());
+      DriveLine economicFWD = new EconomicFWD(
+              new FrontDriveAxle(),
+              new RearDeadAxle(),
+              new ElectricSteering(),
+              new OpenDifferential()
+      );
    
-      EngineAssembly ecoEngineAssembly = new StandardEcoEngine(new EcoEngine(1400, new HorsePower(160, 2), new Torque(184, 3), 4), new EconomyExhaust(), new NaturallyAspiratedInduction());
+      EngineAssembly ecoEngineAssembly = new StandardEcoEngine(
+              new EcoEngine(1400,
+              new HorsePower(160, 2),
+              new Torque(184, 3), 4),
+              new EconomyExhaust(),
+              new NaturallyAspiratedInduction()
+      );
    
-      Suspension economySuspension= new EconomySuspension(new StockShock(0), new StockSpring(0), new EconomyTire(10, 10), new AlloyWheel(0, tire));
+      Suspension economySuspension= new EconomySuspension(
+              new StockShock(0),
+              new StockSpring(0),
+              new EconomyTire(10, 10),
+              new AlloyWheel(0, tire)
+      );
    
       return new Automobile("Dodge", "Dart", "SXT Sport Blacktop", coupe, economicFWD, ecoEngineAssembly, economySuspension);
    }
