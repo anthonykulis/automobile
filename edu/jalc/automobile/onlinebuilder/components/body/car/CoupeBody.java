@@ -5,7 +5,7 @@ import edu.jalc.automobile.parts.body.EngineCompartment;
 import edu.jalc.automobile.parts.body.Quarterpanels;
 import edu.jalc.automobile.parts.body.StandardTrunk;
 
-class CoupeBody extends CarBody {
+public class CoupeBody extends CarBody {
 
 	public CoupeBody(Quarterpanels quarterpanels, EngineCompartment engineCompartment, Cabin cabin, StandardTrunk trunk){
 		super(quarterpanels, engineCompartment, cabin, trunk);
