@@ -13,6 +13,6 @@ public class PolishedAlumWheels extends AlloyWheel {
 
     @Override
     public String toString() {
-        return this.getSize() + "inch Polished Aluminum Wheels";
+        return this.getSize() + " inch Polished Aluminum Wheels";
     }
 }

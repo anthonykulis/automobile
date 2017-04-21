@@ -13,7 +13,7 @@ public class SilverAlumWheel extends AlloyWheel{
 
     @Override
     public String toString() {
-        return this.getSize() + "inch Silver Aluminum Wheel";
+        return this.getSize() + " inch Silver Aluminum Wheel";
     }
 
 }

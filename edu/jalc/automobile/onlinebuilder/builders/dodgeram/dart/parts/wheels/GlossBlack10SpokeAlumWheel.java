@@ -13,6 +13,6 @@ public class GlossBlack10SpokeAlumWheel extends AlloyWheel{
 
     @Override
     public String toString() {
-        return this.getSize() + "inch Gloss Black 10 Spoke Aluminum Wheel";
+        return this.getSize() + " inch Gloss Black 10 Spoke Aluminum Wheel";
     }
 }

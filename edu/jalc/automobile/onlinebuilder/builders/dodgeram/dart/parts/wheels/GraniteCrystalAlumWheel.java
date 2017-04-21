@@ -13,7 +13,7 @@ public class GraniteCrystalAlumWheel extends AlloyWheel{
 
     @Override
     public String toString() {
-        return this.getSize() + "inch Granite Crystal Aluminum Wheel";
+        return this.getSize() + " inch Granite Crystal Aluminum Wheel";
     }
 
 }
