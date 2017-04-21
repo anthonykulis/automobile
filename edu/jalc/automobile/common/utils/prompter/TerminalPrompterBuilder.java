@@ -1,20 +1,13 @@
 package edu.jalc.automobile.common.utils.prompter;
 
-<<<<<<< HEAD
 import edu.jalc.automobile.onlinebuilder.components.Component;
 import edu.jalc.automobile.parts.body.Paint;
-
-=======
->>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
 import java.util.ArrayList;
 
 public class TerminalPrompterBuilder implements TerminalPrompterBuilderInterface {
 
-<<<<<<< HEAD
 	private ArrayList<Object> components = new ArrayList<>();
-=======
 	private ArrayList<Object> options = new ArrayList<>();
->>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
 	private int itemNumber = 1;
 	private String type;
 
@@ -30,11 +23,8 @@ public class TerminalPrompterBuilder implements TerminalPrompterBuilderInterface
 
 	@Override
 	public TerminalPrompterBuilderInterface addOption(Object object) {
-<<<<<<< HEAD
 		this.components.add(object);
-=======
 		this.options.add(object);
->>>>>>> 67b8e179a889eff51e6eaddb7d354599bd2c3ad4
 		return this;
 	}
 
