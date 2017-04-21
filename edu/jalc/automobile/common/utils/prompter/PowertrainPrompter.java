@@ -5,11 +5,13 @@ import edu.jalc.automobile.parts.engine.HeavyDutyHEMI;
 import edu.jalc.automobile.parts.engine.CumminsTurboDieselEngine;
 import edu.jalc.automobile.parts.driveline.RearAxleRatio;
 import edu.jalc.automobile.parts.suspension.AirSuspension;
+import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 
 public class PowertrainPrompter{
   public static void main(String[] args) throws Exception{
+    HorsePower hp = new HorsePower(383, 0);
     HEMIVTTEngine hemi = new HEMIVTTEngine();
-    HeavyDutyHEMI heavy = new HeavyDutyHEMI();
+    HeavyDutyHEMI heavy = new HeavyDutyHEMI(hp);
     CumminsTurboDieselEngine diesel = new CumminsTurboDieselEngine();
     RearAxleRatio axle1 = new RearAxleRatio(3.42);
     RearAxleRatio axle2 = new RearAxleRatio(3.73);
