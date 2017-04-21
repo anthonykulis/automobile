@@ -15,7 +15,7 @@ import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.wheels.
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.suspension.*;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
-import edu.jalc.automobile.onlinebuilder.components.engine.economy.EcoEngineAssembly;
+import edu.jalc.automobile.onlinebuilder.components.engine.economy.standard.StandardEcoEngine;
 
 
 import edu.jalc.automobile.onlinebuilder.components.body.Body;
@@ -110,8 +110,8 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
       EcoEngine ecoDieselEngine= new EcoDieselEngine( 182,new HorsePower(240,3600),new Torque(420,2000),6);
       EcoEngine hemiVVTEngine = new HemiVVTEngine(345,new HorsePower(395,5600 ),new Torque(410,3950),8);
       
-      EngineAssembly eco_DieselEngine = new EcoEngineAssembly(ecoDieselEngine, new EconomyExhaust());
-      EngineAssembly hemi_VVTEngine  = new  EcoEngineAssembly(hemiVVTEngine,new EconomyExhaust());
+      EngineAssembly eco_DieselEngine = new StandardEcoEngine(ecoDieselEngine, new EconomyExhaust() , new NaturallyAspiratedInduction());
+      EngineAssembly hemi_VVTEngine  = new  StandardEcoEngine(hemiVVTEngine,new EconomyExhaust(),new NaturallyAspiratedInduction());
       
       promptBuilder.addType(" PowerTain \n Engine ");
       promptBuilder.addOption(eco_DieselEngine);
