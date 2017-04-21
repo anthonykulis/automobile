@@ -3,11 +3,9 @@ import edu.jalc.automobile.parts.suspension.Tire;
 
 public class OnOffRoad  extends TruckTire  {
    
-   public  OnOffRoad(double height, double width,String tireDetails){
+   public  OnOffRoad(String tireDetails){
       super(height, width,tireDetails);
-   }
-
-   
+   } 
    public String toString(){
       return +getHeight()+ "x" +getWidth() +getTireDetails()+" On Off Road Tire";
    }

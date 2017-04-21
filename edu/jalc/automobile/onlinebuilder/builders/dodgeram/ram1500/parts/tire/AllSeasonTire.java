@@ -2,12 +2,10 @@ package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.tire;
 
 public class AllSeasonTire  extends TruckTire  {
     
-   public  AllSeasonTire(double height, double width,String tireDetails){
-      super(height, width,tireDetails);
+   public  AllSeasonTire(String tireDetails){
+      super(tireDetails);
    }
-
-   
    public String toString(){
-       return +getHeight()+ "x" +getWidth() +getTireDetails()+" All Season Tire";
+      return getTireDetails()+" All Season Tire";
    }
 }

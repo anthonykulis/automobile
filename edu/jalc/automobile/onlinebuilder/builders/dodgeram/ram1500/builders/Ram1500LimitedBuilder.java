@@ -43,6 +43,7 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
    RamTruckCabAndBed cabAndBox;
    TruckDrive truckDrive;
    TruckRearAxle truckRearAxle;
+   TruckTire  tire;
 
    
    private  static  TruckDrive askForTruckDrive(){
@@ -168,11 +169,11 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
    public DodgeRamBuilderInterface askForOptions(){
    //didnt use here since there is one option only for wheel and tire
    //ask about using Tire and Wheel?
-   /*
-      Tire  tire;
-      Wheel wheel;
+   
      
-      try{
+      //Wheel wheel;
+     
+      /*try{
          TerminalPrompterBuilder wheelPrompter = TerminalPrompterBuilder.newBuilder();
          int wheelChoice = wheelPrompter.addType("Wheels")
             .addOption(new TruckAlumWheel(20.0,9.0))
@@ -181,20 +182,19 @@ public class Ram1500LimitedBuilder implements DodgeRamBuilderInterface{
             .ask();
          wheel = (Wheel )wheelPrompter.getOptions().get(wheelChoice - 1);
       } 
-      catch(Exception e){System.err.println(e);}
+      catch(Exception e){System.err.println(e);}*/
    
       try{      
          TerminalPrompterBuilder tirePrompter = TerminalPrompterBuilder.newBuilder();
          int tireChoice = tirePrompter.addType("Tires")
-            .addOption(new BSWAllSeasonTire(60, 275))
-            .sort()
+            .addOption(new BSWAllSeasonTire("P275/60R20"))
             .build()
             .ask();
-         tire = (Tire )tirePrompter.getOptions().get(tireChoice - 1);
+         tire = (TruckTire)tirePrompter.getOptions().get(tireChoice - 1);
       }
-      catch(Exception e){System.err.println(e);}*/
+      catch(Exception e){System.err.println(e);}
       //was not able to find the height for shock and spring!!
-      suspension = new  TruckSuspension( new StockShock(0),new StockSpring(0),new BSWAllSeasonTire(60, 275),new TruckAlumWheel(20.0,9.0));
+      suspension = new  TruckSuspension( new StockShock(0),new StockSpring(0), tire,new TruckAlumWheel(20.0,9.0));
       
       return this;
    }
