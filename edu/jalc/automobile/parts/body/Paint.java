@@ -7,8 +7,6 @@ public class Paint{
    public Paint(String name){
       this.name = name;
    }
-
-
    public String toString(){
       return name;
    }

@@ -2,7 +2,7 @@ package edu.jalc.automobile.parts.engine;
 
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 
-public class HeavyDutyHEMI extends Engine{
+public class HeavyDutyHEMI extends DieselEngine{
 
 
   private HeavyDutyHEMI(double displacement, HorsePower horsePower, Torque torque, int cylinders){

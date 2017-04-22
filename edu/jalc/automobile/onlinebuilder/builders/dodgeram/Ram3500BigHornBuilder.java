@@ -23,7 +23,10 @@ import edu.jalc.automobile.parts.suspension.AllSeasonTire;
 import edu.jalc.automobile.parts.suspension.AllTerrainTire;
 import edu.jalc.automobile.parts.driveline.RearDriveAxle;
 import edu.jalc.automobile.parts.engine.Engine;
-
+import edu.jalc.automobile.parts.body.Paint;
+import edu.jalc.automobile.parts.body.seat.Seat;
+import edu.jalc.automobile.parts.suspension.Wheel;
+import edu.jalc.automobile.parts.suspension.Tire;
 
 public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
 
@@ -31,8 +34,13 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
   private RearDriveAxle axle;
   private AirSuspension suspension;
   private  Paint paint;
+  private Seat seat;
+  private Wheel wheel;
+  private Wheel rearWheel;
+  private Tire tire;
 
   public Ram3500BigHornBuilder askForPowerTrain(){
+
 
     TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
     try{
@@ -85,6 +93,8 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
     }
     return this;
   }
+
+
   public Ram3500BigHornBuilder askForColorAndInterior(){
 
     TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
@@ -98,63 +108,104 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
       .addOption(new SchoolBusYellow())
       .addOption(new TreeGreen())
       .sort()
-      .build();
+      .build()
       .ask();
 
       paint = (Paint)builder.getOptions().get(0);
-      
-      } catch(Exception e){
-        e.printStackTrace();
-        System.exit(1);
+
+    } catch(Exception e){
+      e.printStackTrace();
+      System.exit(1);
       }
 
+      builder = new TerminalPrompterBuilder();
+
       try{
-      TerminalPrompterBuilder.newBuilder().addType("Seating and Trim")
+      builder.newBuilder().addType("Seating and Trim")
         .addOption(new LeatherSeat())
         .build()
         .ask();
-   } catch(Exception e){}
+
+        seat = (Seat)builder.getOptions().get(0);
+
+   } catch(Exception e){
+     e.printStackTrace();
+     System.exit(1);
+   }
+
       return this;
   }
-  public Ram3500BigHornBuilder askForPackages(){
-    TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
-    try{
-    TerminalPrompter prompter = builder.addType("Packages")
-      .addOption(new DualRearWheel())
-      .build();
 
-      prompter.ask();
-    } catch(Exception e){}
+
+  public Ram3500BigHornBuilder askForPackages(){
+
+    TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
+
+    try{
+    builder.addType("Packages")
+      .addOption(new DualRearWheel())
+      .build()
+      .ask();
+
+      rearWheel = (Wheel)builder.getOptions().get(0);
+
+    } catch(Exception e){
+      e.printStackTrace();
+      System.exit(1);
+    }
+
     return this;
   }
+
+
   public Ram3500BigHornBuilder askForOptions(){
-    TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
+
+    TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
+
     try{
-    TerminalPrompter prompter = builder.addType("Wheels")
+    builder.addType("Wheels")
       .addOption(new BlackPaintedAluminumWheel(20))
       .addOption(new PaintedAluminumWheel(20))
       .addOption(new PolishedAluminumWheel(18))
       .sort()
-      .build();
+      .build()
+      .ask();
 
-      prompter.ask();
-    } catch(Exception e){}
+      wheel = (Wheel)builder.getOptions().get(0);
+
+    } catch(Exception e){
+      e.printStackTrace();
+      System.exit(1);
+    }
+
+      builder = new TerminalPrompterBuilder();
 
       try{
-      TerminalPrompterBuilder.newBuilder().addType("Tires")
+      builder.newBuilder().addType("Tires")
         .addOption(new AllSeasonTire(275,70))
         .addOption(new AllTerrainTire(275,70))
         .addOption(new AllTerrainTire(285,60))
         .sort()
         .build()
         .ask();
-     } catch(Exception e){}
+
+        tire = (Tire)builder.getOptions().get(0);
+
+     } catch(Exception e){
+       e.printStackTrace();
+       System.exit(1);
+     }
+
     return this;
+
   }
   public Automobile build(){return null;}
 
   public static void main(String[] args)throws Exception{
     Ram3500BigHornBuilder rm = new Ram3500BigHornBuilder();
     rm.askForPowerTrain();
+    rm.askForColorAndInterior();
+    rm.askForPackages();
+    rm.askForOptions();
   }
 }

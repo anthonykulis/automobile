@@ -2,7 +2,7 @@ package edu.jalc.automobile.parts.engine;
 
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 
-public class CumminsTurboDieselEngine extends Engine{
+public class CumminsTurboDieselEngine extends DieselEngine{
 
   HorsePower hp = new HorsePower(385, 0);
   Torque torque = new Torque(865, 0);

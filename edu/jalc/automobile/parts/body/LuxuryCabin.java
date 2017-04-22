@@ -1,16 +1,16 @@
 package edu.jalc.automobile.parts.body;
 
-import edu.jalc.automobile.parts.body.seat.LeatherSeat;
+import edu.jalc.automobile.parts.body.seat.Seat;
 
 public class LuxuryCabin extends Cabin{
 
-  public LuxuryCabin(LeatherSeat leatherSeat){
+  public LuxuryCabin(Seat leatherSeat){
     super(leatherSeat);
   }
-  public LeatherSeat getSeat(){
-    return (LeatherSeat) super.getSeat();
+  public Seat getSeat(){
+    return (Seat) super.getSeat();
   }
-  
+
   public String toString(){
     return "Luxury Cabin with " + super.getSeat();
   }
