@@ -38,7 +38,7 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
    EngineAssembly engine;
    Body body;
    Suspension suspension;
-   DriveLine driveline;
+   TruckDriveLine driveLine;
    RamTruckCabAndBed cabAndBox;
    TruckDrive truckDrive;
    TruckRearAxle truckRearAxle;
@@ -191,7 +191,7 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
       return this;
    }
    public Automobile build(){
-      TruckDriveLine driveLine=new TruckDriveLine(null,null,null);
+     
       if (truckDriveChoice == 1){
          driveLine = new RamHeavyDutyRWD(
             truckDrive,

@@ -38,7 +38,7 @@ public class Ram1500TradesmanBuilder implements TruckDodgeRamBuilderInterface{
    EngineAssembly engine;
    Body body;
    Suspension suspension;
-   DriveLine driveline;
+   TruckDriveLine driveLine;
    RamTruckCabAndBed cabAndBox;
    TruckDrive truckDrive;
    TruckRearAxle truckRearAxle;
@@ -169,7 +169,7 @@ public class Ram1500TradesmanBuilder implements TruckDodgeRamBuilderInterface{
    }
    
    public TruckDodgeRamBuilderInterface askForOptions(){
-   
+   //wheels
       try{
          TerminalPrompterBuilder wheelPrompter = TerminalPrompterBuilder.newBuilder();
          int wheelChoice = wheelPrompter.addType("Wheels")
@@ -181,7 +181,7 @@ public class Ram1500TradesmanBuilder implements TruckDodgeRamBuilderInterface{
          wheel = (TruckWheel)wheelPrompter.getOptions().get(wheelChoice - 1);
       } 
       catch(Exception e){System.err.println(e);}
-   
+   //tires
       try{      
          TerminalPrompterBuilder tirePrompter = TerminalPrompterBuilder.newBuilder();
          int tireChoice = tirePrompter.addType("Tires")
@@ -201,7 +201,7 @@ public class Ram1500TradesmanBuilder implements TruckDodgeRamBuilderInterface{
       return this;
    }
    public Automobile build(){
-      TruckDriveLine driveLine=new TruckDriveLine(null,null,null);
+      
       if (truckDriveChoice == 1){
          driveLine = new RamHeavyDutyRWD(
             truckDrive,
