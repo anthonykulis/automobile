@@ -2,9 +2,12 @@ package edu.jalc.automobile.parts.suspension;
 
 public class AirSuspension{
 
-  public AirSuspension(){}
+  String suspension;
+  public AirSuspension(){
+    this.suspension = "Auto Level Rear Air Suspension";
+  }
 
   public String toString(){
-    return "Auto Level Rear Air Suspension";
+    return suspension;
   }
 }
