@@ -21,48 +21,76 @@ import edu.jalc.automobile.parts.suspension.PaintedAluminumWheel;
 import edu.jalc.automobile.parts.suspension.PolishedAluminumWheel;
 import edu.jalc.automobile.parts.suspension.AllSeasonTire;
 import edu.jalc.automobile.parts.suspension.AllTerrainTire;
+import edu.jalc.automobile.parts.driveline.RearDriveAxle;
+import edu.jalc.automobile.parts.engine.Engine;
+
 
 public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
 
+  private Engine engine;
+  private RearDriveAxle axle;
+  private AirSuspension suspension;
+  private  Paint paint;
+
   public Ram3500BigHornBuilder askForPowerTrain(){
 
-    TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
-try{
-    TerminalPrompter prompter = builder.addType("Engine")
+    TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
+    try{
+    builder.addType("Engine")
       .addOption(new HEMIVTTEngine())
       .addOption(new HeavyDutyHEMI())
       .addOption(new CumminsTurboDieselEngine())
       .sort()
-      .build();
+      .build()
+      .ask();
 
-      prompter.ask();
+      engine = (Engine)builder.getOptions().get(0);
+
+    } catch(Exception e){
+      e.printStackTrace();
+      System.exit(1);
     }
-catch(Exception e){}
-try{
-    TerminalPrompterBuilder.newBuilder().addType("Axle")
+
+    builder = new TerminalPrompterBuilder();
+
+    try{
+    builder.newBuilder().addType("Axle")
       .addOption(new RearAxleRatio(3.42))
       .addOption(new RearAxleRatio(3.73))
       .addOption(new RearAxleRatio(4.10))
       .sort()
       .build()
       .ask();
-    }
-catch(Exception e){}
 
-try{
-    TerminalPrompterBuilder.newBuilder().addType("Suspension")
+      axle = (RearDriveAxle)builder.getOptions().get(0);
+
+    } catch(Exception e){
+      e.printStackTrace();
+      System.exit(1);
+    }
+
+    builder = new TerminalPrompterBuilder();
+
+    try{
+    builder.newBuilder().addType("Suspension")
       .addOption(new AirSuspension())
-      .sort()
       .build()
       .ask();
+
+      suspension = (AirSuspension)builder.getOptions().get(0);
+
+    } catch(Exception e){
+      e.printStackTrace();
+      System.exit(1);
     }
-catch(Exception e){}
+    return this;
   }
   public Ram3500BigHornBuilder askForColorAndInterior(){
 
-    TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
-try{
-    TerminalPrompter prompter = builder.addType("Exterior Color")
+    TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
+
+    try{
+    builder.addType("Exterior Color")
       .addOption(new BrightGreen())
       .addOption(new BrightRed())
       .addOption(new Yellow())
@@ -71,35 +99,37 @@ try{
       .addOption(new TreeGreen())
       .sort()
       .build();
+      .ask();
 
-      prompter.ask();
-    }
-catch(Exception e){}
+      paint = (Paint)builder.getOptions().get(0);
+      
+      } catch(Exception e){
+        e.printStackTrace();
+        System.exit(1);
+      }
 
-try{
+      try{
       TerminalPrompterBuilder.newBuilder().addType("Seating and Trim")
         .addOption(new LeatherSeat())
         .build()
         .ask();
-   }
-catch(Exception e){}
-
+   } catch(Exception e){}
+      return this;
   }
   public Ram3500BigHornBuilder askForPackages(){
     TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
-try{
+    try{
     TerminalPrompter prompter = builder.addType("Packages")
       .addOption(new DualRearWheel())
       .build();
 
       prompter.ask();
-    }
-catch(Exception e){}
-
+    } catch(Exception e){}
+    return this;
   }
   public Ram3500BigHornBuilder askForOptions(){
     TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
-try{
+    try{
     TerminalPrompter prompter = builder.addType("Wheels")
       .addOption(new BlackPaintedAluminumWheel(20))
       .addOption(new PaintedAluminumWheel(20))
@@ -108,10 +138,9 @@ try{
       .build();
 
       prompter.ask();
-    }
-  catch(Exception e){}
+    } catch(Exception e){}
 
-  try{
+      try{
       TerminalPrompterBuilder.newBuilder().addType("Tires")
         .addOption(new AllSeasonTire(275,70))
         .addOption(new AllTerrainTire(275,70))
@@ -119,9 +148,13 @@ try{
         .sort()
         .build()
         .ask();
-     }
-catch(Exception e){}
-
+     } catch(Exception e){}
+    return this;
   }
-  public Automobile build(){}
+  public Automobile build(){return null;}
+
+  public static void main(String[] args)throws Exception{
+    Ram3500BigHornBuilder rm = new Ram3500BigHornBuilder();
+    rm.askForPowerTrain();
+  }
 }
