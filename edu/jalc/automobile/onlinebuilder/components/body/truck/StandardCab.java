@@ -15,10 +15,10 @@ public class StandardCab extends Truck {
 	}
 
 	public String toString(){
-      return "StandardCab has :\n" +
+      return "Standard Cab has :\n" +
                        "\t"+ getQuarterpanels() +"\n"+
                        "\t"+ getEngineCompartment()+"\n"+
                        "\t"+ getCabin()+"\n"+
                        "\t"+ getTruckBed();
-   
+
    }}
