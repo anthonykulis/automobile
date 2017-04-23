@@ -6,7 +6,6 @@ import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 public class VVTEngine extends EcoEngine{
 
    public VVTEngine(double displacement, HorsePower horsePower, Torque torque, int cylinders){
-      //displacement 3.6 cylinders6
       super(displacement,null,null,cylinders);
    
    }

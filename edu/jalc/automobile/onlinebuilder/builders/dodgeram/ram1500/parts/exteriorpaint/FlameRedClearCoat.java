@@ -4,7 +4,7 @@ import edu.jalc.automobile.parts.body.Paint;
 public class FlameRedClearCoat extends Paint{
 
   public String toString() {
-    return " Flame Red Clear Coat";
+    return "Flame Red Clear Coat";
   }
 
 }

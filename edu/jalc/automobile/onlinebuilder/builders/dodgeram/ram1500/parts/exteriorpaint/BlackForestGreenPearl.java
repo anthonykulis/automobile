@@ -4,7 +4,7 @@ import edu.jalc.automobile.parts.body.Paint;
 public class BlackForestGreenPearl extends Paint{
 
   public String toString() {
-    return " Black Forest Green Pearl";
+    return "Black Forest Green Pearl";
   }
 
 }

@@ -4,7 +4,7 @@ import edu.jalc.automobile.parts.body.Paint;
 public class MaximumSteelMetallicClearCoat extends Paint{
 
   public String toString() {
-    return " Maximum Steel Metallic Clear Coat";
+    return "Maximum Steel Metallic Clear Coat";
   }
 
 }

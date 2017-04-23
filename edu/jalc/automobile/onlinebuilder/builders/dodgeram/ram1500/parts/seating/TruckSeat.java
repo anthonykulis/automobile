@@ -1,8 +1,10 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.ram1500.parts.seating;
 
-public class LimitedLeatherBucketSeats   extends TruckSeat {
+import edu.jalc.automobile.parts.body.seat.Seat;
+
+public class TruckSeat  extends Seat {
 
    public String toString(){
-      return "Limited Leather Bucket Seats ";
+      return "Truck Seats ";
    }
 }

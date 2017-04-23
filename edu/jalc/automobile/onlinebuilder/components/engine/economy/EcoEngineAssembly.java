@@ -4,7 +4,7 @@ import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
 import edu.jalc.automobile.parts.exhaust.EconomyExhaust;
 import edu.jalc.automobile.parts.engine.EcoEngine;
 
- public class EcoEngineAssembly extends EngineAssembly{
+abstract public class EcoEngineAssembly extends EngineAssembly{
   private EconomyExhaust exhaust;
   private EcoEngine engine;
 
@@ -35,9 +35,8 @@ import edu.jalc.automobile.parts.engine.EcoEngine;
   public void setExhaust(EconomyExhaust exhaust){
   this.exhaust = exhaust;
   }
+  
   public String toString(){
-      return "EcoEngineAssembly has:\n" +
-                    "\t"+ engine +"\n"+
-                    "\t"+ exhaust;
-   }  
+    return super.toString() + this.engine.toString() + " with a " + this.exhaust.toString();
+  }
 }

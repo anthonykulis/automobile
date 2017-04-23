@@ -33,7 +33,7 @@ import edu.jalc.automobile.parts.body.Cabin;
 import edu.jalc.automobile.parts.suspension.*;
 import edu.jalc.automobile.parts.driveline.*;
 
-public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
+public class Ram1500TradesmanBuilder implements TruckDodgeRamBuilderInterface{
 
    EngineAssembly engine;
    Body body;
@@ -48,7 +48,7 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
    Paint paint;
   
     
-   int  truckDriveChoice = 1;
+   int  truckDriveChoice = 0;
 
    public TruckDodgeRamBuilderInterface askForTruckDrive(){
       TerminalPrompterBuilder truckDrivePrompter = TerminalPrompterBuilder.newBuilder();
@@ -66,12 +66,15 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
    }
    
    public TruckDodgeRamBuilderInterface askForTruckCabAndBed(){
-      int cabAndBedChoice = 1;
+      int cabAndBedChoice = 0;
       TerminalPrompterBuilder cabAndBedPrompter = TerminalPrompterBuilder.newBuilder();
       try{
          cabAndBedChoice= cabAndBedPrompter.addType("Cab And Box")
             .addOption(new  RamTruckCabAndBed(5.7,"Crew"))
             .addOption(new  RamTruckCabAndBed(6.4,"Crew"))
+            .addOption(new  RamTruckCabAndBed(6.4,"Quad"))
+            .addOption(new  RamTruckCabAndBed(6.4,"Regular"))
+            .addOption(new  RamTruckCabAndBed(8,"Regular"))
             .sort()
             .build()
             .ask();
@@ -87,15 +90,16 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
         //engine choice
       TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
       
-      EcoEngine ecoDieselEngine= new EcoDieselEngine( 182,new HorsePower(240,3600),new Torque(420,2000),6);
+    
       EcoEngine hemiVVTEngine = new HemiVVTEngine(345,new HorsePower(395,5600 ),new Torque(410,3950),8);
+      EcoEngine vvtEngine = new VVTEngine(220,new HorsePower(305,6400 ),new Torque(269,4175),6);
       
-      EngineAssembly eco_DieselEngine = new StandardEcoEngine(ecoDieselEngine, new EconomyExhaust() , new NaturallyAspiratedInduction());
       EngineAssembly hemi_VVTEngine  = new  StandardEcoEngine(hemiVVTEngine,new EconomyExhaust(),new NaturallyAspiratedInduction());
+      EngineAssembly vvt_Engine  = new  StandardEcoEngine(vvtEngine,new EconomyExhaust(),new NaturallyAspiratedInduction());
       
       promptBuilder.addType("Engine ");
-      promptBuilder.addOption(eco_DieselEngine);
       promptBuilder.addOption(hemi_VVTEngine);
+      promptBuilder.addOption(vvt_Engine);
       promptBuilder.sort();
       int engineChoice = 2; 
       try{
@@ -126,26 +130,30 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
      
    //exterior paint choice
       TerminalPrompterBuilder paintPrompter = TerminalPrompterBuilder.newBuilder();
-      int choice =1 ;
+      int paintChoice =1 ;
       paintPrompter.addType("Paint")
          .addOption(new BrightWhiteClearCoat())
          .addOption(new BrilliantBlackCrystalPearl())
          .addOption(new MaximumSteelMetallicClearCoat())
+         .addOption(new BlackForestGreenPearl())
+         .addOption(new FlameRedClearCoat())
+         .addOption(new MidnightBluePearl())
          .sort();
       
       try{
-         choice = paintPrompter.build().ask();
+         paintChoice = paintPrompter.build().ask();
       }
       catch(Exception e){System.err.println(e);}
       
-      paint=(Paint)paintPrompter.getOptions().get(choice - 1);
+      paint=(Paint)paintPrompter.getOptions().get(paintChoice - 1);
       
    //Seat choice
       TerminalPrompterBuilder seatPrompter = TerminalPrompterBuilder.newBuilder();
       int seatChoice = 1;
       try{
          seatChoice = seatPrompter.addType("Seats")
-            .addOption(new LimitedLeatherBucketSeats())
+            .addOption(new HeavyDutyVinylSeat())
+            .addOption(new BenchClothSeat())
             .build()
             .ask();
       }
@@ -161,22 +169,24 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
    }
    
    public TruckDodgeRamBuilderInterface askForOptions(){
-   
+   //wheels
       try{
          TerminalPrompterBuilder wheelPrompter = TerminalPrompterBuilder.newBuilder();
          int wheelChoice = wheelPrompter.addType("Wheels")
-            .addOption(new TruckAlumWheel(20.0,9.0))
+            .addOption(new TruckAliminumWheel(17,7))
+            .addOption(new TruckSteelWheel(17,7))
             .sort()
             .build()
             .ask();
          wheel = (TruckWheel)wheelPrompter.getOptions().get(wheelChoice - 1);
       } 
       catch(Exception e){System.err.println(e);}
-   
+   //tires
       try{      
          TerminalPrompterBuilder tirePrompter = TerminalPrompterBuilder.newBuilder();
          int tireChoice = tirePrompter.addType("Tires")
             .addOption(new BSWAllSeasonTire("P275/60R20"))
+            .addOption(new OWLOnOffRoad("LT265/70R17E"))
             .build()
             .ask();
          tire = (TruckTire)tirePrompter.getOptions().get(tireChoice - 1);
@@ -191,7 +201,7 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
       return this;
    }
    public Automobile build(){
-     
+      
       if (truckDriveChoice == 1){
          driveLine = new RamHeavyDutyRWD(
             truckDrive,
@@ -211,12 +221,12 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
             new LockingDifferential());
       }
    
-      return new Automobile("Ram ","1500 ","Limited ",body,driveLine,engine,suspension);
+      return new Automobile("Ram ","1500 ","Tradesman ",body,driveLine,engine,suspension);
    }
    
    public static void main(String... args){
       
-      Automobile ram1500limited = new Ram1500LimitedBuilder()
+      Automobile ram1500Tradesman = new Ram1500TradesmanBuilder()
          .askForTruckDrive()
          .askForTruckCabAndBed()
          .askForPowerTrain()
@@ -225,7 +235,7 @@ public class Ram1500LimitedBuilder implements TruckDodgeRamBuilderInterface{
          .askForPackages()
          .build();
           
-      System.out.println(ram1500limited);
+      System.out.println(ram1500Tradesman);
    }
 
 }
