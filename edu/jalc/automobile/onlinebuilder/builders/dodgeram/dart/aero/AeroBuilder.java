@@ -6,6 +6,7 @@ import edu.jalc.automobile.common.utils.prompter.TerminalPrompterBuilder;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.Engine;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.OnePointFourLiterI4SixteenValveMultiAirTurboEngine;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.exhaust.SingleExhaust;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.graphic.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.paint.BilletSilverMetallicClearCoat;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.paint.BrightWhiteClearCoat;
@@ -18,6 +19,7 @@ import edu.jalc.automobile.onlinebuilder.components.body.car.SedanBody;
 import edu.jalc.automobile.onlinebuilder.components.driveline.DriveLine;
 import edu.jalc.automobile.onlinebuilder.components.driveline.economic.EconomicFWD;
 import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
+import edu.jalc.automobile.onlinebuilder.components.engine.economy.EcoEngineAssembly;
 import edu.jalc.automobile.onlinebuilder.components.engine.economy.boosted.turbocharged.TurbochargedEcoEngine;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.HorsePower;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.Torque;
@@ -37,46 +39,48 @@ import edu.jalc.automobile.parts.suspension.*;
 import java.util.ArrayList;
 
 public class AeroBuilder implements DodgeRamBuilderInterface {
-    Paint carPaint;
-    ClothSeat clothSeat;
-    Wheel wheel;
-    Tire tire;
-    Engine engine;
-    Graphic carGraphic;
+    private Paint carPaint;
+    private ClothSeat clothSeat;
+    private AlloyWheel wheel;
+    private EconomyTire tire;
+    private EcoEngine engine;
+    private Graphic carGraphic;
 
     @Override
-    public Automobile build() {
-        SedanBody coupe = new SedanBody(
-                new Quarterpanels(carPaint, carGraphic),
-                new EngineCompartment(new Hood(carPaint, carGraphic)),
-                new StandardCabin(clothSeat),
-                new StandardTrunk(13.0)
-        );
+    public AeroBuilder askForPowerTrain() {
+        TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
 
-        DriveLine economicFWD = new EconomicFWD(
-                new FrontDriveAxle(),
-                new RearDeadAxle(),
-                new ElectricSteering(),
-                new OpenDifferential()
+        promptBuilder.addType("Engine");
+        promptBuilder.addOption(
+                new OnePointFourLiterI4SixteenValveMultiAirTurboEngine(
+                        2.0,
+                        new HorsePower(160,2000),
+                        new Torque(184,2000),
+                        4
+                )
         );
+        promptBuilder.sort();
 
-        EngineAssembly ecoEngineAssembly = new TurbochargedEcoEngine(
-                new EcoEngine(1400,
-                new HorsePower(160, 2),
-                new Torque(184, 3), 4),
-                new EconomyExhaust(),
-                new TurbochargedInduction()
-        );
+        try {
+            TerminalPrompter terminalPrompter = promptBuilder.build();
 
-        Suspension economySuspension= new EconomySuspension(
-                new StockShock(0),
-                new StockSpring(0),
-                new EconomyTire(16, 16),
-                new AlloyWheel(16, tire)
-        );
+            int result = terminalPrompter.ask();
 
-        return new Automobile("Dodge", "Dart", "Aero", coupe, economicFWD, ecoEngineAssembly, economySuspension);
+            assert(result == 1);
+
+
+            engine = (EcoEngine)promptBuilder.getOptions().get(0);
+
+            return this;
+
+        } catch (Exception e) {
+            System.out.println(e);
+
+        }
+        return this;
     }
+
+
 
     @Override
     public AeroBuilder askForColorAndInterior( ) {
@@ -148,24 +152,12 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
 
     }
 
+
     @Override
     public AeroBuilder askForOptions() {
         TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
 
-        Wheel silverAlumWheel= new SilverAlumWheel(16);
 
-        promptBuilder.addType("Wheels");
-        promptBuilder.addOption(silverAlumWheel);
-        promptBuilder.sort();
-
-        try {
-            int result = promptBuilder.build().ask();
-            assert result == 1;
-            wheel = silverAlumWheel;
-        } catch (Exception e) {
-
-        }
-        promptBuilder = new TerminalPrompterBuilder();
 
         AllSeasonTires allSeasonTires = new AllSeasonTires();
         allSeasonTires.setTireDetails("205/55R16");
@@ -177,50 +169,82 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
         try {
             int result = promptBuilder.build().ask();
             assert result == 1;
-            tire = allSeasonTires;
+            tire = (EconomyTire)promptBuilder.getOptions().get(0);
+        } catch (Exception e) {
+
+        }
+        promptBuilder = new TerminalPrompterBuilder();
+
+        Wheel silverAlumWheel= new SilverAlumWheel(16,tire);
+
+        promptBuilder.addType("Wheels");
+        promptBuilder.addOption(silverAlumWheel);
+        promptBuilder.sort();
+
+        try {
+            int result = promptBuilder.build().ask();
+            assert result == 1;
+            wheel = (AlloyWheel)promptBuilder.getOptions().get(0);
         } catch (Exception e) {
 
         }
 
         return this;
     }
+
 
     @Override
     public AeroBuilder askForPackages() {
         //~~~~~~~~~~~~~~~~~~~~~~
-        //We Need to make packages still
+        //No packages on this
 
         return this;
     }
 
     @Override
-    public AeroBuilder askForPowerTrain() {
-        TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
+    public Automobile build() {
+        SedanBody coupe = new SedanBody(
+                new Quarterpanels(carPaint, carGraphic),
+                new EngineCompartment(new Hood(carPaint, carGraphic)),
+                new StandardCabin(clothSeat),
+                new StandardTrunk(13.0)
+        );
 
+        DriveLine economicFWD = new EconomicFWD(
+                new FrontDriveAxle(),
+                new RearDeadAxle(),
+                new ElectricSteering(),
+                new OpenDifferential()
+        );
 
-        Engine onePointFourLiterI4SixteenValveMultiAirTurboEngine = new OnePointFourLiterI4SixteenValveMultiAirTurboEngine();
+        EcoEngineAssembly ecoEngineAssembly = new TurbochargedEcoEngine(
+                engine,
+                new SingleExhaust(),
+                new TurbochargedInduction()
+        );
 
+        Suspension economySuspension= new EconomySuspension(
+                new StockShock(0),
+                new StockSpring(0),
+                tire,
+                wheel
+        );
 
-        promptBuilder.addType("Engine");
-        promptBuilder.addOption(onePointFourLiterI4SixteenValveMultiAirTurboEngine);
-        promptBuilder.sort();
-
-        try {
-            TerminalPrompter terminalPrompter = promptBuilder.build();
-
-            int result = terminalPrompter.ask();
-
-            assert (result == 1);
-
-            engine = onePointFourLiterI4SixteenValveMultiAirTurboEngine;
-
-            return this;
-
-        } catch (Exception e) {
-
-        }
-        return this;
+        return new Automobile(
+                "Dodge",
+                "Dart",
+                "Aero",
+                coupe,
+                economicFWD,
+                ecoEngineAssembly,
+                economySuspension
+        );
     }
+
+
+
+
+
 
     public static void main(String[] args) {
         AeroBuilder aeroBuilder = new AeroBuilder();
@@ -229,7 +253,7 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
         aeroBuilder.askForColorAndInterior();
         aeroBuilder.askForPackages();
         aeroBuilder.askForOptions();
-        aeroBuilder.build();
+        System.out.println(aeroBuilder.build());
 
 
     }
