@@ -12,6 +12,6 @@ public class PolishedAluminumWheel extends AluminumWheel {
 
 
    public String toString(){
-      return "Polished Aluminum Wheel: " + getSize();
+      return "Polished Aluminum Wheel: " + getSize() + " in";
    }
 }

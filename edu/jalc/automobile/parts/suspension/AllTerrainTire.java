@@ -13,6 +13,6 @@ public class AllTerrainTire extends Tire {
 
 
    public String toString(){
-      return "All Terrain Tire: On/Off Road";
+      return "All Terrain Tire: On/Off Road " + height + " " + width;
    }
 }

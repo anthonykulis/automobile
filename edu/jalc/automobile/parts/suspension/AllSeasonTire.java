@@ -13,6 +13,6 @@ public class AllSeasonTire extends Tire {
 
 
    public String toString(){
-      return "All Season Tire";
+      return "All Season Tire " + height + " " + width;
    }
 }

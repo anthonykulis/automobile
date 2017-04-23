@@ -1,8 +1,8 @@
 package edu.jalc.automobile.parts.suspension;
 
 public abstract class Tire  {
-	private double height;
-	private double width;
+	public double height;
+	public double width;
 
 	public Tire(double height, double width){
 		this.height = height;

@@ -1,6 +1,7 @@
 package edu.jalc.automobile.parts.suspension;
+import edu.jalc.automobile.onlinebuilder.components.suspension.Suspension;
 
-public class AirSuspension{
+public class AirSuspension extends Suspension{
 
   String suspension;
   public AirSuspension(){

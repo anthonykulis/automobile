@@ -1,8 +1,9 @@
 package edu.jalc.automobile.parts.engine;
+import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
 
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 
-abstract public class Engine{
+abstract public class Engine extends EngineAssembly{
    private double displacement;
    private HorsePower horsePower;
    private Torque torque;
