@@ -20,6 +20,7 @@ import edu.jalc.automobile.parts.exhaust.EconomyExhaust;
 import edu.jalc.automobile.parts.induction.TurbochargedInduction;
 import edu.jalc.automobile.parts.body.seat.Seat;
 import edu.jalc.automobile.parts.driveline.*;
+import edu.jalc.automobile.parts.drive.*;
 
 
 
@@ -33,6 +34,51 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamBuilderInterface{
   private Wheel wheel;
   private Wheel rearWheel;
   private Tire tire;
+  private TruckCabandBed truckCabandBed;
+  private Drive drive;
+  private Body body;
+
+
+  public Ram3500LaramieLongHornBuilder askForTruckDrive(){
+
+    TerminalPrompterBuilder truckDriveBuilder = new TerminalPrompterBuilder();
+
+    try{
+      truckDriveBuilder.newBuilder().addType("TruckDrive")
+        .addOption(new FourByFourDrive())
+        .addOption(new FourByTwoDrive())
+        .sort()
+        .build()
+        .ask();
+    } catch(Exception e){
+      e.printStackTrace();
+      System.exit(1);
+    }
+
+    drive = (Drive)truckDriveBuilder.getOptions().get(0);
+    return this;
+  }
+
+  public Ram3500LaramieLongHornBuilder askForCabandBed(){
+
+    TerminalPrompterBuilder cabAndBedBuilder = new TerminalPrompterBuilder();
+
+    try{
+      cabAndBedBuilder.newBuilder().addType("Cab and Bed Length")
+        .addOption(new TruckCabandBed("Crew Cab", 8))
+        .addOption(new TruckCabandBed("Crew Cab", 6.3))
+        .addOption(new TruckCabandBed("Mega Cab", 6.3))
+        .sort()
+        .build()
+        .ask();
+    } catch(Exception e){
+      e.printStackTrace();
+      System.exit(1);
+    }
+
+    truckCabandBed = (TruckCabandBed)cabAndBedBuilder.getOptions().get(0);
+    return this;
+  }
 
   public Ram3500LaramieLongHornBuilder askForPowerTrain(){
 
