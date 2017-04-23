@@ -1,24 +1,21 @@
-package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.aero;
+package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.gt;
 
 import edu.jalc.automobile.Automobile;
 import edu.jalc.automobile.common.utils.prompter.TerminalPrompter;
 import edu.jalc.automobile.common.utils.prompter.TerminalPrompterBuilder;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.Engine;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.OnePointFourLiterI4SixteenValveMultiAirTurboEngine;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.TwoLiterI4DOHCEngine;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.TwoPointFourLiterI4MultiAirEngine;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.exhaust.SingleExhaust;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.graphic.*;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.paint.BilletSilverMetallicClearCoat;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.paint.BrightWhiteClearCoat;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.paint.GraniteCrystalMetallicClearCoat;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.paint.PitchBlackClearCoat;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.seatingandtrim.SportClothSeatBlackInteriorColor;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.paint.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.seatingandtrim.GTNappaLeatherSeatWithPerforatedSeatInserts;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.tires.AllSeasonTires;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.wheels.SilverAlumWheel;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.wheels.GlossBlack10SpokeAlumWheel;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.wheels.HyperBlackAlumWheels;
 import edu.jalc.automobile.onlinebuilder.components.body.car.SedanBody;
 import edu.jalc.automobile.onlinebuilder.components.driveline.DriveLine;
 import edu.jalc.automobile.onlinebuilder.components.driveline.economic.EconomicFWD;
-import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
 import edu.jalc.automobile.onlinebuilder.components.engine.economy.EcoEngineAssembly;
 import edu.jalc.automobile.onlinebuilder.components.engine.economy.boosted.turbocharged.TurbochargedEcoEngine;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.HorsePower;
@@ -32,13 +29,12 @@ import edu.jalc.automobile.parts.driveline.FrontDriveAxle;
 import edu.jalc.automobile.parts.driveline.OpenDifferential;
 import edu.jalc.automobile.parts.driveline.RearDeadAxle;
 import edu.jalc.automobile.parts.engine.EcoEngine;
-import edu.jalc.automobile.parts.exhaust.EconomyExhaust;
 import edu.jalc.automobile.parts.induction.TurbochargedInduction;
 import edu.jalc.automobile.parts.suspension.*;
 
 import java.util.ArrayList;
 
-public class AeroBuilder implements DodgeRamBuilderInterface {
+public class GtBuilder implements DodgeRamBuilderInterface {
     private Paint carPaint;
     private ClothSeat clothSeat;
     private AlloyWheel wheel;
@@ -47,29 +43,38 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
     private Graphic carGraphic;
 
     @Override
-    public AeroBuilder askForPowerTrain() {
+    public GtBuilder askForPowerTrain() {
         TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
 
         promptBuilder.addType("Engine");
         promptBuilder.addOption(
-                new OnePointFourLiterI4SixteenValveMultiAirTurboEngine(
+                new TwoLiterI4DOHCEngine(
                         2.0,
                         new HorsePower(160,2000),
                         new Torque(184,2000),
                         4
                 )
         );
+
+        promptBuilder.addOption(
+                new TwoPointFourLiterI4MultiAirEngine(
+                        2.0,
+                        new HorsePower(160,2000),
+                        new Torque(184,2000),
+                        4
+                )
+        );
+
+
         promptBuilder.sort();
+        ArrayList<Object> engineList = promptBuilder.getOptions();
 
         try {
             TerminalPrompter terminalPrompter = promptBuilder.build();
 
             int result = terminalPrompter.ask();
 
-            assert(result == 1);
-
-
-            engine = (EcoEngine)promptBuilder.getOptions().get(0);
+            engine = (EcoEngine)engineList.get(result - 1);
 
             return this;
 
@@ -83,7 +88,7 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
 
 
     @Override
-    public AeroBuilder askForColorAndInterior( ) {
+    public GtBuilder askForColorAndInterior( ) {
         TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
 
         promptBuilder.addType("Color");
@@ -92,9 +97,12 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
 
         promptBuilder.addOption(new BrightWhiteClearCoat());
 
-        promptBuilder.addOption(new PitchBlackClearCoat());
+        promptBuilder.addOption(new GoMango());
 
         promptBuilder.addOption(new GraniteCrystalMetallicClearCoat());
+
+        promptBuilder.addOption(new PitchBlackClearCoat());
+
 
         ArrayList<Object> colors = promptBuilder.getOptions();
 
@@ -105,15 +113,13 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
 
             carPaint = (Paint)colors.get(result - 1);
         }
-        catch(Exception e){
-            e.printStackTrace();
-        }
+        catch(Exception e){}
 
         promptBuilder = new TerminalPrompterBuilder();
         promptBuilder.addType("Seating & Trim");
 
 
-        promptBuilder.addOption(new SportClothSeatBlackInteriorColor());
+        promptBuilder.addOption(new GTNappaLeatherSeatWithPerforatedSeatInserts());
         ArrayList<Object> interior = promptBuilder.getOptions();
 
 
@@ -125,15 +131,11 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
             clothSeat = (ClothSeat) interior.get(result - 1);
         }
         catch(Exception e){
-            e.printStackTrace();
         }
 
         promptBuilder = new TerminalPrompterBuilder();
         promptBuilder.addType("Graphic");
-        promptBuilder.addOption(new RoofHoodGrayStripe());
-        promptBuilder.addOption(new RoofHoodDualGrayStripes());
-        promptBuilder.addOption(new RoofHoodDualBlackStripes());
-        promptBuilder.addOption(new FullHoodBlackRedStripe());
+
         promptBuilder.addOption(new BodySideRedRhombusStripe());
         promptBuilder.addOption(new BlackRedGrayGraphic());
 
@@ -154,13 +156,13 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
 
 
     @Override
-    public AeroBuilder askForOptions() {
+    public GtBuilder askForOptions() {
         TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
 
 
 
         AllSeasonTires allSeasonTires = new AllSeasonTires();
-        allSeasonTires.setTireDetails("205/55R16");
+        allSeasonTires.setTireDetails("225/45R17");
 
         promptBuilder.addType("Tires");
         promptBuilder.addOption(allSeasonTires);
@@ -170,28 +172,35 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
             int result = promptBuilder.build().ask();
             assert result == 1;
             tire = (EconomyTire)promptBuilder.getOptions().get(0);
-        } catch (Exception e) {
+        } catch (Exception e) {}
 
-        }
         promptBuilder = new TerminalPrompterBuilder();
 
-        Wheel silverAlumWheel= new SilverAlumWheel(16,tire);
-
         promptBuilder.addType("Wheels");
-        promptBuilder.addOption(silverAlumWheel);
+
+        Wheel glossBlack10SpokeAlumWheel= new GlossBlack10SpokeAlumWheel(16,tire);
+        Wheel hyperBlackAlumWheels = new HyperBlackAlumWheels(18,tire);
+
+        promptBuilder.addOption(glossBlack10SpokeAlumWheel);
+        promptBuilder.addOption(hyperBlackAlumWheels);
         promptBuilder.sort();
+
+        ArrayList<Object> wheelTypes = promptBuilder.getOptions();
+
 
         try {
             int result = promptBuilder.build().ask();
-            assert result == 1;
-            wheel = (AlloyWheel)promptBuilder.getOptions().get(0);
-        } catch (Exception e) {}
+
+            wheel = (AlloyWheel)wheelTypes.get(result - 1);
+        } catch (Exception e) {
+
+        }
 
         return this;
     }
 
     @Override
-    public AeroBuilder askForPackages() {
+    public GtBuilder askForPackages() {
         //~~~~~~~~~~~~~~~~~~~~~~
         //No packages on this
 
@@ -230,7 +239,7 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
         return new Automobile(
                 "Dodge",
                 "Dart",
-                "Aero",
+                "Gt",
                 coupe,
                 economicFWD,
                 ecoEngineAssembly,
@@ -241,13 +250,13 @@ public class AeroBuilder implements DodgeRamBuilderInterface {
 
 
     public static void main(String[] args) {
-        AeroBuilder aeroBuilder = new AeroBuilder();
+        GtBuilder gtBuilder = new GtBuilder();
 
-        aeroBuilder.askForPowerTrain();
-        aeroBuilder.askForColorAndInterior();
-        aeroBuilder.askForPackages();
-        aeroBuilder.askForOptions();
-        System.out.println(aeroBuilder.build());
+        gtBuilder.askForPowerTrain();
+        gtBuilder.askForColorAndInterior();
+        gtBuilder.askForPackages();
+        gtBuilder.askForOptions();
+        System.out.println(gtBuilder.build());
 
     }
 }
