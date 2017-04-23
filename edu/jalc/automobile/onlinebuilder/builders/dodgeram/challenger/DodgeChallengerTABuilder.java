@@ -23,6 +23,9 @@ import edu.jalc.automobile.onlinebuilder.components.body.Body;
 import edu.jalc.automobile.onlinebuilder.components.body.car.CoupeBody;
 import edu.jalc.automobile.parts.body.seat.Seat;
 import edu.jalc.automobile.parts.body.*;
+import edu.jalc.automobile.onlinebuilder.components.suspension.Suspension;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.suspension.SportSuspension;
+import edu.jalc.automobile.parts.suspension.*;
 
 
 
@@ -30,7 +33,8 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
 
   private SportEngineAssembly engine;
   private Body body;
-  //suspension & driveline
+  private Suspension suspension;
+  //driveline
 
 
   //main method goes here
@@ -82,24 +86,34 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     seatPromptBuilder.addType("Interior");
     seatPromptBuilder.addOption(seat);
     try{
-      seatPromptBuilder.build().tell("The T/A model Dodge Challenger ships with "+seat+"Cloth Bucket seats by default");
+      seatPromptBuilder.build().tell("The T/A model Dodge Challenger ships with "+seat+" Cloth Bucket seats by default");
     }
     catch(Exception except){}
 
-    //body assembles here
     this.body = new CoupeBody(new Quarterpanels(paint,null),new EngineCompartment(new Hood(paint,null)),new StandardCabin(seat),new StandardTrunk(5));
 
     return this;
   }
 
   public DodgeRamBuilderInterface askForOptions(){
+
+    AluminumForgedWheel wheel = new AluminumForgedWheel(20,9,"Hyper Black II");
     TerminalPrompterBuilder wheelPromptBuilder = TerminalPrompterBuilder.newBuilder();
     wheelPromptBuilder.addType("Wheels");
-    wheelPromptBuilder.addOption(new AluminumForgedWheel(20,9,"Hyper Black II"));
+    wheelPromptBuilder.addOption(wheel);
+    try{
+      wheelPromptBuilder.build().tell("The T/A model Dodge Challenger ships with "+wheel+" wheels by default");
+    }
+    catch(Exception except){}
 
+    AllSeasonPerformanceTire tire = new AllSeasonPerformanceTire(20,245,"245/45ZR20");
     TerminalPrompterBuilder tirePromptBuilder = TerminalPrompterBuilder.newBuilder();
     tirePromptBuilder.addType("Tires");
-    tirePromptBuilder.addOption(new AllSeasonPerformanceTire(20,245,"245/45ZR20"));
+    tirePromptBuilder.addOption(tire);
+    try{
+      tirePromptBuilder.build().tell("The T/A model Dodge Challenger ships with "+tire+" tires by default");
+    }
+    catch(Exception except){}
 
     TerminalPrompterBuilder brakePromptBuilder = TerminalPrompterBuilder.newBuilder();
     brakePromptBuilder.addType("Brakes");
@@ -119,7 +133,8 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     }
     catch(Exception except){}
 
-    //suspension assembles here
+    this.suspension = new SportSuspension(new StockShock(12),new MediumSpring(12),tire,wheel);
+
     return this;
   }
   //placeholder
@@ -132,6 +147,6 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
 
     //driveline built here
 
-    return new Automobile("Dodge","Challenger","T/A",null,null,engine,null);
+    return new Automobile("Dodge","Challenger","T/A",body,null,engine,suspension);
   }
 }
