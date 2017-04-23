@@ -23,9 +23,9 @@ import edu.jalc.automobile.parts.driveline.*;
 
 
 
-public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
+public class Ram3500LaramieLongHornBuilder implements DodgeRamBuilderInterface{
 
-  private Engine engine;
+  private EngineAssembly engine;
   private RearDriveAxle axle;
   private Suspension suspension;
   private Paint paint;
@@ -34,14 +34,14 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
   private Wheel rearWheel;
   private Tire tire;
 
-  public Ram3500BigHornBuilder askForPowerTrain(){
+  public Ram3500LaramieLongHornBuilder askForPowerTrain(){
 
 
     TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
 
-    int engineOptions = 0;
+    int engineOptions = 1;
     try{
-    engineOptions = builder.addType("Engine")
+    engineOptions = builder.newBuilder().addType("Engine")
       .addOption(new HEMIVTTEngine())
       .addOption(new HeavyDutyHEMI())
       .addOption(new CumminsTurboDieselEngine())
@@ -49,15 +49,16 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
       .build()
       .ask();
 
-    engine = (Engine)builder.getOptions().get(engineOptions -1);
+    //engine = (EngineAssembly)builder.getOptions().get(engineOptions -1);
 
     } catch(Exception e){
       e.printStackTrace();
       System.exit(1);
     }
+    engine = (EngineAssembly)builder.getOptions().get(engineOptions -1);
 
     TerminalPrompterBuilder axleBuilder = new TerminalPrompterBuilder();
-    int axleOptions = 0;
+    int axleOptions = 1;
     try{
     axleOptions = axleBuilder.newBuilder().addType("Axle")
       .addOption(new RearAxleRatio(3.42))
@@ -67,16 +68,17 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
       .build()
       .ask();
 
-    axle = (RearDriveAxle)axleBuilder.getOptions().get(axleOptions - 1);
+    //axle = (RearDriveAxle)axleBuilder.getOptions().get(axleOptions - 1);
 
     } catch(Exception e){
       e.printStackTrace();
       System.exit(1);
     }
+    axle = (RearDriveAxle)axleBuilder.getOptions().get(axleOptions - 1);
 
     TerminalPrompterBuilder suspensionBuilder = new TerminalPrompterBuilder();
 
-    int suspensionOptions = 0;
+    int suspensionOptions;
     try{
     suspensionOptions = suspensionBuilder.newBuilder().addType("Suspension")
       .addOption(new AirSuspension())
@@ -84,7 +86,7 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
       .build()
       .ask();
 
-    suspension = (Suspension)suspensionBuilder.getOptions().get(0);
+    suspension = (Suspension)suspensionBuilder.getOptions().get(suspensionOptions - 1);
 
     } catch(Exception e){
       e.printStackTrace();
@@ -94,7 +96,7 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
   }
 
 
-  public Ram3500BigHornBuilder askForColorAndInterior(){
+  public Ram3500LaramieLongHornBuilder askForColorAndInterior(){
 
     TerminalPrompterBuilder colorBuilder = new TerminalPrompterBuilder();
 
@@ -138,7 +140,7 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
   }
 
 
-  public Ram3500BigHornBuilder askForPackages(){
+  public Ram3500LaramieLongHornBuilder askForPackages(){
 
     TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
 
@@ -160,16 +162,15 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
   }
 
 
-  public Ram3500BigHornBuilder askForOptions(){
+  public Ram3500LaramieLongHornBuilder askForOptions(){
 
     TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
 
     int wheelOption = 1;
     try{
     wheelOption = builder.addType("Wheels")
-      .addOption(new BlackPaintedAluminumWheel(20))
-      .addOption(new PaintedAluminumWheel(20))
-      .addOption(new PolishedAluminumWheel(18))
+      .addOption(new AluminumWheel(17))
+      .addOption(new SpokeAluminumWheel(20))
       .sort()
       .build()
       .ask();
@@ -205,7 +206,7 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
   }
   public Automobile build(){
 
-    Graphic graphic = new Graphic("Ram 3500 BigHorn");
+    Graphic graphic = new Graphic("Ram 3500 Laramie LongHorn");
     Body body = new CrewCab(new Quarterpanels(paint, graphic), new EngineCompartment(new Hood(paint, graphic))
                     , new LuxuryCabin(seat), new LongBed(4));
 
@@ -213,16 +214,16 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
                                   , new ElectricSteering(), new LockingDifferential());
 
     EngineAssembly engineAssembly = new DieselEngineAssembly((DieselEngine)engine, new EconomyExhaust()
-                                      , new TurbochargedInduction());
+                                    , new TurbochargedInduction());
 
     Suspension towing = new TowingHeavyDuty(new HeavyShock(0), new HeavySpring(0), tire, wheel);
 
-    return new Automobile("Ram", "3500", "BigHorn", body, driveline, engineAssembly, towing);
+    return new Automobile("Ram", "3500", "Laramie LongHorn", body, driveline, engineAssembly, towing);
 
   }
 
   public static void main(String[] args)throws Exception{
-    Ram3500BigHornBuilder rm = new Ram3500BigHornBuilder();
+    Ram3500LaramieLongHornBuilder rm = new Ram3500LaramieLongHornBuilder();
     rm.askForPowerTrain();
     rm.askForColorAndInterior();
     rm.askForPackages();
