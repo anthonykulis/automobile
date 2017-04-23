@@ -12,7 +12,6 @@ import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.whee
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.tire.AllSeasonPerformanceTire;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.tire.ThreeSeasonPerformanceTire;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.brake.*;
-
 import edu.jalc.automobile.onlinebuilder.components.engine.sport.NaturallyAspiratedSportEngine;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 import edu.jalc.automobile.onlinebuilder.components.engine.sport.SportEngineAssembly;
@@ -20,15 +19,21 @@ import edu.jalc.automobile.parts.engine.SportEngine;
 import edu.jalc.automobile.parts.induction.NaturallyAspiratedInduction;
 import edu.jalc.automobile.parts.exhaust.PerformanceExhaust;
 import edu.jalc.automobile.parts.body.Paint;
+import edu.jalc.automobile.onlinebuilder.components.body.Body;
+import edu.jalc.automobile.onlinebuilder.components.body.car.CoupeBody;
+import edu.jalc.automobile.parts.body.seat.Seat;
+import edu.jalc.automobile.parts.body.*;
+
 
 
 public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
 
   private SportEngineAssembly engine;
+  private Body body;
+  //suspension & driveline
 
-  public Automobile build(){
-    return new Automobile("Dodge","Challenger","T/A",null,null,engine,null);
-  }
+
+  //main method goes here
 
   public DodgeRamBuilderInterface askForPowerTrain(){
     TerminalPrompterBuilderInterface powertrainPromptBuilder = TerminalPrompterBuilder.newBuilder();
@@ -72,13 +77,18 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     }
     Paint paint = (Paint)paintPromptBuilder.getOptions().get(choice - 1);
 
+    ClothBucketSeat seat = new ClothBucketSeat("Black");
     TerminalPrompterBuilder seatPromptBuilder = TerminalPrompterBuilder.newBuilder();
     seatPromptBuilder.addType("Interior");
-    seatPromptBuilder.addOption(new ClothBucketSeat("Black"));
+    seatPromptBuilder.addOption(seat);
     try{
-    seatPromptBuilder.build();
+      seatPromptBuilder.build().tell("The T/A model Dodge Challenger ships with "+seat+"Cloth Bucket seats by default");
     }
     catch(Exception except){}
+
+    //body assembles here
+    this.body = new CoupeBody(new Quarterpanels(paint,null),new EngineCompartment(new Hood(paint,null)),new StandardCabin(seat),new StandardTrunk(5));
+
     return this;
   }
 
@@ -105,13 +115,23 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     //Not sure about this casting
     Object brake = (Object)brakePromptBuilder.getOptions().get(choice - 1);
     try{
-    brakePromptBuilder.build();
+      brakePromptBuilder.build();
     }
     catch(Exception except){}
+
+    //suspension assembles here
     return this;
   }
   //placeholder
   public DodgeRamBuilderInterface askForPackages(){
     return this;
+  }
+
+  //will be filled with proper parameters
+  public Automobile build(){
+
+    //driveline built here
+
+    return new Automobile("Dodge","Challenger","T/A",null,null,engine,null);
   }
 }
