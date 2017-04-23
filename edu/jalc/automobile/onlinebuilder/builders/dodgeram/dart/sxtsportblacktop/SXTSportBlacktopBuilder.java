@@ -56,6 +56,7 @@ public class SXTSportBlacktopBuilder implements DodgeRamBuilderInterface{
       EngineAssembly ecoEngineAssembly = new StandardEcoEngine(
               engine,
               new SingleExhaust(),
+
               new NaturallyAspiratedInduction()
       );
    
@@ -64,6 +65,7 @@ public class SXTSportBlacktopBuilder implements DodgeRamBuilderInterface{
               new StockSpring(0),
               tire,
               wheel
+
       );
    
       return new Automobile("Dodge", "Dart", "SXT Sport Blacktop", coupe, economicFWD, ecoEngineAssembly, economySuspension);
