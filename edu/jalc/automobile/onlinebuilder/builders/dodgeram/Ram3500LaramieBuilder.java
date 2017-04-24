@@ -183,23 +183,6 @@ public class Ram3500LaramieBuilder implements DodgeRamBuilderInterface{
 
 
   public Ram3500LaramieBuilder askForPackages(){
-
-    TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
-
-    int packageOptions = 1;
-    try{
-    packageOptions = builder.addType("Packages")
-      .addOption(new DualRearWheel())
-      .build()
-      .ask();
-
-    rearWheel = (Wheel)builder.getOptions().get(packageOptions - 1);
-
-    } catch(Exception e){
-      e.printStackTrace();
-      System.exit(1);
-    }
-
     return this;
   }
 
@@ -273,7 +256,6 @@ public class Ram3500LaramieBuilder implements DodgeRamBuilderInterface{
     rm.askForCabandBed();
     rm.askForPowerTrain();
     rm.askForColorAndInterior();
-    rm.askForPackages();
     rm.askForOptions();
     System.out.println(rm.build());
   }

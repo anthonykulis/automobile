@@ -62,7 +62,7 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
   public Ram3500BigHornBuilder askForCabandBed(){
 
     TerminalPrompterBuilder cabAndBedBuilder = new TerminalPrompterBuilder();
-    
+
     int cabAndBedcount = 1;
     try{
       cabAndBedcount = cabAndBedBuilder.addType("Cab and Bed Length")
@@ -185,23 +185,6 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
 
   public Ram3500BigHornBuilder askForPackages(){
     return this;
-    /*TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
-
-    int packageOptions = 1;
-    try{
-    packageOptions = builder.addType("Packages")
-      .addOption(new DualRearWheel())
-      .build()
-      .ask();
-
-    rearWheel = (Wheel)builder.getOptions().get(packageOptions - 1);
-
-    } catch(Exception e){
-      e.printStackTrace();
-      System.exit(1);
-    }
-
-    return this;*/
   }
 
 
