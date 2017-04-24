@@ -28,20 +28,21 @@ import edu.jalc.automobile.parts.suspension.Wheel;
 import edu.jalc.automobile.parts.body.*;
 import edu.jalc.automobile.parts.suspension.*;
 import edu.jalc.automobile.parts.driveline.*;
-import edu.jalc.automobile.parts.body.seat.ClothSeat;
+import edu.jalc.automobile.parts.body.seat.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.exhaust.*;
 
 public class SXTBuilder implements DartBuilderInterface{
    private EcoEngine engine;
    private Paint paint;
-   private ClothSeat clothSeat;
+   private Seat seat;
    private Graphic graphic;
    private EconomyTire tire;
    private AlloyWheel wheel;
    private EconomyExhaust exhaust;
+   private Cabin cabin;
    
    public Automobile build() {
-      SedanBody coupe = new SedanBody(new Quarterpanels(paint, graphic), new EngineCompartment(new Hood(paint, graphic)), new StandardCabin(clothSeat), new StandardTrunk(13.1));
+      SedanBody coupe = new SedanBody(new Quarterpanels(paint, graphic), new EngineCompartment(new Hood(paint, graphic)), cabin, new StandardTrunk(13.1));
    
       DriveLine economicFWD = new EconomicFWD(new FrontDriveAxle(), new RearDeadAxle(), new ElectricSteering(), new OpenDifferential());
    
@@ -115,8 +116,14 @@ public class SXTBuilder implements DartBuilderInterface{
       try{
       
          int result = builder.build().ask();
-      
-         clothSeat = (ClothSeat)seats.get(result - 1);
+         if (result < 5){
+            seat = (ClothSeat)seats.get(result - 1);
+            cabin = new StandardCabin((ClothSeat)seat);
+         } 
+         else {
+            seat = (LeatherSeat)seats.get(result - 1);
+            cabin = new LuxuryCabin((LeatherSeat)seat);
+         }
       }
       catch(Exception e){
          e.printStackTrace();
@@ -173,7 +180,7 @@ public class SXTBuilder implements DartBuilderInterface{
          e.printStackTrace();
          System.exit(1);
       }
-
+   
       
       builder = new TerminalPrompterBuilder();
       builder.addType("Wheels");

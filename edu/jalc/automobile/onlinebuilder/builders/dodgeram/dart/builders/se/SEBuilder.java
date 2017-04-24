@@ -139,6 +139,28 @@ public class SEBuilder implements DartBuilderInterface{
    public SEBuilder askForOptions() {
       
       TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
+      AllSeasonTires allSeasonTiresOptionOne = new AllSeasonTires();
+      allSeasonTiresOptionOne.setTireDetails("205/55R16");
+      AllSeasonTires allSeasonTiresOptionTwo = new AllSeasonTires();
+      allSeasonTiresOptionTwo.setTireDetails("225/45R17");
+      builder.addType("Tires");
+      builder.addOption(allSeasonTiresOptionOne);
+      builder.addOption(allSeasonTiresOptionTwo);
+      builder.sort();
+   
+      ArrayList<Object> tires = builder.getOptions();
+   
+      try {
+         int result = builder.build().ask();
+         tire = (EconomyTire)tires.get(result - 1);
+      } 
+      catch (Exception e) {
+         e.printStackTrace();
+         System.exit(1);
+      }
+
+      
+      builder = new TerminalPrompterBuilder();
       builder.addType("Wheels");
       builder.addOption(new WheelCover(16, tire));
       builder.addOption(new GraniteCrystalAlumWheel(17, tire));
@@ -156,23 +178,7 @@ public class SEBuilder implements DartBuilderInterface{
          e.printStackTrace();
          System.exit(1); 
       } 
-      
-      builder = new TerminalPrompterBuilder();
-      AllSeasonTires allSeasonTires = new AllSeasonTires();
-      allSeasonTires.setTireDetails("205/55R16");
-   
-      builder.addType("Tires");
-      builder.addOption(allSeasonTires);
-      builder.sort();
-   
-      try {
-         int result = builder.build().ask();
-         tire = allSeasonTires;
-      } 
-      catch (Exception e) {
-      
-      }
-        
+              
       return this;
    }
 
