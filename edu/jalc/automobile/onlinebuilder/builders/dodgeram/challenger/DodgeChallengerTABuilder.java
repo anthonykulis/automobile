@@ -97,7 +97,8 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     }
     catch(Exception except){}
 
-    this.body = new CoupeBody(new Quarterpanels(paint,null),new EngineCompartment(new Hood(paint,null)),new StandardCabin(seat),new StandardTrunk(5));
+    Graphic graphic = new Graphic("none");
+    this.body = new CoupeBody(new Quarterpanels(paint,graphic),new EngineCompartment(new Hood(paint,graphic)),new StandardCabin(seat),new StandardTrunk(5));
 
     return this;
   }
@@ -121,25 +122,6 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
       tirePromptBuilder.build().tell("The T/A model Dodge Challenger ships with "+tire+" tires by default");
     }
     catch(Exception except){}
-
-    
-    /*TerminalPrompterBuilder brakePromptBuilder = TerminalPrompterBuilder.newBuilder();
-    brakePromptBuilder.addType("Brakes");
-    brakePromptBuilder.addOption(new StandardBrakePad());
-    brakePromptBuilder.addOption(new HighPerformanceBrakePad());
-    int choice;
-    try{
-      choice = brakePromptBuilder.sort().build().ask();
-    }
-    catch(Exception except){
-      choice = 0;
-    }
-    //Not sure about this casting
-    Object brake = (Object)brakePromptBuilder.getOptions().get(choice - 1);
-    try{
-      brakePromptBuilder.build();
-    }
-    catch(Exception except){}*/
 
     this.suspension = new SportSuspension(new StockShock(12),new MediumSpring(12),tire,wheel);
 
