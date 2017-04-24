@@ -152,7 +152,7 @@ public class Ram1500SportBuilder implements TruckDodgeRamBuilderInterface{
     TerminalPrompterBuilder wheelPrompter = TerminalPrompterBuilder.newBuilder();
     try{
       wheelPrompter.addType("Wheel");
-      wheelPrompter.addOption(new TruckAliminumWheel(20,9));
+      wheelPrompter.addOption(new TruckAliminumWheel(22,9));
       wheelPrompter.sort();
       numOfOptions = wheelPrompter.build().ask();
     }
@@ -162,7 +162,7 @@ public class Ram1500SportBuilder implements TruckDodgeRamBuilderInterface{
     TerminalPrompterBuilder tirePrompter =TerminalPrompterBuilder.newBuilder();
     try{
       tirePrompter.addType("Tire");
-      tirePrompter.addOption(new BSWAllSeasonTire("285/4R22"));
+      tirePrompter.addOption(new BSWAllSeasonTire("285/45R22"));
       tirePrompter.sort();
       numOfOptions = tirePrompter.build().ask();
     }
