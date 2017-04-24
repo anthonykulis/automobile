@@ -97,7 +97,19 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     }
     catch(Exception except){}
 
-    Graphic graphic = new Graphic("none");
+    TerminalPrompterBuilder graphicPromptBuilder = TerminalPrompterBuilder.newBuilder();
+    graphicPromptBuilder.addType("Graphic");
+    graphicPromptBuilder.addOption("'Challenger' Body Side Stripe");
+    graphicPromptBuilder.addOption("No Stripe");
+    int graphicChoice;
+    try{
+      graphicChoice = graphicPromptBuilder.sort().build().ask();
+    }
+    catch(Exception except){
+      graphicChoice = 0;
+    }
+
+    Graphic graphic = new Graphic(graphicPromptBuilder.getOptions().get(graphicChoice - 1).toString());
     this.body = new CoupeBody(new Quarterpanels(paint,graphic),new EngineCompartment(new Hood(paint,graphic)),new StandardCabin(seat),new StandardTrunk(5));
 
     return this;
