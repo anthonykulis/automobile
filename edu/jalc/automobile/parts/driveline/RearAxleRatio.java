@@ -13,6 +13,6 @@ public class RearAxleRatio extends RearDriveAxle{
   }
 
   public String toString(){
-    return " Axle Ratio" + getRatio();
+    return "Axle Ratio " + getRatio();
   }
 }

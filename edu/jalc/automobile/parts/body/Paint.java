@@ -5,14 +5,9 @@ public class Paint{
    private String name;
 
    public Paint(String name){
-
-     this.name = name;
-
+      this.name = name;
    }
-
-
    public String toString(){
-      return "Paint is :\n" +
-                        "\t"+name;
+      return name;
    }
 }

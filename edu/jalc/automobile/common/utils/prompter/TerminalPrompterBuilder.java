@@ -2,6 +2,8 @@ package edu.jalc.automobile.common.utils.prompter;
 
 import edu.jalc.automobile.onlinebuilder.components.Component;
 import edu.jalc.automobile.parts.body.Paint;
+import edu.jalc.automobile.onlinebuilder.components.Component;
+import edu.jalc.automobile.parts.body.Paint;
 import java.util.ArrayList;
 
 public class TerminalPrompterBuilder implements TerminalPrompterBuilderInterface {
