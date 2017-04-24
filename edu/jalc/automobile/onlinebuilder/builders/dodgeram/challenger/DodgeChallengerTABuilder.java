@@ -4,29 +4,34 @@ import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterf
 import edu.jalc.automobile.Automobile;
 import edu.jalc.automobile.common.utils.prompter.*;
 
+import edu.jalc.automobile.parts.engine.SportEngine;
+import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
+import edu.jalc.automobile.onlinebuilder.components.engine.sport.SportEngineAssembly;
+import edu.jalc.automobile.onlinebuilder.components.engine.sport.NaturallyAspiratedSportEngine;
+import edu.jalc.automobile.parts.induction.NaturallyAspiratedInduction;
+import edu.jalc.automobile.parts.exhaust.PerformanceExhaust;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.engine.HemiVvtSportEngine;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.engine.HemiMdsVvtSportEngine;
+
+import edu.jalc.automobile.parts.body.*;
+import edu.jalc.automobile.parts.body.Paint;
+import edu.jalc.automobile.parts.body.seat.Seat;
+import edu.jalc.automobile.onlinebuilder.components.body.Body;
+import edu.jalc.automobile.onlinebuilder.components.body.car.CoupeBody;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.paint.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.seat.ClothBucketSeat;
+
+import edu.jalc.automobile.parts.suspension.*;
+import edu.jalc.automobile.onlinebuilder.components.suspension.Suspension;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.suspension.SportSuspension;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.wheel.AluminumForgedWheel;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.tire.AllSeasonPerformanceTire;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.tire.ThreeSeasonPerformanceTire;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.brake.*;
-import edu.jalc.automobile.onlinebuilder.components.engine.sport.NaturallyAspiratedSportEngine;
-import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
-import edu.jalc.automobile.onlinebuilder.components.engine.sport.SportEngineAssembly;
-import edu.jalc.automobile.parts.engine.SportEngine;
-import edu.jalc.automobile.parts.induction.NaturallyAspiratedInduction;
-import edu.jalc.automobile.parts.exhaust.PerformanceExhaust;
-import edu.jalc.automobile.parts.body.Paint;
-import edu.jalc.automobile.onlinebuilder.components.body.Body;
-import edu.jalc.automobile.onlinebuilder.components.body.car.CoupeBody;
-import edu.jalc.automobile.parts.body.seat.Seat;
-import edu.jalc.automobile.parts.body.*;
-import edu.jalc.automobile.onlinebuilder.components.suspension.Suspension;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.suspension.SportSuspension;
-import edu.jalc.automobile.parts.suspension.*;
 
+import edu.jalc.automobile.onlinebuilder.components.driveline.DriveLine;
+import edu.jalc.automobile.onlinebuilder.components.driveline.sport.SportRWD;
+import edu.jalc.automobile.parts.driveline.*;
 
 
 public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
@@ -34,10 +39,12 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
   private SportEngineAssembly engine;
   private Body body;
   private Suspension suspension;
-  //driveline
+  private DriveLine driveline;
 
-
-  //main method goes here
+  public static void main(String[] args){
+    Automobile ta = new DodgeChallengerTABuilder().askForPowerTrain().askForColorAndInterior().askForOptions().askForPackages().build();
+    System.out.println(ta);
+  }
 
   public DodgeRamBuilderInterface askForPowerTrain(){
     TerminalPrompterBuilderInterface powertrainPromptBuilder = TerminalPrompterBuilder.newBuilder();
@@ -115,7 +122,8 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     }
     catch(Exception except){}
 
-    TerminalPrompterBuilder brakePromptBuilder = TerminalPrompterBuilder.newBuilder();
+    
+    /*TerminalPrompterBuilder brakePromptBuilder = TerminalPrompterBuilder.newBuilder();
     brakePromptBuilder.addType("Brakes");
     brakePromptBuilder.addOption(new StandardBrakePad());
     brakePromptBuilder.addOption(new HighPerformanceBrakePad());
@@ -131,22 +139,23 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     try{
       brakePromptBuilder.build();
     }
-    catch(Exception except){}
+    catch(Exception except){}*/
 
     this.suspension = new SportSuspension(new StockShock(12),new MediumSpring(12),tire,wheel);
 
     return this;
   }
+
   //placeholder
   public DodgeRamBuilderInterface askForPackages(){
     return this;
   }
 
-  //will be filled with proper parameters
   public Automobile build(){
 
-    //driveline built here
+    DriveLine driveline = new SportRWD(new FrontDeadAxle(),new RearDriveAxle(),new DriveShaft(),new HydraulicSteering(),new TorqueVectorDifferential());
 
-    return new Automobile("Dodge","Challenger","T/A",body,null,engine,suspension);
+    return new Automobile("Dodge","Challenger","T/A",body,driveline,engine,suspension);
   }
+
 }
