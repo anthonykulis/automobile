@@ -111,6 +111,8 @@ public class Ram1500LoneStarBuilder implements TruckDodgeRamBuilderInterface{
     try{
       axlePrompter.addType("Axle");
       axlePrompter.addOption(new TruckRearAxle(3.92));
+      axlePrompter.addOption(new TruckRearAxle(3.21));
+      axlePrompter.addOption(new TruckRearAxle(3.55));
       axlePrompter.sort();
       numOfOptions = axlePrompter.build().ask();
     }
