@@ -1,4 +1,4 @@
-package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.gt.sport;
+package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.builders.gtsport;
 
 import edu.jalc.automobile.Automobile;
 import edu.jalc.automobile.common.utils.prompter.TerminalPrompter;
@@ -145,6 +145,7 @@ public class GtSportBuilder implements DartBuilderInterface {
 
         promptBuilder.addOption(new BodySideRedRhombusStripe());
         promptBuilder.addOption(new BlackRedGrayGraphic());
+        promptBuilder.addOption(new NoSelection());
 
         ArrayList<Object> stripes = promptBuilder.getOptions();
 

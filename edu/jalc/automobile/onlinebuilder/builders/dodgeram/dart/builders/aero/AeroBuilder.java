@@ -1,4 +1,4 @@
-package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.aero;
+package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.builders.aero;
 
 import edu.jalc.automobile.Automobile;
 import edu.jalc.automobile.common.utils.prompter.TerminalPrompter;
@@ -137,6 +137,7 @@ public class AeroBuilder implements DartBuilderInterface {
         promptBuilder.addOption(new FullHoodBlackRedStripe());
         promptBuilder.addOption(new BodySideRedRhombusStripe());
         promptBuilder.addOption(new BlackRedGrayGraphic());
+        promptBuilder.addOption(new NoSelection());
 
         ArrayList<Object> stripes = promptBuilder.getOptions();
 

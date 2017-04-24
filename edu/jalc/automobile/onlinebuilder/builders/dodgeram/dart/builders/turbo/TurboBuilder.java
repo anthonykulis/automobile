@@ -1,4 +1,4 @@
-package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.turbo;
+package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.builders.turbo;
 
 import java.util.*;
 import edu.jalc.automobile.Automobile;
@@ -116,6 +116,7 @@ public class TurboBuilder implements DartBuilderInterface{
       promptBuilder.addType("Graphic");
       promptBuilder.addOption(new BodySideRedRhombusStripe());
       promptBuilder.addOption(new BlackRedGrayGraphic());
+      promptBuilder.addOption(new NoSelection());
    
       ArrayList<Object> stripes = promptBuilder.getOptions();
    
