@@ -54,18 +54,15 @@ public class SXTSportBuilder implements DartBuilderInterface{
    public SXTSportBuilder askForPowerTrain(){
       TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
       builder.addType("Engine");
-      builder.addOption(new TwoPointFourLiterI4MultiAirEngine(2.4, new HorsePower(160, 0), new Torque(184, 0), 4));
-      builder.addOption(new TwoPointFourLiterI4PZEVMAirEngine(2.4, new HorsePower(160, 0), new Torque(184, 0), 4));
+      builder.addOption(new TwoLiterI4DOHCEngine(2.0, new HorsePower(160, 0), new Torque(184, 0), 4));
       builder.sort();
-      
-      ArrayList<Object> engines = builder.getOptions();
       
       try{
          TerminalPrompter prompter = builder.build();
       
          int result = prompter.ask();
       
-         engine = (EcoEngine)engines.get(result - 1);
+         engine = (EcoEngine)builder.getOptions().get(0);
          
       } 
       catch(Exception e){
@@ -81,8 +78,6 @@ public class SXTSportBuilder implements DartBuilderInterface{
       builder.addOption(new BilletSilverMetallicClearCoat());
       builder.addOption(new BrightWhiteClearCoat());
       builder.addOption(new PitchBlackClearCoat());
-      builder.addOption(new GraniteCrystalMetallicClearCoat());
-      builder.addOption(new GoMango());
       builder.addOption(new B5BluePearlCoat());
       builder.sort();
       
@@ -103,17 +98,11 @@ public class SXTSportBuilder implements DartBuilderInterface{
       
       builder = TerminalPrompterBuilder.newBuilder();
       builder.addType("Seating");
-      builder.addOption(new PremiumBlackRubyRedInteriorColors());
-      builder.addOption(new PremiumClothSeatsBlackLightFrostInteriorColor());
-      builder.addOption(new PremiumBlackLightTungstenInteriorColors());
-      builder.addOption(new PremiumClothSeatBlackInteriorColor());
-      builder.addOption(new KatzkinBlackRedLeather());
-      builder.addOption(new KatzkinBlackAshLeather());
-      builder.addOption(new KatzkinBlackLeather());
+      builder.addOption(new SportClothSeatBlackInteriorColor());
+   
       ArrayList<Object> seats = builder.getOptions();
    
       try{
-      
          int result = builder.build().ask();
       
          clothSeat = (ClothSeat)seats.get(result - 1);
@@ -155,12 +144,9 @@ public class SXTSportBuilder implements DartBuilderInterface{
       allSeasonTiresOptionOne.setTireDetails("205/55R16");
       AllSeasonTires allSeasonTiresOptionTwo = new AllSeasonTires();
       allSeasonTiresOptionTwo.setTireDetails("225/45R17");
-      AllSeasonTires allSeasonTiresOptionThree = new AllSeasonTires();
-      allSeasonTiresOptionThree.setTireDetails("225/40R18");
       builder.addType("Tires");
       builder.addOption(allSeasonTiresOptionOne);
       builder.addOption(allSeasonTiresOptionTwo);
-      builder.addOption(allSeasonTiresOptionThree);
       builder.sort();
    
       ArrayList<Object> tires = builder.getOptions();
@@ -178,8 +164,7 @@ public class SXTSportBuilder implements DartBuilderInterface{
       builder = new TerminalPrompterBuilder();
       builder.addType("Wheels");
       builder.addOption(new SilverAlumWheel(16, tire));
-      builder.addOption(new GraniteCrystalAlumWheel(17, tire));
-      builder.addOption(new GlossBlack10SpokeAlumWheel(18, tire));
+      builder.addOption(new PolishedAlumWheels(17, tire));
       builder.sort();
    
       ArrayList<Object> wheels = builder.getOptions();
@@ -194,7 +179,7 @@ public class SXTSportBuilder implements DartBuilderInterface{
          e.printStackTrace();
          System.exit(1); 
       } 
-        
+              
       return this;
    }
 
