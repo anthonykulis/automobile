@@ -33,7 +33,7 @@ import edu.jalc.automobile.parts.body.Cabin;
 import edu.jalc.automobile.parts.suspension.*;
 import edu.jalc.automobile.parts.driveline.*;
 
-public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
+public class Ram1500SportBuilder implements TruckDodgeRamBuilderInterface{
   EngineAssembly engine;//3
   Body body;//7 but has issue
   Suspension suspension;//10
@@ -46,10 +46,12 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
   TruckSeat seat;//6
   Paint paint;//5
 
+  int truckDriveChoice;
+
   public TruckDodgeRamBuilderInterface askForTruckDrive(){
      TerminalPrompterBuilder truckDrivePrompter = TerminalPrompterBuilder.newBuilder();
      try{
-        int truckDriveChoice = truckDrivePrompter.addType("Drive")
+        truckDriveChoice = truckDrivePrompter.addType("Drive")
            .addOption(new FourByTwoTruckDrive())
            .addOption(new FourByFourTruckDrive())
            .sort()
@@ -62,9 +64,10 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
   }
 
   public TruckDodgeRamBuilderInterface askForTruckCabAndBed(){
+    int cabAndBedChoice = 0;
      TerminalPrompterBuilder cabAndBedPrompter = TerminalPrompterBuilder.newBuilder();
      try{
-        int cabAndBedChoice = cabAndBedPrompter.addType("Cab And Box")
+        cabAndBedChoice = cabAndBedPrompter.addType("Cab And Box")
           .addOption(new  RamTruckCabAndBed(5.7,"Crew"))
           .addOption(new  RamTruckCabAndBed(6.4,"Crew"))
           .addOption(new  RamTruckCabAndBed(6.4,"Quad"))
@@ -78,7 +81,7 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
      return this;
   }
 
-  public DodgeRamBuilderInterface askForPowerTrain(TerminalPrompterBuilderInterface promptBuilder){
+  public TruckDodgeRamBuilderInterface askForPowerTrain(){
     TerminalPrompterBuilder enginePrompter = TerminalPrompterBuilder.newBuilder();
 
     EcoEngine hemiVVTEngine = new HemiVVTEngine(345,new HorsePower(395,5600 ),new Torque(410,3950),8);
@@ -109,10 +112,10 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
     return this;
   }
 
-  public DodgeRamBuilderInterface askForColorAndInterior(TerminalPrompterBuilderInterface promptBuilder, RamTruckCabAndBed cabAndBox){
+  public TruckDodgeRamBuilderInterface askForColorAndInterior(){
     TerminalPrompterBuilder paintPrompter = TerminalPrompterBuilder.newBuilder();
 
-    int numOfOptions;
+    int numOfOptions = 0;
 
     try{
       paintPrompter.addType("Color");
@@ -144,8 +147,8 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
     return this;
 
   }
-  public DodgeRamBuilderInterface askForOptions(TerminalPrompterBuilderInterface promptBuilder){
-    int numOfOptions;
+  public TruckDodgeRamBuilderInterface askForOptions(){
+    int numOfOptions = 0;
     TerminalPrompterBuilder wheelPrompter = TerminalPrompterBuilder.newBuilder();
     try{
       wheelPrompter.addType("Wheel");
@@ -172,7 +175,7 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
 
     return this;
   }
-  public DodgeRamBuilderInterface askForPackages(TerminalPrompterBuilderInterface promptBuilder){
+  public TruckDodgeRamBuilderInterface askForPackages(){
     return this;
   }
 
@@ -184,7 +187,7 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
       new LockingDifferential());
     }
     else if (truckDriveChoice == 2){
-      driveLine = new RamFourWheelDrive(truckDrive, trukcRearAxle,
+      driveLine = new RamFourWheelDrive(truckDrive, truckRearAxle,
       new FourWheelDriveAxle(), new DriveShaft(), new ElectricSteering(),
       new LockingDifferential());
     }
