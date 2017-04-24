@@ -137,7 +137,9 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
     catch(Exception e){System.err.println(e);}
     seat = (TruckSeat)seatPrompter.getOptions().get(numOfOptions - 1);
 //Issue here as to cab type
-    //this.body =
+    this.body = new CrewCab(new Quarterpanels(paint,null),
+      new EngineCompartment(new Hood(paint,null)),
+      new TruckCabin(seat), cabAndBox);
 
     return this;
 
