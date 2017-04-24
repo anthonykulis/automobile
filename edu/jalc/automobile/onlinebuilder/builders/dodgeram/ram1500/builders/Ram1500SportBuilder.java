@@ -190,7 +190,16 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
     return new Automobile("Ram", "1500", "Sport", body,driveLine,engine,suspension);
   }
   public static void main(String[] args) {
-    
+    Automobile ram1500Sport = new Ram1500SportBuilder()
+      .askForTruckDrive()
+      .askForTruckCabAndBed()
+      .askForPowerTrain()
+      .askForColorAndInterior()
+      .askForOptions()
+      .askForPackages()
+      .build();
+
+    System.out.println(ram1500Sport);
   }
 
 
