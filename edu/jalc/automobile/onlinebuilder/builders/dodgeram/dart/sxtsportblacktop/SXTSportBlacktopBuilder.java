@@ -2,7 +2,7 @@ package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.sxtsportblackto
 
 import java.util.*;
 import edu.jalc.automobile.Automobile;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.DartBuilderInterface;
 import edu.jalc.automobile.common.utils.prompter.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.paint.*;
@@ -30,7 +30,7 @@ import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 import edu.jalc.automobile.parts.body.seat.ClothSeat;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.exhaust.SingleExhaust;
 
-public class SXTSportBlacktopBuilder implements DodgeRamBuilderInterface{
+public class SXTSportBlacktopBuilder implements DartBuilderInterface{
    private EcoEngine engine;
    private Paint paint;
    private ClothSeat clothSeat;
