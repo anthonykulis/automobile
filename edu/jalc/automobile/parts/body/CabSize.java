@@ -1,6 +1,6 @@
 package edu.jalc.automobile.parts.body;
 
-public class CabSize{
+public class {
   private String type;
   private int cabFeet;
   private int cabInch;
