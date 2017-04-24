@@ -42,25 +42,25 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
       .build();
     System.out.println(srt392);
   }
-  
+
   public DodgeRamBuilderInterface askForPowerTrain(){
     TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
-    
+
     SportEngine mdsEngine = new HemiMdsSportEngine(392,new HorsePower(485,4000),new Torque(475,3000),8);
     SportEngine hemiEngine = new HEMISportEngine(392,new HorsePower(485,4000),new Torque(475,3000),8);
-    
+
     EngineAssembly mds_Engine = new NaturallyAspiratedSportEngine(mdsEngine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
     EngineAssembly hemi_Engine = new NaturallyAspiratedSportEngine(hemiEngine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
-    
+
     promptBuilder.addType("Powertrain");
     promptBuilder.addOption(hemi_Engine);
     promptBuilder.addOption(mds_Engine);
     promptBuilder.sort();
-    int choice = 1; //the default online
+    int choice = 1;
     try{
       choice = promptBuilder.build().ask();
     }catch(Exception e){}
-    
+
     this.engine = (EngineAssembly)promptBuilder.getOptions().get(choice - 1);
     return this;
   }
@@ -68,7 +68,7 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
     Paint paint = askForPaint();
     Graphic graphic = askForGraphic();
     ColoredLeatherSeat seat = askForSeat();
-    
+
     this.body = new CoupeBody(
       new Quarterpanels(paint,new Graphic("None")),
       new EngineCompartment(new Hood(paint, graphic)),
@@ -76,10 +76,10 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
       new StandardTrunk(5));
     return this;
   }
-  
+
   private Paint askForPaint(){
     TerminalPrompterBuilder paintPrompter = TerminalPrompterBuilder.newBuilder();
-    int choice = 7;
+    int choice = 4;
     paintPrompter.addType("Paint")
       .addOption(new OctaneRedPaint())
       .addOption(new ContusionBluePaint())
@@ -89,11 +89,11 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
       .addOption(new YellowJacketPaint())
       .addOption(new MaximumSteelPaint())
       .sort();
-    
+
     try{
       choice = paintPrompter.build().ask();
-    }catch(Exception e){System.err.println(e);}
-    
+    }catch(Exception e){e.printStackTrace();}
+
     return (Paint)paintPrompter.getOptions().get(choice - 1);
   }
   private Graphic askForGraphic(){
@@ -107,7 +107,7 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
         .sort()
         .build()
         .ask();
-    }catch(Exception e){System.err.println(e);}
+    }catch(Exception e){e.printStackTrace();}
     return (Graphic)graphicPrompter.getOptions().get(graphicChoice - 1);
   }
   private ColoredLeatherSeat askForSeat(){
@@ -122,12 +122,12 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
         .sort()
         .build()
         .ask();
-    }catch(Exception e){System.err.println(e);}
+    }catch(Exception e){e.printStackTrace();}
     return (ColoredLeatherSeat)seatPrompter.getOptions().get(seatChoice - 1);
   }
-  
+
   public DodgeRamBuilderInterface askForOptions(){
-    
+
     SportTire tire = new SportTire(0,0);
     SteelForgedWheel wheel = new SteelForgedWheel(20,9.5,"SRT Hyper Black");
     try{
@@ -136,7 +136,9 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
         .addOption(wheel)
         .build()
         .tell("Your SRT 392 comes with\n" + wheel + "\n");
-    
+    }catch(Exception e){e.printStackTrace();}
+
+    try{
       TerminalPrompterBuilder tirePrompter = TerminalPrompterBuilder.newBuilder();
       int tireChoice = tirePrompter.addType("Tires")
         .addOption(new AllSeasonPerformanceTire(20,9.5,"275/40ZR20"))
@@ -145,9 +147,9 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
         .build()
         .ask();
       tire = (SportTire)tirePrompter.getOptions().get(tireChoice - 1);
-    }catch(Exception e){System.err.println(e);}
+    }catch(Exception e){e.printStackTrace();}
     suspension = new SportSuspension(new StockShock(12), new MediumSpring(12), tire, wheel);
-    
+
     return this;
   }
   public DodgeRamBuilderInterface askForPackages(){
@@ -155,14 +157,14 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
     return this;
   }
   public Automobile build(){
-  
+
     DriveLine driveLine = new SportRWD(
       new FrontDeadAxle(),
       new RearDriveAxle(),
       new DriveShaft(),
       new HydraulicSteering(),
       new TorqueVectorDifferential());
-  
+
     return new Automobile("Dodge","Challenger","SRT 392",body,driveLine,engine,suspension);
   }
 }
