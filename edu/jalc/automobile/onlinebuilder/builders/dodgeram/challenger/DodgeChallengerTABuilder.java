@@ -6,6 +6,7 @@ import edu.jalc.automobile.common.utils.prompter.*;
 
 import edu.jalc.automobile.parts.engine.SportEngine;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
+import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
 import edu.jalc.automobile.onlinebuilder.components.engine.sport.SportEngineAssembly;
 import edu.jalc.automobile.onlinebuilder.components.engine.sport.NaturallyAspiratedSportEngine;
 import edu.jalc.automobile.parts.induction.NaturallyAspiratedInduction;
@@ -47,7 +48,7 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
   }
 
   public DodgeRamBuilderInterface askForPowerTrain(){
-    TerminalPrompterBuilderInterface powertrainPromptBuilder = TerminalPrompterBuilder.newBuilder();
+    TerminalPrompterBuilder powertrainPromptBuilder = TerminalPrompterBuilder.newBuilder();
     SportEngine hemiVvtEngine = new HemiVvtSportEngine(5.7,new HorsePower(375,5200),new Torque(410,4200),8);
     SportEngineAssembly vvt_Engine = new NaturallyAspiratedSportEngine(hemiVvtEngine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
     SportEngine hemiMdsVvtSportEngine = new HemiMdsVvtSportEngine(5.7,new HorsePower(375,5200),new Torque(410,4200),8);
@@ -62,10 +63,7 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     catch(Exception except){
       choice = 0;
     }
-    if (choice == 0)
-      this.engine = vvt_Engine;
-    else
-      this.engine = mds_Vvt_Engine;
+    this.engine = (SportEngineAssembly)powertrainPromptBuilder.getOptions().get(choice -1);
     return this;
   }
 
@@ -99,8 +97,8 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
 
     TerminalPrompterBuilder graphicPromptBuilder = TerminalPrompterBuilder.newBuilder();
     graphicPromptBuilder.addType("Graphic");
-    graphicPromptBuilder.addOption("'Challenger' Body Side Stripe");
-    graphicPromptBuilder.addOption("No Stripe");
+    graphicPromptBuilder.addOption(new Graphic("'Challenger' Body Side Stripe"));
+    graphicPromptBuilder.addOption(new Graphic("No Stripe"));
     int graphicChoice;
     try{
       graphicChoice = graphicPromptBuilder.sort().build().ask();
@@ -108,8 +106,7 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     catch(Exception except){
       graphicChoice = 0;
     }
-
-    Graphic graphic = new Graphic(graphicPromptBuilder.getOptions().get(graphicChoice - 1).toString());
+    Graphic graphic = (Graphic)graphicPromptBuilder.getOptions().get(graphicChoice - 1);
     this.body = new CoupeBody(new Quarterpanels(paint,graphic),new EngineCompartment(new Hood(paint,graphic)),new StandardCabin(seat),new StandardTrunk(5));
 
     return this;
