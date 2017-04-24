@@ -13,14 +13,11 @@ public class CrewCab extends Truck {
 		return super.getCabin();
 	}
 	public String toString(){
-<<<<<<< HEAD
       return "Crew Cab has :\n" +
-=======
-      return "CrewCab has :\n" +
->>>>>>> b9377132d8da211ccc8871f3dc51556e05df5a4a
                        "\t"+ getQuarterpanels() +"\n"+
                        "\t"+ getEngineCompartment()+"\n"+
                        "\t"+ getCabin()+"\n"+
                        "\t"+ getTruckBed();
 
-   }}
+   }
+}
