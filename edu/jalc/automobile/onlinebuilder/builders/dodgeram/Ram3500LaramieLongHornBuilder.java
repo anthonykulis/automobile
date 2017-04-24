@@ -20,7 +20,7 @@ import edu.jalc.automobile.parts.exhaust.EconomyExhaust;
 import edu.jalc.automobile.parts.induction.TurbochargedInduction;
 import edu.jalc.automobile.parts.body.seat.Seat;
 import edu.jalc.automobile.parts.driveline.*;
-import edu.jalc.automobile.parts.drive.*;
+import edu.jalc.automobile.onlinebuilder.components.driveline.truck.SuperDutyFourWheelDrive;
 
 
 
@@ -35,15 +35,14 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
   private Wheel rearWheel;
   private Tire tire;
   private TruckCabandBed truckCabandBed;
-  private Drive drive;
+  private FourWheelDriveAxle fourWheelDriveAxle;
   private Body body;
 
-
+  int truckdrivecount = 1;
   public Ram3500LaramieLongHornBuilder askForTruckDrive(){
 
     TerminalPrompterBuilder truckDriveBuilder = new TerminalPrompterBuilder();
 
-    int truckdrivecount = 1;
     try{
       truckdrivecount = truckDriveBuilder.addType("Truck Drive")
         .addOption(new FourByFourDrive())
@@ -56,7 +55,7 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
       System.exit(1);
     }
 
-    drive = (Drive)truckDriveBuilder.getOptions().get(truckdrivecount - 1);
+    fourWheelDriveAxle = (FourWheelDriveAxle)truckDriveBuilder.getOptions().get(truckdrivecount - 1);
     return this;
   }
 
@@ -67,9 +66,9 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
     int cabAndBedcount = 1;
     try{
       cabAndBedcount = cabAndBedBuilder.addType("Cab and Bed Length")
-        .addOption(new TruckCabandBed("Crew Cab", 8))
-        .addOption(new TruckCabandBed("Crew Cab", 6.3))
-        .addOption(new TruckCabandBed("Mega Cab", 6.3))
+        .addOption(new TruckCabandBed("Crew Cab", 8, 0))
+        .addOption(new TruckCabandBed("Crew Cab", 6, 4))
+        .addOption(new TruckCabandBed("Mega Cab", 6, 4))
         .sort()
         .build()
         .ask();
@@ -253,11 +252,22 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
   public Automobile build(){
 
     Graphic graphic = new Graphic("Ram 3500 Laramie LongHorn");
+
     Body body = new CrewCab(new Quarterpanels(paint, graphic), new EngineCompartment(new Hood(paint, graphic))
                     , new LuxuryCabin(seat), truckCabandBed);
 
-    TruckDriveLine driveline = new HeavyDutyRWD(axle, new FrontDeadAxle(), new DriveShaft()
-                                  , new ElectricSteering(), new LockingDifferential());
+
+    TruckDriveLine driveline = null;
+    /* Note that HeavyDutyRWD does not take in a fourWheelDriveAxle so displaying 4x2 Drive isnt possible as well as
+      SuperDutyFourWheelDrive does not take in a axle so displaying axle for SuperDutyFourWheelDrive is impossible.*/
+    if (truckdrivecount == 1){
+      driveline = new HeavyDutyRWD(axle, new FrontDeadAxle(), new DriveShaft()
+                      , new ElectricSteering(), new LockingDifferential());
+    }
+    else{
+      driveline = new SuperDutyFourWheelDrive(fourWheelDriveAxle, new DriveShaft()
+                      , new ElectricSteering(), new LockingDifferential());
+    }
 
     EngineAssembly engineAssembly = new DieselEngineAssembly((DieselEngine)engine, new EconomyExhaust()
                                     , new TurbochargedInduction());
