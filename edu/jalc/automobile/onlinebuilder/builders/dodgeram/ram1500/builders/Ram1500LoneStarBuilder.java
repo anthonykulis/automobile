@@ -35,7 +35,7 @@ import edu.jalc.automobile.parts.driveline.*;
 
 public class Ram1500LoneStarBuilder implements TruckDodgeRamBuilderInterface{
   EngineAssembly engine;//3
-  Body body;//7 but has issue
+  Body body;//7
   Suspension suspension;//10
   TruckDriveLine driveLine;//11
   RamTruckCabAndBed cabAndBox;//2
@@ -88,9 +88,11 @@ public class Ram1500LoneStarBuilder implements TruckDodgeRamBuilderInterface{
     //Add
     EcoEngine hemiVVTEngine = new HemiVVTEngine(345,new HorsePower(395,5600 ),new Torque(410,3950),8);
     EcoEngine vvtEngine = new VVTEngine(220,new HorsePower(305,6400 ),new Torque(269,4175),6);
+    EcoEngine ecoDieselEngine= new EcoDieselEngine( 182,new HorsePower(240,3600),new Torque(420,2000),6);
 
     EngineAssembly hemi_VVTEngine  = new  StandardEcoEngine(hemiVVTEngine,new EconomyExhaust(),new NaturallyAspiratedInduction());
     EngineAssembly vvt_Engine  = new  StandardEcoEngine(vvtEngine,new EconomyExhaust(),new NaturallyAspiratedInduction());
+    EngineAssembly eco_DieselEngine = new StandardEcoEngine(ecoDieselEngine, new EconomyExhaust() , new NaturallyAspiratedInduction());
 
     int numOfOptions = 0;
 
