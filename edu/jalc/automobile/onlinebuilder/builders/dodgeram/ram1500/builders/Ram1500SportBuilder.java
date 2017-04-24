@@ -35,13 +35,14 @@ import edu.jalc.automobile.parts.driveline.*;
 
 public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
   EngineAssembly engine;//3
-  Body body;
-  Suspension suspension;
-  TruckDriveLine driveLine;
+  Body body;//7 but has issue
+  Suspension suspension;//10
+  TruckDriveLine driveLine;//11
   RamTruckCabAndBed cabAndBox;//2
   TruckDrive truckDrive;//1
   TruckRearAxle truckRearAxle;//4
-  TruckTire tire;
+  TruckTire tire;//9
+  TruckWheel wheel;//8
   TruckSeat seat;//6
   Paint paint;//5
 
@@ -114,7 +115,6 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
     int numOfOptions;
 
     try{
-
       paintPrompter.addType("Color");
       paintPrompter.addOption(new FlameRedClearCoat());
       paintPrompter.addOption(new BrightWhiteClearCoat());
@@ -137,13 +137,38 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
     catch(Exception e){System.err.println(e);}
     seat = (TruckSeat)seatPrompter.getOptions().get(numOfOptions - 1);
 //Issue here as to cab type
-    //this.body = 
+    //this.body =
 
     return this;
 
   }
   public DodgeRamBuilderInterface askForOptions(TerminalPrompterBuilderInterface promptBuilder){
-    return null;
+    int numOfOptions;
+    TerminalPrompterBuilder wheelPrompter = TerminalPrompterBuilder.newBuilder();
+    try{
+      wheelPrompter.addType("Wheel");
+      wheelPrompter.addOption(new TruckAliminumWheel(20,9));
+      wheelPrompter.sort();
+      numOfOptions = wheelPrompter.build().ask();
+    }
+    catch (Exception e) {System.err.println(e);}
+    wheel =(TruckWheel)wheelPrompter.getOptions().get(numOfOptions - 1);
+
+    TerminalPrompterBuilder tirePrompter =TerminalPrompterBuilder.newBuilder();
+    try{
+      tirePrompter.addType("Tire");
+      tirePrompter.addOption(new BSWAllSeasonTire("285/4R22"));
+      tirePrompter.sort();
+      numOfOptions = tirePrompter.build().ask();
+    }
+    catch (Exception e) {System.err.println(e);}
+    tire = (TruckTire)tirePrompter.getOptions().get(numOfOptions - 1);
+
+    suspension = new  TruckSuspension( new StockShock(0),new StockSpring(0), tire,wheel);
+
+
+
+    return this;
   }
   public DodgeRamBuilderInterface askForPackages(TerminalPrompterBuilderInterface promptBuilder){
     return this;
@@ -151,9 +176,22 @@ public class Ram1500SportBuilder implements DodgeRamBuilderInterface{
 
   public Automobile build(){
 
-    return null;
+    if(truckDriveChoice == 1){
+      driveLine = new RamHeavyDutyRWD(truckDrive, truckRearAxle,
+      new FrontDeadAxle(), new DriveShaft(), new ElectricSteering(),
+      new LockingDifferential());
+    }
+    else if (truckDriveChoice == 2){
+      driveLine = new RamFourWheelDrive(truckDrive, trukcRearAxle,
+      new FourWheelDriveAxle(), new DriveShaft(), new ElectricSteering(),
+      new LockingDifferential());
+    }
+
+    return new Automobile("Ram", "1500", "Sport", body,driveLine,engine,suspension);
   }
-  //public static void main(String[] args) {  }
+  public static void main(String[] args) {
+    
+  }
 
 
 }
