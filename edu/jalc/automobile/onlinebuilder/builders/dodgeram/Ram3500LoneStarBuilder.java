@@ -18,13 +18,8 @@ import edu.jalc.automobile.parts.body.colors.HillsGreen;
 import edu.jalc.automobile.parts.body.colors.SchoolBusYellow;
 import edu.jalc.automobile.parts.body.colors.TreeGreen;
 import edu.jalc.automobile.parts.body.colors.Yellow;
-import edu.jalc.automobile.parts.body.seat.Seat;
-import edu.jalc.automobile.parts.body.seat.ClothSeat;
-import edu.jalc.automobile.parts.suspension.Wheel;
-import edu.jalc.automobile.parts.suspension.DualRearWheel;
-import edu.jalc.automobile.parts.suspension.SteelWheel;
-import edu.jalc.automobile.parts.suspension.SteelChromeCladWheel;
-import edu.jalc.automobile.parts.suspension.SteelArgentWheel;
+import edu.jalc.automobile.parts.body.seat.*;
+import edu.jalc.automobile.parts.suspension.*;
 import edu.jalc.automobile.parts.suspension.Tire;
 import edu.jalc.automobile.parts.suspension.AllSeasonTire;
 import edu.jalc.automobile.parts.suspension.AllTerrainTire;
@@ -46,7 +41,7 @@ import edu.jalc.automobile.parts.engine.EcoEngine;
 import edu.jalc.automobile.onlinebuilder.components.engine.economy.boosted.turbocharged.TurbochargedEcoEngine;
 import edu.jalc.automobile.onlinebuilder.components.body.truck.TruckSize;
 
-public class Ram3500SLTBuilder implements DodgeRamTruckBuilderInterface{
+public class Ram3500LoneStarBuilder implements DodgeRamTruckBuilderInterface{
 
    private CabSize cabSize;
    private BedSize bedSize;
@@ -59,12 +54,11 @@ public class Ram3500SLTBuilder implements DodgeRamTruckBuilderInterface{
    private Wheel wheel;
    private Tire tire;
 
-   public Ram3500SLTBuilder askForCabAndBed(){
+   public Ram3500LoneStarBuilder askForCabAndBed(){
      TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
      int cabChoice = 1;
      try{
        cabChoice = builder.addType("Cab Size")
-        .addOption(new RegularCabin())
         .addOption(new CrewCabin(8,0))
         .addOption(new CrewCabin(6,4))
         .addOption(new MegaCabin())
@@ -98,7 +92,7 @@ public class Ram3500SLTBuilder implements DodgeRamTruckBuilderInterface{
      return this;
    }
 
-   public Ram3500SLTBuilder askForPowerTrain(){
+   public Ram3500LoneStarBuilder askForPowerTrain(){
     TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
     int engineChoice = 1;
     try {
@@ -153,7 +147,7 @@ public class Ram3500SLTBuilder implements DodgeRamTruckBuilderInterface{
     return this;
   }
 
-  public Ram3500SLTBuilder askForColorAndInterior(){
+  public Ram3500LoneStarBuilder askForColorAndInterior(){
     TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
     int paintChoice = 1;
     try{
@@ -179,6 +173,7 @@ public class Ram3500SLTBuilder implements DodgeRamTruckBuilderInterface{
     try{
       seatChoice = builder.addType("Seating and Trim")
         .addOption(new ClothSeat())
+        .addOption(new LeatherSeat())
         .sort()
         .build()
         .ask();
@@ -192,15 +187,14 @@ public class Ram3500SLTBuilder implements DodgeRamTruckBuilderInterface{
     return this;
   }
 
-  public Ram3500SLTBuilder askForOptions(){
+  public Ram3500LoneStarBuilder askForOptions(){
     TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
     int wheelChoice = 1;
     try{
       wheelChoice = builder.addType("Wheels")
-        .addOption(new SteelWheel(18))
-        .addOption(new SteelChromeCladWheel(18))
-        .addOption(new SteelChromeCladWheel(17))
-        .addOption(new SteelArgentWheel(17))
+        .addOption(new PolishedAluminumWheel(18))
+        .addOption(new BlackPaintedAluminumWheel(20))
+        .addOption(new PaintedAluminumWheel(20))
         .sort()
         .build()
         .ask();
@@ -232,8 +226,8 @@ public class Ram3500SLTBuilder implements DodgeRamTruckBuilderInterface{
     return this;
   }
 
-  public Ram3500SLTBuilder askForPackages(){
-    TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
+  public Ram3500LoneStarBuilder askForPackages(){
+    /*TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
     int packageChoice = 1;
     try{
       packageChoice = builder.addType("Packages")
@@ -246,9 +240,10 @@ public class Ram3500SLTBuilder implements DodgeRamTruckBuilderInterface{
     } catch(Exception e){
         e.printStackTrace();
         System.exit(0);
-    }
+    }*/
 
     return this;
+
   }
 
   public Automobile build(){
@@ -282,7 +277,7 @@ public class Ram3500SLTBuilder implements DodgeRamTruckBuilderInterface{
   }
 
   public static void main(String[] args) throws Exception{
-    System.out.println(new Ram3500SLTBuilder()
+    System.out.println(new Ram3500LoneStarBuilder()
       .askForCabAndBed()
       .askForPowerTrain()
       .askForColorAndInterior()
