@@ -39,34 +39,13 @@ public class SXTSportBlacktopBuilder implements DartBuilderInterface{
    private AlloyWheel wheel;
 
    public Automobile build() {
-      SedanBody coupe = new SedanBody(
-              new Quarterpanels(paint, graphic),
-              new EngineCompartment(new Hood(paint, graphic)),
-              new StandardCabin(clothSeat),
-              new StandardTrunk(13.1)
-      );
+      SedanBody coupe = new SedanBody(new Quarterpanels(paint, graphic), new EngineCompartment(new Hood(paint, graphic)), new StandardCabin(clothSeat), new StandardTrunk(13.1));
 
-      DriveLine economicFWD = new EconomicFWD(
-              new FrontDriveAxle(),
-              new RearDeadAxle(),
-              new ElectricSteering(),
-              new OpenDifferential()
-      );
+      DriveLine economicFWD = new EconomicFWD(new FrontDriveAxle(), new RearDeadAxle(), new ElectricSteering(), new OpenDifferential());
 
-      EngineAssembly ecoEngineAssembly = new StandardEcoEngine(
-              engine,
-              new SingleExhaust(),
+      EngineAssembly ecoEngineAssembly = new StandardEcoEngine(engine, new SingleExhaust(), new NaturallyAspiratedInduction());
 
-              new NaturallyAspiratedInduction()
-      );
-
-      Suspension economySuspension= new EconomySuspension(
-              new StockShock(0),
-              new StockSpring(0),
-              tire,
-              wheel
-
-      );
+      Suspension economySuspension= new EconomySuspension(new StockShock(0), new StockSpring(0), tire, wheel);
 
       return new Automobile("Dodge", "Dart", "SXT Sport Blacktop", coupe, economicFWD, ecoEngineAssembly, economySuspension);
    }
@@ -74,9 +53,7 @@ public class SXTSportBlacktopBuilder implements DartBuilderInterface{
    public SXTSportBlacktopBuilder askForPowerTrain(){
       TerminalPrompterBuilder promptBuilder = new TerminalPrompterBuilder();
       promptBuilder.addType("Engine");
-      promptBuilder.addOption(
-              new TwoLiterI4DOHCEngine(2.0, new HorsePower(160, 0), new Torque(184, 0), 4)
-      );
+      promptBuilder.addOption(new TwoLiterI4DOHCEngine(2.0, new HorsePower(160, 0), new Torque(184, 0), 4));
       promptBuilder.sort();
 
       try{
