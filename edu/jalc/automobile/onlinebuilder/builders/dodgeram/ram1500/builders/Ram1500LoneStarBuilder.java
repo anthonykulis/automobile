@@ -100,6 +100,7 @@ public class Ram1500LoneStarBuilder implements TruckDodgeRamBuilderInterface{
       enginePrompter.addType("Engine");
       enginePrompter.addOption(hemi_VVTEngine);
       enginePrompter.addOption(vvt_Engine);
+      enginePrompter.addOption(eco_DieselEngine);
       enginePrompter.sort();
       numOfOptions = enginePrompter.build().ask();
     }
