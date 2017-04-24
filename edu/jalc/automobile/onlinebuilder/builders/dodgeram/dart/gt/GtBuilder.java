@@ -4,6 +4,7 @@ import edu.jalc.automobile.Automobile;
 import edu.jalc.automobile.common.utils.prompter.TerminalPrompter;
 import edu.jalc.automobile.common.utils.prompter.TerminalPrompterBuilder;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.DartBuilderInterface;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.TwoLiterI4DOHCEngine;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.TwoPointFourLiterI4MultiAirEngine;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.exhaust.SingleExhaust;
@@ -34,7 +35,7 @@ import edu.jalc.automobile.parts.suspension.*;
 
 import java.util.ArrayList;
 
-public class GtBuilder implements DodgeRamBuilderInterface {
+public class GtBuilder implements DartBuilderInterface {
     private Paint carPaint;
     private ClothSeat clothSeat;
     private AlloyWheel wheel;
@@ -58,7 +59,7 @@ public class GtBuilder implements DodgeRamBuilderInterface {
 
         promptBuilder.addOption(
                 new TwoPointFourLiterI4MultiAirEngine(
-                        2.0,
+                        2.4,
                         new HorsePower(160,2000),
                         new Torque(184,2000),
                         4

@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c0bd62e-c071-4635-864e-1f69ccbb7be8" name="Default" comment="">
+    <list default="true" id="6c0bd62e-c071-4635-864e-1f69ccbb7be8" name="Default" comment="Changed up things that needed to be changed">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/automobile.iml" afterPath="$PROJECT_DIR$/.idea/automobile.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/aero/AeroBuilder.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/aero/AeroBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/gt/GtBuilder.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/gt/GtBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/gt/sport/GtSportBuilder.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/gt/sport/GtSportBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/gt/sport/blacktop/GtSportBlackTopBuilder.java" afterPath="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/gt/sport/blacktop/GtSportBlackTopBuilder.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,8 +80,8 @@
       <file leaf-file-name="AeroBuilder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/aero/AeroBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+            <state relative-caret-position="714">
+              <caret line="42" column="14" lean-forward="false" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/DartBuilderInterface.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,8 +116,8 @@
       <file leaf-file-name="GtSportBlackTopBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/gt/sport/blacktop/GtSportBlackTopBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+            <state relative-caret-position="283">
+              <caret line="40" column="13" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,10 +171,10 @@
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/engine/economy/EcoEngineAssembly.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/components/suspension/economy/EconomySuspension.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/DartBuilderInterface.java" />
-        <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/gt/sport/blacktop/GtSportBlackTopBuilder.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/gt/sport/GtSportBuilder.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/gt/GtBuilder.java" />
         <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/aero/AeroBuilder.java" />
+        <option value="$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/gt/sport/blacktop/GtSportBlackTopBuilder.java" />
       </list>
     </option>
   </component>
@@ -570,6 +575,9 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.Unnamed">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1032,13 +1040,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493034139599</updated>
-      <workItem from="1493034140807" duration="214000" />
+      <workItem from="1493034140807" duration="521000" />
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changed up things that needed to be changed">
+      <created>1493034369435</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1493034369435</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12305000" />
+    <option name="totallyTimeSpent" value="12612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1918" height="1038" extended-state="6" />
@@ -1087,7 +1102,8 @@
     <MESSAGE value="Finished areo builder with new changes made on friday" />
     <MESSAGE value="Finished GT Builder up" />
     <MESSAGE value="Finished Rest of builders up and put them under folder since they go together but just are sub classes of on another" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Rest of builders up and put them under folder since they go together but just are sub classes of on another" />
+    <MESSAGE value="Changed up things that needed to be changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed up things that needed to be changed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1430,17 +1446,7 @@
     <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/DartBuilderInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/gt/sport/blacktop/GtSportBlackTopBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1467,15 +1473,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/aero/AeroBuilder.java">
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/gt/sport/blacktop/GtSportBlackTopBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+        <state relative-caret-position="283">
+          <caret line="40" column="13" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/edu/jalc/automobile/onlinebuilder/builders/dodgeram/dart/aero/AeroBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="14" lean-forward="false" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>automobile</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
