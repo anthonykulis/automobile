@@ -72,7 +72,6 @@ public class Ram1500NightBuilder implements TruckDodgeRamBuilderInterface{
           .addOption(new  RamTruckCabAndBed(6.4,"Crew"))
           .addOption(new  RamTruckCabAndBed(6.4,"Quad"))
           .addOption(new  RamTruckCabAndBed(6.4,"Regular"))
-          .addOption(new  RamTruckCabAndBed(8,"Regular"))
           .sort()
           .build()
           .ask();
@@ -88,11 +87,9 @@ public class Ram1500NightBuilder implements TruckDodgeRamBuilderInterface{
     //Add
     EcoEngine hemiVVTEngine = new HemiVVTEngine(345,new HorsePower(395,5600 ),new Torque(410,3950),8);
     EcoEngine vvtEngine = new VVTEngine(220,new HorsePower(305,6400 ),new Torque(269,4175),6);
-    EcoEngine ecoDieselEngine= new EcoDieselEngine( 182,new HorsePower(240,3600),new Torque(420,2000),6);
 
     EngineAssembly hemi_VVTEngine  = new  StandardEcoEngine(hemiVVTEngine,new EconomyExhaust(),new NaturallyAspiratedInduction());
     EngineAssembly vvt_Engine  = new  StandardEcoEngine(vvtEngine,new EconomyExhaust(),new NaturallyAspiratedInduction());
-    EngineAssembly eco_DieselEngine = new StandardEcoEngine(ecoDieselEngine, new EconomyExhaust() , new NaturallyAspiratedInduction());
 
     int numOfOptions = 0;
 
@@ -130,12 +127,9 @@ public class Ram1500NightBuilder implements TruckDodgeRamBuilderInterface{
       paintPrompter.addType("Color");
       paintPrompter.addOption(new FlameRedClearCoat());
       paintPrompter.addOption(new BrightWhiteClearCoat());
-      paintPrompter.addOption(new MaximumSteelMetallicClearCoat());
       paintPrompter.addOption(new BrilliantBlackCrystalPearl());
-      paintPrompter.addOption(new BlackForestGreenPearl());
-      paintPrompter.addOption(new MidnightBluePearl());
       paintPrompter.sort();
-      //ArrayList<Object> colors = paintPrompter.getOptions();
+
       numOfOptions = paintPrompter.build().ask();
     }
     catch(Exception e){System.err.println(e);}
@@ -144,8 +138,8 @@ public class Ram1500NightBuilder implements TruckDodgeRamBuilderInterface{
     TerminalPrompterBuilder seatPrompter = TerminalPrompterBuilder.newBuilder();
     try{
       seatPrompter.addType("Seats");
-      seatPrompter.addOption(new PremiumBenchClothSeat());
-      seatPrompter.addOption(new PremiumBucketClothSeat());
+      seatPrompter.addOption(new LetherTrimmedBucketSeat());
+      seatPrompter.addOption(new BucketClothSeat());
       seatPrompter.sort();
       numOfOptions = seatPrompter.build().ask();
     }
@@ -174,7 +168,6 @@ public class Ram1500NightBuilder implements TruckDodgeRamBuilderInterface{
     TerminalPrompterBuilder tirePrompter =TerminalPrompterBuilder.newBuilder();
     try{
       tirePrompter.addType("Tire");
-      tirePrompter.addOption(new BSWAllSeasonTire("P275/60R20"));
       tirePrompter.addOption(new OWLAllSeasonTire("P275/60R20"));
       tirePrompter.sort();
       numOfOptions = tirePrompter.build().ask();
