@@ -198,7 +198,7 @@ public class Ram1500NightBuilder implements TruckDodgeRamBuilderInterface{
       new LockingDifferential());
     }
 
-    return new Automobile("Ram", "1500", "LoneStar", body,driveLine,engine,suspension);
+    return new Automobile("Ram", "1500", "Night", body,driveLine,engine,suspension);
   }
   public static void main(String[] args) {
     Automobile ram1500Night = new Ram1500NightBuilder()
