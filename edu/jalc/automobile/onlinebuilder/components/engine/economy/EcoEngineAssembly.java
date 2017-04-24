@@ -37,6 +37,6 @@ import edu.jalc.automobile.parts.engine.EcoEngine;
   }
   
   public String toString(){
-    return super.toString() + this.engine.toString() + " with a " + this.exhaust.toString();
+    return super.toString() + this.engine.toString()  + " with a " + this.exhaust.toString();
   }
 }

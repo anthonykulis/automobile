@@ -1,4 +1,7 @@
 package edu.jalc.automobile.parts.body;
+
+import edu.jalc.automobile.parts.suspension.SportTire;
+
 public class SportTireTest {
    public void testGetHeight(){
       System.out.println("Testing SportTire::getHeight");
