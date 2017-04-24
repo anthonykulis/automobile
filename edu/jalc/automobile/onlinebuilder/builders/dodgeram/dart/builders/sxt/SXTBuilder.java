@@ -29,7 +29,7 @@ import edu.jalc.automobile.parts.body.*;
 import edu.jalc.automobile.parts.suspension.*;
 import edu.jalc.automobile.parts.driveline.*;
 import edu.jalc.automobile.parts.body.seat.ClothSeat;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.exhaust.SingleExhaust;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.exhaust.*;
 
 public class SXTBuilder implements DartBuilderInterface{
    private EcoEngine engine;
@@ -38,13 +38,14 @@ public class SXTBuilder implements DartBuilderInterface{
    private Graphic graphic;
    private EconomyTire tire;
    private AlloyWheel wheel;
+   private EconomyExhaust exhaust;
    
    public Automobile build() {
       SedanBody coupe = new SedanBody(new Quarterpanels(paint, graphic), new EngineCompartment(new Hood(paint, graphic)), new StandardCabin(clothSeat), new StandardTrunk(13.1));
    
       DriveLine economicFWD = new EconomicFWD(new FrontDriveAxle(), new RearDeadAxle(), new ElectricSteering(), new OpenDifferential());
    
-      EngineAssembly ecoEngineAssembly = new StandardEcoEngine(engine, new SingleExhaust(), new NaturallyAspiratedInduction());
+      EngineAssembly ecoEngineAssembly = new StandardEcoEngine(engine, exhaust, new NaturallyAspiratedInduction());
    
       Suspension economySuspension= new EconomySuspension(new StockShock(0), new StockSpring(0), tire, wheel);
    
@@ -198,8 +199,25 @@ public class SXTBuilder implements DartBuilderInterface{
    }
 
    public SXTBuilder askForPackages(){
-      System.out.println("No packages avaliable");
-      System.out.println("");
+      TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
+      builder.addType("Exhaust");
+      builder.addOption(new SingleExhaust());
+      builder.addOption(new DoubleExhaust());
+      builder.sort();
+   
+      ArrayList<Object> exhausts = builder.getOptions();
+   
+      try {
+         int result = builder.build().ask();
+         
+         exhaust = (EconomyExhaust)exhausts.get(result - 1);
+         
+      } 
+      catch (Exception e) {
+         e.printStackTrace();
+         System.exit(1); 
+      } 
+       
       return this;
    }
 
