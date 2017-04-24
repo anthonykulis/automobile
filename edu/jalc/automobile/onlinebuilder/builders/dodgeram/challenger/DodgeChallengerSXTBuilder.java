@@ -59,11 +59,15 @@ public class DodgeChallengerSXTBuilder implements DodgeRamBuilderInterface{
    }
 
    public DodgeRamBuilderInterface askForColorAndInterior(){
-      Paint paint = new YellowJacketPaint();
-      //, new RedlineTricoat, new PitchBlack, new MaximumSteel, new TorRed, new ContusionBlue;
          TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
          promptBuilder.addType("Paint");
-         promptBuilder.addOption(paint);
+         promptBuilder.addOption(new YellowJacketPaint());
+         promptBuilder.addOption(new PitchBlackPaint());
+         promptBuilder.addOption(new MaximumSteelPaint());
+         promptBuilder.addOption(new OctaneRedPaint());
+         promptBuilder.addOption(new GreenGoPaint());
+         promptBuilder.addOption(new GoMangoPaint());
+         promptBuilder.addOption(new ContusionBluePaint());
          promptBuilder.sort();
          int choice = 1;
          try{
@@ -105,7 +109,15 @@ public class DodgeChallengerSXTBuilder implements DodgeRamBuilderInterface{
    }
 
 	public Automobile build(){
-      return new Automobile("Dodge","Challenger","SXT",null,null,this.engineAssembly,null);
+  
+    DriveLine driveLine = new SportRWD(
+      new FrontDeadAxle(),
+      new RearDriveAxle(),
+      new DriveShaft(),
+      new HydraulicSteering(),
+      new TorqueVectorDifferential());
+      
+    return new Automobile("Dodge","Challenger","SXT",null,driveLine,this.engineAssembly,null);
    }
 
 }
