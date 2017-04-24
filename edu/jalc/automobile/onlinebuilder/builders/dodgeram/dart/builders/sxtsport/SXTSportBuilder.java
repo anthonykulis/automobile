@@ -48,7 +48,7 @@ public class SXTSportBuilder implements DartBuilderInterface{
    
       Suspension economySuspension= new EconomySuspension(new StockShock(0), new StockSpring(0), tire, wheel);
    
-      return new Automobile("Dodge", "Dart", "SXT", coupe, economicFWD, ecoEngineAssembly, economySuspension);
+      return new Automobile("Dodge", "Dart", "SXT Sport", coupe, economicFWD, ecoEngineAssembly, economySuspension);
    }
    
    public SXTSportBuilder askForPowerTrain(){
