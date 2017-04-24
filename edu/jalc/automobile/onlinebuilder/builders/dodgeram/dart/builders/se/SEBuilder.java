@@ -1,9 +1,10 @@
-package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.sxt;
+package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.builders.se;
 
 import java.util.*;
 import edu.jalc.automobile.Automobile;
 import edu.jalc.automobile.common.utils.prompter.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.DartBuilderInterface;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.paint.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.seatingandtrim.*;
@@ -30,7 +31,7 @@ import edu.jalc.automobile.parts.driveline.*;
 import edu.jalc.automobile.parts.body.seat.ClothSeat;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.exhaust.SingleExhaust;
 
-public class SXTBuilder implements DodgeRamBuilderInterface{
+public class SEBuilder implements DartBuilderInterface{
    private EcoEngine engine;
    private Paint paint;
    private ClothSeat clothSeat;
@@ -47,10 +48,10 @@ public class SXTBuilder implements DodgeRamBuilderInterface{
    
       Suspension economySuspension= new EconomySuspension(new StockShock(0), new StockSpring(0), tire, wheel);
    
-      return new Automobile("Dodge", "Dart", "SXT", coupe, economicFWD, ecoEngineAssembly, economySuspension);
+      return new Automobile("Dodge", "Dart", "SE", coupe, economicFWD, ecoEngineAssembly, economySuspension);
    }
    
-   public SXTBuilder askForPowerTrain(){
+   public SEBuilder askForPowerTrain(){
       TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
       builder.addType("Engine");
       builder.addOption(new TwoLiterI4DOHCEngine(2.0, new HorsePower(160, 0), new Torque(184, 0), 4));
@@ -71,7 +72,7 @@ public class SXTBuilder implements DodgeRamBuilderInterface{
       return this;
    }
       
-   public SXTBuilder askForColorAndInterior() {
+   public SEBuilder askForColorAndInterior() {
       TerminalPrompterBuilder builder = TerminalPrompterBuilder.newBuilder();
       builder.addType("Color");
       builder.addOption(new BilletSilverMetallicClearCoat());
@@ -118,7 +119,7 @@ public class SXTBuilder implements DodgeRamBuilderInterface{
       builder.addOption(new FullHoodBlackRedStripe());
       builder.addOption(new BodySideRedRhombusStripe());
       builder.addOption(new BlackRedGrayGraphic());
-      builder.addOption(new NoGraphic());
+      builder.addOption(new NoSelection());
    
       ArrayList<Object> stripes = builder.getOptions();
    
@@ -135,7 +136,7 @@ public class SXTBuilder implements DodgeRamBuilderInterface{
       return this;   
    }
    
-   public SXTBuilder askForOptions() {
+   public SEBuilder askForOptions() {
       
       TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
       builder.addType("Wheels");
@@ -175,14 +176,14 @@ public class SXTBuilder implements DodgeRamBuilderInterface{
       return this;
    }
 
-   public SXTBuilder askForPackages(){
+   public SEBuilder askForPackages(){
       System.out.println("No packages avaliable");
       System.out.println("");
       return this;
    }
 
    public static void main(String[] args) throws Exception{
-      System.out.println(new SXTBuilder()
+      System.out.println(new SEBuilder()
             .askForPowerTrain()
             .askForColorAndInterior()
             .askForOptions()
