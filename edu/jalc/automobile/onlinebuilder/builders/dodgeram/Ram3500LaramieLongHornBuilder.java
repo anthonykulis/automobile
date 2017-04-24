@@ -24,7 +24,7 @@ import edu.jalc.automobile.parts.drive.*;
 
 
 
-public class Ram3500LaramieLongHornBuilder implements DodgeRamBuilderInterface{
+public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterface{
 
   private EngineAssembly engine;
   private RearDriveAxle axle;

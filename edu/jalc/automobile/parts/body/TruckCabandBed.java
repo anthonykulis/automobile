@@ -3,12 +3,14 @@ import edu.jalc.automobile.parts.body.TruckBed;
 
 public class TruckCabandBed extends TruckBed{
 
-  public double bedLength;
+  public int bedLengthFt;
+  public int bedLengthIn;
   public String cabName;
 
-  public TruckCabandBed(String cabName, double bedLength){
+  public TruckCabandBed(String cabName, int bedLengthFt, int bedLengthIn){
     this.cabName = cabName;
-    this.bedLength = bedLength;
+    this.bedLengthFt = bedLengthFt;
+    this.bedLengthIn = bedLengthIn;
   }
 
   //Using this awesome method
@@ -17,6 +19,6 @@ public class TruckCabandBed extends TruckBed{
   }
 
   public String toString(){
-    return "Cab and Box Length: " + cabName + " " + bedLength + " ft";
+    return "Cab and Box Length: " + cabName + " " + bedLengthFt + "\'" + bedLengthIn + "\"";
   }
 }

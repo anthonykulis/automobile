@@ -24,7 +24,7 @@ import edu.jalc.automobile.parts.drive.*;
 
 
 
-public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
+public class Ram3500BigHornBuilder implements DodgeRamTruckBuilderInterface{
 
   private EngineAssembly engine;
   private RearDriveAxle axle;
@@ -66,9 +66,9 @@ public class Ram3500BigHornBuilder implements DodgeRamBuilderInterface{
     int cabAndBedcount = 1;
     try{
       cabAndBedcount = cabAndBedBuilder.addType("Cab and Bed Length")
-        .addOption(new TruckCabandBed("Crew Cab", 8))
-        .addOption(new TruckCabandBed("Crew Cab", 6.3))
-        .addOption(new TruckCabandBed("Mega Cab", 6.3))
+        .addOption(new TruckCabandBed("Crew Cab", 8, 0))
+        .addOption(new TruckCabandBed("Crew Cab", 6, 4))
+        .addOption(new TruckCabandBed("Mega Cab", 6, 4))
         .sort()
         .build()
         .ask();
