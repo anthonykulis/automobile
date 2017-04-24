@@ -49,6 +49,7 @@ public class EconomySuspension extends Economy{
       return "EconomySuspension has :\n" +
               "\t"+ stockShock.toString()+"\n"+
               "\t"+ stockSpring.toString()+"\n"+
+              "\t"+ wheel.toString() +"\n" +
               "\t"+ stockTire.toString();
    }
 
