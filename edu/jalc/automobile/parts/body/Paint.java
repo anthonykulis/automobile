@@ -1,7 +1,7 @@
 package edu.jalc.automobile.parts.body;
 
 public class Paint{
-   private String name;
+   public String name;
 
    public Paint(){
 
@@ -11,5 +11,9 @@ public class Paint{
    public String toString(){
       return "Paint is :\n" +
                         "\t"+name;
+   }
+
+   public String getName() {
+      return name;
    }
 }

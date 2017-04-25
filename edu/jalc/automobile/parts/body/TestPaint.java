@@ -3,8 +3,11 @@ package edu.jalc.automobile.parts.body;
 public class TestPaint{
   public void testGetPaint(){
     System.out.println("Testing getPaint :: Paint");
-    Paint paint = new Paint("black");
-    assert(paint.getPaint().equals("black"));
+    Paint paint = new Paint();
+    paint.name = "black";
+
+    assert(paint.getName().equals("black"));
+
   }
 
   public static void main(String[] args){

@@ -9,10 +9,11 @@ public class CrewCab extends Truck {
       super(quarterpanels, engineCompartment, cabin, truckBed);
    }
 
-   public Cabin getCabin() {
-     return super.getCabin();
-   }
-   public String toString(){
+	public Cabin getCabin() {
+		return super.getCabin();
+	}
+	public String toString(){
+
       return "CrewCab has :\n" +
                        "\t"+ getQuarterpanels() +"\n"+
                        "\t"+ getEngineCompartment()+"\n"+
