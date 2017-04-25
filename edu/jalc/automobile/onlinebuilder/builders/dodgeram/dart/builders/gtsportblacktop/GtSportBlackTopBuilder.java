@@ -1,49 +1,48 @@
 package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.builders.gtsportblacktop;
 
+
+import java.util.*;
 import edu.jalc.automobile.Automobile;
-import edu.jalc.automobile.common.utils.prompter.TerminalPrompter;
-import edu.jalc.automobile.common.utils.prompter.TerminalPrompterBuilder;
+import edu.jalc.automobile.common.utils.prompter.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.DartBuilderInterface;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.TwoLiterI4DOHCEngine;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.TwoPointFourLiterI4MultiAirEngine;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.exhaust.SingleExhaust;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.graphic.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.engine.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.paint.*;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.seatingandtrim.GTNappaLeatherSeatWithPerforatedSeatInserts;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.seatingandtrim.SportClothSeatBlackInteriorColor;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.tires.AllSeasonTires;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.wheels.GlossBlack10SpokeAlumWheel;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.wheels.GraniteCrystalAlumWheel;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.wheels.HyperBlackAlumWheels;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.seatingandtrim.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.graphic.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.tires.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.wheels.*;
 import edu.jalc.automobile.onlinebuilder.components.body.car.SedanBody;
 import edu.jalc.automobile.onlinebuilder.components.driveline.DriveLine;
 import edu.jalc.automobile.onlinebuilder.components.driveline.economic.EconomicFWD;
+import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
 import edu.jalc.automobile.onlinebuilder.components.engine.economy.EcoEngineAssembly;
-import edu.jalc.automobile.onlinebuilder.components.engine.economy.boosted.turbocharged.TurbochargedEcoEngine;
-import edu.jalc.automobile.onlinebuilder.components.engine.specs.HorsePower;
-import edu.jalc.automobile.onlinebuilder.components.engine.specs.Torque;
+import edu.jalc.automobile.onlinebuilder.components.engine.economy.standard.StandardEcoEngine;
+import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 import edu.jalc.automobile.onlinebuilder.components.suspension.Suspension;
 import edu.jalc.automobile.onlinebuilder.components.suspension.economy.EconomySuspension;
-import edu.jalc.automobile.parts.body.*;
-import edu.jalc.automobile.parts.body.seat.ClothSeat;
-import edu.jalc.automobile.parts.driveline.ElectricSteering;
-import edu.jalc.automobile.parts.driveline.FrontDriveAxle;
-import edu.jalc.automobile.parts.driveline.OpenDifferential;
-import edu.jalc.automobile.parts.driveline.RearDeadAxle;
+import edu.jalc.automobile.onlinebuilder.components.engine.economy.boosted.turbocharged.TurbochargedEcoEngine;
 import edu.jalc.automobile.parts.engine.EcoEngine;
-import edu.jalc.automobile.parts.induction.TurbochargedInduction;
+import edu.jalc.automobile.parts.exhaust.*;
+import edu.jalc.automobile.parts.induction.NaturallyAspiratedInduction;
+import edu.jalc.automobile.parts.suspension.Tire;
+import edu.jalc.automobile.parts.suspension.Wheel;
+import edu.jalc.automobile.parts.body.*;
 import edu.jalc.automobile.parts.suspension.*;
+import edu.jalc.automobile.parts.driveline.*;
+import edu.jalc.automobile.parts.body.seat.*;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dart.parts.exhaust.*;
+import edu.jalc.automobile.parts.induction.TurbochargedInduction;
 
 
-import java.util.ArrayList;
 
 public class GtSportBlackTopBuilder implements DartBuilderInterface {
     private Paint carPaint;
-    private ClothSeat clothSeat;
+    private Seat seat;
     private AlloyWheel wheel;
     private EconomyTire tire;
     private EcoEngine engine;
+    private Cabin cabin;
     private Graphic carGraphic;
 
     @Override
@@ -136,10 +135,16 @@ public class GtSportBlackTopBuilder implements DartBuilderInterface {
 
         try{
             TerminalPrompter prompter = promptBuilder.build();
-
             int result = prompter.ask();
-
-            clothSeat = (ClothSeat) interior.get(result - 1);
+            
+            if (result < 5){
+               seat = (ClothSeat)interior.get(result - 1);
+               cabin = new StandardCabin((ClothSeat)seat);
+            } 
+            else {
+             seat = (LeatherSeat)interior.get(result - 1);
+             cabin = new LuxuryCabin((LeatherSeat)seat);
+            }
         }
         catch(Exception e){
         }
@@ -222,7 +227,7 @@ public class GtSportBlackTopBuilder implements DartBuilderInterface {
         SedanBody coupe = new SedanBody(
                 new Quarterpanels(carPaint, carGraphic),
                 new EngineCompartment(new Hood(carPaint, carGraphic)),
-                new StandardCabin(clothSeat),
+                cabin,
                 new StandardTrunk(13.0)
         );
 
