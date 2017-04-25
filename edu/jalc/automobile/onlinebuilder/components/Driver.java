@@ -1,9 +1,9 @@
 package edu.jalc.automobile.onlinebuilder.components;
 
 import java.util.ArrayList;
-import edu.jalc.automobile.onlinebuilder.components.towing.*;
-import edu.jalc.automobile.onlinebuilder.components.economy.*;
-import edu.jalc.automobile.onlinebuilder.components.sport.*;
+import edu.jalc.automobile.onlinebuilder.components.engine.diese.*;
+import edu.jalc.automobile.onlinebuilder.components.engine.economy.*;
+import edu.jalc.automobile.onlinebuilder.components.engine.sport.*;
 import edu.jalc.automobile.parts.*;
 
 public class Driver{
