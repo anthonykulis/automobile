@@ -10,7 +10,7 @@ public class CrewCab extends Truck {
    }
 
    public Cabin getCabin() {
-      return (Cabin) super.getCabin();
+      return super.getCabin();
    }
    public String toString(){
       return "CrewCab has :\n" +
