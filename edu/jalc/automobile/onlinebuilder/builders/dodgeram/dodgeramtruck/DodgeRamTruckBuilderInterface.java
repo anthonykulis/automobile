@@ -3,11 +3,18 @@ package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dodgeramtruck;
 import edu.jalc.automobile.Automobile;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
 
+
 public interface DodgeRamTruckBuilderInterface extends DodgeRamBuilderInterface{
 
   DodgeRamTruckBuilderInterface askForTruckDrive();
 
   DodgeRamTruckBuilderInterface askForCabandBed();
+
+public interface DodgeRamTruckBuilderInterface extends DodgeRamBuilderInterface {
+
+  DodgeRamTruckBuilderInterface askForTruckDrive();
+
+  DodgeRamTruckBuilderInterface askForCabAndBed();
 
 	DodgeRamTruckBuilderInterface askForPowerTrain();
 

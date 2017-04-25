@@ -9,8 +9,8 @@ public class ExtendedCab extends Truck {
 		super(quarterpanels, engineCompartment, cabin, truckBed);
 	}
 
-	public LuxuryCabin getCabin() {
-		return (LuxuryCabin) super.getCabin();
+	public Cabin getCabin() {
+		return super.getCabin();
 	}
 
 	public String toString(){

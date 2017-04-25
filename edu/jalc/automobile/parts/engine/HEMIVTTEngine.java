@@ -2,7 +2,7 @@ package edu.jalc.automobile.parts.engine;
 
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
 
-public class HEMIVTTEngine extends DieselEngine{
+public class HEMIVTTEngine extends EcoEngine{
 
   private HEMIVTTEngine(double displacement, HorsePower horsePower, Torque torque, int cylinders){
   super(0,null,null,0);
