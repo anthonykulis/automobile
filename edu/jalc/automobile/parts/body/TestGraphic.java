@@ -3,8 +3,8 @@ package edu.jalc.automobile.parts.body;
 public class TestGraphic{
   public void testGetGraphic(){
     System.out.println("Testing getGraphic :: Graphic");
-    Graphic graphic = new Graphic("stripes");
-    assert(graphic.getGraphic().equals("stripes"));
+    Graphic graphic = new Graphic();
+    assert(graphic.toString().equals("stripes"));
   }
 
   public static void main(String[] args){

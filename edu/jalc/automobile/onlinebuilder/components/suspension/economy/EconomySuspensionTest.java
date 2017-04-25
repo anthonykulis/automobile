@@ -19,7 +19,7 @@ public class EconomySuspensionTest{
    }
    public void testGetTire() {
       System.out.println("Testing EconomySuspension::getTire");
-      StockTire tire = new StockTire(5,5);
+      EconomyTire tire = new EconomyTire(5,5);
       EconomySuspension economySuspension = new EconomySuspension(null, null,tire,null);
       economySuspension.setStockTire(5,5);
 
@@ -27,19 +27,12 @@ public class EconomySuspensionTest{
    }
    public void testGetWheel() {
       System.out.println("Testing EconomySuspension::getWheel");
-      AlloyWheel alloyWheel = new AlloyWheel(5);
+      AlloyWheel alloyWheel = new AlloyWheel(5,null);
       EconomySuspension economySuspension = new EconomySuspension(null,null,null,alloyWheel);
-      assert(alloyWheel == economySuspension.getWheel);
+      assert(alloyWheel == economySuspension.getWheel());
 
    }
 
-   public void testGetWheel() {
-      System.out.println("Testing EconomySuspension::getWheel");
-
-
-
-
-   }
 
    public static void main(String[] args){
       EconomySuspensionTest test = new EconomySuspensionTest();
