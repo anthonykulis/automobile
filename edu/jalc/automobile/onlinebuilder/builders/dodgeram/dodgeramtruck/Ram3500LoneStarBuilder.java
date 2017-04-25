@@ -225,9 +225,7 @@ public class Ram3500LoneStarBuilder implements DodgeRamTruckBuilderInterface{
     return this;
   }
 
-  public Ram3500LoneStarBuilder askForPackages(){
-    return this;
-  }
+  public Ram3500LoneStarBuilder askForPackages(){return this;}
 
   public Automobile build(){
 
