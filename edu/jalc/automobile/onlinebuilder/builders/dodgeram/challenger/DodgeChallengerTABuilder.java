@@ -2,6 +2,7 @@ package edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger;
 
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
 import edu.jalc.automobile.Automobile;
+
 import edu.jalc.automobile.common.utils.prompter.*;
 
 import edu.jalc.automobile.parts.engine.SportEngine;
@@ -35,7 +36,9 @@ import edu.jalc.automobile.onlinebuilder.components.driveline.sport.SportRWD;
 import edu.jalc.automobile.parts.driveline.*;
 
 
+
 public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
+
 
   private SportEngineAssembly engine;
   private Body body;
@@ -148,5 +151,4 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
 
     return new Automobile("Dodge","Challenger","T/A",body,driveline,engine,suspension);
   }
-
 }
