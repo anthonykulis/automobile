@@ -3,6 +3,7 @@ package edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger;
 import edu.jalc.automobile.Automobile;
 import edu.jalc.automobile.common.utils.prompter.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
+
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.engine.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.paint.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.seat.*;
@@ -43,6 +44,7 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
     System.out.println(srt392);
   }
 
+
   public DodgeRamBuilderInterface askForPowerTrain(){
     TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
 
@@ -56,6 +58,7 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
     promptBuilder.addOption(hemi_Engine);
     promptBuilder.addOption(mds_Engine);
     promptBuilder.sort();
+
     int choice = 1;
     try{
       choice = promptBuilder.build().ask();
@@ -65,6 +68,7 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
     return this;
   }
   public DodgeRamBuilderInterface askForColorAndInterior(){
+
     Paint paint = askForPaint();
     Graphic graphic = askForGraphic();
     ColoredLeatherSeat seat = askForSeat();
@@ -127,7 +131,6 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
   }
 
   public DodgeRamBuilderInterface askForOptions(){
-
     SportTire tire = new SportTire(0,0);
     SteelForgedWheel wheel = new SteelForgedWheel(20,9.5,"SRT Hyper Black");
     try{

@@ -4,6 +4,6 @@ import edu.jalc.automobile.onlinebuilder.components.Component;
 
 abstract public class EngineAssembly extends Component {
   public String toString(){
-    return "Engine:\n";
+    return "Engine Assembly Has:\n";
   }
 }
