@@ -1,6 +1,7 @@
-package edu.jalc.automobile.onlinebuilder.builders.dodgeram;
+package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dodgeramtruck;
 
 import edu.jalc.automobile.Automobile;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
 
 public interface DodgeRamTruckBuilderInterface extends DodgeRamBuilderInterface{
 

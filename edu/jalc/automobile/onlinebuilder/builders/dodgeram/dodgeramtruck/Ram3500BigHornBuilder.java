@@ -1,10 +1,10 @@
-package edu.jalc.automobile.onlinebuilder.builders.dodgeram;
+package edu.jalc.automobile.onlinebuilder.builders.dodgeram.dodgeramtruck;
 
 import edu.jalc.automobile.parts.body.*;
 import edu.jalc.automobile.parts.engine.*;
 import edu.jalc.automobile.parts.suspension.*;
 import edu.jalc.automobile.parts.body.colors.*;;
-import edu.jalc.automobile.parts.body.seat.LeatherSeat;
+import edu.jalc.automobile.parts.body.seat.*;
 import edu.jalc.automobile.common.utils.prompter.TerminalPrompterBuilder;
 import edu.jalc.automobile.common.utils.prompter.TerminalPrompter;
 import edu.jalc.automobile.Automobile;
@@ -13,6 +13,7 @@ import edu.jalc.automobile.onlinebuilder.components.driveline.TruckDriveLine;
 import edu.jalc.automobile.onlinebuilder.components.engine.diesel.DieselEngineAssembly;
 import edu.jalc.automobile.onlinebuilder.components.engine.EngineAssembly;
 import edu.jalc.automobile.onlinebuilder.components.body.truck.CrewCab;
+import edu.jalc.automobile.onlinebuilder.components.body.truck.StandardCab;
 import edu.jalc.automobile.onlinebuilder.components.suspension.towing.*;
 import edu.jalc.automobile.onlinebuilder.components.suspension.Suspension;
 import edu.jalc.automobile.onlinebuilder.components.driveline.truck.HeavyDutyRWD;
@@ -21,10 +22,11 @@ import edu.jalc.automobile.parts.induction.TurbochargedInduction;
 import edu.jalc.automobile.parts.body.seat.Seat;
 import edu.jalc.automobile.parts.driveline.*;
 import edu.jalc.automobile.onlinebuilder.components.driveline.truck.SuperDutyFourWheelDrive;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.dodgeramtruck.*;
 
 
 
-public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterface{
+public class Ram3500BigHornBuilder implements DodgeRamTruckBuilderInterface{
 
   private EngineAssembly engine;
   private RearDriveAxle axle;
@@ -38,13 +40,14 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
   private FourWheelDriveAxle fourWheelDriveAxle;
   private Body body;
 
-  int truckdrivecount = 1;
-  public Ram3500LaramieLongHornBuilder askForTruckDrive(){
+  int truckDriveCount = 1;
+
+  public Ram3500BigHornBuilder askForTruckDrive(){
 
     TerminalPrompterBuilder truckDriveBuilder = new TerminalPrompterBuilder();
 
     try{
-      truckdrivecount = truckDriveBuilder.addType("Truck Drive")
+      truckDriveCount = truckDriveBuilder.addType("Truck Drive")
         .addOption(new FourByFourDrive())
         .addOption(new FourByTwoDrive())
         .sort()
@@ -55,11 +58,11 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
       System.exit(1);
     }
 
-    fourWheelDriveAxle = (FourWheelDriveAxle)truckDriveBuilder.getOptions().get(truckdrivecount - 1);
+    fourWheelDriveAxle = (FourWheelDriveAxle)truckDriveBuilder.getOptions().get(truckDriveCount - 1);
     return this;
   }
 
-  public Ram3500LaramieLongHornBuilder askForCabandBed(){
+  public Ram3500BigHornBuilder askForCabandBed(){
 
     TerminalPrompterBuilder cabAndBedBuilder = new TerminalPrompterBuilder();
 
@@ -81,8 +84,7 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
     return this;
   }
 
-  public Ram3500LaramieLongHornBuilder askForPowerTrain(){
-
+  public Ram3500BigHornBuilder askForPowerTrain(){
 
     TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
 
@@ -95,8 +97,6 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
       .sort()
       .build()
       .ask();
-
-    //engine = (EngineAssembly)builder.getOptions().get(engineOptions -1);
 
     } catch(Exception e){
       e.printStackTrace();
@@ -123,7 +123,7 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
 
     TerminalPrompterBuilder suspensionBuilder = new TerminalPrompterBuilder();
 
-    int suspensionOptions;
+    int suspensionOptions = 1;
     try{
     suspensionOptions = suspensionBuilder.addType("Suspension")
       .addOption(new AirSuspension())
@@ -140,8 +140,8 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
     return this;
   }
 
-
-  public Ram3500LaramieLongHornBuilder askForColorAndInterior(){
+  int seatingOptions;
+  public Ram3500BigHornBuilder askForColorAndInterior(){
 
     TerminalPrompterBuilder colorBuilder = new TerminalPrompterBuilder();
 
@@ -167,10 +167,10 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
 
       TerminalPrompterBuilder seatBuilder = new TerminalPrompterBuilder();
 
-      int seatingOptions = 1;
       try{
       seatingOptions = seatBuilder.addType("Seating and Trim")
         .addOption(new LeatherSeat())
+        .addOption(new ClothSeat())
         .build()
         .ask();
 
@@ -185,37 +185,21 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
   }
 
 
-  public Ram3500LaramieLongHornBuilder askForPackages(){
-
-    TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
-
-    int packageOptions = 1;
-    try{
-    packageOptions = builder.addType("Packages")
-      .addOption(new DualRearWheel())
-      .build()
-      .ask();
-
-    rearWheel = (Wheel)builder.getOptions().get(packageOptions - 1);
-
-    } catch(Exception e){
-      e.printStackTrace();
-      System.exit(1);
-    }
-
+  public Ram3500BigHornBuilder askForPackages(){
     return this;
   }
 
 
-  public Ram3500LaramieLongHornBuilder askForOptions(){
+  public Ram3500BigHornBuilder askForOptions(){
 
     TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
 
     int wheelOption = 1;
     try{
     wheelOption = builder.addType("Wheels")
-      .addOption(new AluminumWheel(17))
-      .addOption(new SpokeAluminumWheel(20))
+      .addOption(new BlackPaintedAluminumWheel(20))
+      .addOption(new PaintedAluminumWheel(20))
+      .addOption(new PolishedAluminumWheel(18))
       .sort()
       .build()
       .ask();
@@ -251,22 +235,27 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
   }
   public Automobile build(){
 
-    Graphic graphic = new Graphic("Ram 3500 Laramie LongHorn");
+    Graphic graphic = new Graphic("Ram 3500 Big Horn");
 
-    Body body = new CrewCab(new Quarterpanels(paint, graphic), new EngineCompartment(new Hood(paint, graphic))
+    if(seatingOptions == 1){
+      body = new CrewCab(new Quarterpanels(paint, graphic), new EngineCompartment(new Hood(paint, graphic))
                     , new LuxuryCabin(seat), truckCabandBed);
-
+    }
+    else{
+      body = new StandardCab(new Quarterpanels(paint, graphic), new EngineCompartment(new Hood(paint, graphic))
+                    , new StandardCabin(seat), truckCabandBed);
+    }
 
     TruckDriveLine driveline = null;
     /* Note that HeavyDutyRWD does not take in a fourWheelDriveAxle so displaying 4x2 Drive isnt possible as well as
       SuperDutyFourWheelDrive does not take in a axle so displaying axle for SuperDutyFourWheelDrive is impossible.*/
-    if (truckdrivecount == 1){
+    if (truckDriveCount == 1){
       driveline = new HeavyDutyRWD(axle, new FrontDeadAxle(), new DriveShaft()
-                      , new ElectricSteering(), new LockingDifferential());
+                                    , new ElectricSteering(), new LockingDifferential());
     }
     else{
-      driveline = new SuperDutyFourWheelDrive(fourWheelDriveAxle, new DriveShaft()
-                      , new ElectricSteering(), new LockingDifferential());
+     driveline = new SuperDutyFourWheelDrive(fourWheelDriveAxle, new DriveShaft()
+                                  , new ElectricSteering(), new LockingDifferential());
     }
 
     EngineAssembly engineAssembly = new DieselEngineAssembly((DieselEngine)engine, new EconomyExhaust()
@@ -274,17 +263,16 @@ public class Ram3500LaramieLongHornBuilder implements DodgeRamTruckBuilderInterf
 
     Suspension towing = new TowingHeavyDuty(new HeavyShock(0), new HeavySpring(0), tire, wheel);
 
-    return new Automobile("Ram", "3500", "Laramie LongHorn", body, driveline, engineAssembly, towing);
+    return new Automobile("Ram", "3500", "Big Horn", body, driveline, engineAssembly, towing);
 
   }
 
   public static void main(String[] args)throws Exception{
-    Ram3500LaramieLongHornBuilder rm = new Ram3500LaramieLongHornBuilder();
+    Ram3500BigHornBuilder rm = new Ram3500BigHornBuilder();
     rm.askForTruckDrive();
     rm.askForCabandBed();
     rm.askForPowerTrain();
     rm.askForColorAndInterior();
-    rm.askForPackages();
     rm.askForOptions();
     System.out.println(rm.build());
   }
