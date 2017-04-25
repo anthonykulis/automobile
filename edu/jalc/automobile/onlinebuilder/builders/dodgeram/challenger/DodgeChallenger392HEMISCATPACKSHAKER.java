@@ -47,20 +47,18 @@ public class DodgeChallenger392HEMISCATPACKSHAKER implements DodgeRamBuilderInte
 
     SportEngine mdsEngine = new HemiMdsSportEngine(392,new HorsePower(485,4000),new Torque(475,3000),8);
     SportEngine hemiEngine = new HEMISportEngine(6.4,new HorsePower(485,4000),new Torque(475,3000),8);
-
-    EngineAssembly mds_Engine = new NaturallyAspiratedSportEngine(mdsEngine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
-    EngineAssembly hemi_Engine = new NaturallyAspiratedSportEngine(hemiEngine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
-
+    
     promptBuilder.addType("Powertrain");
-    promptBuilder.addOption(hemi_Engine);
-    promptBuilder.addOption(mds_Engine);
+    promptBuilder.addOption(hemiEngine);
+    promptBuilder.addOption(mdsEngine);
     promptBuilder.sort();
     int choice = 1; //the default online
     try{
       choice = promptBuilder.build().ask();
     }catch(Exception e){}
 
-    this.engine = (EngineAssembly)promptBuilder.getOptions().get(choice - 1);
+    SportEngine sEngine = (SportEngine)promptBuilder.getOptions().get(choice - 1);
+    this.engine = new NaturallyAspiratedSportEngine(sEngine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
     return this;
   }
   public DodgeRamBuilderInterface askForColorAndInterior(){
