@@ -10,8 +10,8 @@ public class StandardCab extends Truck {
 		super(quarterpanels, engineCompartment, cabin, truckBed);
 	}
 
-	public StandardCabin getCabin() {
-		return (StandardCabin) super.getCabin();
+	public Cabin getCabin() {
+		return super.getCabin();
 	}
 
 	public String toString(){
