@@ -98,6 +98,7 @@ public class AeroBuilder implements DartBuilderInterface {
         promptBuilder.addOption(new GraniteCrystalMetallicClearCoat());
 
         ArrayList<Object> colors = promptBuilder.getOptions();
+        promptBuilder.sort();
 
         try{
             TerminalPrompter prompter = promptBuilder.build();
@@ -116,6 +117,7 @@ public class AeroBuilder implements DartBuilderInterface {
 
         promptBuilder.addOption(new SportClothSeatBlackInteriorColor());
         ArrayList<Object> interior = promptBuilder.getOptions();
+        promptBuilder.sort();
 
 
         try{
@@ -140,6 +142,7 @@ public class AeroBuilder implements DartBuilderInterface {
         promptBuilder.addOption(new NoSelection());
 
         ArrayList<Object> stripes = promptBuilder.getOptions();
+        promptBuilder.sort();
 
         try{
             int result = promptBuilder.build().ask();

@@ -108,6 +108,7 @@ public class GtSportBuilder implements DartBuilderInterface {
 
         promptBuilder.addOption(new B5BluePearlCoat());
 
+        promptBuilder.sort();
 
         ArrayList<Object> colors = promptBuilder.getOptions();
 
@@ -128,6 +129,7 @@ public class GtSportBuilder implements DartBuilderInterface {
         promptBuilder.addOption(new SportClothSeatBlackInteriorColor());
 
         ArrayList<Object> interior = promptBuilder.getOptions();
+        promptBuilder.sort();
 
 
         try{
@@ -146,6 +148,7 @@ public class GtSportBuilder implements DartBuilderInterface {
         promptBuilder.addOption(new BodySideRedRhombusStripe());
         promptBuilder.addOption(new BlackRedGrayGraphic());
         promptBuilder.addOption(new NoSelection());
+        promptBuilder.sort();
 
         ArrayList<Object> stripes = promptBuilder.getOptions();
 

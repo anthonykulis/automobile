@@ -112,6 +112,8 @@ public class GtSportBlackTopBuilder implements DartBuilderInterface {
 
 
         ArrayList<Object> colors = promptBuilder.getOptions();
+        promptBuilder.sort();
+        
 
         try{
             TerminalPrompter prompter = promptBuilder.build();
@@ -150,6 +152,7 @@ public class GtSportBlackTopBuilder implements DartBuilderInterface {
         promptBuilder.addOption(new NoSelection());
 
         ArrayList<Object> stripes = promptBuilder.getOptions();
+        promptBuilder.sort();
 
         try{
             int result = promptBuilder.build().ask();

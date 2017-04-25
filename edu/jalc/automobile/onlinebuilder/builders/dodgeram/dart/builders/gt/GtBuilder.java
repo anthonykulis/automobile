@@ -104,6 +104,7 @@ public class GtBuilder implements DartBuilderInterface {
 
         promptBuilder.addOption(new PitchBlackClearCoat());
 
+        promptBuilder.sort();
 
         ArrayList<Object> colors = promptBuilder.getOptions();
 
@@ -122,6 +123,7 @@ public class GtBuilder implements DartBuilderInterface {
 
         promptBuilder.addOption(new GTNappaLeatherSeatWithPerforatedSeatInserts());
         ArrayList<Object> interior = promptBuilder.getOptions();
+        promptBuilder.sort();
 
 
         try{
@@ -142,6 +144,7 @@ public class GtBuilder implements DartBuilderInterface {
         promptBuilder.addOption(new NoSelection());
 
         ArrayList<Object> stripes = promptBuilder.getOptions();
+        promptBuilder.sort();
 
         try{
             int result = promptBuilder.build().ask();
