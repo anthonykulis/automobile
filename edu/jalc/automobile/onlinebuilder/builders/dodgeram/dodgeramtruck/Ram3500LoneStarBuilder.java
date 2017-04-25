@@ -255,7 +255,7 @@ public class Ram3500LoneStarBuilder implements DodgeRamTruckBuilderInterface{
 
     Suspension towing = new TowingSuperDuty(new SuperShock(0), new SuperSpring(0), tire, wheel);
 
-    return new Automobile("Ram", "3500", "SLT", body, driveline, engineAssembly, towing);
+    return new Automobile("Ram", "3500", "Lone Star", body, driveline, engineAssembly, towing);
   }
 
   public static void main(String[] args) throws Exception{
