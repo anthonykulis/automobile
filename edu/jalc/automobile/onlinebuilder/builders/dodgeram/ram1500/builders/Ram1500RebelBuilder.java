@@ -175,7 +175,7 @@ public class Ram1500RebelBuilder implements TruckDodgeRamBuilderInterface{
       try{
          TerminalPrompterBuilder tirePrompter = TerminalPrompterBuilder.newBuilder();
          int tireChoice = tirePrompter.addType("Tires")
-            .addOption(new BSWAllSeasonTire("P285/70R17"))
+            .addOption(new BSWAllSeasonTire("LT285/70R17"))
             .build()
             .ask();
          tire = (TruckTire)tirePrompter.getOptions().get(tireChoice - 1);
