@@ -16,5 +16,4 @@ public class HighPerformanceSeat extends LeatherSeat{
   public String toString(){
     return String.format("%s %s High Performance Seats", this.color, this.description);
   }
-
 }
