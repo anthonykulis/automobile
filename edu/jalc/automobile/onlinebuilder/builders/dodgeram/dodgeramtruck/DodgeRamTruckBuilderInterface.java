@@ -5,6 +5,8 @@ import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterf
 
 public interface DodgeRamTruckBuilderInterface extends DodgeRamBuilderInterface {
 
+  DodgeRamTruckBuilderInterface askForTruckDrive();
+
   DodgeRamTruckBuilderInterface askForCabAndBed();
 
 	DodgeRamTruckBuilderInterface askForPowerTrain();

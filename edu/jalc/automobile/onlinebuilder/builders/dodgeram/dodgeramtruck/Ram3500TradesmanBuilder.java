@@ -54,8 +54,31 @@ public class Ram3500TradesmanBuilder implements DodgeRamTruckBuilderInterface{
   private Tire tire;
 
   int truckDriveOption = 1;
+
+  public Ram3500TradesmanBuilder askForTruckDrive(){
+
+     TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
+     try{
+       truckDriveOption = builder.addType("Truck Drive")
+       .addOption(new FourByFourDrive())
+       .addOption(new FourByTwoDrive())
+       .sort()
+       .build()
+       .ask();
+
+      fourWheelDriveAxle = (FourWheelDriveAxle)builder.getOptions().get(truckDriveOption - 1);
+
+       }catch(Exception e){
+        e.printStackTrace();
+        System.exit(1);
+       }
+
+     return this;
+  }
+
   public Ram3500TradesmanBuilder askForCabAndBed(){
     TerminalPrompterBuilder builder = new TerminalPrompterBuilder();
+    int cabAndBedCount = 1;
     try{
       truckDriveOption = builder.addType("Cab and Bed Length")
        .addOption(new TruckCabandBed("Crew Cabin", 8, 0))
@@ -65,28 +88,11 @@ public class Ram3500TradesmanBuilder implements DodgeRamTruckBuilderInterface{
        .build()
        .ask();
 
-       truckCabAndBed = (TruckCabandBed)builder.getOptions().get(truckDriveOption - 1);
+       truckCabAndBed = (TruckCabandBed)builder.getOptions().get(cabAndBedCount - 1);
     } catch(Exception e){
        e.printStackTrace();
        System.exit(1);
     }
-
-    builder = new TerminalPrompterBuilder();
-    try{
-      truckDriveOption = builder.addType("Truck Drive")
-       .addOption(new FourByFourDrive())
-       .addOption(new FourByTwoDrive())
-       .sort()
-       .build()
-       .ask();
-
-       fourWheelDriveAxle = (FourWheelDriveAxle)builder.getOptions().get(truckDriveOption - 1);
-
-    }catch(Exception e){
-       e.printStackTrace();
-       System.exit(1);
-    }
-
     return this;
   }
 
