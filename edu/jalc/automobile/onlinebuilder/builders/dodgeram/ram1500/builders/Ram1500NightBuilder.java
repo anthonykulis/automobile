@@ -138,7 +138,7 @@ public class Ram1500NightBuilder implements TruckDodgeRamBuilderInterface{
     TerminalPrompterBuilder seatPrompter = TerminalPrompterBuilder.newBuilder();
     try{
       seatPrompter.addType("Seats");
-      seatPrompter.addOption(new LetherTrimmedBucketSeat());
+      seatPrompter.addOption(new LeatherTrimmedBucketSeat());
       seatPrompter.addOption(new BucketClothSeat());
       seatPrompter.sort();
       numOfOptions = seatPrompter.build().ask();
