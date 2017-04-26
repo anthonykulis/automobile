@@ -9,6 +9,7 @@ import edu.jalc.automobile.parts.suspension.Tire;
 import edu.jalc.automobile.parts.suspension.Wheel;
 
 
+
 public class TowingSuperDuty extends Towing{
 
    private SuperShock shock;

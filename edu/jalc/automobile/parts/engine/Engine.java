@@ -23,7 +23,7 @@ abstract public class Engine extends EngineAssembly{
    }
 
    public String toString(){
-     return String.format("%fcc %d cylinder",displacement,cylinders);
+     return String.format("%f %d cylinder",displacement,cylinders);
    }
 
    public double getDisplacement(){
