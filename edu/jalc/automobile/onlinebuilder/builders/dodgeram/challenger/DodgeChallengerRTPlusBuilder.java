@@ -24,20 +24,17 @@ import edu.jalc.automobile.parts.induction.NaturallyAspiratedInduction;
 import edu.jalc.automobile.parts.exhaust.PerformanceExhaust;
 import edu.jalc.automobile.parts.body.seat.Seat;
 import edu.jalc.automobile.parts.body.*;
+import edu.jalc.automobile.parts.body.seat.LeatherSeat;
 import edu.jalc.automobile.parts.suspension.*;
 import edu.jalc.automobile.parts.driveline.*;
 
 public class DodgeChallengerRTPlusBuilder implements DodgeRamBuilderInterface{
 
-  EngineAssembly engine;
-  Body body;
-  Suspension suspension;
-  DriveLine driveline;
-
-   private EngineAssembly engineAssembly;
-   private Paint paint;
-   private CarbonAluminumWheel carbonAluminumWheel;
-   private AllSeasonPerformanceTire allSeasonPerformanceTire;
+  private Body body;
+  private Suspension suspension;
+  private DriveLine driveline;
+  private EngineAssembly engineAssembly;
+  private Paint paint;
    
    public static void main(String... args){
       Automobile auto = new DodgeChallengerRTPlusBuilder()
@@ -64,22 +61,27 @@ public class DodgeChallengerRTPlusBuilder implements DodgeRamBuilderInterface{
    }
 
    public DodgeRamBuilderInterface askForColorAndInterior(){
-         TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
-         promptBuilder.addType("Paint");
-         promptBuilder.addOption(new YellowJacketPaint());
-         promptBuilder.addOption(new PitchBlackPaint());
-         promptBuilder.addOption(new MaximumSteelPaint());
-         promptBuilder.addOption(new OctaneRedPaint());
-         promptBuilder.addOption(new GreenGoPaint());
-         promptBuilder.addOption(new GoMangoPaint());
-         promptBuilder.addOption(new ContusionBluePaint());
-         promptBuilder.sort();
-         int choice = 1;
-         try{
-            choice = promptBuilder.build().ask();
-         }catch(Exception e){}
-         paint = (Paint)promptBuilder.getOptions().get(choice - 1);
-      this.paint = paint;
+      TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
+      promptBuilder.addType("Paint");
+      promptBuilder.addOption(new YellowJacketPaint());
+      promptBuilder.addOption(new PitchBlackPaint());
+      promptBuilder.addOption(new MaximumSteelPaint());
+      promptBuilder.addOption(new OctaneRedPaint());
+      promptBuilder.addOption(new GreenGoPaint());
+      promptBuilder.addOption(new GoMangoPaint());
+      promptBuilder.addOption(new ContusionBluePaint());
+      promptBuilder.sort();
+      int choice = 1;
+      try{
+         choice = promptBuilder.build().ask();
+      }catch(Exception e){}
+      paint = (Paint)promptBuilder.getOptions().get(choice - 1);
+      this.body = new CoupeBody(
+        new Quarterpanels(paint, new Graphic("None")),
+        new EngineCompartment(new Hood(paint, new Graphic("None"))),
+        new LuxuryCabin(new LeatherSeat()),
+        new StandardTrunk(7));
+              
       return this;
    }
 
@@ -95,10 +97,7 @@ public class DodgeChallengerRTPlusBuilder implements DodgeRamBuilderInterface{
               .build()
               .tell("Your R/T Plus Comes With " + aluminumWheel + "\nYour R/T Plus Comes With " + allSeasonPerformanceTire);
         }catch(Exception e){e.printStackTrace();}
-      this.carbonAluminumWheel = carbonAluminumWheel;
-      this.allSeasonPerformanceTire = allSeasonPerformanceTire;
-    }catch(Exception e){System.err.println(e);}
-    suspension = new SportSuspension(new StockShock(12), new MediumSpring(12), tire, wheel);
+    suspension = new SportSuspension(new StockShock(12), new MediumSpring(12), allSeasonPerformanceTire, aluminumWheel);
       
       return this;
    }
@@ -118,14 +117,14 @@ public class DodgeChallengerRTPlusBuilder implements DodgeRamBuilderInterface{
 
 	public Automobile build(){
   
-    DriveLine driveLine = new SportRWD(
+    this.driveline = new SportRWD(
       new FrontDeadAxle(),
       new RearDriveAxle(),
       new DriveShaft(),
       new HydraulicSteering(),
       new TorqueVectorDifferential());
       
-    return new Automobile("Dodge","Challenger","R/T Plus",body,driveLine,this.engineAssembly,suspension);
+    return new Automobile("Dodge","Challenger","R/T Plus",this.body,this.driveline,this.engineAssembly,this.suspension);
    }
 
 }
