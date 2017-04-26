@@ -3,12 +3,11 @@ package edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger;
 import edu.jalc.automobile.Automobile;
 import edu.jalc.automobile.common.utils.prompter.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.DodgeRamBuilderInterface;
-
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.engine.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.paint.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.seat.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.color.*;
-import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.wheel.SteelForgedWheel;
+import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.wheel.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.tire.*;
 import edu.jalc.automobile.onlinebuilder.builders.dodgeram.challenger.parts.suspension.SportSuspension;
 import edu.jalc.automobile.onlinebuilder.components.engine.specs.*;
@@ -27,23 +26,24 @@ import edu.jalc.automobile.parts.body.*;
 import edu.jalc.automobile.parts.suspension.*;
 import edu.jalc.automobile.parts.driveline.*;
 
-public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
+public class DodgeChallenger392HemiScatPackShakerBuilder implements DodgeRamBuilderInterface{
 
   EngineAssembly engine;
   Body body;
   Suspension suspension;
   DriveLine driveline;
+  
+  boolean dynamic = false;
 
   public static void main(String... args){
-    Automobile srt392 = new DodgeChallengerSRT392Builder()
+    Automobile Hemi392 = new DodgeChallenger392HemiScatPackShakerBuilder()
       .askForPowerTrain()
       .askForColorAndInterior()
-      .askForOptions()
       .askForPackages()
+      .askForOptions()
       .build();
-    System.out.println(srt392);
+    System.out.println(Hemi392);
   }
-
 
   public DodgeRamBuilderInterface askForPowerTrain(){
     TerminalPrompterBuilder promptBuilder = TerminalPrompterBuilder.newBuilder();
@@ -51,27 +51,26 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
     SportEngine mdsEngine = new HemiMdsSportEngine(392,new HorsePower(485,4000),new Torque(475,3000),8);
     SportEngine hemiEngine = new HEMISportEngine(392,new HorsePower(485,4000),new Torque(475,3000),8);
 
-    EngineAssembly mds_Engine = new NaturallyAspiratedSportEngine(mdsEngine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
-    EngineAssembly hemi_Engine = new NaturallyAspiratedSportEngine(hemiEngine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
+    //EngineAssembly mds_Engine = new NaturallyAspiratedSportEngine(mdsEngine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
+    //EngineAssembly hemi_Engine = new NaturallyAspiratedSportEngine(hemiEngine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
 
     promptBuilder.addType("Powertrain");
-    promptBuilder.addOption(hemi_Engine);
-    promptBuilder.addOption(mds_Engine);
+    promptBuilder.addOption(hemiEngine);
+    promptBuilder.addOption(mdsEngine);
     promptBuilder.sort();
-
     int choice = 1;
     try{
       choice = promptBuilder.build().ask();
     }catch(Exception e){}
 
-    this.engine = (EngineAssembly)promptBuilder.getOptions().get(choice - 1);
+    SportEngine engine = (SportEngine)promptBuilder.getOptions().get(choice - 1);
+    this.engine = new NaturallyAspiratedSportEngine(engine, new PerformanceExhaust(), new NaturallyAspiratedInduction());
     return this;
   }
   public DodgeRamBuilderInterface askForColorAndInterior(){
-
     Paint paint = askForPaint();
     Graphic graphic = askForGraphic();
-    ColoredLeatherSeat seat = askForSeat();
+    HighPerformanceSeat seat = askForSeat();
 
     this.body = new CoupeBody(
       new Quarterpanels(paint,new Graphic("None")),
@@ -105,8 +104,7 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
     TerminalPrompterBuilder graphicPrompter = TerminalPrompterBuilder.newBuilder();
     try{
       graphicChoice = graphicPrompter.addType("Graphics")
-        .addOption(new Graphic("Twin Silver Center Stripes"))
-        .addOption(new Graphic("Twin Black Center Stripes"))
+        .addOption(new Graphic("Black Center Stripe"))
         .addOption(new Graphic("None"))
         .sort()
         .build()
@@ -114,49 +112,80 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
     }catch(Exception e){e.printStackTrace();}
     return (Graphic)graphicPrompter.getOptions().get(graphicChoice - 1);
   }
-  private ColoredLeatherSeat askForSeat(){
+  private HighPerformanceSeat askForSeat(){
     TerminalPrompterBuilder seatPrompter = TerminalPrompterBuilder.newBuilder();
     int seatChoice = 2;
     try{
       seatChoice = seatPrompter.addType("Seats")
-        .addOption(new ColoredLeatherSeat(new Red(), "Nappa Alcantara"))
-        .addOption(new ColoredLeatherSeat(new Black(), "Nappa Alcantara"))
-        .addOption(new ColoredLeatherSeat(new Black(), "SRT Laguna"))
-        .addOption(new ColoredLeatherSeat(new Sepia(), "SRT Laguna"))
+        .addOption(new HighPerformanceSeat(new Red(), "Suede / Nappa Leather"))
+        .addOption(new HighPerformanceSeat(new Black(), "Suede / Nappa Leather"))
         .sort()
         .build()
         .ask();
     }catch(Exception e){e.printStackTrace();}
-    return (ColoredLeatherSeat)seatPrompter.getOptions().get(seatChoice - 1);
+    return (HighPerformanceSeat)seatPrompter.getOptions().get(seatChoice - 1);
   }
 
   public DodgeRamBuilderInterface askForOptions(){
-    SportTire tire = new SportTire(0,0);
-    SteelForgedWheel wheel = new SteelForgedWheel(20,9.5,"SRT Hyper Black");
-    try{
-      TerminalPrompterBuilder wheelPrompter = TerminalPrompterBuilder.newBuilder();
-      wheelPrompter.addType("Wheels")
-        .addOption(wheel)
-        .build()
-        .tell("Your SRT 392 comes with\n" + wheel + "\n");
-    }catch(Exception e){e.printStackTrace();}
 
+    SportTire tire;
+    Wheel wheel;
+    int wheelChoice = 0, tireChoice = 0;
+    
+    Wheel aWheel = new AluminumWheel(20,9,"Polished");
+    Wheel sfWheel = new SteelForgedWheel(20,9.5,"Low-Gloss Black");
+    Wheel afWheel = new AluminumForgedWheel(20,9,"Hyper Black II");
+    
+    TerminalPrompterBuilder wheelPrompter = TerminalPrompterBuilder.newBuilder();
     try{
-      TerminalPrompterBuilder tirePrompter = TerminalPrompterBuilder.newBuilder();
-      int tireChoice = tirePrompter.addType("Tires")
-        .addOption(new AllSeasonPerformanceTire(20,9.5,"275/40ZR20"))
-        .addOption(new PZeroSummerTire(20,9.5,"275/40ZR20"))
-        .sort()
+      wheelPrompter.addType("Wheels");
+      if(dynamic){
+        wheelPrompter.addOption("Keep: " + sfWheel);
+        wheelPrompter.addOption("Add: " + aWheel);
+      }else wheelPrompter.addOption("Default: " + aWheel);
+      wheelPrompter.addOption("Add: " + afWheel);
+      if(!dynamic) wheelPrompter.addOption("Add: " + sfWheel);
+      wheelChoice = wheelPrompter.build()
+        .ask();
+    }catch(Exception e){e.printStackTrace();}
+    Wheel[] wheels;
+    if(dynamic){wheels = new Wheel[]{sfWheel,aWheel,afWheel};}
+    else{wheels = new Wheel[]{aWheel,afWheel,sfWheel};}
+    wheel = wheels[wheelChoice - 1];
+
+    TerminalPrompterBuilder tirePrompter = TerminalPrompterBuilder.newBuilder();
+    try{
+      tirePrompter.addType("Tires");
+      if(wheel instanceof SteelForgedWheel){
+        tirePrompter.addOption(new AllSeasonPerformanceTire(20,9.5,"275/40ZR20"))
+          .addOption(new PZeroSummerTire(20,9.5,"275/40ZR20"));
+      }else{
+        tirePrompter.addOption(new AllSeasonPerformanceTire(20,9.0,"245/45ZR20"))
+          .addOption(new ThreeSeasonPerformanceTire(20,9.0,"245/45ZR20"))
+          .addOption(new PZeroSummerTire(20,9.5,"275/40ZR20"));
+      }
+      tireChoice = tirePrompter.sort()
         .build()
         .ask();
-      tire = (SportTire)tirePrompter.getOptions().get(tireChoice - 1);
     }catch(Exception e){e.printStackTrace();}
+    
+    tire = (SportTire)tirePrompter.getOptions().get(tireChoice - 1);
+    
     suspension = new SportSuspension(new StockShock(12), new MediumSpring(12), tire, wheel);
 
     return this;
   }
   public DodgeRamBuilderInterface askForPackages(){
-    //no packages with code representation
+    TerminalPrompterBuilder packagePrompter = TerminalPrompterBuilder.newBuilder();
+    try{
+      int p = packagePrompter.addType("packages")
+        .addOption("Add Dynamics Package")
+        .addOption("Do Not Add Dynamics Package")
+        .sort()
+        .build()
+        .ask();
+      if(p == 1) this.dynamic = true;
+    }catch(Exception e){e.printStackTrace();}
     return this;
   }
   public Automobile build(){
@@ -171,4 +200,3 @@ public class DodgeChallengerSRT392Builder implements DodgeRamBuilderInterface{
     return new Automobile("Dodge","Challenger","SRT 392",body,driveLine,engine,suspension);
   }
 }
-

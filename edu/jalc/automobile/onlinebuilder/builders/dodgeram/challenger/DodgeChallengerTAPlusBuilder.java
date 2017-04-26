@@ -34,17 +34,19 @@ import edu.jalc.automobile.onlinebuilder.components.driveline.DriveLine;
 import edu.jalc.automobile.onlinebuilder.components.driveline.sport.SportRWD;
 import edu.jalc.automobile.parts.driveline.*;
 
-public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
+public class DodgeChallengerTAPlusBuilder implements DodgeRamBuilderInterface{
 
   private SportEngineAssembly engine;
   private Body body;
   private Suspension suspension;
   private DriveLine driveline;
 
+
   public static void main(String[] args){
-    Automobile ta = new DodgeChallengerTABuilder().askForPowerTrain().askForColorAndInterior().askForOptions().askForPackages().build();
-    System.out.println(ta);
+    Automobile taPlus = new DodgeChallengerTAPlusBuilder().askForPowerTrain().askForColorAndInterior().askForOptions().askForPackages().build();
+    System.out.println(taPlus);
   }
+
 
   public DodgeRamBuilderInterface askForPowerTrain(){
     TerminalPrompterBuilder powertrainPromptBuilder = TerminalPrompterBuilder.newBuilder();
@@ -90,7 +92,7 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     seatPromptBuilder.addType("Interior");
     seatPromptBuilder.addOption(seat);
     try{
-      seatPromptBuilder.build().tell("The T/A model Dodge Challenger ships with "+seat+" Cloth Bucket seats by default");
+      seatPromptBuilder.build().tell("The T/A Plus model Dodge Challenger ships with "+seat+" Cloth Bucket seats by default");
     }
     catch(Exception except){}
 
@@ -109,42 +111,42 @@ public class DodgeChallengerTABuilder implements DodgeRamBuilderInterface{
     this.body = new CoupeBody(new Quarterpanels(paint,graphic),new EngineCompartment(new Hood(paint,graphic)),new StandardCabin(seat),new StandardTrunk(5));
 
     return this;
-  }
-
-  public DodgeRamBuilderInterface askForOptions(){
-
-    AluminumForgedWheel wheel = new AluminumForgedWheel(20,9,"Hyper Black II");
-    TerminalPrompterBuilder wheelPromptBuilder = TerminalPrompterBuilder.newBuilder();
-    wheelPromptBuilder.addType("Wheels");
-    wheelPromptBuilder.addOption(wheel);
-    try{
-      wheelPromptBuilder.build().tell("The T/A model Dodge Challenger ships with "+wheel+" wheels by default");
     }
-    catch(Exception except){}
 
-    AllSeasonPerformanceTire tire = new AllSeasonPerformanceTire(20,245,"245/45ZR20");
-    TerminalPrompterBuilder tirePromptBuilder = TerminalPrompterBuilder.newBuilder();
-    tirePromptBuilder.addType("Tires");
-    tirePromptBuilder.addOption(tire);
-    try{
-      tirePromptBuilder.build().tell("The T/A model Dodge Challenger ships with "+tire+" tires by default");
+    public DodgeRamBuilderInterface askForOptions(){
+
+      AluminumForgedWheel wheel = new AluminumForgedWheel(20,9,"Hyper Black II");
+      TerminalPrompterBuilder wheelPromptBuilder = TerminalPrompterBuilder.newBuilder();
+      wheelPromptBuilder.addType("Wheels");
+      wheelPromptBuilder.addOption(wheel);
+      try{
+        wheelPromptBuilder.build().tell("The T/A Plus model Dodge Challenger ships with "+wheel+" wheels by default");
+      }
+      catch(Exception except){}
+
+      AllSeasonPerformanceTire tire = new AllSeasonPerformanceTire(20,245,"245/45ZR20");
+      TerminalPrompterBuilder tirePromptBuilder = TerminalPrompterBuilder.newBuilder();
+      tirePromptBuilder.addType("Tires");
+      tirePromptBuilder.addOption(tire);
+      try{
+        tirePromptBuilder.build().tell("The T/A Plus model Dodge Challenger ships with "+tire+" tires by default");
+      }
+      catch(Exception except){}
+
+      this.suspension = new SportSuspension(new StockShock(12),new MediumSpring(12),tire,wheel);
+
+      return this;
     }
-    catch(Exception except){}
+    //placeholder
+    public DodgeRamBuilderInterface askForPackages(){
+      return this;
+    }
 
-    this.suspension = new SportSuspension(new StockShock(12),new MediumSpring(12),tire,wheel);
+    public Automobile build(){
 
-    return this;
-  }
+      DriveLine driveline = new SportRWD(new FrontDeadAxle(),new RearDriveAxle(),new DriveShaft(),new HydraulicSteering(),new TorqueVectorDifferential());
 
-  //placeholder
-  public DodgeRamBuilderInterface askForPackages(){
-    return this;
-  }
+      return new Automobile("Dodge","Challenger","T/A Plus",body,driveline,engine,suspension);
+    }
 
-  public Automobile build(){
-
-    DriveLine driveline = new SportRWD(new FrontDeadAxle(),new RearDriveAxle(),new DriveShaft(),new HydraulicSteering(),new TorqueVectorDifferential());
-
-    return new Automobile("Dodge","Challenger","T/A",body,driveline,engine,suspension);
-  }
 }
