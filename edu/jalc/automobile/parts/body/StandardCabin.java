@@ -1,17 +1,17 @@
 package edu.jalc.automobile.parts.body;
 
-import edu.jalc.automobile.parts.body.seat.ClothSeat;
+import edu.jalc.automobile.parts.body.seat.Seat;
 
 public class StandardCabin extends Cabin{
 
-  public StandardCabin(ClothSeat clothSeat){
+  public StandardCabin(Seat clothSeat){
     super(clothSeat);
   }
 
-  public ClothSeat getSeat(){
-    return (ClothSeat) super.getSeat();
+  public Seat getSeat(){
+    return (Seat) super.getSeat();
   }
-  
+
   public String toString(){
     return "Standard Cabin with " + super.getSeat();
   }

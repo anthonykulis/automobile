@@ -5,7 +5,7 @@ public class Graphic{
 
   public Graphic(){
   }
-    
+
   public Graphic(String name){
     this.name = name;
   }

@@ -1,16 +1,14 @@
 package edu.jalc.automobile.parts.body;
+import edu.jalc.automobile.parts.body.colors.BrightRed;
 
 public class Paint{
    public String name;
 
-   public Paint(){
-
+   public Paint(String name){
+      this.name = name;
    }
-
-
    public String toString(){
-      return "Paint is :\n" +
-                        "\t"+name;
+      return name;
    }
 
    public String getName() {
