@@ -7,7 +7,7 @@ abstract public class Cabin{
   private Seat seat;
 
   private Cabin(){
-    this.seat =null; 
+    this.seat =null;
   }
 
   public Cabin(Seat seat){

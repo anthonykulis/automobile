@@ -15,9 +15,13 @@ public class CrewCab extends Truck {
 	public String toString(){
 
       return "CrewCab has :\n" +
+
                        "\t"+ getQuarterpanels() +"\n"+
                        "\t"+ getEngineCompartment()+"\n"+
                        "\t"+ getCabin()+"\n"+
                        "\t"+ getTruckBed();
-   
-   }}
+
+
+   }
+}
+

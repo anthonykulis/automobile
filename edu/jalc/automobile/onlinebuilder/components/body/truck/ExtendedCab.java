@@ -14,10 +14,10 @@ public class ExtendedCab extends Truck {
 	}
 
 	public String toString(){
-      return "ExtendedCab has :\n" +
+      return "Extended Cab has :\n" +
                        "\t"+ getQuarterpanels() +"\n"+
                        "\t"+ getEngineCompartment()+"\n"+
                        "\t"+ getCabin()+"\n"+
                        "\t"+ getTruckBed();
-   
+
    }}
