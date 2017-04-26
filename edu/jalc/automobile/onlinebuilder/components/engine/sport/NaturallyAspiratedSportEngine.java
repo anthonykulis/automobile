@@ -13,7 +13,7 @@ public class NaturallyAspiratedSportEngine extends SportEngineAssembly{
   }
   
   public String toString(){
-    return String.format("Engine:%n\tNaturally Aspirated %s with a %s",this.getEngine(),this.getExhaust());
+    return super.toString() + "\tInduction: " + this.getInduction();
   }
 
   public NaturallyAspiratedInduction getInduction(){
